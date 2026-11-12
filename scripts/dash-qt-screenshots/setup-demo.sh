@@ -116,6 +116,13 @@ va W "${H[core-dev-team-q1]}" yes "${WM[0]}"; va W "${H[core-dev-team-q1]}" no "
 wait_votes pcli 20
 mine 1
 
+echo "Adding everyday wallet activity..."
+# Last, so the Overview tab's recent transactions aren't all masternode payments.
+tick 600; X sendtoaddress "$(W getnewaddress 'Freelance payment')" 10 >/dev/null
+tick 60; S=$(X getnewaddress); W setlabel "$S" "Hardware store"; W sendtoaddress "$S" 2.5 >/dev/null
+tick 60; W sendtoaddress "$(W getnewaddress 'Savings')" 1 >/dev/null
+mine 1
+
 W encryptwallet "$WALLET_PASS" >/dev/null
 echo "Height $(cli getblockcount), $(cli protx list | grep -c '"') masternodes, $(cli gobject count | tr -d '\n')"
 stop_node cli "$DEMO"; stop_node pcli "$PEER"

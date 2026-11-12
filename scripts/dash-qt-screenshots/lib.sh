@@ -59,16 +59,11 @@ EOF
   # dash-qt runs with XDG_CONFIG_HOME=$WORK/xdg, so the host's Qt settings and
   # fontconfig don't apply. Skip the first-run Appearance Setup dialog, show the
   # Masternodes and Governance tabs, and make Ubuntu Sans the default UI font.
+  # The Qt settings file is rewritten on every start, so window geometry,
+  # discreet mode and other state saved by an earlier run don't carry over.
   mkdir -p "$WORK/xdg/Dash" "$WORK/xdg/fontconfig"
-  python3 - "$WORK/xdg/Dash/Dash-Qt-regtest.conf" <<'EOF'
-import configparser, sys
-p = sys.argv[1]
-c = configparser.RawConfigParser(); c.optionxform = str; c.read(p)
-if not c.has_section("General"): c.add_section("General")
-for k in ("fAppearanceSetupDone", "fShowMasternodesTab", "fShowGovernanceTab"):
-    c.set("General", k, "true")
-with open(p, "w") as f: c.write(f, space_around_delimiters=False)
-EOF
+  printf '%s\n' '[General]' fAppearanceSetupDone=true fShowMasternodesTab=true \
+    fShowGovernanceTab=true mask_values=false > "$WORK/xdg/Dash/Dash-Qt-regtest.conf"
   cat > "$WORK/xdg/fontconfig/fonts.conf" <<'EOF'
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
@@ -94,28 +89,34 @@ tick() { # advance both nodes' clocks by $1 seconds (default 600)
   echo "$t" > "$WORK/mocktime"; pcli setmocktime "$t"; cli setmocktime "$t" 2>/dev/null || true
 }
 
+# Make sure the node answering on a data directory's RPC port is that data
+# directory's node, not one left running from another $WORK.
+owns() { "$1" getrpcinfo 2>/dev/null | grep -qF "\"logpath\": \"$2/"; }  # cli-function datadir
+own() { owns "$@" || die "another Dash Core node answers on the RPC port in $2/dash.conf; stop it first"; }
+
 start_peer() {
-  pcli getblockcount >/dev/null 2>&1 && return
+  if pcli getblockcount >/dev/null 2>&1; then own pcli "$PEER"; return; fi
   "$DASHD" -datadir="$PEER" -mocktime="$(now)" -daemon >/dev/null
-  pcli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null
+  pcli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null; own pcli "$PEER"
 }
 
 start_demo_daemon() {
   "$DASHD" -datadir="$DEMO" -mocktime="$(now)" -daemon >/dev/null
-  cli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null
+  cli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null; own cli "$DEMO"
 }
 
 start_demo_qt() {
   write_profile
   env "${QT_ENV[@]}" nohup "$DASH_QT" -datadir="$DEMO" -choosedatadir=0 \
     -mocktime="$(now)" > "$WORK/dash-qt.log" 2>&1 &
-  cli -rpcwait -rpcwaittimeout=90 getblockcount >/dev/null
+  cli -rpcwait -rpcwaittimeout=90 getblockcount >/dev/null; own cli "$DEMO"
 }
 
 running() { pgrep -u "$(id -u)" -f -- "-datadir=$1( |$)" >/dev/null; }
 stop_node() { # cli-function datadir
   running "$2" || return 0
-  "$1" stop >/dev/null 2>&1 || true
+  # RPC stop only if the RPC port is this node's; otherwise go straight to signals.
+  if owns "$1" "$2"; then "$1" stop >/dev/null 2>&1 || true; fi
   for _ in $(seq 30); do running "$2" || return 0; pause 1; done
   # An open modal dialog can block dash-qt's shutdown; then signal it.
   pkill -u "$(id -u)" -TERM -f -- "-datadir=$2( |$)" || true

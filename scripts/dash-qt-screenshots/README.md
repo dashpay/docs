@@ -108,20 +108,23 @@ export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
 
 | Script | What it does |
 |---|---|
-| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes. Keeps a pristine copy of it. |
+| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes, and a few ordinary payments. Keeps a pristine copy of it. |
 | `capture.sh` | Restores the pristine copy (every run), starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
 | `compare.sh` | Compares the images from the latest capture run with the repository, or with another output directory, and lists the share of changed pixels per image. |
 | `lib.sh` | Shared settings and helpers. |
 
 What is repeatable:
 
-- Two capture runs on the same demo data give identical images, except the
-  wizard's Keys, Review and Save operator key pages. Those show an operator key
-  that dash-qt generates at random.
+- Two capture runs on the same demo data give identical images, except:
+  - the wizard's Keys, Review and Save operator key pages, which show an
+    operator key that dash-qt generates at random
+  - the Tools window's Information tab (**Startup time**) and Console tab (the
+    welcome message's timestamp), which use the real clock
 - A new demo data build gives the same addresses, keys, heights, dates and vote
-  totals. Masternode payment order (**Last Paid**, **Next Payment**) and
-  proposal hashes (Governance tab **Hash** column) depend on transaction hashes
-  that include random wallet choices, so they can differ. Rebuild the demo data
+  totals. Masternode payment order (**Last Paid**, **Next Payment**), proposal
+  hashes (Governance tab **Hash** column), and wallet balances and fees depend on
+  transaction hashes and coin selection, which include random wallet choices,
+  so they can differ. Rebuild the demo data
   only when you need to; capture runs reuse it.
 
 Limits:
@@ -133,11 +136,22 @@ Limits:
 - The GUI compares the chain tip with the real clock, not mocktime, so it shows
   the sync overlay. `capture.sh` clicks **Hide**. Anything else that uses the
   real clock may differ between days.
+- Headless and regtest show in some shots:
+  - Options > Main: the tray icon options are disabled (Xvfb has no system
+    tray), and **Enable RPC server** is checked (the scripts drive the nodes
+    over RPC).
+  - Tools window Information and Repair tabs show the data directory, which is
+    under `$WORK`. Keep the default `WORK` for those shots.
+  - Receive: **Requested payments history** is empty. Payment requests can only
+    be created in the GUI.
+- Not scripted, because regtest can't show them well: Tools window **Network
+  Traffic** (almost no traffic) and **Peers** (one local peer).
 - Not scripted yet, take these by hand: the masternode context menu, the
   Proposal Votes dialog, Coin Selection, wallet migration, the splash screen,
   Create Wallet, the wizard's confirm, signing and finished pages (they register
   a masternode, which changes the demo data), and anything that needs v24
-  active.
+  active. The status-bar icon images (`hd.png`, `locks.png`, `sync.png`,
+  `network-icons.png`) are enlarged icons, not window captures.
 
 ### Driving the GUI
 

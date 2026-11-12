@@ -17,39 +17,74 @@
 set -euo pipefail
 . "$(dirname "$0")/lib.sh"
 
-SHOTS=(masternodes governance options wizard wizard-evonode)
+SHOTS=(tabs masternodes governance options tools wizard wizard-evonode)
 OUT=$WORK/out
 U=$OUT/docs/user
+I=$U/wallets/dashcore/img
 WIZ=$WORK/wizard-raw
 
 # --- Shots -------------------------------------------------------------------
 # Main window: 1124 x 784 matches the existing main-window images.
-main_tab() { # x of the tab in the 1124-wide tab bar
+# Tab x positions in the 1124-wide tab bar: Overview 72, Send 212, Receive 352,
+# Transactions 492, CoinJoin 632, Masternodes 772, Governance 912.
+main_tab() { # x of the tab
   M=$(main_win); place "$M" 1124 784; click "$M" "$1" 45 1.5
+}
+
+shot_tabs() {
+  main_tab 72;  grab "$M" "$I/overview.png"
+  key "$M" ctrl+shift+d; place "$M" 1124 798   # Settings > Discreet mode
+  grab "$M" "$I/overview-discreet.png"; key "$M" ctrl+shift+d
+  main_tab 212; grab "$M" "$I/send.png"
+  # Filled-in form. The address is the peer wallet's next one, the same every run.
+  local a; a=$(pcli -rpcwallet=ext getnewaddress)
+  click "$M" 485 129 0.3; type_text "$M" "$a"
+  click "$M" 485 172 0.3; type_text "$M" "Invoice #124"
+  click "$M" 147 215 0.3; key "$M" ctrl+a; type_text "$M" 2.5; key "$M" Tab
+  grab "$M" "$I/sendready.png"
+  main_tab 352; grab "$M" "$I/receive.png"
+  main_tab 492; grab "$M" "$I/transactions.png"
+  main_tab 632; grab "$M" "$I/coinjoin.png"
 }
 
 shot_masternodes() {
   main_tab 772
-  grab "$M" "$U/wallets/dashcore/img/masternodes.png"
-  convert "$U/wallets/dashcore/img/masternodes.png" -crop 1124x300+0+0 +repage -strip \
+  grab "$M" "$I/masternodes.png"
+  convert "$I/masternodes.png" -crop 1124x300+0+0 +repage -strip \
     "$U/masternodes/img/dashcore-mn-register-button.png"
 }
 
 shot_governance() {
   main_tab 912
   click "$M" 120 224   # select the first proposal
-  grab "$M" "$U/wallets/dashcore/img/governance.png"
-  cp "$U/wallets/dashcore/img/governance.png" "$U/governance/img/core-qt/governance-tab.png"
+  grab "$M" "$I/governance.png"
+  cp "$I/governance.png" "$U/governance/img/core-qt/governance-tab.png"
 }
 
 shot_options() {
   M=$(main_win); key "$M" alt+s; key "$M" o
-  local O; O=$(win Options)
-  place "$O" 692 493; click "$O" 175 27   # Wallet tab
-  grab "$O" "$U/wallets/dashcore/img/options-wallet.png"
-  place "$O" 692 465; click "$O" 512 27   # Display tab
-  grab "$O" "$U/wallets/dashcore/img/options-display.png"
+  local O t x h; O=$(win Options)
+  # tab:x of the tab:window height (each matches the existing image)
+  for t in main:60:493 wallet:175:493 coinjoin:290:496 network:405:493 \
+           display:512:465 appearance:635:465; do
+    IFS=: read -r t x h <<<"$t"
+    place "$O" 692 "$h"; click "$O" "$x" 27; grab "$O" "$I/options-$t.png"
+  done
   key "$O" Escape
+}
+
+# Tools window, opened and switched with its Window menu shortcuts.
+shot_tools() {
+  local T t k w h
+  M=$(main_win)
+  for t in information:i:834:618 console:c:833:591 wallet-repair:r:787:618; do
+    IFS=: read -r t k w h <<<"$t"
+    key "$M" "ctrl+shift+$k"; T=$(win "Tools window"); place "$T" "$w" "$h"
+    # Console: focus the message area, so the input line has no blinking cursor.
+    [ "$t" != console ] || click "$T" 400 300
+    grab "$T" "$I/tools-$t.png"
+  done
+  key "$T" Escape
 }
 
 # Register Masternode wizard: 640 px wide, buttons at the bottom of a 900 px window.
@@ -112,7 +147,7 @@ sync_nodes; finish_mnsync
 M=$(main_win); place "$M" 1124 784
 click "$M" 980 627   # "Hide" on the sync overlay (shown because the GUI compares
                      # the mocktime tip with the real clock); harmless otherwise
-mkdir -p "$U/wallets/dashcore/img" "$U/masternodes/img" "$U/governance/img/core-qt"
+mkdir -p "$I" "$U/masternodes/img" "$U/governance/img/core-qt"
 touch "$OUT/.run-start"   # compare.sh only looks at images from this run
 for s in "${REQ[@]}"; do echo "capturing $s"; "shot_$s"; done
 
