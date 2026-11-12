@@ -84,6 +84,10 @@ cleanup() {
       [[ -f "$DATADIR/regtest/dashd.pid" ]] || break
       sleep 0.5
     done
+    if [[ -f "$DATADIR/regtest/dashd.pid" ]]; then
+      echo "warning: dashd did not stop; leaving datadir $DATADIR in place" >&2
+      return
+    fi
   fi
   if [[ "$TEMP_DATADIR" == 1 && "${KEEP_DATADIR:-0}" != 1 ]]; then
     rm -rf "$DATADIR"
@@ -148,7 +152,7 @@ echo "dashd: $(cat "$OUT_DIR/version.txt")"
 echo "datadir: $DATADIR"
 echo "output: $OUT_DIR"
 
-"$DASHD" -regtest -datadir="$DATADIR" -daemon \
+"$DASHD" -regtest -datadir="$DATADIR" -daemonwait \
   -port="$P2P_PORT" -rpcport="$RPC_PORT" -listen=0 -server -rest -txindex \
   -disablewallet -mocktime="$MOCKTIME_START" -debug=0 >/dev/null
 NODE_STARTED=1
@@ -182,14 +186,15 @@ mine() {
 }
 
 # spend <txid> <vout> <recipient_amount> - pay recipient, change to miner;
-# prints the TXID
+# prints the TXID. Runs inside $(...), where set -e does not apply, so each
+# step checks for failure explicitly.
 spend() {
   local txid="$1" vout="$2" amount="$3" value change raw signed
-  value="$(cli gettxout "$txid" "$vout" true | json_get value)"
-  change="$(python3 -c 'from decimal import Decimal as D; import sys; print(D(sys.argv[1]) - D(sys.argv[2]) - D(sys.argv[3]))' "$value" "$amount" "$FEE")"
+  value="$(cli gettxout "$txid" "$vout" true | json_get value)" || return 1
+  change="$(python3 -c 'from decimal import Decimal as D; import sys; print(D(sys.argv[1]) - D(sys.argv[2]) - D(sys.argv[3]))' "$value" "$amount" "$FEE")" || return 1
   raw="$(cli createrawtransaction "[{\"txid\":\"$txid\",\"vout\":$vout}]" \
-    "{\"$RECIPIENT_ADDR\":$amount,\"$MINER_ADDR\":$change}")"
-  signed="$(cli signrawtransactionwithkey "$raw" "[\"$MINER_WIF\"]" | json_get hex)"
+    "{\"$RECIPIENT_ADDR\":$amount,\"$MINER_ADDR\":$change}")" || return 1
+  signed="$(cli signrawtransactionwithkey "$raw" "[\"$MINER_WIF\"]" | json_get hex)" || return 1
   cli sendrawtransaction "$signed"
 }
 
@@ -271,7 +276,7 @@ rest mempool-info.json "mempool/info.json"
 rest tx.hex  "tx/${CONFIRMED_TXID}.hex"
 rest tx.json "tx/${CONFIRMED_TXID}.json"
 
-# Error cases documented on the page
+# Error cases (some are documented on the page)
 rest error-block-invalid-hash.txt      "block/nothex.json"
 rest error-deploymentinfo-notfound.txt "deploymentinfo/$(printf '0%.0s' {1..64}).json"
 rest error-headers-count.txt           "headers/0/${TX_BLOCK_HASH}.json"

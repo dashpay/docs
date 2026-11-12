@@ -93,7 +93,7 @@ Result | object | Required<br>(exactly 1) | An object containing the requested b
 → → →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 → → →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
 → → →<br>`cbTx` | object | Optional<br>(0 or 1) | The decoded Coinbase special transaction (CbTx) payload, with the same fields as the block's `cbTx` object.  Only present if this is a coinbase special transaction.  Other DIP2 special transaction types include their own decoded payload object instead (for example, `proRegTx` or `qcTx`)
-→ → →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
+→ → →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
 → → →<br>`fee` | number (Dash) | Optional<br>(0 or 1) | The transaction fee in DASH.  Not present for the coinbase transaction or if block undo data is not available
 → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
 → → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
@@ -106,7 +106,7 @@ Result | object | Required<br>(exactly 1) | An object containing the requested b
 → →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | Blocks between the current block and the last known block with a ChainLock
 → →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | Best ChainLock signature known by the miner
 → →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | Balance in the Platform credit pool
-→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
+→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
 
 *Examples from Dash Core 24.0.0*
 
@@ -354,7 +354,7 @@ Result | object | Required<br>(exactly 1) | An object containing the requested b
 → →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | Blocks between the current block and the last known block with a ChainLock
 → →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | Best ChainLock signature known by the miner
 → →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | Balance in the Platform credit pool
-→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
+→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
 
 *Examples from Dash Core 24.0.0*
 
@@ -1165,7 +1165,7 @@ Result | object | Required<br>(exactly 1) | An object describing the request tra
 →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
 →<br>`cbTx` | object | Optional<br>(0 or 1) | The decoded Coinbase special transaction (CbTx) payload, with the same fields as the block-level `cbTx` object in [GET Block](../api/http-rest-requests.md#get-block).  Only present if this is a coinbase special transaction.  Other DIP2 special transaction types include their own decoded payload object instead (for example, `proRegTx` or `qcTx`)
-→<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
+→<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
 →<br>`blockhash` | string (hex) | Optional<br>(0 or 1) | If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order.  Not present for memory pool transactions
 →<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
 

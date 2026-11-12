@@ -8,7 +8,7 @@ This directory contains a tool to regenerate the examples on the [HTTP REST requ
 
 1. Starts a fresh, isolated regtest node (`-rest -txindex -server -listen=0 -disablewallet`)
 2. Builds a small, deterministic chain and mempool (see [Chain Contents](#chain-contents))
-3. Requests every REST endpoint shown on the page, in every format the page shows, plus the documented error cases
+3. Requests every REST endpoint shown on the page, in every format the page shows, plus several error cases
 4. Writes each response to a named file in the output directory
 5. Stops the node
 
@@ -77,7 +77,7 @@ No masternodes or quorums exist, so `chainlock` and `instantlock` are always `fa
 | `mempool-contents.json`, `mempool-contents-txids.json`, `mempool-contents-txids-sequence.json` | `/rest/mempool/contents` (default, `verbose=false`, and `verbose=false&mempool_sequence=true`) |
 | `mempool-info.json` | `/rest/mempool/info` |
 | `tx.hex`, `tx.json` | `/rest/tx/<txid>` |
-| `error-*.txt` | Error responses documented on the page |
+| `error-*.txt` | Error responses for several endpoints (not all are documented on the page) |
 
 Each `.json` response also has a `.pretty.json` copy (2-space indentation, numbers kept exactly as the node wrote them), and each `.hex` response has a `.wrapped.txt` copy (64 characters per line with trailing `\`), matching how the docs show them.
 
