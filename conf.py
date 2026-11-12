@@ -197,6 +197,7 @@ html_static_path = ['_static']
 html_css_files = [
     'css/footer.css',
     'css/pydata-overrides.css',
+    'css/image-zoom.css',
 ]
 
 # A list of paths that contain extra files not directly related to the documentation, such as
@@ -297,3 +298,9 @@ googleanalytics_enabled = True
 def setup(app):
     app.add_js_file('js/lang.js')
     app.add_js_file('js/pydata-search-close.js')
+    # medium-zoom pinned to 1.1.0 and vendored (MIT, see medium-zoom-1.1.0.LICENSE). Upgrade
+    # deliberately: review the diff first.
+    # Source: npm medium-zoom@1.1.0 dist/medium-zoom.min.js
+    # sha256: 6603320c02180d81b16dca4971f52763035ebc6ff18bd38729a47ff062be8d67
+    app.add_js_file('js/medium-zoom-1.1.0.min.js', loading_method='defer')
+    app.add_js_file('js/image-zoom.js', loading_method='defer')
