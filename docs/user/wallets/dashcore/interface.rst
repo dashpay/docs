@@ -561,7 +561,7 @@ The Tools Dialog
 ================
 
 This documentation describes the functionality of the Dash Core Tools
-dialog, available under the **Tools** menu in Dash Core.
+dialog, available under the **Window** menu in Dash Core.
 
 Information tab
 ---------------
@@ -592,9 +592,9 @@ Memory pool
   both transactions created since the last block and transactions which
   could not be entered in the last block because it was full.
 
-Open debug log file
-  This button opens debug.log from the application data directory. This
-  file contains output from Dash Core which may help to diagnose errors.
+To open debug.log from the application data directory, click **File > Open
+debug log file**. This file contains output from Dash Core which may help to
+diagnose errors.
 
 The **Network** view shows the status of Dash-specific network features.
 
