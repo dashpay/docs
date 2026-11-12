@@ -16,14 +16,18 @@ need_bins
 if [ -e "$WORK" ]; then
   [ "${1:-}" = --force ] || die "$WORK exists; use --force to rebuild it"
   # Only delete a directory this script created.
+  check_work
   [ -f "$WORK/mocktime" ] || die "$WORK does not look like demo data; not deleting it"
   stop_node cli "$DEMO"; stop_node pcli "$PEER"; rm -rf "$WORK"
 fi
-mkdir -p "$WORK"; echo "$MOCKTIME" > "$WORK/mocktime"
+mkdir -p "$WORK"; check_work; echo "$MOCKTIME" > "$WORK/mocktime"
+trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"; stop_x' EXIT
 
 # Non-default ports so a maintainer's own regtest node doesn't clash.
-write_conf "$PEER" 29898 29899
-write_conf "$DEMO" 39898 39899 connect=127.0.0.1:29899
+# Localhost only. The demo node keeps listening so Options shows the default
+# "Allow incoming connections".
+write_conf "$PEER" 29898 29899 bind=127.0.0.1
+write_conf "$DEMO" 39898 39899 bind=127.0.0.1 connect=127.0.0.1:29899
 write_profile
 start_peer; start_demo_daemon
 
@@ -61,7 +65,7 @@ mine 1
 echo "Registering masternodes..."
 # One registration per block so payment order doesn't depend on proTxHash.
 # BLS secrets 0x01..0x08 (any valid scalar works; these are just fixed).
-bls_pub() { cli bls fromsecret "$(printf '%064x' "$1")" | python3 -c 'import json,sys;print(json.load(sys.stdin)["public"])'; }
+bls_pub() { cli bls fromsecret "$(printf '%064x' "$1")" | python3 -I -c 'import json,sys;print(json.load(sys.stdin)["public"])'; }
 n=1
 for i in 0 1 2; do   # owned by the demo wallet (Owned filter, My votes)
   W protx register_fund "$(W getnewaddress)" "[\"203.0.113.$((11+i)):19899\"]" \
@@ -86,7 +90,7 @@ for p in "${props[@]}"; do
   pa=$(X getnewaddress)
   json=$(printf '{"type":1,"name":"%s","start_epoch":%d,"end_epoch":%d,"payment_amount":%s,"payment_address":"%s","url":"https://www.dashcentral.org/p/%s"}' \
          "$1" $((t-60)) $((t+86400*60)) "$2" "$pa" "$1")
-  hex=$(printf '%s' "$json" | python3 -c 'import sys;print(sys.stdin.buffer.read().hex())')
+  hex=$(printf '%s' "$json" | python3 -I -c 'import sys;print(sys.stdin.buffer.read().hex())')
   PREP+=( "$1 $t $hex $(X gobject prepare 0 1 "$t" "$hex")" )
   tick 60
 done
@@ -97,8 +101,8 @@ done
 mine 1
 
 echo "Voting..."
-XM=($(X protx list wallet | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)))'))
-WM=($(W protx list wallet | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)))'))
+XM=($(X protx list wallet | python3 -I -c 'import json,sys;print(" ".join(json.load(sys.stdin)))'))
+WM=($(W protx list wallet | python3 -I -c 'import json,sys;print(" ".join(json.load(sys.stdin)))'))
 va() { tick 5; "$1" gobject vote-alias "$2" funding "$3" "$4" >/dev/null; }
 for i in 0 1 2 3 4; do va X "${H[dash-docs-v24-update]}" yes "${XM[$i]}"; done
 for i in 0 1 2; do va X "${H[core-dev-team-q1]}" yes "${XM[$i]}"; done; va X "${H[core-dev-team-q1]}" no "${XM[3]}"
@@ -106,7 +110,7 @@ va X "${H[community-meetups]}" yes "${XM[0]}"; va X "${H[community-meetups]}" ab
 for i in 0 1 2; do va X "${H[marketing-campaign-2027]}" no "${XM[$i]}"; done; va X "${H[marketing-campaign-2027]}" yes "${XM[3]}"
 wait_votes() { # node-cli count: governance objects and votes are relayed with a delay
   for _ in $(seq 60); do
-    [ "$("$1" gobject count json | python3 -c 'import json,sys;d=json.load(sys.stdin);print(d["proposals"],d["votes"])')" = "4 $2" ] && return
+    [ "$("$1" gobject count json | python3 -I -c 'import json,sys;d=json.load(sys.stdin);print(d["proposals"],d["votes"])')" = "4 $2" ] && return
     pause 1
   done; die "governance data did not reach $1"
 }

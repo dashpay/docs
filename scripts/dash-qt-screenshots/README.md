@@ -65,6 +65,10 @@ Following this process keeps the window contents consistent either way.
 
 ## Headless setup (Ubuntu, no desktop)
 
+On a desktop, run only the package and locale lines: the `fonts.conf` step
+changes the default font for your whole session, and the scripts below set up
+their own fonts anyway.
+
 ```bash
 sudo apt-get install --no-install-recommends \
   xvfb xauth fonts-ubuntu fontconfig imagemagick xdotool locales
@@ -90,17 +94,20 @@ DISPLAY=:99 LANG=en_US.UTF-8 QT_FONT_DPI=96 dash-qt -regtest -datadir=<dir> &
 The static dash-qt build only has the `xcb` Qt platform plugin, so it needs an
 X display (Xvfb) even for `dash-qt -help`.
 
+Screenshot tools add metadata such as the capture time and time zone. Remove it
+from hand-taken screenshots before committing them: `mogrify -strip <file>.png`.
+
 ## Scripted capture
 
 Some screenshots can be retaken with scripts in this directory. They need the
 packages above (the scripts set up fontconfig, Qt settings and Xvfb themselves)
-and a Dash Core build.
+and a Dash Core build. Use a release you verified or built yourself: the scripts
+run its binaries as you.
 
 ```bash
 export DASH_BIN=/path/to/dash/bin   # dashd, dash-cli, and dash-qt (or qt/dash-qt)
-export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
 
-./setup-demo.sh            # build the regtest demo data (about 15 s)
+./setup-demo.sh            # build the regtest demo data (about 40 s)
 ./capture.sh               # all shots, or name some: capture.sh options wizard
 ./compare.sh               # what changed against the committed images
 ./compare.sh --install     # copy the changed images into the repository
@@ -112,6 +119,21 @@ export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
 | `capture.sh` | Restores the pristine copy (every run), starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
 | `compare.sh` | Compares the images from the latest capture run with the repository, or with another output directory, and lists the share of changed pixels per image. |
 | `lib.sh` | Shared settings and helpers. |
+
+Data, logs and output go in `WORK` (default `/tmp/dash-qt-screenshots`). The
+Tools window shots show that path, so `capture.sh tools` only runs with the
+default. The scripts keep other local users out:
+
+- `WORK` must be a folder you own that others can't write to, and is created
+  private. Every folder above it must belong to you or root and not be writable
+  by others, unless it is sticky like `/tmp`.
+- Each run starts its own Xvfb on a free display, readable only with the cookie
+  in `$WORK/xauthority`, and stops it at the end (`--keep` leaves it running and
+  prints how to reach and stop it).
+- The nodes use RPC cookie authentication; there is no fixed password. They
+  start with `-daemonwait` (dash-qt: a fresh cookie), so a script never talks to
+  a server someone else started on the same port.
+- `compare.sh --install` only copies regular PNG files under `docs/user/`.
 
 What is repeatable:
 
@@ -169,8 +191,9 @@ Limits:
 
 ### Regtest demo data
 
-- Use a `dash.conf` with `rpcuser`/`rpcpassword`, and a second `dashd` peer so
-  the status bar doesn't show "Connecting to peers…".
+- Use a `dash.conf` with `server=1` (`dash-cli -datadir=<dir>` then
+  authenticates with the node's cookie file; no password needed), and a second
+  `dashd` peer so the status bar doesn't show "Connecting to peers…".
 - Mine past height 650 so DIP3 is active.
 - After each start, run `mnsync next` until the status is
   `MASTERNODE_SYNC_FINISHED`, otherwise the GUI shows the sync overlay. If the

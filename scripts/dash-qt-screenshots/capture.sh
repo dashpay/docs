@@ -3,9 +3,9 @@
 #
 # Usage: capture.sh [--keep] [shot...]
 #   shot     one or more of the names below (default: all)
-#   --keep   leave dash-qt and the peer running afterwards, e.g. to inspect a
-#            failed shot (Xvfb always stays up). The next run restarts them
-#            from the pristine demo data anyway.
+#   --keep   leave dash-qt, the peer and the private Xvfb running afterwards,
+#            e.g. to inspect a failed shot; prints how to reach and stop them.
+#            The next run restarts the nodes from the pristine demo data anyway.
 #
 # Images are written to $WORK/out/<repo path>, e.g.
 # $WORK/out/docs/user/wallets/dashcore/img/masternodes.png. Compare them with
@@ -135,14 +135,25 @@ for a in "$@"; do
 done
 [ ${#REQ[@]} -gt 0 ] || REQ=("${SHOTS[@]}")
 need_bins
+[ -d "$WORK" ] || die "no demo data in $WORK; run setup-demo.sh first"
+check_work
 [ -d "$WORK/demo.base" ] || die "no demo data in $WORK; run setup-demo.sh first"
+if [[ " ${REQ[*]} " == *" tools "* ]] && [ "$WORK" != "$WORK_DEFAULT" ]; then
+  die "the tools shots show the data folder; use the default WORK ($WORK_DEFAULT)"
+fi
 
-start_x
+if [ $KEEP = 1 ]; then
+  trap 'if [ -n "$XVFB_PID" ]; then
+          echo "Left running (--keep). Inspect with DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY;"
+          echo "Stop Xvfb with: kill $XVFB_PID. The next capture.sh run stops and restarts the nodes."
+        fi' EXIT
+else
+  trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"; stop_x' EXIT
+fi
 # Always start from the pristine copy, so a failed or --keep run can't leak state.
 stop_node cli "$DEMO"; stop_node pcli "$PEER"
 rm -rf "$DEMO" "$PEER"; cp -a "$WORK/demo.base" "$DEMO"; cp -a "$WORK/peer.base" "$PEER"
-[ $KEEP = 1 ] || trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"' EXIT
-start_peer; open_gui
+start_x; start_peer; open_gui
 mkdir -p "$I" "$U/masternodes/img" "$U/governance/img/core-qt"
 touch "$OUT/.run-start"   # compare.sh only looks at images from this run
 for s in "${REQ[@]}"; do echo "capturing $s"; "shot_$s"; done

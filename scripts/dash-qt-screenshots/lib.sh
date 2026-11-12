@@ -5,9 +5,28 @@
 # DASH_BIN: directory with dashd and dash-cli, plus dash-qt either next to them
 # (release tarball bin/) or in qt/ (source build src/).
 DASH_BIN=${DASH_BIN:-$(dirname "$(command -v dashd 2>/dev/null || echo /nonexistent/dashd)")}
-WORK=$(realpath -m "${WORK:-/tmp/dash-qt-screenshots}")
 shopt -s inherit_errexit
-export DISPLAY=${DISPLAY_NUM:-:99}
+die() { echo "error: $*" >&2; exit 1; }
+umask 077   # everything the scripts create under $WORK is private to you
+# WORK: data, logs and output. The Tools window shots show this path, so keep
+# the default for those (see check_work for the safety checks).
+WORK_DEFAULT=/tmp/dash-qt-screenshots
+WORK=${WORK:-$WORK_DEFAULT}
+# Resolve only the parent, so a symlinked WORK itself stays visible to check_work.
+WORK=$(realpath -m -- "$(dirname "$WORK")")/$(basename "$WORK")
+# Every folder above WORK must exist, belong to you or root, and not be writable
+# by others unless sticky like /tmp, so nobody else can swap WORK. Checked before
+# anything is created.
+d=$(dirname "$WORK")
+[ -d "$d" ] || die "$d does not exist; create it or choose another WORK"
+while :; do
+  [ -O "$d" ] || [ "$(stat -c %u "$d")" = 0 ] || die "$d belongs to another user; choose another WORK"
+  [ -z "$(find "$d" -maxdepth 0 -perm /022 ! -perm -1000)" ] ||
+    die "$d is writable by other users; choose another WORK"
+  [ "$d" != / ] || break; d=$(dirname "$d")
+done
+unset d
+unset DISPLAY   # GUI commands only ever use the private Xvfb from start_x
 
 DASHD=$DASH_BIN/dashd
 CLI_BIN=$DASH_BIN/dash-cli
@@ -37,19 +56,26 @@ need_bins() {
 cli()  { "$CLI_BIN" -datadir="$DEMO" "$@"; }
 pcli() { "$CLI_BIN" -datadir="$PEER" "$@"; }
 pause() { timeout "${1:-1}" tail -f /dev/null || true; }
-die() { echo "error: $*" >&2; exit 1; }
+
+# $WORK must be a folder you own that others can't write to. Run it after
+# creating $WORK: mkdir -p succeeds on a folder someone else already made.
+check_work() {
+  [ -d "$WORK" ] && [ ! -L "$WORK" ] && [ -O "$WORK" ] || die "$WORK is not a folder you own"
+  [ -z "$(find "$WORK" -maxdepth 0 -perm /022)" ] || die "$WORK is writable by other users"
+}
 
 write_conf() { # dir rpcport port extra...
   local dir=$1 rpc=$2 port=$3; shift 3
   mkdir -p "$dir"
-  { printf 'regtest=1\nserver=1\n[regtest]\nrpcuser=u\nrpcpassword=p\n'
-    printf 'rpcport=%s\nport=%s\nbind=127.0.0.1\nfallbackfee=0.00001\n' "$rpc" "$port"
+  # No rpcuser/rpcpassword: dash-cli -datadir uses the node's private .cookie.
+  { printf 'regtest=1\nserver=1\n[regtest]\n'
+    printf 'rpcport=%s\nport=%s\nfallbackfee=0.00001\n' "$rpc" "$port"
     printf '%s\n' "$@"; } > "$dir/dash.conf"
 }
 
 write_profile() { # GUI font settings; only while dash-qt/dashd on DEMO is stopped
   mkdir -p "$DEMO/regtest"
-  python3 - "$DEMO/regtest/settings.json" <<'EOF'
+  python3 -I - "$DEMO/regtest/settings.json" <<'EOF'
 import json, os, sys
 p = sys.argv[1]
 s = json.load(open(p)) if os.path.exists(p) else {}
@@ -75,17 +101,39 @@ EOF
 EOF
 }
 
+# A private Xvfb for this run, on the first free display, that only clients
+# with the cookie in $WORK/xauthority can use. stop_x shuts it down.
+XVFB_PID=
 start_x() {
-  if ! xdpyinfo >/dev/null 2>&1 && ! xdotool getdisplaygeometry >/dev/null 2>&1; then
-    nohup Xvfb "$DISPLAY" -screen 0 1920x1080x24 -nolisten tcp > "$WORK/xvfb.log" 2>&1 &
-    for _ in $(seq 10); do xdotool getdisplaygeometry >/dev/null 2>&1 && return; pause 0.5; done
-    die "Xvfb did not start on $DISPLAY; see $WORK/xvfb.log"
+  [ -z "$XVFB_PID" ] || return 0
+  local old; old=$(cat "$WORK/xvfb.pid" 2>/dev/null || true)   # left by --keep
+  if [[ $old =~ ^[0-9]+$ ]] && [ -O "/proc/$old" ] && [ "$(cat "/proc/$old/comm")" = Xvfb ]; then
+    kill "$old" || true
   fi
+  export XAUTHORITY=$WORK/xauthority
+  : > "$XAUTHORITY"
+  # Wildcard entry (any host, any display): the display number isn't known yet.
+  echo "ffff 0000  0000  0012 4d49542d4d414749432d434f4f4b49452d31 0010 $(mcookie)" |
+    xauth -q -f "$XAUTHORITY" nmerge -
+  : > "$WORK/xvfb.display"
+  nohup Xvfb -displayfd 3 -auth "$XAUTHORITY" -screen 0 1920x1080x24 -nolisten tcp \
+    3> "$WORK/xvfb.display" > "$WORK/xvfb.log" 2>&1 &
+  XVFB_PID=$!; echo "$XVFB_PID" > "$WORK/xvfb.pid"
+  for _ in $(seq 20); do
+    if grep -q . "$WORK/xvfb.display"; then export DISPLAY=":$(head -1 "$WORK/xvfb.display")"; return; fi
+    pause 0.5
+  done
+  die "Xvfb did not start; see $WORK/xvfb.log"
 }
+stop_x() { [ -z "$XVFB_PID" ] || kill "$XVFB_PID" 2>/dev/null || true; XVFB_PID=; }
 
-now() { cat "$WORK/mocktime" 2>/dev/null || echo "$MOCKTIME"; }
+now() {
+  local t; t=$(cat "$WORK/mocktime" 2>/dev/null || echo "$MOCKTIME")
+  [[ $t =~ ^[0-9]+$ ]] || die "$WORK/mocktime does not hold a number"
+  echo "$t"
+}
 tick() { # advance both nodes' clocks by $1 seconds (default 600)
-  local t=$(( $(now) + ${1:-600} ))
+  local t; t=$(now); t=$(( t + ${1:-600} ))
   echo "$t" > "$WORK/mocktime"; pcli setmocktime "$t"; cli setmocktime "$t" 2>/dev/null || true
 }
 
@@ -94,34 +142,50 @@ tick() { # advance both nodes' clocks by $1 seconds (default 600)
 owns() { "$1" getrpcinfo 2>/dev/null | grep -qF "\"logpath\": \"$2/"; }  # cli-function datadir
 own() { owns "$@" || die "another Dash Core node answers on the RPC port in $2/dash.conf; stop it first"; }
 
+# -daemonwait returns only once the node is up, and fails if its ports are
+# taken, so dash-cli can't end up talking to someone else's server.
 start_peer() {
-  if pcli getblockcount >/dev/null 2>&1; then own pcli "$PEER"; return; fi
-  "$DASHD" -datadir="$PEER" -mocktime="$(now)" -daemon >/dev/null
-  pcli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null; own pcli "$PEER"
+  if running "$PEER"; then own pcli "$PEER"; return; fi
+  local t; t=$(now)
+  "$DASHD" -datadir="$PEER" -mocktime="$t" -daemonwait >/dev/null
+  own pcli "$PEER"
 }
 
 start_demo_daemon() {
-  "$DASHD" -datadir="$DEMO" -mocktime="$(now)" -daemon >/dev/null
-  cli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null; own cli "$DEMO"
+  local t; t=$(now)
+  "$DASHD" -datadir="$DEMO" -mocktime="$t" -daemonwait >/dev/null
+  own cli "$DEMO"
 }
 
+# dash-qt has no -daemonwait. It writes a new .cookie only after it holds the
+# RPC port, so wait for that file while dash-qt is still running.
 start_demo_qt() {
+  local t pid; t=$(now)
   write_profile
+  rm -f "$DEMO/regtest/.cookie"
   env "${QT_ENV[@]}" nohup "$DASH_QT" -datadir="$DEMO" -choosedatadir=0 \
-    -mocktime="$(now)" > "$WORK/dash-qt.log" 2>&1 &
+    -mocktime="$t" > "$WORK/dash-qt.log" 2>&1 &
+  pid=$!
+  for _ in $(seq 90); do
+    [ -f "$DEMO/regtest/.cookie" ] && break
+    kill -0 "$pid" 2>/dev/null || die "dash-qt exited; see $WORK/dash-qt.log"
+    pause 1
+  done
   cli -rpcwait -rpcwaittimeout=90 getblockcount >/dev/null; own cli "$DEMO"
 }
 
-running() { pgrep -u "$(id -u)" -f -- "-datadir=$1( |$)" >/dev/null; }
+# pgrep/pkill take a regex, so escape the path's special characters.
+re_path() { printf '%s' "$1" | sed 's/[][\.*^$+?(){}|]/\\&/g'; }
+running() { pgrep -u "$(id -u)" -f -- "-datadir=$(re_path "$1")( |$)" >/dev/null; }
 stop_node() { # cli-function datadir
   running "$2" || return 0
   # RPC stop only if the RPC port is this node's; otherwise go straight to signals.
   if owns "$1" "$2"; then "$1" stop >/dev/null 2>&1 || true; fi
   for _ in $(seq 30); do running "$2" || return 0; pause 1; done
   # An open modal dialog can block dash-qt's shutdown; then signal it.
-  pkill -u "$(id -u)" -TERM -f -- "-datadir=$2( |$)" || true
+  pkill -u "$(id -u)" -TERM -f -- "-datadir=$(re_path "$2")( |$)" || true
   for _ in $(seq 15); do running "$2" || return 0; pause 1; done
-  pkill -u "$(id -u)" -KILL -f -- "-datadir=$2( |$)" || true; pause 1
+  pkill -u "$(id -u)" -KILL -f -- "-datadir=$(re_path "$2")( |$)" || true; pause 1
 }
 
 sync_nodes() { # wait until the demo node has the peer's tip
