@@ -68,7 +68,10 @@ write_conf() { # dir rpcport port extra...
   local dir=$1 rpc=$2 port=$3; shift 3
   mkdir -p "$dir"
   # No rpcuser/rpcpassword: dash-cli -datadir uses the node's private .cookie.
-  { printf 'regtest=1\nserver=1\n[regtest]\n'
+  # RPC on 127.0.0.1 only (rpcbind needs rpcallowip): by default it also binds
+  # ::1 and starts if either works, so a taken 127.0.0.1 port, which dash-cli
+  # uses, would go unnoticed.
+  { printf 'regtest=1\nserver=1\n[regtest]\nrpcbind=127.0.0.1\nrpcallowip=127.0.0.1\n'
     printf 'rpcport=%s\nport=%s\nfallbackfee=0.00001\n' "$rpc" "$port"
     printf '%s\n' "$@"; } > "$dir/dash.conf"
 }
@@ -104,12 +107,15 @@ EOF
 # A private Xvfb for this run, on the first free display, that only clients
 # with the cookie in $WORK/xauthority can use. stop_x shuts it down.
 XVFB_PID=
-start_x() {
-  [ -z "$XVFB_PID" ] || return 0
-  local old; old=$(cat "$WORK/xvfb.pid" 2>/dev/null || true)   # left by --keep
+stop_kept_x() { # an Xvfb left running by capture.sh --keep
+  local old; old=$(cat "$WORK/xvfb.pid" 2>/dev/null || true)
   if [[ $old =~ ^[0-9]+$ ]] && [ -O "/proc/$old" ] && [ "$(cat "/proc/$old/comm")" = Xvfb ]; then
     kill "$old" || true
   fi
+}
+start_x() {
+  [ -z "$XVFB_PID" ] || return 0
+  stop_kept_x
   export XAUTHORITY=$WORK/xauthority
   : > "$XAUTHORITY"
   # Wildcard entry (any host, any display): the display number isn't known yet.
@@ -139,7 +145,7 @@ tick() { # advance both nodes' clocks by $1 seconds (default 600)
 
 # Make sure the node answering on a data directory's RPC port is that data
 # directory's node, not one left running from another $WORK.
-owns() { "$1" getrpcinfo 2>/dev/null | grep -qF "\"logpath\": \"$2/"; }  # cli-function datadir
+owns() { "$1" -rpcclienttimeout=30 getrpcinfo 2>/dev/null | grep -qF "\"logpath\": \"$2/"; }  # cli-function datadir
 own() { owns "$@" || die "another Dash Core node answers on the RPC port in $2/dash.conf; stop it first"; }
 
 # -daemonwait returns only once the node is up, and fails if its ports are
@@ -171,6 +177,7 @@ start_demo_qt() {
     kill -0 "$pid" 2>/dev/null || die "dash-qt exited; see $WORK/dash-qt.log"
     pause 1
   done
+  [ -f "$DEMO/regtest/.cookie" ] || die "dash-qt did not start its RPC server; see $WORK/dash-qt.log"
   cli -rpcwait -rpcwaittimeout=90 getblockcount >/dev/null; own cli "$DEMO"
 }
 

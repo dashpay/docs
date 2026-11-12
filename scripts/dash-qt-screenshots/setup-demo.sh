@@ -18,7 +18,7 @@ if [ -e "$WORK" ]; then
   # Only delete a directory this script created.
   check_work
   [ -f "$WORK/mocktime" ] || die "$WORK does not look like demo data; not deleting it"
-  stop_node cli "$DEMO"; stop_node pcli "$PEER"; rm -rf "$WORK"
+  stop_node cli "$DEMO"; stop_node pcli "$PEER"; stop_kept_x; rm -rf "$WORK"
 fi
 mkdir -p "$WORK"; check_work; echo "$MOCKTIME" > "$WORK/mocktime"
 trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"; stop_x' EXIT
