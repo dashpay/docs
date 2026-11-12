@@ -176,13 +176,17 @@ The number of words generated correlates to the amount of entropy used:
 |  224         |    21  |
 |  256         |    24  |
 
-The passphrase can be of any length.  It is simply appended to the mnemonic pseudo-sentence, and then both the mnemonic and password are hashed 2,048 times using HMAC-SHA512, resulting in a seemingly-random 512-bit seed.  Because any input to the hash function creates a seemingly-random 512-bit seed, there is no fundamental way to prove the user entered the correct password, possibly allowing the user to protect a seed even when under duress.
+BIP39 does not limit the passphrase length. However, as of Dash Core 24.0.0, Dash Core rejects a passphrase longer than 248 bytes when creating an HD wallet or upgrading a wallet to HD (256 bytes with the `-allow-deprecated-long-mnemonics` option, which is intended only for recovering existing wallets).  The passphrase is simply appended to the mnemonic pseudo-sentence, and then both the mnemonic and password are hashed 2,048 times using HMAC-SHA512, resulting in a seemingly-random 512-bit seed.  Because any input to the hash function creates a seemingly-random 512-bit seed, there is no fundamental way to prove the user entered the correct password, possibly allowing the user to protect a seed even when under duress.
 
 For implementation details, please see [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
+## Descriptor Wallets
+
+As of Dash Core 24.0.0, new Dash Core wallets are descriptor wallets by default. A descriptor wallet uses [output script descriptors](https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki) to describe the scripts it watches and how their keys are derived. A legacy wallet can still be created by setting `descriptors` to `false` in the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet) or by running `dash-wallet create` with the `-legacy` option. The experimental [`migratewallet` RPC](../api/remote-procedure-calls-wallet.md#migratewallet) converts an existing legacy wallet to a descriptor wallet.
+
 ## Loose-Key Wallets
 
-Loose-Key wallets, also called "Just a Bunch Of Keys (JBOK)", are a form of wallet that originated from the Bitcoin Core client wallet. The Dash Core client wallet creates 1000 private key/public key pairs automatically via a Pseudo-Random-Number Generator (PRNG) for later use.
+Loose-Key wallets, also called "Just a Bunch Of Keys (JBOK)", are a form of wallet that originated from the Bitcoin Core client wallet. A legacy Dash Core wallet created without HD support (`-usehd=0`) creates 1000 private key/public key pairs automatically via a Pseudo-Random-Number Generator (PRNG) for later use.
 
 These unused private keys are stored in a virtual "key pool", with new keys being generated whenever a previously-generated key was used, ensuring the pool maintained 1000 unused keys. (If the wallet is encrypted, new keys are only generated while the wallet is unlocked.)
 
