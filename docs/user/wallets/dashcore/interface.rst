@@ -561,10 +561,13 @@ The Tools Dialog
 ================
 
 This documentation describes the functionality of the Dash Core Tools
-dialog, available under the **Tools** menu in Dash Core.
+dialog, available under the **Window** menu in Dash Core.
 
 Information tab
 ---------------
+
+The buttons at the top of the Information tab switch between three views:
+**General**, **Network** and **Governance**.
 
 .. figure:: img/tools-information.png
    :scale: 50 %
@@ -589,9 +592,65 @@ Memory pool
   both transactions created since the last block and transactions which
   could not be entered in the last block because it was full.
 
-Open debug log file
-  This button opens debug.log from the application data directory. This
-  file contains output from Dash Core which may help to diagnose errors.
+To open debug.log from the application data directory, click **File > Open
+debug log file**. This file contains output from Dash Core which may help to
+diagnose errors.
+
+The **Network** view shows the status of Dash-specific network features.
+
+.. figure:: img/tools-information-network.png
+   :scale: 50 %
+
+   The Network view of the Information tab
+
+Credit Pool
+  This section shows the funds locked in the Platform credit pool, the change
+  in the last block, the number of pending unlocks and the current withdrawal
+  limit.
+
+InstantSend
+  This section shows the number of verified and unverified InstantSend locks,
+  locks still waiting for their transaction, and transactions without an
+  InstantSend lock.
+
+Masternodes
+  This section shows the total and enabled number of regular masternodes and
+  evonodes.
+
+ChainLocks
+  This section shows the height, time and hash of the most recent ChainLocked
+  block.
+
+Quorums
+  This section lists each long-living masternode quorum (LLMQ) type with its
+  number of active quorums and their health. Hover over an entry for more
+  detail, such as when the last quorum formed.
+
+The **Governance** view summarizes the current governance cycle.
+
+.. figure:: img/tools-information-governance.png
+   :scale: 50 %
+
+   The Governance view of the Information tab
+
+General
+  This section shows the number of completed voting cycles, the last and next
+  superblock heights, and the voting cutoff block for the next superblock.
+
+Participation
+  This section shows the highest number of masternodes and evonodes that have
+  voted on a single proposal, out of those eligible, and the number of yes
+  votes a proposal needs to pass.
+
+Node
+  This section shows how many masternodes this wallet controls the voting keys
+  for, and how many votes they have.
+
+Proposals
+  This section shows the number of proposals, how much of the budget is
+  allocated to proposals that will be funded, and how many proposals are
+  passing, passing but unfunded because the budget is used up, or failing. The
+  chart shows each passing proposal's share of the budget.
 
 Console tab
 -----------

@@ -65,6 +65,10 @@ Following this process keeps the window contents consistent either way.
 
 ## Headless setup (Ubuntu, no desktop)
 
+On a desktop, run only the package and locale lines: the `fonts.conf` step
+changes the default font for your whole session, and the scripts below set up
+their own fonts anyway.
+
 ```bash
 sudo apt-get install --no-install-recommends \
   xvfb xauth fonts-ubuntu fontconfig imagemagick xdotool locales
@@ -90,6 +94,89 @@ DISPLAY=:99 LANG=en_US.UTF-8 QT_FONT_DPI=96 dash-qt -regtest -datadir=<dir> &
 The static dash-qt build only has the `xcb` Qt platform plugin, so it needs an
 X display (Xvfb) even for `dash-qt -help`.
 
+Screenshot tools add metadata such as the capture time and time zone. Remove it
+from hand-taken screenshots before committing them: `mogrify -strip <file>.png`.
+
+## Scripted capture
+
+Some screenshots can be retaken with scripts in this directory. They need the
+packages above (the scripts set up fontconfig, Qt settings and Xvfb themselves)
+and a Dash Core build. Use a release you verified or built yourself: the scripts
+run its binaries as you.
+
+```bash
+export DASH_BIN=/path/to/dash/bin   # dashd, dash-cli, and dash-qt (or qt/dash-qt)
+
+./setup-demo.sh            # build the regtest demo data (about 40 s)
+./capture.sh               # all shots, or name some: capture.sh options wizard
+./compare.sh               # what changed against the committed images
+./compare.sh --install     # copy the changed images into the repository
+```
+
+| Script | What it does |
+|---|---|
+| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes, a few ordinary payments, and payment requests (made in the GUI, so it needs Xvfb too). Keeps a pristine copy of it. |
+| `capture.sh` | Restores the pristine copy (every run), starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
+| `compare.sh` | Compares the images from the latest capture run with the repository, or with another output directory, and lists the share of changed pixels per image. |
+| `lib.sh` | Shared settings and helpers. |
+
+Data, logs and output go in `WORK` (default `/tmp/dash-qt-screenshots`). The
+Tools window shots show that path, so `capture.sh tools` only runs with the
+default. The scripts keep other local users out:
+
+- `WORK` must be a folder you own that others can't write to, and is created
+  private. Every folder above it must belong to you or root and not be writable
+  by others, unless it is sticky like `/tmp`.
+- Each run starts its own Xvfb on a free display, readable only with the cookie
+  in `$WORK/xauthority`, and stops it at the end (`--keep` leaves it running and
+  prints how to reach and stop it).
+- The nodes use RPC cookie authentication; there is no fixed password. They
+  start with `-daemonwait` (dash-qt: a fresh cookie), so a script never talks to
+  a server someone else started on the same port.
+- `compare.sh --install` only copies regular PNG files under `docs/user/`.
+
+What is repeatable:
+
+- Two capture runs on the same demo data give identical images, except:
+  - the wizard's Keys, Review and Save operator key pages, which show an
+    operator key that dash-qt generates at random
+  - the Tools window's Information tab (**Startup time**) and Console tab (the
+    welcome message's timestamp), which use the real clock
+- A new demo data build gives the same addresses, keys, heights, dates and vote
+  totals. Masternode payment order (**Last Paid**, **Next Payment**), proposal
+  hashes (Governance tab **Hash** column), and wallet balances and fees depend on
+  transaction hashes and coin selection, which include random wallet choices,
+  so they can differ. Rebuild the demo data
+  only when you need to; capture runs reuse it.
+
+Limits:
+
+- Coordinates are tied to the window sizes and layout of the Dash Core version
+  the shots were written for (v24.0.0). When a release moves a button, update
+  the coordinates in `capture.sh`. A changed `compare.sh` result is the signal
+  to look.
+- The GUI compares the chain tip with the real clock, not mocktime, so it shows
+  the sync overlay. `capture.sh` clicks **Hide**. Anything else that uses the
+  real clock may differ between days.
+- Headless and regtest show in some shots:
+  - Options > Main: the tray icon options are disabled (Xvfb has no system
+    tray), and **Enable RPC server** is checked (the scripts drive the nodes
+    over RPC).
+  - Tools window Information and Repair tabs show the data directory, which is
+    under `$WORK`. Keep the default `WORK` for those shots.
+  - Receive: the payment requests are dated with the real clock when
+    `setup-demo.sh` ran (Dash Core ignores mocktime for them), so they are
+    newer than the transactions. They change only when the demo data is
+    rebuilt.
+- Not scripted, because regtest can't show them well: Tools window **Network
+  Traffic** (almost no traffic) and **Peers** (one local peer).
+- Not scripted yet, take these by hand: the masternode context menu, the
+  Proposal Votes dialog, Coin Selection, wallet migration, the splash screen,
+  Create Wallet, the wizard's confirm, signing and finished pages (they register
+  a masternode, which changes the demo data), and anything that needs v24
+  active. The status-bar icon images (`hd.png`, `locks.png`, `sync.png`,
+  `network-icons.png`) are enlarged icons, not window captures.
+
 ### Driving the GUI
 
 - Find windows with `xdotool search --onlyvisible --name ''` and
@@ -104,8 +191,9 @@ X display (Xvfb) even for `dash-qt -help`.
 
 ### Regtest demo data
 
-- Use a `dash.conf` with `rpcuser`/`rpcpassword`, and a second `dashd` peer so
-  the status bar doesn't show "Connecting to peers…".
+- Use a `dash.conf` with `server=1` (`dash-cli -datadir=<dir>` then
+  authenticates with the node's cookie file; no password needed), and a second
+  `dashd` peer so the status bar doesn't show "Connecting to peers…".
 - Mine past height 650 so DIP3 is active.
 - After each start, run `mnsync next` until the status is
   `MASTERNODE_SYNC_FINISHED`, otherwise the GUI shows the sync overlay. If the

@@ -56,7 +56,7 @@ fee to encourage nodes on the network to prioritize your transaction.
 
 Let’s try an example. Say you have received an invoice which you now
 want to pay with Dash. The writer of the invoice has included a Dash
-address, which can be seen in the following window beginning with *yWa*.
+address, which can be seen in the following window beginning with *yU2y*.
 The invoice is for 2.5 Dash, which you fill in the **Amount** field.
 
 .. figure:: img/sendready.png
