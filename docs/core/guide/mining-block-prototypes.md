@@ -16,7 +16,7 @@ The simplest and earliest method was the now-deprecated Dash Core `getwork` RPC,
 
 An improved method is the Dash Core [`getblocktemplate` RPC](../api/remote-procedure-calls-mining.md#getblocktemplate). This provides the mining software with much more information:
 
-1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet. This includes the `masternode` and `superblock` payments the coinbase transaction must make. As of Dash Core 24.0.0, once the v24 hard fork activates, each entry in these arrays must be paid by its own coinbase output. A shared masternode or a masternode with multiple owner payouts can produce several entries, and identical entries (same script and amount) each need a separate output.
+1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet. This includes the `masternode` and `superblock` payments the coinbase transaction must make. Once the v24 hard fork activates, each entry in these arrays must be paid by its own coinbase output. A shared masternode or a masternode with multiple owner payouts can produce several entries, and identical entries (same script and amount) each need a separate output.
 
 2. A complete dump of the [transactions](../resources/glossary.md#transaction) `dashd` or the mining pool suggests including in the block, allowing the mining software to inspect the transactions, optionally add additional transactions, and optionally remove non-required transactions.
 

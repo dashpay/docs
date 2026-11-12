@@ -52,7 +52,7 @@ In protocol versions > 70208, Dash Core can use any [input](../resources/glossar
 
 This phase involves exchanging a sequence of messages with a [masternode](../resources/glossary.md#masternode) so it can construct a denominate transaction with inputs from the clients in its pool.
 
-As of Dash Core 24.0.0, once the v24 hard fork activates, a client can also use a mixing session to rebalance how many coins it holds of each denomination. In a promotion, the client combines 10 coins of the session denomination into 1 coin of the next larger denomination. In a demotion, it splits 1 coin of the next larger denomination into 10 coins of the session denomination. See the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) and [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) for details.
+Once the v24 hard fork activates, a client can also use a mixing session to rebalance how many coins it holds of each denomination. In a promotion, the client combines 10 coins of the session denomination into 1 coin of the next larger denomination. In a demotion, it splits 1 coin of the next larger denomination into 10 coins of the session denomination. See the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) and [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) for details.
 
 ### Data Flow
 

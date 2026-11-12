@@ -18,7 +18,7 @@ The following table lists the aspects of the DKG process a masternode must compl
 | 70218+ | Have an open P2P port ([Dash Core 0.16.0+](https://github.com/dashpay/dash/pull/3390)). _Enforcement of this requirement is dependent on Spork 23 being enabled_ |
 | 70218+ | Have a protocol version => [`MIN_MASTERNODE_PROTO_VERSION`](https://github.com/dashpay/dash/blob/v19.x/src/version.h#L23). During updates where this version is increased, masternodes will begin receiving PoSe score increases once > 80% of masternodes have upgrade ([Dash Core 0.16.0+](https://github.com/dashpay/dash/pull/3390)). _Enforcement of this requirement is dependent on Spork 23 being enabled_ |
 
-As of Dash Core 24.0.0, quorum members also vote a member as having a bad connection if its masternode connections advertise that it does not relay transactions or does not serve compact block filters. As with the other connection requirements, enforcement depends on Spork 23 being enabled. Dash Core 24.0.0 masternodes also refuse to start with `-blocksonly=1` or `-peerblockfilters=0`.
+Quorum members also vote a member as having a bad connection if its masternode connections advertise that it does not relay transactions or does not serve compact block filters. As with the other connection requirements, enforcement depends on Spork 23 being enabled. Masternodes also refuse to start with `-blocksonly=1` or `-peerblockfilters=0`.
 
 ## Proof of Service Score Weighting
 

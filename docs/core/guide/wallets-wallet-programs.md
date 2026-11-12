@@ -84,7 +84,7 @@ The primary advantage of hardware wallets is their possibility for greatly impro
 
 The primary disadvantage of hardware wallets is their hassle. Even though the hassle is less than that of offline wallets, the user must still purchase a hardware wallet device and carry it with them whenever they need to make a transaction using the signing-only wallet. An additional disadvantage is that not all wallet programs support hardware wallets.
 
-As of Dash Core 23.1.0, Dash Core can use a hardware wallet through an external signing tool, such as the experimental [HWI](https://github.com/dashpay/HWI) tool, set with the `-signer` option. The hardware wallet is used through a descriptor wallet created with the `external_signer` and `disable_private_keys` options of the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet).
+Dash Core can use a hardware wallet through an external signing tool, such as the experimental [HWI](https://github.com/dashpay/HWI) tool, set with the `-signer` option. The hardware wallet is used through a descriptor wallet created with the `external_signer` and `disable_private_keys` options of the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet).
 
 ## Distributing-Only Wallets
 
