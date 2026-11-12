@@ -95,6 +95,103 @@ collateral transaction will reset your position in the payment queue.
 Changing your IP address or making changes to the voting or various
 payout addresses will not reset your position in the payment queue.
 
+.. _dashcore-mn-maintenance:
+
+Using the Dash Core wallet
+--------------------------
+
+Starting with Dash Core v24.0.0, the transactions described below can also be
+created from the **Masternodes** tab of the Dash Core wallet. Right-click a
+masternode in the list to open the context menu and select one of the following
+actions. Check **Owned** to show only the masternodes this wallet has keys for.
+
+.. figure:: img/dashcore-mn-context-menu.png
+   :width: 400px
+
+   Masternode list context menu in Dash Core
+
+- **Update Service…**: Creates a :ref:`ProUpServTx <dip3-update-service>`. Every
+  current value is prefilled, so only change the fields you want to update, such
+  as the **Service addresses** or, for evonodes, the Platform fields. Enter the
+  operator BLS secret key in the **Operator key** field. If the masternode has a
+  non-zero operator reward, the **Operator payout address** can also be set. A
+  successful update also revives a PoSe-banned masternode.
+- **Update Registrar…**: Creates a :ref:`ProUpRegTx <dip3-update-registrar>` to
+  change the **Operator public key**, **Voting address** or **Payout address**.
+  The owner key must be present in this wallet. Changing the operator key
+  immediately PoSe-bans the masternode, and the new operator must then send an
+  Update Service transaction to revive it.
+- **Revoke…**: Creates a :ref:`ProUpRevTx <dip3-revoke>`. Select a **Reason**
+  (**Not specified**, **Termination of service**, **Compromised keys** or
+  **Change of keys**) and enter the operator BLS secret key in the **Operator
+  key** field. Revoking clears the service address and PoSe-bans the masternode
+  until its owner changes the operator key. The collateral is not affected.
+
+Each dialog also has a **Fee source** field. For **Update Service…** and
+**Revoke…**, **Automatic (recommended)** pays the fee from the current operator
+payout address, then the masternode payout address. For **Update Registrar…**,
+it uses the masternode's current payout address. Select an address only to
+override that choice. For shared masternodes, select an address of your wallet
+instead. Click **Send Update** (or
+**Revoke**) to sign and broadcast the transaction. If your wallet is encrypted,
+you will be asked to unlock it. The transaction ID is shown once the
+transaction has been sent.
+
+.. note::
+
+  The operator key is entered manually and is not stored in the wallet. The
+  wallet sending the transaction only needs to be able to sign transactions to
+  pay the fee, except for **Update Registrar…**, which also requires the owner
+  key. The payout address of a masternode with multiple payouts cannot be
+  changed from this dialog. Use the ``protx update_registrar`` command instead.
+
+.. _shared-masternode-maintenance:
+
+Shared masternodes
+^^^^^^^^^^^^^^^^^^
+
+:ref:`Shared masternodes <shared-masternode-setup>` appear in the list with the
+type **Shared (you hold k of n)**. The context menu of a shared masternode
+offers the following actions instead of **Update Registrar…**. They require one
+of the masternode's share owner keys in this wallet. For **Change Reward
+Address…** and **Rotate Keys…**, the fee is paid from an address of your wallet
+that you select in **Fee source**. Dissolution fees are deducted from a
+participant's refunded principal.
+
+- **Change Reward Address…**: Changes where your share of the masternode's
+  rewards is paid. Enter the **New reward address**, or click **Use new
+  address** or **Use refund address**, then click **Send Update**. Only your
+  share is affected. The amount and refund address of a share never change.
+- **Rotate Keys…**: Changes the operator key and/or voting address. Every share
+  owner must approve the change. One person enters the **New operator key**
+  and/or **New voting address** and clicks **Prepare Request**, then sends the
+  same request to every share owner. The others paste the request, click
+  **Approve and Copy Reply** and send back their reply. When all approvals are
+  in, the person who prepared the request clicks **Send Rotation**. The
+  masternode is PoSe-banned as soon as the operator key changes, until the new
+  operator sends an Update Service transaction.
+- **Dissolve…**: Ends the masternode and returns every participant's principal
+  to their refund address. This cannot be undone. Select **Dissolve Now** to
+  dissolve on your own. During the early period, you pay the early-exit
+  penalty and must confirm this before continuing. Select **Dissolve Together**
+  to dissolve for free at any time with the approval of every share owner,
+  using the same prepare and approve steps as **Rotate Keys…**, then click
+  **Send Dissolution**.
+- **Create Standby Dissolution…**: Creates a signed dissolution file that you
+  keep offline and only broadcast if you need it. It never expires and recovers
+  your principal even if your wallet is lost. The file holds two transactions:
+  one that returns your full principal once the early period has ended, and one
+  that is valid immediately but pays the early-exit penalty. Store the file
+  with your refund address backup, separately from your wallet.
+
+The dissolution actions are available once the registration has at least one
+confirmation.
+
+To continue a request you received from another share owner, open the **Shared
+Masternode…** wizard and paste the message on the landing page. Dash Core opens
+the matching dialog. If you paste a standby dissolution, Dash Core asks whether
+to broadcast it.
+
 .. _dip3-update-service:
 
 ProUpServTx
@@ -229,6 +326,7 @@ Example to update payout address::
 
   protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae "" "" yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
 
+.. _dip3-revoke:
 
 ProUpRevTx
 ----------
