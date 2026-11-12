@@ -89,6 +89,10 @@ Users should never manually manage private keys on mainnet. As dangerous as raw 
 
 Use the [`dumpprivkey` RPC](../api/remote-procedure-calls-wallet.md#dumpprivkey) to get the [private keys](../resources/glossary.md#private-key) corresponding to the [public keys](../resources/glossary.md#public-key) used in the two UTXOs our inputs we will be spending.  We need the private keys so we can sign each of the inputs separately.
 
+:::{note}
+The `dumpprivkey` RPC only works with legacy wallets. See the [tutorial setup](../examples/transaction-tutorial.md#setup) to create one.
+:::
+
 ``` bash
 > dash-cli -regtest dumpprivkey $UTXO1_ADDRESS
 cNL522MEQUnQxsZJo4ryPH8sPd2uVZaFKjKnZivo9DyVjpAGU7qP
