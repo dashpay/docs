@@ -24,12 +24,7 @@ I=$U/wallets/dashcore/img
 WIZ=$WORK/wizard-raw
 
 # --- Shots -------------------------------------------------------------------
-# Main window: 1124 x 784 matches the existing main-window images.
-# Tab x positions in the 1124-wide tab bar: Overview 72, Send 212, Receive 352,
-# Transactions 492, CoinJoin 632, Masternodes 772, Governance 912.
-main_tab() { # x of the tab
-  M=$(main_win); place "$M" 1124 784; click "$M" "$1" 45 1.5
-}
+# main_tab (lib.sh) switches tabs in the 1124 x 784 main window.
 
 shot_tabs() {
   main_tab 72;  grab "$M" "$I/overview.png"
@@ -147,11 +142,7 @@ start_x
 stop_node cli "$DEMO"; stop_node pcli "$PEER"
 rm -rf "$DEMO" "$PEER"; cp -a "$WORK/demo.base" "$DEMO"; cp -a "$WORK/peer.base" "$PEER"
 [ $KEEP = 1 ] || trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"' EXIT
-start_peer; start_demo_qt
-sync_nodes; finish_mnsync
-M=$(main_win); place "$M" 1124 784
-click "$M" 980 627   # "Hide" on the sync overlay (shown because the GUI compares
-                     # the mocktime tip with the real clock); harmless otherwise
+start_peer; open_gui
 mkdir -p "$I" "$U/masternodes/img" "$U/governance/img/core-qt"
 touch "$OUT/.run-start"   # compare.sh only looks at images from this run
 for s in "${REQ[@]}"; do echo "capturing $s"; "shot_$s"; done

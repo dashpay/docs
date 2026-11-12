@@ -124,6 +124,21 @@ tick 60; W sendtoaddress "$(W getnewaddress 'Savings')" 1 >/dev/null
 mine 1
 
 W encryptwallet "$WALLET_PASS" >/dev/null
+
+echo "Adding payment requests in the GUI..."
+# Dash Core has no RPC for payment requests, and dates them with the real clock,
+# so they're made once here and kept in the pristine copy.
+stop_node cli "$DEMO"; open_gui; main_tab 352   # Receive
+request() { # label amount message
+  click "$M" 500 145 0.3; type_text "$M" "$1"
+  click "$M" 150 186 0.3; key "$M" ctrl+a; [ -z "$2" ] || type_text "$M" "$2"
+  click "$M" 500 227 0.3; [ -z "$3" ] || type_text "$M" "$3"
+  click "$M" 167 267 2                           # Create new receiving address
+  key "$(win "Request payment to $1")" Escape
+}
+request "Invoice #125" 12.5 "Website design"
+request "Meetup donations" "" "Thanks for supporting the Dash meetup"
+request "Rent share" 450 "November"
 echo "Height $(cli getblockcount), $(cli protx list | grep -c '"') masternodes, $(cli gobject count | tr -d '\n')"
 stop_node cli "$DEMO"; stop_node pcli "$PEER"
 # capture.sh restores these copies before each run, so wallet state such as the

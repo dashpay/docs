@@ -108,7 +108,7 @@ export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
 
 | Script | What it does |
 |---|---|
-| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes, and a few ordinary payments. Keeps a pristine copy of it. |
+| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes, a few ordinary payments, and payment requests (made in the GUI, so it needs Xvfb too). Keeps a pristine copy of it. |
 | `capture.sh` | Restores the pristine copy (every run), starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
 | `compare.sh` | Compares the images from the latest capture run with the repository, or with another output directory, and lists the share of changed pixels per image. |
 | `lib.sh` | Shared settings and helpers. |
@@ -142,8 +142,10 @@ Limits:
     over RPC).
   - Tools window Information and Repair tabs show the data directory, which is
     under `$WORK`. Keep the default `WORK` for those shots.
-  - Receive: **Requested payments history** is empty. Payment requests can only
-    be created in the GUI.
+  - Receive: the payment requests are dated with the real clock when
+    `setup-demo.sh` ran (Dash Core ignores mocktime for them), so they are
+    newer than the transactions. They change only when the demo data is
+    rebuilt.
 - Not scripted, because regtest can't show them well: Tools window **Network
   Traffic** (almost no traffic) and **Peers** (one local peer).
 - Not scripted yet, take these by hand: the masternode context menu, the

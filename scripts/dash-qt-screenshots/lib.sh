@@ -151,6 +151,22 @@ key() { xdotool windowfocus "$1"; shift; xdotool key "$@"; pause 1; }
 type_text() { xdotool windowfocus "$1"; xdotool type --delay 15 "$2"; xdotool mousemove $PARK_X $PARK_Y; pause 0.5; }
 grab() { mkdir -p "$(dirname "$2")"; import -window "$1" +repage -strip "$2"; }  # id out
 
+# Main window: 1124 x 784 matches the existing main-window images.
+# Tab x positions in the 1124-wide tab bar: Overview 72, Send 212, Receive 352,
+# Transactions 492, CoinJoin 632, Masternodes 772, Governance 912.
+main_tab() { # x of the tab
+  M=$(main_win); place "$M" 1124 784; click "$M" "$1" 45 1.5
+}
+
+# Start dash-qt on the demo data (the peer must be running) and get the main
+# window ready: synced, placed, and the sync overlay hidden.
+open_gui() {
+  start_x; start_demo_qt; sync_nodes; finish_mnsync
+  M=$(main_win); place "$M" 1124 784
+  click "$M" 980 627   # "Hide" on the sync overlay (shown because the GUI compares
+                       # the mocktime tip with the real clock); harmless otherwise
+}
+
 # Cut the empty space between a dialog's content and its bottom button row.
 # Keeps the content, a 24 px margin and the last 64 px (buttons).
 compact() { # in out
