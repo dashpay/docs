@@ -36,7 +36,8 @@ shot_tabs() {
   key "$M" ctrl+shift+d; place "$M" 1124 798   # Settings > Discreet mode
   grab "$M" "$I/overview-discreet.png"; key "$M" ctrl+shift+d
   main_tab 212; grab "$M" "$I/send.png"
-  # Filled-in form. The address is the peer wallet's next one, the same every run.
+  # Filled-in form. The address is the peer wallet's next one, the same every run;
+  # send-receive.rst names its first characters (yU2y).
   local a; a=$(pcli -rpcwallet=ext getnewaddress)
   click "$M" 485 129 0.3; type_text "$M" "$a"
   click "$M" 485 172 0.3; type_text "$M" "Invoice #124"
