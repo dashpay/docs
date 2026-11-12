@@ -44,7 +44,7 @@ Usage:
 
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
-       regtest
+       devnet, regtest
 
   -devnet=<name>
        Use devnet chain with provided name

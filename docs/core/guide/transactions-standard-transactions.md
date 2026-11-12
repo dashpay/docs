@@ -12,6 +12,10 @@ Non-standard transactions---those that fail the test---may be accepted by [nodes
 
 Besides making it more difficult for someone to attack Dash for free by broadcasting harmful transactions, the standard transaction test also helps prevent users from creating transactions today that would make adding new transaction features in the future more difficult. For example, as described above, each transaction includes a version number---if users started arbitrarily changing the version number, it would become useless as a tool for introducing backwards-incompatible features.
 
+:::{note}
+The shared collateral script (`04445348437551`) used by [shared masternodes](../reference/transactions-special-transactions.md#shared-masternode-registration) is non-standard except as the declared collateral output of a shared masternode registration (ProRegTx). Spending it is only standard in a [ProDisTx](../reference/transactions-special-transactions.md#prodistx).
+:::
+
 As of Dash Core 0.12.2, the standard pubkey script types are:
 
 ## Pay To Public Key Hash (P2PKH)

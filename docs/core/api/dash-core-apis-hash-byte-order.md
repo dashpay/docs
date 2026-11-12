@@ -55,6 +55,10 @@ As header hashes and TXIDs are widely used as global identifiers in other Dash s
 |---------------|---------------------|-----------------|
 
 :::{note}
+As of Dash Core 24.0.0, the TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) is calculated with the payload's quorum signing info set to zero, so it is not SHA256(SHA256()) of the full transaction. The SHA256(SHA256()) hash of the full transaction is its instance hash.
+:::
+
+:::{note}
 Note: RPCs which return raw results, such as `getrawtransaction` or the raw mode of `getblock`, always display hashes as they appear in blocks ([internal byte order](../resources/glossary.md#internal-byte-order)).
 :::
 
@@ -69,7 +73,8 @@ decode_hex = codecs.getdecoder('hex_codec')
 encode_hex = codecs.getencoder('hex_codec')
 
 # You can put in $data an 80-byte block header to get its header hash,
-# or a raw transaction to get its txid
+# or a raw transaction to get its txid (for a version 2 asset unlock
+# transaction, this gives its instance hash instead of its txid)
 data = decode_hex('00')[0]
 data_hash = sha256(sha256(data).digest()).digest()
 

@@ -144,6 +144,11 @@ Accessing the Governance tab
 Open your Dash Core Wallet and click on the **Governance** tab. This displays a list of existing
 proposals and provides **Create Proposal** and **Resume Proposal** buttons.
 
+The tab also shows the estimated voting deadline for the current superblock
+cycle. If your wallet contains masternode voting keys, you can use the **My
+Votes** column and the **Votes…** button to review and cast votes. See
+:ref:`proposal-vote-core-qt` for details.
+
 .. figure:: img/core-qt/governance-tab.png
    :width: 500px
 
@@ -414,6 +419,7 @@ are available to view and manage proposals and voting:
 
 - `DashCentral <https://www.dashcentral.org/budget>`__
 - `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
+- :ref:`Dash Core wallet Governance tab <proposal-vote-core-qt>`
 
 For information on how to create a proposal, see :ref:`here
 <creating-proposals>`.
@@ -450,6 +456,58 @@ tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT.
    :width: 400px
 
    Voting interface in DMT
+
+.. _proposal-vote-core-qt:
+
+Dash Core wallet Governance tab
+-------------------------------
+
+.. versionadded:: v24.0.0
+
+   Votes can be cast from the Governance tab of the Dash Core wallet.
+
+The Governance tab of the Dash Core wallet can vote with any masternode whose
+voting key is in the loaded wallet. Voting is available once the wallet has
+finished synchronizing governance data. If the wallet is encrypted, you will be
+asked to unlock it when you submit your votes.
+
+The Governance tab shows the estimated voting deadline for the current
+superblock cycle above the list of proposals, for example **Voting deadline: ~3
+days left (1728 blocks, block 2345678)**. The estimate is based on the remaining
+blocks and the target block time. Votes cast after the deadline are still
+relayed, but may not affect the payment for the current cycle.
+
+The **My Votes** column summarizes the current votes cast on each proposal by
+the masternodes whose voting keys are in your wallet. Votes are counted by
+weight, so an evonode counts as four votes. For example, **4Y, 0N, 0A / 1
+unvoted** means that four votes were cast for **Yes** and one vote has not been
+cast. Hover over the column to see the vote of each masternode. **No voting
+keys** means that the wallet does not contain a voting key for any eligible
+masternode.
+
+To vote on a proposal:
+
+#. Select the proposal and click **Votes…**. Alternatively, right-click the
+   proposal and click **Vote Yes**, **Vote No** or **Vote Abstain**.
+#. In the **Proposal Votes** dialog, confirm or change the vote outcome in the
+   dropdown box. The dialog lists each eligible masternode, along with its
+   voting address, vote weight, current vote, the time of its current vote and
+   its ProTx hash.
+#. Select the checkbox next to each masternode you want to vote with, or click
+   **Select All**. The number of selected masternodes and their total vote
+   weight are shown below the list.
+#. Click the vote button (for example, **Vote Yes**) and unlock the wallet if
+   prompted.
+
+.. figure:: img/core-qt/proposal-votes-dialog.png
+   :width: 500px
+
+   Selecting masternodes to vote with in the Proposal Votes dialog
+
+Dash Core displays a summary showing how many votes succeeded and lists any
+errors. Changing a vote replaces that masternode's previous vote on the
+proposal. The network only accepts a changed vote from the same masternode once
+per hour.
 
 .. _dash-core-voting:
 
@@ -501,3 +559,6 @@ vote of a running masternode. The wallet controlling the private key to
 this address will then cast votes on behalf of this masternode owner
 simply by following the :ref:`Dash Core voting procedure <dash-core-voting>` 
 described above. No further configuration is required.
+
+Delegates can also vote from the :ref:`Governance tab <proposal-vote-core-qt>`
+of the Dash Core wallet.

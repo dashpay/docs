@@ -16,6 +16,8 @@ The [`clsig` message](../reference/p2p-network-instantsend-messages.md#clsig) is
 
 Once a [`clsig` message](../reference/p2p-network-instantsend-messages.md#clsig) is received, clients must reject any other blocks for the indicated block height as described in [DIP8 (ChainLocks)](https://github.com/dashpay/dips/blob/master/dip-0008.md). This increases security by preventing reorganization of a block with a ChainLock (and all blocks below it).
 
+As of Dash Core 24.0.0, a `clsig` message is only accepted if the node requested it from the sending peer via a [`getdata` message](../reference/p2p-network-data-messages.md#getdata); unrequested messages are ignored and the sending peer is treated as misbehaving. Also as of Dash Core 24.0.0, synced nodes recover ChainLocks from the ChainLock signature embedded in the coinbase transaction of newly connected blocks (after v20 activation) and relay them like any other new ChainLock, even if the original `clsig` message was missed.
+
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | 4 | nHeight | int32_t | Block height
@@ -52,10 +54,14 @@ The [`isdlock` message](../reference/p2p-network-instantsend-messages.md#isdlock
 
 The request ID for an isdlock can be calculated deterministically using the formula: `hash("islock" + serialized_inputs)`, where "islock" is a string prefix and the inputs are serialized in their COutPoint format. This ID is used for quorum signature verification and can be obtained via the [`getislocks` RPC command](../api/remote-procedure-calls-raw-transactions.md#getislocks).
 
+As of Dash Core 24.0.0, version 2 asset unlock transactions can be locked by InstantSend. Since these transactions have no inputs, the `isdlock` carries a single synthetic outpoint consisting of the asset unlock's signing request ID (`hash("plwdtx" + withdrawal_index)`) and an index of `0`. This binds the withdrawal index to one TXID so any other transaction claiming the same index conflicts with the lock.
+
+Since Dash Core 23.1.3, `isdlock` inventory announcements are not sent to masternode peers that have requested recovered signatures via the [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendrecsigs), since they can reconstruct the `isdlock` from the recovered signature.
+
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | 1 | version | uint8 | The version of the isdlock message |
-| 1-9 | inputsSize | compactSize uint | Number of inputs |
+| 1-9 | inputsSize | compactSize uint | Number of inputs<br>As of Dash Core 23.1.7, limited to 48,780 (the maximum block size divided by 41, the minimum size of a transaction input) |
 | 36 * `inputsSize`| inputs | COutPoint | Outpoints used in the transaction |
 | 32 | txid | uint256 | TXID of the locked transaction |
 | 32 | cycleHash | uint256 | Block hash of first block of the DKG cycle in which the quorum signing this isdlock is active.<br>**Note**: As of v23.0.0 (protocol 70237), this represents the signing quorum's cycle, not the current height's cycle |

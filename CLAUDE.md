@@ -74,7 +74,9 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 * `scripts/dashmate-update.sh` - Updates dashmate download links content
 * `scripts/check-rpc-links.py` - Verifies that `` [`<rpc>` RPC](...#anchor) `` links point at the RPC they name. Run after editing RPC docs: `scripts/check-rpc-links.py [paths...]` (default: `docs/`)
 * `scripts/core-help-parsing.sh` - Converts `dashd`/`dash-qt`/`dash-cli --help` output into the format used by the `docs/core/dashcore/wallet-arguments-and-commands-*` pages (supports `--update <file>`)
+* `scripts/core-regtest-examples/` - Regenerates the `docs/core/api/http-rest-requests.md` examples from a deterministic Dash Core regtest run (`DASH_BIN=<dir> ./capture-rest-examples.sh`). Example output on that page comes from this script; don't hand-edit it. See its README
 * `scripts/core-rpc-tools/` - Dumps RPC help from a running node and generates version-to-version change summaries. Primary workflow for Dash Core release updates; see its README.
+* `scripts/dash-qt-screenshots/README.md` - Screenshot profile and headless (Xvfb) setup for Dash Core GUI screenshots. Follow it for every new or retaken Dash Core screenshot so desktop and headless captures match. In short: Ubuntu Sans, Light theme, font-scale -30, weights 3/6, `LANG=en_US.UTF-8`, `QT_FONT_DPI=96`. Retakes match the old image's size; new main-window shots default to 1064x749. Keep window title bars when a capture has them; headless captures without them are fine. `setup-demo.sh`, `capture.sh` and `compare.sh` there rebuild deterministic regtest demo data and retake the main-window tab, Options, Tools window (Information, Console, Repair) and registration wizard screenshots.
 
 ## Automation
 
@@ -85,4 +87,5 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 
 * Branches are named after Dash Core versions. PRs target the upstream (`dashpay/docs`) default branch, currently `23.0.0`. Older version branches (e.g., `0.17.0`) are stale; do not use them as a PR base even if a fork's `HEAD` points there.
 * Commit messages use conventional commits with scopes, e.g. `docs(rpc): ...`, `docs(governance): ...`, `chore: ...`.
+* Generate new example output for `docs/core/` on regtest so it can be reproduced later, preferably with a script under `scripts/core-regtest-examples/`. Use testnet only when regtest can't show the behavior (InstantSend/ChainLocks, quorums, live network parameters). Don't label examples as regtest output; the `*Examples from Dash Core X*` heading is enough.
 * Before finishing a change, do a clean rebuild and confirm no new Sphinx warnings. After RPC doc edits, also run `scripts/check-rpc-links.py`.

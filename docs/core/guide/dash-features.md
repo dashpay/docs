@@ -20,6 +20,8 @@ The most important differentiating feature of the Dash payments network is the c
 
 However, the Dash network has a second layer of network participants that provide enhanced functionality in exchange for compensation. This second layer of masternodes enables the industry-leading features described in this section - most notably: [InstantSend](../guide/dash-features-instantsend.md), [ChainLocks](../guide/dash-features-chainlocks.md), [CoinJoin](../guide/dash-features-coinjoin.md), and [Governance](../guide/dash-features-governance.md).
 
+After the v24 hard fork activates, a masternode's collateral can be shared by 2 to 8 participants, and a masternode owner can split their reward across up to 8 payout addresses (see [Masternode Payment](../guide/dash-features-masternode-payment.md)). [Evonodes](#evolution-masternodes) cannot use either feature until the separate `evo_shares` deployment activates.
+
 #### Evolution Masternodes
 
 :::{note}

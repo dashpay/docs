@@ -169,6 +169,22 @@ registered on the Dash network. You can filter the data by entering a
 value in the Filter List field, or display only masternodes with owner
 keys stored in the loaded wallet.
 
+The type filter can show all masternodes, or only regular masternodes,
+evonodes or shared masternodes. Click **Register Masternode…** to register a
+new masternode or evonode using the loaded wallet, or click **Shared
+Masternode…** to create a masternode whose collateral is pooled by multiple
+parties, or to continue a saved session. See :ref:`dashcore-mn-wizard` for
+details on registering a masternode from this tab, and
+:ref:`masternode-maintenance` for details on maintaining a masternode.
+
+Right-click a masternode to copy its ProTx hash or collateral outpoint, filter
+the list by one of its addresses, or maintain a masternode controlled by the
+loaded wallet. Maintenance actions include **Update Service…**, **Update
+Registrar…** and **Revoke…**. Shared masternodes also offer **Change Reward
+Address…**, **Rotate Keys…**, **Dissolve…** and **Create Standby
+Dissolution…**. Actions that the loaded wallet cannot perform are disabled,
+and their tooltips explain why.
+
 .. figure:: img/masternodes.png
 
    The Masternodes tab
@@ -179,6 +195,13 @@ The Governance Tab
 The Governance tab shows an overview of the governance proposals currently
 active on the Dash network. You can filter the data by entering a
 value in the Filter List field.
+
+The tab also shows an estimate of the voting deadline for the current
+superblock cycle. When a wallet is loaded, the **My Votes** column summarizes
+the current votes on each proposal from masternodes whose voting keys are in the
+wallet, or shows **No voting keys**. Select a proposal and click **Votes…** to
+view each masternode's current vote and to vote with selected masternodes. See
+:ref:`proposal-vote-core-qt` for details.
 
 .. figure:: img/governance.png
 
@@ -349,17 +372,6 @@ Enable coin control features
 Keep custom change address
   Whether to keep the specified custom change address or not.
   
-Show Masternodes tab
-  Enabling this option causes Dash Core to display an additional
-  Masternodes tab to the right of the Transactions tab. This option
-  requires you to restart the Dash Core app. The Masternodes tab can be
-  used to view details of masternodes registered on the Dash blockchain.
-
-Show Governance tab
-  Enabling this option causes Dash Core to display an additional Governance tab.
-  This option requires you to restart the Dash Core app. The Governance tab can
-  be used to view details of governance proposals active on the Dash network.
-
 Spend unconfirmed change
   When this option is enabled, the Dash Core wallet permits you to
   immediately spend change from previous transactions that has been
@@ -489,6 +501,20 @@ User interface language
   Select your preferred language from this drop-down menu. Changing the
   language requires you to restart the Dash Core app.
 
+Show Masternodes tab
+  Enabling this option causes Dash Core to display an additional
+  Masternodes tab to the right of the Transactions tab. The Masternodes tab can
+  be used to view details of masternodes registered on the Dash blockchain.
+
+Show Governance tab
+  Enabling this option causes Dash Core to display an additional Governance tab.
+  The Governance tab can be used to view details of governance proposals active
+  on the Dash network.
+
+Show governance clock
+  Enabling this option shows the governance clock in the status bar. This option
+  is only available when the Governance tab is shown.
+
 Unit to show amounts in
   This allows you to change the default unit of currency in Dash Core from
   DASH to mDASH, µDASH or duffs. Each unit shifts the decimal separator
@@ -535,10 +561,13 @@ The Tools Dialog
 ================
 
 This documentation describes the functionality of the Dash Core Tools
-dialog, available under the **Tools** menu in Dash Core.
+dialog, available under the **Window** menu in Dash Core.
 
 Information tab
 ---------------
+
+The buttons at the top of the Information tab switch between three views:
+**General**, **Network** and **Governance**.
 
 .. figure:: img/tools-information.png
    :scale: 50 %
@@ -563,9 +592,65 @@ Memory pool
   both transactions created since the last block and transactions which
   could not be entered in the last block because it was full.
 
-Open debug log file
-  This button opens debug.log from the application data directory. This
-  file contains output from Dash Core which may help to diagnose errors.
+To open debug.log from the application data directory, click **File > Open
+debug log file**. This file contains output from Dash Core which may help to
+diagnose errors.
+
+The **Network** view shows the status of Dash-specific network features.
+
+.. figure:: img/tools-information-network.png
+   :scale: 50 %
+
+   The Network view of the Information tab
+
+Credit Pool
+  This section shows the funds locked in the Platform credit pool, the change
+  in the last block, the number of pending unlocks and the current withdrawal
+  limit.
+
+InstantSend
+  This section shows the number of verified and unverified InstantSend locks,
+  locks still waiting for their transaction, and transactions without an
+  InstantSend lock.
+
+Masternodes
+  This section shows the total and enabled number of regular masternodes and
+  evonodes.
+
+ChainLocks
+  This section shows the height, time and hash of the most recent ChainLocked
+  block.
+
+Quorums
+  This section lists each long-living masternode quorum (LLMQ) type with its
+  number of active quorums and their health. Hover over an entry for more
+  detail, such as when the last quorum formed.
+
+The **Governance** view summarizes the current governance cycle.
+
+.. figure:: img/tools-information-governance.png
+   :scale: 50 %
+
+   The Governance view of the Information tab
+
+General
+  This section shows the number of completed voting cycles, the last and next
+  superblock heights, and the voting cutoff block for the next superblock.
+
+Participation
+  This section shows the highest number of masternodes and evonodes that have
+  voted on a single proposal, out of those eligible, and the number of yes
+  votes a proposal needs to pass.
+
+Node
+  This section shows how many masternodes this wallet controls the voting keys
+  for, and how many votes they have.
+
+Proposals
+  This section shows the number of proposals, how much of the budget is
+  allocated to proposals that will be funded, and how many proposals are
+  passing, passing but unfunded because the budget is used up, or failing. The
+  chart shows each passing proposal's share of the budget.
 
 Console tab
 -----------

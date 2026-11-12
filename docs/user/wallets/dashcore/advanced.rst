@@ -31,8 +31,10 @@ following window appears:
 
 Right click on the transaction(s) you do not want to spend, then select
 **Lock unspent**. A small lock will appear next to the transaction. You
-can click the **Toggle lock state** button to invert the locked/unlocked
-state of all UTXOs. When you are ready to continue, click **OK**. You
+can click the **(un)lock all** button to lock all listed UTXOs. If any
+listed UTXOs are already locked, the button unlocks them instead. The
+button works in both tree mode and list mode. When you are ready to
+continue, click **OK**. You
 can now safely create transactions with your remaining funds without
 affecting the locked UTXOs.
 
@@ -661,6 +663,48 @@ Close all wallets confirmation screen.
    Close wallet confirmation
 
 Once all wallets are closed, wallet-related items on the tab bar will be disabled.
+
+.. _dashcore-migrate-wallet:
+
+Migrate a legacy wallet
+-----------------------
+
+.. versionadded:: v24.0.0
+
+   Descriptor wallets are created by default, and legacy wallets can be migrated
+   to descriptor wallets from the **File** menu.
+
+To convert a legacy (non-descriptor) wallet to a descriptor wallet, set it as
+the active wallet using the wallet selection dropdown box. Next, click **File ->
+Migrate Wallet** and then click **Yes** on the Migrate wallet confirmation
+screen. This menu item is only enabled when the active wallet is a legacy
+wallet. If the wallet is encrypted, enter the wallet passphrase when prompted.
+
+.. figure:: img/wallet-migrate-confirmation.png
+   :width: 350px
+
+   Migrate wallet confirmation
+
+Before migrating, Dash Core creates a backup of the legacy wallet in the
+wallet's directory. The backup file name ends with ``.legacy.bak``. If the
+migration fails, Dash Core restores the original wallet. If the migration
+completes but the result is not what you expected, use **File -> Restore
+Wallet...** to restore the backup.
+
+The migrated wallet keeps the same name as the original wallet. An HD wallet
+keeps the same HD seed and mnemonic. If the legacy wallet contains watch-only
+scripts, or solvable scripts that it does not watch, Dash Core moves them
+into additional wallets whose names end with ``_watchonly`` and ``_solvables``,
+respectively. The message shown when migration completes lists any additional
+wallets that were created.
+
+.. warning::
+
+  Create a new :ref:`backup <dashcore-backup>` after migrating. Earlier backups
+  contain the legacy wallet, not the migrated descriptor wallet.
+
+The ``migratewallet`` RPC provides the same function from the console or
+``dash-cli``.
 
 Alternative methods
 -------------------
