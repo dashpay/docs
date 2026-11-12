@@ -84,6 +84,10 @@ shot_tools() {
     # Console: focus the message area, so the input line has no blinking cursor.
     [ "$t" != console ] || click "$T" 400 300
     grab "$T" "$I/tools-$t.png"
+    if [ "$t" = information ]; then   # the Information tab's other views
+      click "$T" 118 73; grab "$T" "$I/tools-information-network.png"
+      click "$T" 194 73; grab "$T" "$I/tools-information-governance.png"
+    fi
   done
   key "$T" Escape
 }
