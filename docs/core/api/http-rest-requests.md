@@ -440,9 +440,6 @@ Result (whitespace added):
 
 ## GET BlockFilter
 
-:::{versionadded} 22.0.0
-:::
-
 The `GET blockfilter` operation gets the [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) compact block filter for a block either as a JSON object or as a serialized filter. Requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled (masternodes enable it automatically).
 
 *Request*
@@ -512,9 +509,6 @@ Result (whitespace added):
 
 ## GET BlockFilterHeaders
 
-:::{versionadded} 22.0.0
-:::
-
 The `GET blockfilterheaders` operation returns the [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) compact block filter headers for a specified amount of blocks in upward direction, either as a JSON array or serialized. Requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled (masternodes enable it automatically).
 
 *Request*
@@ -523,9 +517,7 @@ The `GET blockfilterheaders` operation returns the [BIP157](https://github.com/b
 GET /blockfilterheaders/<filtertype>/<hash>.<format>?count=<count>
 ```
 
-:::{versionchanged} 23.0.0
-The amount of filter headers moved to the `count` query parameter. The older `GET /blockfilterheaders/<filtertype>/<count>/<hash>.<format>` form is deprecated but still supported.
-:::
+The older `GET /blockfilterheaders/<filtertype>/<count>/<hash>.<format>` form is deprecated but still supported.
 
 *Parameter #1---the filter type*
 
@@ -927,9 +919,7 @@ The `GET headers` operation returns a specified amount of block headers in upwar
 GET /headers/<hash>.<format>?count=<count>
 ```
 
-:::{versionchanged} 23.0.0
-The amount of block headers moved to the `count` query parameter. The older `GET /headers/<count>/<hash>.<format>` form is deprecated but still supported.
-:::
+The older `GET /headers/<count>/<hash>.<format>` form is deprecated but still supported.
 
 *Parameter #1---the header hash of the block to retrieve*
 

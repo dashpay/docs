@@ -92,9 +92,7 @@ send("getdata",
 
 We request a merkle block for transactions matching our filter, completing our script.
 
-:::{note}
-The filter, block header hash, and merkle block used in these examples come from the Bitcoin block chain, where this example originated, so a Dash node won't return a merkle block for them. To try the script on Dash, create a filter for a Dash transaction as shown in [Creating a Bloom Filter](../examples/p2p-network-creating-a-bloom-filter.md) and request the block that contains it.
-:::
+% TODO: Replace the Bitcoin filter, block header hash and merkle block in these examples with Dash data (the parsing page's SVGs would need updating too).
 
 To run the script, we simply pipe it to the Unix [`netcat` command](https://en.wikipedia.org/wiki/Netcat) or one of its many clones, one of which is available for practically any platform. For example, with the original netcat and using hexdump (`hd`) to display the output:
 
