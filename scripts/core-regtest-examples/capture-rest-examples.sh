@@ -154,7 +154,7 @@ echo "output: $OUT_DIR"
 
 "$DASHD" -regtest -datadir="$DATADIR" -daemonwait \
   -port="$P2P_PORT" -rpcport="$RPC_PORT" -listen=0 -server -rest -txindex \
-  -disablewallet -mocktime="$MOCKTIME_START" -debug=0 >/dev/null
+  -blockfilterindex=basic -disablewallet -mocktime="$MOCKTIME_START" -debug=0 >/dev/null
 NODE_STARTED=1
 cli -rpcwait -rpcwaittimeout=60 getblockcount >/dev/null
 
@@ -216,6 +216,23 @@ MEMPOOL_PARENT_TXID="$(spend "$(coinbase_txid 2)" 0 5.00000000)"
 MEMPOOL_CHILD_TXID="$(spend "$MEMPOOL_PARENT_TXID" 1 1.00000000)"
 
 TX_BLOCK_HASH="$(cli getblockhash "$TX_BLOCK_HEIGHT")"
+
+# Wait for the block filter index to reach the tip
+filter_index_height() {
+  cli getindexinfo "basic block filter index" | python3 -c '
+import json, sys
+print(json.load(sys.stdin).get("basic block filter index", {}).get("best_block_height", -1))
+'
+}
+for _ in $(seq 1 120); do
+  [[ "$(filter_index_height)" == "$TIP_HEIGHT" ]] && break
+  sleep 0.5
+done
+if [[ "$(filter_index_height)" != "$TIP_HEIGHT" ]]; then
+  echo "error: block filter index did not reach height $TIP_HEIGHT" >&2
+  exit 1
+fi
+
 if [[ "$(cli getblock "$TX_BLOCK_HASH" 1 | json_get tx 1)" != "$CONFIRMED_TXID" ]]; then
   echo "error: confirmed transaction is not in block $TX_BLOCK_HEIGHT" >&2
   exit 1
@@ -260,9 +277,20 @@ UTXO_PATH="checkmempool/${CONFIRMED_TXID}-0/${MEMPOOL_PARENT_TXID}-0"
 rest getutxos.hex  "getutxos/${UTXO_PATH}.hex"
 rest getutxos.json "getutxos/${UTXO_PATH}.json"
 
-# GET Headers (deprecated /headers/<count>/<hash> form, still served by v24)
-rest headers.hex  "headers/2/${TX_BLOCK_HASH}.hex"
-rest headers.json "headers/2/${TX_BLOCK_HASH}.json"
+# GET BlockFilter
+rest blockfilter.hex  "blockfilter/basic/${TX_BLOCK_HASH}.hex"
+rest blockfilter.json "blockfilter/basic/${TX_BLOCK_HASH}.json"
+
+# GET BlockFilterHeaders
+rest blockfilterheaders.hex  "blockfilterheaders/basic/${TX_BLOCK_HASH}.hex?count=2"
+rest blockfilterheaders.json "blockfilterheaders/basic/${TX_BLOCK_HASH}.json?count=2"
+
+# GET Headers
+rest headers.hex  "headers/${TX_BLOCK_HASH}.hex?count=2"
+rest headers.json "headers/${TX_BLOCK_HASH}.json?count=2"
+# Deprecated /headers/<count>/<hash> form, still served by v24
+rest headers-deprecated.hex  "headers/2/${TX_BLOCK_HASH}.hex"
+rest headers-deprecated.json "headers/2/${TX_BLOCK_HASH}.json"
 
 # GET MemPool/Contents
 rest mempool-contents.json                "mempool/contents.json"
@@ -280,6 +308,7 @@ rest tx.json "tx/${CONFIRMED_TXID}.json"
 rest error-block-invalid-hash.txt      "block/nothex.json"
 rest error-deploymentinfo-notfound.txt "deploymentinfo/$(printf '0%.0s' {1..64}).json"
 rest error-headers-count.txt           "headers/0/${TX_BLOCK_HASH}.json"
+rest error-blockfilter-type.txt        "blockfilter/extended/${TX_BLOCK_HASH}.json"
 rest error-mempool-verbose.txt         "mempool/contents.json?verbose=maybe"
 rest error-mempool-sequence.txt        "mempool/contents.json?mempool_sequence=true"
 rest error-chaininfo-format.txt        "chaininfo.hex"

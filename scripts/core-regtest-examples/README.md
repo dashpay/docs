@@ -6,7 +6,7 @@ This directory contains a tool to regenerate the examples on the [HTTP REST requ
 
 `capture-rest-examples.sh`:
 
-1. Starts a fresh, isolated regtest node (`-rest -txindex -server -listen=0 -disablewallet`)
+1. Starts a fresh, isolated regtest node (`-rest -txindex -blockfilterindex=basic -server -listen=0 -disablewallet`)
 2. Builds a small, deterministic chain and mempool (see [Chain Contents](#chain-contents))
 3. Requests every REST endpoint shown on the page, in every format the page shows, plus several error cases
 4. Writes each response to a named file in the output directory
@@ -55,7 +55,7 @@ All coins are mined to and spent from a fixed, hard-coded **regtest-only** key. 
 | Height | Contents |
 |--------|----------|
 | 1-605 | Coinbase-only blocks paying the miner address. DIP0003, v20, and MN_RR activate at 432 and withdrawals at 600 (regtest `CRegTestParams` in `src/chainparams.cpp`), so later blocks carry a version 3 CbTx (`cbTx` in the JSON) |
-| 606 | Coinbase plus one confirmed transaction: spends the block 1 coinbase, pays 10 DASH to the recipient address and the change to the miner address. Used for the Block, Block/NoTxDetails, BlockHashByHeight, Headers, DeploymentInfo, Tx, and GetUtxos examples |
+| 606 | Coinbase plus one confirmed transaction: spends the block 1 coinbase, pays 10 DASH to the recipient address and the change to the miner address. Used for the Block, Block/NoTxDetails, BlockFilter, BlockFilterHeaders, BlockHashByHeight, Headers, DeploymentInfo, Tx, and GetUtxos examples |
 | 607-610 | Coinbase-only blocks (tip is 610, so block 606 has 5 confirmations) |
 | Mempool | Parent: spends the block 2 coinbase, pays 5 DASH to the recipient address. Child: spends the parent's change output, pays 1 DASH to the recipient address. The child depends on the parent, so `depends` and `spentby` are populated |
 
@@ -69,11 +69,14 @@ No masternodes or quorums exist, so `chainlock` and `instantlock` are always `fa
 |------|----------|
 | `block.hex`, `block.json` | `/rest/block/<hash>` |
 | `block-notxdetails.hex`, `block-notxdetails.json` | `/rest/block/notxdetails/<hash>` |
+| `blockfilter.hex`, `blockfilter.json` | `/rest/blockfilter/basic/<hash>` |
+| `blockfilterheaders.hex`, `blockfilterheaders.json` | `/rest/blockfilterheaders/basic/<hash>?count=2` |
 | `blockhashbyheight.hex`, `blockhashbyheight.json` | `/rest/blockhashbyheight/<height>` |
 | `chaininfo.json` | `/rest/chaininfo` |
 | `deploymentinfo.json`, `deploymentinfo-block.json` | `/rest/deploymentinfo` (tip and block 606) |
 | `getutxos.hex`, `getutxos.json` | `/rest/getutxos/checkmempool/...` |
-| `headers.hex`, `headers.json` | `/rest/headers/2/<hash>` (deprecated path form, still served) |
+| `headers.hex`, `headers.json` | `/rest/headers/<hash>?count=2` |
+| `headers-deprecated.hex`, `headers-deprecated.json` | `/rest/headers/2/<hash>` (deprecated path form, still served) |
 | `mempool-contents.json`, `mempool-contents-txids.json`, `mempool-contents-txids-sequence.json` | `/rest/mempool/contents` (default, `verbose=false`, and `verbose=false&mempool_sequence=true`) |
 | `mempool-info.json` | `/rest/mempool/info` |
 | `tx.hex`, `tx.json` | `/rest/tx/<txid>` |
