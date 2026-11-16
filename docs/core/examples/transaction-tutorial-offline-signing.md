@@ -4,6 +4,9 @@
   :description: The example in this section demonstrates offline signing of a transaction, including spending an unconfirmed output, without sending it to the local node.
 ```
 
+% Example output on this page comes from scripts/core-regtest-examples/run-transaction-tutorials.sh.
+% Use the output of a single run for all tutorial pages so values stay consistent between them.
+
 # Offline Signing
 
 We will now spend the [transaction](../resources/glossary.md#transaction) created in the [Complex Raw Transaction subsection](../examples/transaction-tutorial-complex-raw-transaction.md) without sending it to the local [node](../resources/glossary.md#node) first. This is the same basic process used by [wallet](../resources/glossary.md#wallet) programs for offline signing---which generally means signing a transaction without access to the current UTXO set.

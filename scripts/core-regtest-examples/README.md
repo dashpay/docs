@@ -1,6 +1,9 @@
 # Dash Core Regtest Example Capture
 
-This directory contains a tool to regenerate the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page from a real Dash Core node.
+This directory contains tools that run Dash Core examples from the docs on a real regtest node:
+
+* `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
+* `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
 
 ## Overview
 
@@ -97,3 +100,15 @@ Other files:
 * Two consecutive runs on the same machine produced byte-identical output, including `size_on_disk` (ChainInfo) and `usage` (MemPool/Info).
 * `size_on_disk` and `usage` depend on on-disk and in-memory layout, so they may differ between platforms or Dash Core builds even when everything else matches.
 * Any change to the chain layout constants at the top of the script (start time, spacing, heights, fee, keys) changes every hash in the output. Change them only on purpose, and then regenerate every example on the page.
+
+## Transaction Tutorials
+
+`run-transaction-tutorials.sh` starts a fresh, isolated regtest node, creates the legacy wallet from the tutorial setup, and runs the commands from each transaction tutorial page in order: simple spending, simple raw transaction, complex raw transaction, offline signing, and P2SH multisig. Each step's output goes to a numbered file in the output directory, followed by an `exit=<status>` line. The script fails if any step other than offline signing step 5a (which is meant to fail) returns an error.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorials.sh
+```
+
+It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26671`), and `RPC_PORT` (default `26672`) variables as `capture-rest-examples.sh`. Legacy wallets need Dash Core built with Berkeley DB support, which the release binaries include.
+
+The output is not deterministic: the wallet creates new keys on every run, so addresses, keys, and TXIDs change. When you refresh a tutorial page, paste the output from a single run so that values the text refers to later (TXIDs, addresses, and amounts) stay consistent.

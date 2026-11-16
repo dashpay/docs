@@ -4,6 +4,9 @@
   :description: In this subsection, we will create a P2SH multisig address, spend duffs to it, and then spend those duffs from it to another address.
 ```
 
+% Example output on this page comes from scripts/core-regtest-examples/run-transaction-tutorials.sh.
+% Use the output of a single run for all tutorial pages so values stay consistent between them.
+
 # P2SH Multisig
 
 In this subsection, we will create a [P2SH multisig](../resources/glossary.md#p2sh-multisig) address, spend [duffs](../resources/glossary.md#duffs) to it, and then spend those duffs from it to another [address](../resources/glossary.md#address).

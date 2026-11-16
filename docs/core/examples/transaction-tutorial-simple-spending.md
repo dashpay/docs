@@ -4,6 +4,9 @@
   :description: Dash Core provides several RPCs which handle all the details of spending, including creating a change output and paying an appropriate transaction fee. 
 ```
 
+% Example output on this page comes from scripts/core-regtest-examples/run-transaction-tutorials.sh.
+% Use the output of a single run for all tutorial pages so values stay consistent between them.
+
 # Simple Spending
 
 Dash Core provides several RPCs which handle all the details of spending, including creating a [change output](../resources/glossary.md#change-output) and paying an appropriate [transaction fee](../resources/glossary.md#transaction-fee). Even advanced users should use these RPCs whenever possible to decrease the chance that [duffs](../resources/glossary.md#duffs) will be lost by mistake.

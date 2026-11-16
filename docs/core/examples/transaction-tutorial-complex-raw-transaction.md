@@ -4,6 +4,9 @@
   :description: The example here demonstrates the creation of a transaction with two inputs and two outputs, where each input is signed separately.
 ```
 
+% Example output on this page comes from scripts/core-regtest-examples/run-transaction-tutorials.sh.
+% Use the output of a single run for all tutorial pages so values stay consistent between them.
+
 # Complex Raw Transaction
 
 In this example, we'll create a [transaction](../resources/glossary.md#transaction) with two [inputs](../resources/glossary.md#input) and two [outputs](../resources/glossary.md#output).  We'll sign each of the inputs separately, as might happen if the two inputs belonged to different people who agreed to create a transaction together (such as a CoinJoin transaction).
