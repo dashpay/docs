@@ -10,7 +10,7 @@ Before a full [node](../resources/glossary.md#node) can validate unconfirmed tra
 
 Although the word "initial" implies this method is only used once, it can also be used any time a large number of blocks need to be downloaded, such as when a previously-caught-up node has been offline for a long time. In this case, a node can use the IBD method to download all the blocks which were produced since the last time it was online.
 
-Dash Core uses the IBD method any time the last block on its local best block chain has a [block header](../resources/glossary.md#block-header) time more than 24 hours in the past. Dash Core will also perform IBD if its local best block chain is more than 144 blocks lower than its local best [header chain](../resources/glossary.md#header-chain) (that is, the local block chain is more than about 6 hours in the past).
+Dash Core uses the IBD method any time the last block on its local best block chain has a [block header](../resources/glossary.md#block-header) time more than 6 hours in the past. Dash Core will also perform IBD if its local best block chain is more than 144 blocks lower than its local best [header chain](../resources/glossary.md#header-chain) (that is, the local block chain is more than about 6 hours in the past).
 
 ## Blocks-First
 
@@ -99,11 +99,11 @@ After the IBD node has partially validated the block headers, it can do two thin
 
 2. **Download Blocks:** While the IBD node continues downloading headers, and after the headers finish downloading, the IBD node will request and download each [block](../resources/glossary.md#block). The IBD node can use the block header hashes it computed from the header chain to create [`getdata` messages](../reference/p2p-network-data-messages.md#getdata) that request the blocks it needs by their [inventory](../resources/glossary.md#inventory). It doesn't need to request these from the sync node---it can request them from any of its full node [peers](../resources/glossary.md#peer). (Although not all full nodes may store all blocks.) This allows it to fetch blocks in parallel and avoid having its download speed constrained to the upload speed of a single sync node.
 
-    To spread the load between multiple peers, Dash Core will only request up to 16 blocks at a time from a single peer. Combined with its maximum of 8 outbound connections, this means Dash Core using headers-first will request a maximum of 128 blocks simultaneously during IBD (the same maximum number that blocks-first Dash Core requested from its sync node).
+    To spread the load between multiple peers, Dash Core will only request up to 16 blocks at a time from a single peer. Combined with its default of 8 full-relay outbound connections and 2 block-relay-only outbound connections, this means Dash Core using headers-first will request a maximum of 160 blocks simultaneously from its outbound peers during IBD.
 
 ![Simulated Headers-First Download Window](../../img/dev/en-headers-first-moving-window.svg)
 
-Dash Core's headers-first mode uses a 1,024-block moving download window to maximize download speed. The lowest-height block in the window is the next block to be validated; if the block hasn't arrived by the time Dash Core is ready to validate it, Dash Core will wait a minimum of two more seconds for the stalling node to send the block. If the block still hasn't arrived, Dash Core will disconnect from the stalling node and attempt to connect to another node. For example, in the illustration above, Node A will be disconnected if it doesn't send block 3 within at least two seconds.
+Dash Core's headers-first mode uses a 1,024-block moving download window to maximize download speed. The lowest-height block in the window is the next block to be validated; if the block hasn't arrived by the time Dash Core is ready to validate it, Dash Core will wait for the stalling node to send the block for a timeout that is normally two seconds. If the block still hasn't arrived, Dash Core will disconnect from the stalling node and attempt to connect to another node. Each such disconnection temporarily doubles the timeout, up to a maximum of 64 seconds, so that a slow local connection doesn't cause several peers to be disconnected; the timeout then gradually returns to two seconds. For example, in the illustration above, Node A will be disconnected if it doesn't send block 3 within the stalling timeout.
 
 Once the IBD node is synced to the tip of the block chain, it will accept blocks sent through the regular block broadcasting described in a later subsection.
 

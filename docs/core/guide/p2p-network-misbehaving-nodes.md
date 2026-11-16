@@ -22,7 +22,7 @@ Furthermore, a few additional changes are introduced to how discouraged addresse
 
 * Discouragement cannot be removed with the [`setban remove` RPC](../api/remote-procedure-calls-network.md#setban) command. If you need to remove a discouragement, you can remove all discouragements by stopping and restarting your node.
 
- If a peer gets a banscore above the `-banscore=<n>` threshold (100 by default), they will be disconnected and discouraged.
+ If a peer's banscore reaches the fixed threshold of 100 (`DISCOURAGEMENT_THRESHOLD`), they will be disconnected and discouraged. The threshold is not configurable; the `-banscore` option was removed.
 
 | Type | Misbehavior | Ban Score | Description |
 | ---- | ----------- | --------- | ----------- |

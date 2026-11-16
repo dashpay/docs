@@ -22,8 +22,8 @@ After the v24 hard fork activates, the collateral of a masternode can be funded 
 
 ## Evolution Masternodes
 
-Since Evolution masternodes (evonodes) have four times more collateral than regular masternodes, evonodes are paid in four consecutive blocks each time they are selected for payment. This is to maintain the same incentive structure that regular masternodes have.
+Since the `mn_rr` hard fork activated (mainnet block 2,128,896), Dash Core divides the masternode reward into Core (62.5%) and Platform (37.5%) portions. The Platform portion goes into the Platform credit pool and is then distributed by Platform to Evolution masternodes (evonodes). Both regular masternodes and evonodes receive a single reward payment on the Core chain per payment cycle. Evonodes receive the remainder of their block rewards from Platform. Additionally, evonodes receive 100% of the fees generated from Dash Platform since they are the only nodes that host it.
 
-Once Dash Platform is released, 37.5% of the masternode block subsidy will be moved into the Platform credit pool and used to pay evonodes. Both regular masternodes and evonodes will then receive a single reward payment on the Core chain per payment cycle. Evonodes will receive the remainder of their block rewards from Platform. Additionally, evonodes will receive 100% of the fees generated from Dash Platform since they are the only nodes that host it.
+Before the `mn_rr` hard fork, evonodes were paid in four consecutive blocks each time they were selected for payment, since they have four times more collateral than regular masternodes.
 
 Evonodes cannot use [multi-party payouts](#multi-party-payouts) or [shared collateral](#shared-masternodes) until the separate `evo_shares` deployment activates.

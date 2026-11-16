@@ -25,9 +25,9 @@ With the exception of the final step (`qfcommit` message broadcast), the message
 :::{attention}
 Minimum Masternode Protocol Version Since Dash Core 0.16.0, masternodes perform a [version
 check](https://github.com/dashpay/dash/pull/3390) on their quorum peers during DKG. Masternodes that
-do not meet the `MIN_MASTERNODE_PROTO_VERSION` will begin receiving increases in
-[PoSe](../guide/dash-features-proof-of-service.md) score once ~70% of the masternodes on the network
-have upgraded to that version. As of Dash Core 24.0.0, `MIN_MASTERNODE_PROTO_VERSION` is 70242, so
+do not meet the `MIN_MASTERNODE_PROTO_VERSION` are voted as having a bad connection and can receive
+increases in [PoSe](../guide/dash-features-proof-of-service.md) score. There is no network upgrade
+percentage threshold for this check. As of Dash Core 24.0.0, `MIN_MASTERNODE_PROTO_VERSION` is 70242, so
 masternodes running Dash Core 23.x do not meet it.
 :::
 
@@ -81,11 +81,10 @@ Note the following timeouts defined by Dash Core related to signing sessions:
 | --- | --- | --- |
 | `SESSION_NEW_SHARES_TIMEOUT` | 60 | Time to wait for new shares |
 | `SIG_SHARE_REQUEST_TIMEOUT` | 5 | Time to wait for a requested share before requesting from a different node |
-| `SESSION_TOTAL_TIMEOUT` | 300 | Time to wait for session to complete |
 
 ## Quorum Configuration
 
-Mainnet and Testnet only use quorums of pre-defined sizes that are hard coded into Dash Core. RegTest and Devnet environments each have a quorum that supports custom size and threshold parameters that are controlled via command line or configuration file parameters (`llmqtestparams`/`llmqdevnetparams`).
+Mainnet and Testnet only use quorums of pre-defined sizes that are hard coded into Dash Core. RegTest and Devnet environments each have a quorum that supports custom size and threshold parameters that are controlled via command line or configuration file parameters (`llmqtestparams`/`llmqdevnetparams`). Custom quorum sizes cannot exceed 400 members (`MAX_LLMQ_SIZE`).
 
 A list of all the quorums and their default sizes can be found in the [Current LLMQ Types table](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md) found in DIP-6.
 
@@ -93,13 +92,13 @@ The specific quorum type used for a feature can vary based on the network. The f
 
 | | Mainnet | Testnet | Devnet * | RegTest * |
 |-|-|-|-|-|
-| ChainLocks ([DIP-8](https://github.com/dashpay/dips/blob/master/dip-0008.md)) | LLMQ_400_60 | LLMQ_50_60 | LLMQ_50_60 | LLMQ_TEST |
-| Deterministic InstantSend | LLMQ_60_75 | LLMQ_60_75 | LLMQ_60_75 | LLMQ_TEST_DIP0024 |
+| ChainLocks ([DIP-8](https://github.com/dashpay/dips/blob/master/dip-0008.md)) | LLMQ_400_60 | LLMQ_50_60 | LLMQ_DEVNET | LLMQ_TEST |
+| Deterministic InstantSend | LLMQ_60_75 | LLMQ_60_75 | LLMQ_DEVNET_DIP0024 | LLMQ_TEST_DIP0024 |
 | InstantSend (pre DIP-24) | LLMQ_50_60 | LLMQ_50_60 | LLMQ_50_60 | LLMQ_TEST_INSTANTSEND |
-| Platform | LLMQ_100_67 | LLMQ_25_67 | LLMQ_100_67 | LLMQ_TEST_PLATFORM |
-| Enhanced Hard Fork ([DIP-23](https://github.com/dashpay/dips/blob/master/dip-0023.md))| LLMQ_400_85 | LLMQ_50_60 | LLMQ_50_60 | LLMQ_TEST |
+| Platform | LLMQ_100_67 | LLMQ_25_67 | LLMQ_DEVNET_PLATFORM | LLMQ_TEST_PLATFORM |
+| Enhanced Hard Fork ([DIP-23](https://github.com/dashpay/dips/blob/master/dip-0023.md))| LLMQ_400_85 | LLMQ_50_60 | LLMQ_DEVNET | LLMQ_TEST |
 
-\* Note that the quorum types used on RegTest and Devnets have customizable parameters as described above
+\* Note that the quorum types used on RegTest and Devnets have customizable parameters as described above. On Devnets, the quorum type used for each feature can also be overridden with the `-llmqchainlocks`, `-llmqinstantsenddip0024`, `-llmqplatform`, and `-llmqmnhf` options.
 
 ### Quorum formation
 
