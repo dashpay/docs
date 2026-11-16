@@ -107,7 +107,7 @@ The same address can be used in more than one notification.
 
 ZeroMQ endpoint specifiers for TCP (and others) are documented in the [ZeroMQ API](http://api.zeromq.org/4-0:_start).
 
-Client side, then, the ZeroMQ subscriber socket must have the `ZMQ_SUBSCRIBE` option set to one or either of these prefixes (for instance, just `hash`); without doing so will result in no messages arriving. Please see the Dash Core repository for a [working example](https://github.com/dashpay/dash/blob/master/contrib/zmq/zmq_sub3.4.py).
+Client side, then, the ZeroMQ subscriber socket must have the `ZMQ_SUBSCRIBE` option set to one or either of these prefixes (for instance, just `hash`); without doing so will result in no messages arriving. Please see the Dash Core repository for a [working example](https://github.com/dashpay/dash/blob/master/contrib/zmq/zmq_sub.py).
 
 ## Notes
 
