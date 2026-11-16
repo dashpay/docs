@@ -432,6 +432,10 @@ Result (truncated):
 }
 ```
 
+:::{note}
+This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `mnList[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
+:::
+
 *See also: none*
 
 ### ProTx Info
@@ -513,7 +517,7 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | → →<br>`is_platform_banned` | bool | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Platform ban status |
 | → →<br>`platform_ban_height_updated` | integer | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Height when the Platform ban was updated |
 
-*Example from Dash Core 23.10.0*
+*Example from Dash Core 23.0.0*
 
 ```bash
 dash-cli -testnet protx info\
@@ -572,6 +576,10 @@ Result:
   }
 }
 ```
+
+:::{note}
+This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `state.service` with `-deprecatedrpc=service`. Use `addresses` instead.
+:::
 
 ### ProTx List
 
@@ -1625,13 +1633,13 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name              | Type   | Presence                | Description                                                   |
 | ----------------- | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1761,13 +1769,13 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #10---platform HTTPS addresses*
 
 | Name               | Type   | Presence                | Description                                                   |
 | ------------------ | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---fund address*
 
@@ -1900,13 +1908,13 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1948,6 +1956,8 @@ Result:
 
 The `protx update_service_evo` RPC creates and sends a ProUpServTx to the network. This will update the IP address and the Platform fields of an evonode. If this is done for an evonode that was PoSe-banned, the ProUpServTx will also revive this evonode.
 
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, this RPC creates a version 3 ProUpServTx, which also upgrades a version 2 evonode to version 3. A version 2 evonode ProUpServTx is invalid after activation.
+
 *Parameter #1---initial provider registration transaction hash*
 
 | Name        | Type         | Presence                | Description                                                   |
@@ -1976,13 +1986,13 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. |
 
 *Parameter #6---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. |
 
 *Parameter #7---operator payout address*
 
@@ -2168,7 +2178,7 @@ The `protx update_registrar` RPC creates and sends a ProUpRegTx to the network.
 
 | Name            | Type   | Presence             | Description                                                                                                                       |
 | --------------- | ------ | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>If set to an empty string, the currently active payout address is reused.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>If set to an empty string, the currently active payout address is reused.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. An evonode that is still at ProTx version 2 stays at version 2 and accepts only a single payout address. To use payout shares, first upgrade it with [`protx update_service_evo`](#protx-update-service-evo), listing its Platform addresses. |
 | →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
 | → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
 | → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
@@ -2510,7 +2520,7 @@ The registration flow is:
 4. Have the funding inputs signed (for example, with [`signrawtransactionwithwallet`](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet)) and broadcast the transaction with [`sendrawtransaction`](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction).
 
 :::{important}
-Consent is required from each share in the table, not from each funding input. An input is not tied to any share. Before signing its funding inputs, each participant should check the share table (`proRegTx` in [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction), or `terms` from `protx shared_sign`) for its own share, with its own amount and addresses. Signing inputs into a table without that share gives the contribution to the other shares.
+Consent is required from each share in the table, not from each funding input. An input is not tied to any share. Before signing its funding inputs, each participant should check the share table (`proRegTx.shares` in [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoded-special-transaction-payloads), or `terms` from `protx shared_sign`) for its own share, with its own amount and addresses. Signing inputs into a table without that share gives the contribution to the other shares.
 :::
 
 :::{important}
@@ -3006,6 +3016,10 @@ Result (truncated):
 }
 ```
 
+:::{note}
+This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `members[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
+:::
+
 ### Quorum DKGInfo
 
 :::{versionadded} 20.1.0
@@ -3068,23 +3082,23 @@ The `quorum dkgstatus` RPC displays the status of the current DKG process.
 
 | Name                                      | Type             | Presence                | Description                                                                                                                                                                      |
 | ----------------------------------------- | ---------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `result`                                  | array            | Required<br>(exactly 1) | An array of objects each containing a provider transaction, or JSON `null` if an error occurred                                                                                  |
-| →<br>`time`                               | number           | Required<br>(exactly 1) | The Unix epoch time                                                                                                                                                              |
-| →<br>`timeStr`                            | string           | Required<br>(exactly 1) | The UTC time as a string                                                                                                                                                         |
-| →<br>`session`                            | array of objects | Required<br>(exactly 1) | Array of objects containing DKG Session information                                                                                                                              |
-| → →<br>Session                            | object           | Required<br>(exactly 1) | DKG session object                                                                                                                                                               |
+| `result`                                  | object           | Required<br>(exactly 1) | An object describing the status of the current DKG process |
+| →<br>`time`                               | number           | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a Unix epoch time                                                                                                                                                              |
+| →<br>`timeStr`                            | string           | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a UTC time string                                                                                                                                                         |
+| →<br>`session`                            | array of objects | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>Array of objects containing DKG Session information                                                                                                                              |
+| → →<br>Session                            | object           | Optional<br>(0 or more) | DKG session object                                                                                                                                                               |
 | → → →<br>`llmqType`                       | string           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>[Quorum type name](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md)                                                          |
 | → → →<br>`quorumIndex`                    | number           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>The index of the quorum                                                                                                                         |
-| → → →<br>`status`                         | object           | Required<br>(exactly 1) | DKG session status information                                                                                                                                                   |
-| → → → →<br>`llmqType`                     | number           | Required<br>(exactly 1) | [Type of quorum](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md):<br>`1` - LLMQ_50_60<br>`2` - LLMQ_400_60<br>`3` - LLMQ_400_85<br>`4` - LLMQ_100_67<br>`5` - LLMQ_60_75<br>`6` - LLMQ_25_67 |
-| → → → →<br>`quorumHash`                   | string (hex)     | Required<br>(exactly 1) | The block hash of the quorum                                                                                                                                                     |
-| → → → →<br>`quorumHeight`                 | number           | Required<br>(exactly 1) | The block height of the quorum                                                                                                                                                   |
-| → → → →<br>`phase`                        | number           | Required<br>(exactly 1) | Latest DKG phase whose messages this node has already sent<br>`1` - Initialized<br>`2` - Contributing<br>`3` - Complaining<br>`4` - Justifying<br>`5` - Committing<br>`6` - Finalizing                                 |
-| → → → →<br>`sentContributions`            | bool             | Required<br>(exactly 1) | True when contributions have been sent                                                                                                                                           |
-| → → → →<br>`sentComplaint`                | bool             | Required<br>(exactly 1) | True when complaints have been sent                                                                                                                                              |
-| → → → →<br>`sentJustification`            | bool             | Required<br>(exactly 1) | True when justifications have been sent                                                                                                                                          |
-| → → → →<br>`sentPrematureCommitment`      | bool             | Required<br>(exactly 1) | True when premature commitments have been sent                                                                                                                                   |
-| → → → →<br>`aborted`                      | bool             | Required<br>(exactly 1) | True if the DKG session has been aborted                                                                                                                                         |
+| → → →<br>`status`                         | object           | Required<br>(exactly 1) | DKG session status information. Empty for an unknown LLMQ type or quorum hash                                                                                                                                                   |
+| → → → →<br>`llmqType`                     | number           | Optional<br>(0 or 1)    | [Type of quorum](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md):<br>`1` - LLMQ_50_60<br>`2` - LLMQ_400_60<br>`3` - LLMQ_400_85<br>`4` - LLMQ_100_67<br>`5` - LLMQ_60_75<br>`6` - LLMQ_25_67 |
+| → → → →<br>`quorumHash`                   | string (hex)     | Optional<br>(0 or 1)    | The block hash of the quorum                                                                                                                                                     |
+| → → → →<br>`quorumHeight`                 | number           | Optional<br>(0 or 1)    | The block height of the quorum                                                                                                                                                   |
+| → → → →<br>`phase`                        | number           | Optional<br>(0 or 1)    | Latest DKG phase whose messages this node has already sent<br>`1` - Initialized<br>`2` - Contributing<br>`3` - Complaining<br>`4` - Justifying<br>`5` - Committing<br>`6` - Finalizing                                 |
+| → → → →<br>`sentContributions`            | bool             | Optional<br>(0 or 1)    | True when contributions have been sent                                                                                                                                           |
+| → → → →<br>`sentComplaint`                | bool             | Optional<br>(0 or 1)    | True when complaints have been sent                                                                                                                                              |
+| → → → →<br>`sentJustification`            | bool             | Optional<br>(0 or 1)    | True when justifications have been sent                                                                                                                                          |
+| → → → →<br>`sentPrematureCommitment`      | bool             | Optional<br>(0 or 1)    | True when premature commitments have been sent                                                                                                                                   |
+| → → → →<br>`aborted`                      | bool             | Optional<br>(0 or 1)    | True if the DKG session has been aborted                                                                                                                                         |
 | → → → →<br>`badMembers`                   | number           | Required<br>(exactly 1) | Number of bad members                                                                                                                                                            |
 | → → → →<br>`weComplain`                   | number           | Required<br>(exactly 1) | Number of complaints sent                                                                                                                                                        |
 | → → → →<br>`receivedContributions`        | number           | Required<br>(exactly 1) | Number of contributions received                                                                                                                                                 |
@@ -3092,17 +3106,17 @@ The `quorum dkgstatus` RPC displays the status of the current DKG process.
 | → → → →<br>`receivedJustifications`       | number           | Required<br>(exactly 1) | Number of justifications received                                                                                                                                                |
 | → → → →<br>`receivedPrematureCommitments` | number           | Required<br>(exactly 1) | Number of premature commitments received                                                                                                                                         |
 | →<br>`quorumConnections`                  | array of objects | Required<br>(exactly 1) | **Modified in Dash Core 18.0.0**<br>Array of objects containing quorum connection information                                                                                    |
-| → →<br>Quorum type                        | object           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>An object describing connection information for a quorum index and type                                                                         |
+| → →<br>Quorum type                        | object           | Required<br>(1 or more) | *Added in Dash Core 18.0.0*<br>An object describing connection information for a quorum index and type                                                                         |
 | → → →<br>`llmqType`                       | string           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>[Quorum type name](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md)                                                          |
 | → → →<br>`quorumIndex`                    | number           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>The index of the quorum                                                                                                                         |
-| → → →<br>`pQuorumBaseBlockIndex`          | number           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>The height of the quorum's base block                                                                                                           |
-| → → → <br>`quorumHash`                    | string (hex)     | Required<br>(exactly 1) | The block hash of the quorum                                                                                                                                                     |
-| → → →<br>`pindexTip`                      | number           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>The height of the quorum's index tip                                                                                                            |
-| → → →<br>`quorumConnections`              | array of objects | Required<br>(exactly 1) | Array of objects containing quorum connection information                                                                                                                        |
-| → → → →<br>Connection                     | object           | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>An object describing a quorum connection                                                                                                    |
+| → → →<br>`pQuorumBaseBlockIndex`          | number           | Optional<br>(0 or 1)    | *Added in Dash Core 18.0.0*<br>Only present on an active masternode<br><br>The height of the quorum's base block                                                                                                           |
+| → → →<br>`quorumHash`                     | string (hex)     | Optional<br>(0 or 1)    | Only present on an active masternode<br><br>The block hash of the quorum                                                                                                                                                     |
+| → → →<br>`pindexTip`                      | number           | Optional<br>(0 or 1)    | *Added in Dash Core 18.0.0*<br>Only present on an active masternode<br><br>The height of the quorum's index tip                                                                                                            |
+| → → →<br>`quorumConnections`              | array of objects | Optional<br>(0 or 1)    | Only present on an active masternode<br><br>Array of objects containing quorum connection information                                                                                                                        |
+| → → → →<br>Connection                     | object           | Optional<br>(0 or more) | *Added in Dash Core 0.16.0*<br><br>An object describing a quorum connection                                                                                                    |
 | → → → →→<br>`proTxHash`                   | string (hex)     | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>The hash of the quorum member's provider registration transaction as hex in RPC byte order                                                  |
 | → → → →→<br>`connected`                   | boolean          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether or not the connection is active                                                                                                     |
-| → → → →→<br>`address`                     | string           | Optional<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Address                                                                                                                                     |
+| → → → →→<br>`address`                     | string           | Optional<br>(0 or 1)    | *Added in Dash Core 0.16.0*<br><br>IP address and port of the masternode. Only present if the connection is active                                                                                                                                     |
 | → → → →→<br>`outbound`                    | boolean          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether or not this is an outbound connection                                                                                               |
 | →<br>`minableCommitments`                 | array            | Required<br>(exactly 1) | Array of objects containing commitments the next block would include                                                                                                             |
 
@@ -4781,7 +4795,7 @@ The `quorum rotationinfo` RPC returns  quorum rotation information. The response
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `baseBlockHashes` | array | Optional<br>(0 or 1) | **Updated in Dash Core 23.0.0** (previously `baseBlockHash...`)<br>Array of block hashes (default: empty array) |
+| `baseBlockHashes` | array | Optional<br>(0 or 1) | **Updated in Dash Core 23.0.0** (previously `baseBlockHash...`)<br>Array of block hashes (default: empty array)<br>**Updated in Dash Core 24.0.0**<br>At most 4096 block hashes. More returns an error |
 
 *Result---rotation info*
 
@@ -4949,6 +4963,10 @@ Result (truncated):
   ]
 }
 ```
+
+:::{note}
+This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `service` in `mnList` entries with `-deprecatedrpc=service`. Use `addresses` instead.
+:::
 
 ### Quorum SelectQuorum
 

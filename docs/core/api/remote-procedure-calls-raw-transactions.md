@@ -536,6 +536,7 @@ _Result---the decoded transaction_
 | → → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
 | →<br>`extraPayloadSize` | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`     | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
+| →<br>Payload object | object | Optional<br>(0 or 1) | The decoded special transaction payload, named after the transaction type (for example, `proRegTx` or `cbTx`). Only present if it's a DIP2 special transaction. See [Decoded Special Transaction Payloads](#decoded-special-transaction-payloads) |
 | →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs |
 
 _Example from Dash Core 23.0.0_
@@ -671,6 +672,105 @@ _See also:_
 * [CreateRawTransaction](../api/remote-procedure-calls-raw-transactions.md#createrawtransaction): creates an unsigned serialized transaction that spends a previous output to a new output with a P2PKH or P2SH address. The transaction is not stored in the wallet or transmitted to the network.
 * [SignRawTransactionWithKey](#signrawtransactionwithkey): signs inputs for a transaction in the serialized transaction format using private keys provided in the call.
 * [SendRawTransaction](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction): validates a transaction and broadcasts it to the peer-to-peer network.
+
+### Decoded Special Transaction Payloads
+
+For a [special transaction](../resources/glossary.md#special-transactions), the decoded transaction also includes an object holding the decoded extra payload, after `extraPayload`. The same object is returned by the [`decoderawtransaction` RPC](#decoderawtransaction), the [`getrawtransaction` RPC](#getrawtransaction) (verbose), the [`getblock` RPC](../api/remote-procedure-calls-blockchain.md#getblock) (verbosity 2), and the [`getspecialtxes` RPC](../api/remote-procedure-calls-blockchain.md#getspecialtxes) (verbosity 2). The object's name depends on the transaction type. Its fields follow the payload fields described on the [Special Transactions](../reference/transactions-special-transactions.md) page. The object is omitted if the payload can't be decoded.
+
+| Object | Tx type | Payload |
+| ------ | ------- | ------- |
+| `proRegTx` | 1 | [ProRegTx](../reference/transactions-special-transactions.md#proregtx) |
+| `proUpServTx` | 2 | [ProUpServTx](../reference/transactions-special-transactions.md#proupservtx) |
+| `proUpRegTx` | 3 | [ProUpRegTx](../reference/transactions-special-transactions.md#proupregtx) |
+| `proUpRevTx` | 4 | [ProUpRevTx](../reference/transactions-special-transactions.md#prouprevtx) |
+| `cbTx` | 5 | [CbTx](../reference/transactions-special-transactions.md#cbtx) |
+| `qcTx` | 6 | [QcTx](../reference/transactions-special-transactions.md#qctx) |
+| `mnhfTx` | 7 | [MnHfTx](../reference/transactions-special-transactions.md#mnhftx) |
+| `assetLockTx` | 8 | [AssetLockTx](../reference/transactions-special-transactions.md#assetlocktx) |
+| `assetUnlockTx` | 9 | [AssetUnlockTx](../reference/transactions-special-transactions.md#assetunlocktx) |
+| `proDisTx` | 10 | [ProDisTx](../reference/transactions-special-transactions.md#prodistx)<br>_Added in Dash Core 24.0.0_ |
+| `proUpShareTx` | 11 | [ProUpShareTx](../reference/transactions-special-transactions.md#proupsharetx)<br>_Added in Dash Core 24.0.0_ |
+| `proUpSharedRegTx` | 12 | [ProUpSharedRegTx](../reference/transactions-special-transactions.md#proupsharedregtx)<br>_Added in Dash Core 24.0.0_ |
+
+In `proRegTx` and `proUpServTx`, the `service`, `platformP2PPort` and `platformHTTPPort` fields are deprecated and only returned with `-deprecatedrpc=service`. Use `addresses` instead.
+
+The following tables describe the objects and fields added in Dash Core 24.0.0.
+
+_Owner payout and share fields of `proRegTx` and `proUpRegTx`_
+
+_Added in Dash Core 24.0.0_
+
+A version 3 `proRegTx` or `proUpRegTx` reports its owner payouts as a `payouts` array instead of `payoutAddress`. A shared masternode registration (a version 3 `proRegTx` with a share table) reports `shares`, `earlyPeriodBlocks` and `earlyPenalty` instead, and omits `ownerAddress`.
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| →<br>`ownerAddress` | string | Optional<br>(0 or 1) | `proRegTx` only. Dash address used for payee updates and proposal voting. Omitted for a shared masternode registration |
+| →<br>`payoutAddress` | string | Optional<br>(0 or 1) | Dash address used for masternode reward payments. Only present for version 1 and 2 payloads |
+| →<br>`payouts` | array | Optional<br>(0 or 1) | Owner reward payout shares. Only present for version 3 payloads that aren't shared masternode registrations. See [Payout Share Structure](../reference/transactions-special-transactions.md#payout-share-structure) |
+| → →<br>Payout | object | Required<br>(1 or more) | An owner payout entry |
+| → → →<br>`address` | string | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → →<br>`script` | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → →<br>`reward` | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| →<br>`shares` | array | Optional<br>(0 or 1) | `proRegTx` only. Collateral shares of a shared masternode. See [Collateral Share Structure](../reference/transactions-special-transactions.md#collateral-share-structure) |
+| → →<br>Share | object | Required<br>(2 or more) | A collateral share |
+| → → →<br>`amount` | number (duffs) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → →<br>`refundAddress` | string | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → →<br>`refundScript` | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → →<br>`rewardAddress` | string | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to. The same as `refundAddress` if the share has no reward script |
+| → → →<br>`rewardScript` | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey. The same as `refundScript` if the share has no reward script |
+| → → →<br>`ownerAddress` | string | Required<br>(exactly 1) | Dash address of the share owner key |
+| →<br>`earlyPeriodBlocks` | number (int) | Optional<br>(0 or 1) | `proRegTx` only. Length in blocks of the early period during which unilateral dissolution is penalized. Only present for a shared masternode registration |
+| →<br>`earlyPenalty` | number (duffs) | Optional<br>(0 or 1) | `proRegTx` only. Penalty in duffs for unilateral dissolution during the early period. Only present for a shared masternode registration |
+
+_Asset lock credit output address_
+
+_Added in Dash Core 24.0.0_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `assetLockTx` | object | Optional<br>(0 or 1) | The asset lock special transaction |
+| →<br>`creditOutputs` | array | Required<br>(exactly 1) | The credit outputs |
+| → →<br>Credit output | object | Required<br>(1 or more) | A credit output (`value`, `valueSat` and `scriptPubKey`) |
+| → → →<br>`address` | string | Optional<br>(0 or 1) | [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) Platform address of the credit output. Only present for asset lock payload version 2 |
+
+_`proDisTx`---shared masternode dissolution_
+
+_Added in Dash Core 24.0.0_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `proDisTx` | object | Optional<br>(0 or 1) | The shared masternode dissolution special transaction |
+| →<br>`version` | number (int) | Required<br>(exactly 1) | Special transaction version |
+| →<br>`proTxHash` | string (hex) | Required<br>(exactly 1) | Hash of the masternode's initial ProRegTx |
+| →<br>`actorIndex` | number (int) | Required<br>(exactly 1) | Index into the share table of the participant paying the penalty (if any) and the fee |
+| →<br>`sigCount` | number (int) | Required<br>(exactly 1) | Number of signatures: `1` for a unilateral dissolution, one per share for a unanimous dissolution |
+
+_`proUpShareTx`---shared masternode share update_
+
+_Added in Dash Core 24.0.0_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `proUpShareTx` | object | Optional<br>(0 or 1) | The shared masternode share update special transaction |
+| →<br>`version` | number (int) | Required<br>(exactly 1) | Special transaction version |
+| →<br>`proTxHash` | string (hex) | Required<br>(exactly 1) | Hash of the masternode's initial ProRegTx |
+| →<br>`shareIndex` | number (int) | Required<br>(exactly 1) | Index into the share table of the share being updated |
+| →<br>`rewardAddress` | string | Optional<br>(0 or 1) | New Dash address for this share's owner rewards. Omitted only when the payload's reward script is not P2PKH or P2SH |
+| →<br>`inputsHash` | string (hex) | Required<br>(exactly 1) | Hash of all the outpoints of the transaction inputs |
+
+_`proUpSharedRegTx`---shared masternode registrar update_
+
+_Added in Dash Core 24.0.0_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `proUpSharedRegTx` | object | Optional<br>(0 or 1) | The shared masternode registrar update special transaction |
+| →<br>`version` | number (int) | Required<br>(exactly 1) | Special transaction version |
+| →<br>`proTxHash` | string (hex) | Required<br>(exactly 1) | Hash of the masternode's initial ProRegTx |
+| →<br>`votingAddress` | string | Required<br>(exactly 1) | Dash address used for voting |
+| →<br>`pubKeyOperator` | string | Required<br>(exactly 1) | BLS public key used for operator signing |
+| →<br>`inputsHash` | string (hex) | Required<br>(exactly 1) | Hash of all the outpoints of the transaction inputs |
+| →<br>`sigCount` | number (int) | Required<br>(exactly 1) | Number of signatures. Must equal the share count |
 
 ## DecodeScript
 
@@ -1059,6 +1159,7 @@ _Result (if verbosity=`1`)---the decoded transaction_
 | → → →<br>`spentHeight` | number (int) | Optional<br>(0 or 1) | The block height of the spending transaction, or `-1` if the spending transaction is in the mempool (only if spentindex is enabled) |
 | →<br>`extraPayloadSize`     | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`         | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
+| →<br>Payload object | object | Optional<br>(0 or 1) | The decoded special transaction payload, named after the transaction type (for example, `proRegTx` or `cbTx`). Only present if it's a DIP2 special transaction. See [Decoded Special Transaction Payloads](#decoded-special-transaction-payloads) |
 | →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs |
 | →<br>`hex`                  | string (hex)   | Required<br>(exactly 1) | The serialized, hex-encoded data for the provided `txid`                                                                                                                                                                                                                                                                         |
 | →<br>`blockhash`            | string (hex)   | Optional<br>(0 or 1)    | If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order                                                                                                                                                                                   |

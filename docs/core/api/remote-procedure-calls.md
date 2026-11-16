@@ -155,7 +155,7 @@ Argument types are checked more strictly:
 
 * Boolean arguments of the Dash-specific RPCs (`bls`, `coinjoinsalt`, `masternode`, `protx`, `quorum` and their subcommands) must be JSON `true` or `false`. Strings such as `"true"` or `"1"` are rejected. Starting Dash Core with `-deprecatedrpc=permissive_bool` restores the old behavior, but this option will be removed in a future version.
 * Numeric arguments of the `gobject`, `masternode`, `protx` and `quorum` RPCs and their subcommands must be JSON numbers. Strings containing a number are rejected with a type error (code -3), and there is no option to restore the old behavior. The exceptions are the `baseBlock` and `block` arguments of `protx diff` and `protx listdiff`, which take a block hash or a height, and the `operatorReward` and bare-port `platformP2PAddrs`/`platformHTTPSAddrs` arguments of the `protx register*` RPCs, which accept a number or a string.
-* The boolean arguments of `setban` and `addpeeraddress` accept only `true`, `false` or `null`. Other values, which were previously treated as `false`, now return a type error.
+* The boolean arguments of `setban`, `addpeeraddress` and `walletcreatefundedpsbt` (`bip32derivs`) accept only `true`, `false` or `null`. Other values, which were previously treated as `false`, now return a type error.
 
 These rules apply only to values that are passed. An optional boolean or numeric argument can still be set to JSON `null` to use its default, for example the `detailed` argument of `protx list` or the `fee` argument of `protx shared_dissolve`.
 

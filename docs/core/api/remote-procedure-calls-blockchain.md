@@ -223,6 +223,7 @@ Name | Type | Presence | Description
 → → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
 → →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 → →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
+→ →<br>Payload object | object | Optional<br>(0 or 1) | The decoded special transaction payload, named after the transaction type (for example, `proRegTx` or `cbTx`). Only present if it's a DIP2 special transaction. See [Decoded Special Transaction Payloads](../api/remote-procedure-calls-raw-transactions.md#decoded-special-transaction-payloads)
 → →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
 → →<br>`fee` | number | Optional<br>(0 or 1) | The transaction fee in DASH, omitted if block undo data is not available
 → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
@@ -591,6 +592,10 @@ Result:
   "warnings": "Make sure to encrypt your wallet and delete all non-encrypted backups after you have verified that the wallet works!"
 }
 ```
+
+:::{note}
+This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `softforks` with `-deprecatedrpc=softforks`. Use the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) for deployment status instead.
+:::
 
 *See also*
 
@@ -2038,7 +2043,7 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | string (hex): array of objects | Required<br>(exactly 1) | Array of special transaction objects in the format of the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction)
+`result` | string (hex): array of objects | Required<br>(exactly 1) | Array of special transaction objects in the format of the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction), including the [decoded special transaction payload](../api/remote-procedure-calls-raw-transactions.md#decoded-special-transaction-payloads)
 
 *Example from Dash Core 0.13.1*
 
@@ -2141,6 +2146,10 @@ Result:
   }
 ]
 ```
+
+:::{note}
+This example predates Dash Core 23.0.0. Dash Core 23.0.0 and later return `scriptPubKey.address` and `scriptPubKey.desc` instead of the removed `reqSigs` and `addresses` fields.
+:::
 
 *See also:*
 

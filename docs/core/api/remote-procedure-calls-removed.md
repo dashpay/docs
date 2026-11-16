@@ -62,6 +62,24 @@ dash-cli -testnet gobject vote-conf \
 }
 ```
 
+## Masternode
+
+### Masternode Current
+
+:::{attention}
+Removed in Dash Core 23.0.0
+:::
+
+The `masternode current` RPC printed info on the current masternode winner to be paid the next block. It was deprecated in Dash Core 0.17.0. Use the [`masternode payments` RPC](../api/remote-procedure-calls-dash.md#masternode-payments) or the [`masternode winners` RPC](../api/remote-procedure-calls-dash.md#masternode-winners) instead.
+
+### Masternode Winner
+
+:::{attention}
+Removed in Dash Core 23.0.0
+:::
+
+The `masternode winner` RPC printed info on the next masternode winner to vote for. It was deprecated in Dash Core 0.17.0. Use the [`masternode payments` RPC](../api/remote-procedure-calls-dash.md#masternode-payments) or the [`masternode winners` RPC](../api/remote-procedure-calls-dash.md#masternode-winners) instead.
+
 ## Protx
 
 ### ProTx Register HPMN
