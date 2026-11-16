@@ -41,11 +41,11 @@ Requires an installation of [NodeJS](https://nodejs.org/en/download/)
 The JavaScript zeromq package is available from [npmjs.com](https://www.npmjs.com/package/zeromq) and can be installed from the command line by running:
 
 ```shell
-npm install zeromq@5
+npm install zeromq@6
 ```
 
 :::{attention}
-Version 5 of the zeromq package should be used for compatibility reasons.
+The example below uses the version 6 API of the zeromq package. Version 5 has a different API and doesn't build on current Node.js releases.
 :::
 
 ### 2. Subscribe to ZeroMQ Messages
@@ -56,31 +56,35 @@ Create a file with the following contents. Then run it by typing `node <your-fil
 
 ```{code-block} javascript
 const zmq = require('zeromq');
-const sock = zmq.socket('sub');
 const zmqPort = 20009;
 
-sock.connect('tcp://127.0.0.1:' + zmqPort);
+async function run() {
+  const sock = new zmq.Subscriber();
+  sock.connect('tcp://127.0.0.1:' + zmqPort);
 
-// Subscribe to transaction notifications
-sock.subscribe('hashtx'); // Note: this will subscribe to hashtxlock also
+  // Subscribe to transaction notifications
+  sock.subscribe('hashtx'); // Note: this will subscribe to hashtxlock also
 
-// Subscribe to InstantSend/ChainLock notifications
-sock.subscribe('hashchainlock');
-sock.subscribe('hashtxlock');
-sock.subscribe('rawchainlock'); // Note: this will subscribe to rawchainlocksig also
-sock.subscribe('rawtxlock'); // Note: this will subscribe to rawtxlocksig also
+  // Subscribe to InstantSend/ChainLock notifications
+  sock.subscribe('hashchainlock');
+  sock.subscribe('hashtxlock');
+  sock.subscribe('rawchainlock'); // Note: this will subscribe to rawchainlocksig also
+  sock.subscribe('rawtxlock'); // Note: this will subscribe to rawtxlocksig also
 
-console.log('Subscriber connected to port %d', zmqPort);
+  console.log('Subscriber connected to port %d', zmqPort);
 
-sock.on('message', function(topic, message) {
-  console.log(
-    'Received',
-    topic.toString().toUpperCase(),
-    'containing:\n',
-    message.toString('hex'),
-    '\n'
-  );
-});
+  for await (const [topic, message] of sock) {
+    console.log(
+      'Received',
+      topic.toString().toUpperCase(),
+      'containing:\n',
+      message.toString('hex'),
+      '\n'
+    );
+  }
+}
+
+run();
 ```
 
 ```{code-block} python
@@ -94,7 +98,6 @@ port = 20009
 
 class ZMQHandler():
     def __init__(self):
-        self.loop = asyncio.get_event_loop()
         self.zmqContext = zmq.asyncio.Context()
 
         self.zmqSubSocket = self.zmqContext.socket(zmq.SUB)
@@ -111,31 +114,31 @@ class ZMQHandler():
 
         print('Subscriber connected to port {}'.format(port))
 
-    @asyncio.coroutine
-    def handle(self) :
-        msg = yield from self.zmqSubSocket.recv_multipart()
-        topic = msg[0]
-        body = msg[1]
-        sequence = "Unknown"
+    async def handle(self):
+        while True:
+            msg = await self.zmqSubSocket.recv_multipart()
+            topic = msg[0]
+            body = msg[1]
 
-        print('Received {} containing:\n{}\n'.format(
-            topic.decode("utf-8"), 
-            binascii.hexlify(body).decode("utf-8")))
+            print('Received {} containing:\n{}\n'.format(
+                topic.decode("utf-8"),
+                binascii.hexlify(body).decode("utf-8")))
 
-        # schedule ourselves to receive the next message
-        asyncio.ensure_future(self.handle())
+    async def start(self):
+        task = asyncio.create_task(self.handle())
+        asyncio.get_running_loop().add_signal_handler(signal.SIGINT, task.cancel)
+        try:
+            await task
+        except asyncio.CancelledError:
+            pass
+        finally:
+            self.zmqContext.destroy()
 
-    def start(self):
-        self.loop.add_signal_handler(signal.SIGINT, self.stop)
-        self.loop.create_task(self.handle())
-        self.loop.run_forever()
+async def main():
+    daemon = ZMQHandler()
+    await daemon.start()
 
-    def stop(self):
-        self.loop.stop()
-        self.zmqContext.destroy()
-
-daemon = ZMQHandler()
-daemon.start()
+asyncio.run(main())
 ```
 
 ::::
