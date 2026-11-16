@@ -103,7 +103,7 @@ Other files:
 
 ## Transaction Tutorials
 
-`run-transaction-tutorials.sh` starts a fresh, isolated regtest node, creates the legacy wallet from the tutorial setup, and runs the commands from each transaction tutorial page in order: simple spending, simple raw transaction, complex raw transaction, offline signing, and P2SH multisig. Each step's output goes to a numbered file in the output directory, followed by an `exit=<status>` line. The script fails if any step other than offline signing step 5a (which is meant to fail) returns an error.
+`run-transaction-tutorials.sh` starts a fresh, isolated regtest node, creates the legacy wallet from the tutorial setup, and runs the equivalent of the commands on each transaction tutorial page in order: simple spending, simple raw transaction, complex raw transaction, offline signing, and P2SH multisig. Each step's output goes to a numbered file in the output directory, followed by an `exit=<status>` line. The script fails if any step other than offline signing step 5a (which is meant to fail) returns an error.
 
 ```bash
 DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorials.sh

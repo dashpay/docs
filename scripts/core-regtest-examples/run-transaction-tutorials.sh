@@ -62,6 +62,8 @@ elif [[ -e "$DATADIR" && -n "$(ls -A "$DATADIR")" ]]; then
   exit 1
 fi
 mkdir -p "$DATADIR" "$OUT_DIR"
+# Drop numbered output from an earlier run so the final check only sees this run
+rm -f "$OUT_DIR"/[0-9]*.txt
 
 # The pages run `dash-cli -regtest ...`; this adds the isolated datadir and port
 dash_cli() {

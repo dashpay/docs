@@ -29,7 +29,7 @@ Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of t
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -320,7 +320,7 @@ Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of t
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -556,7 +556,7 @@ Name | Type | Presence | Description
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | array | Required<br>(exactly 1) | An array containing the requested filter headers
-→<br>Filter Header | string (hex) | Required<br>(1 or more) | A filter header, encoded as hex in RPC byte order.  The array contains the amount of filter headers requested with `count`, or fewer if the chain tip is reached first
+→<br>Filter Header | string (hex) | Optional<br>(0 or more) | A filter header, encoded as hex in RPC byte order.  The array contains the amount of filter headers requested with `count`, or fewer if the chain tip is reached first. It is empty if the block hash is not in the active chain
 
 *Examples from Dash Core 24.0.2*
 
@@ -613,7 +613,7 @@ Block Height | number (int) | Required<br>(exactly 1) | The height of the block 
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block hash contents in JSON, or `.bin` or `hex` for a serialized block hash in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block hash contents in JSON, or `.bin` or `.hex` for a serialized block hash in binary or hex
 
 *Response as JSON*
 
@@ -835,7 +835,7 @@ Outpoint | vector | Required<br>(1 or more) | The list of outpoints to be querie
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -941,7 +941,7 @@ Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of t
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block headers in JSON, or `.bin` or `.hex` for serialized block headers in binary or hex
 
 *Parameter #3---the amount of block headers to retrieve*
 
@@ -954,7 +954,7 @@ Name | Type | Presence | Description
 Name | Type | Presence | Description
 --- | --- | --- | ---
 Result | array | Required<br>(exactly 1) | An array containing the requested block headers
-→<br>Block Header | object | Required<br>(1 or more) | An object containing a block header.  The amount of the objects is the same as the amount provided in parameter #3
+→<br>Block Header | object | Optional<br>(0 or more) | An object containing a block header.  The array contains the amount of headers requested with `count`, or fewer if the chain tip is reached first. It is empty if the block hash is not in the active chain
 → →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #1
 → →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
@@ -972,7 +972,7 @@ Result | array | Required<br>(exactly 1) | An array containing the requested blo
 → →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
 → →<br>`chainlock` | bool | Required<br>(exactly 1) | If set to `true`, this block is locked by a ChainLock
 
-*Examples from Dash Core 24.0.0*
+*Examples from Dash Core 24.0.2*
 
 Request 2 block headers in hex-encoded serialized block format:
 
@@ -1289,7 +1289,7 @@ TXID | path (hex) | Required<br>(exactly 1) | The TXID of the transaction to get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded transaction contents in JSON, or `.bin` or `hex` for a serialized transaction in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded transaction contents in JSON, or `.bin` or `.hex` for a serialized transaction in binary or hex
 
 *Response as JSON*
 

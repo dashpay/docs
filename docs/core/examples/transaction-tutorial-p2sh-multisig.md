@@ -36,7 +36,7 @@ Recall from the Guide that the hashed public keys used in addresses obfuscate th
 
 Use the [`getaddressinfo` RPC](../api/remote-procedure-calls-wallet.md#getaddressinfo) to display the full (unhashed) public key for the addresses.  This is the information which will actually be included in the multisig redeem script.  This is also the information you would give another person or device as part of creating a multisig output or P2SH multisig redeem script.
 
-We save the address returned to a shell variable.
+We save the public key returned to a shell variable.
 
 ``` bash
 > dash-cli -regtest getaddressinfo $NEW_ADDRESS3

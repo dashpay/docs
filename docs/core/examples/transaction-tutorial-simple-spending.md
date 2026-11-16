@@ -114,10 +114,9 @@ Shell script to run the previous example ([view as a GitHub Gist](https://gist.g
 ``` shell
 #!/bin/bash
 
-# Set RPCUSER and RPCPWD to the username and password configure in dash.conf
-RPCUSER="user"
-RPCPWD="pass"
-REGTEST_CMD="dash-cli -regtest -rpcuser=$RPCUSER -rpcpassword=$RPCPWD"
+# Uses cookie authentication. If dash.conf sets rpcuser and rpcpassword,
+# add -rpcuser=<user> -rpcpassword=<password> to REGTEST_CMD.
+REGTEST_CMD="dash-cli -regtest"
 
 # SIMPLE SPENDING EXAMPLE
 # -----------------------

@@ -16,7 +16,7 @@ All three programs get settings from `dash.conf` in the `DashCore` application d
 
 Dash Core doesn't create `dash.conf`, so create the file if it doesn't exist. (`dash-qt` creates an empty file when you select **Open wallet configuration file** from its **File** menu.)
 
-`dashd` and `dash-cli` don't need an RPC password when they run on the same system as the same user and use the same data directory. If no `rpcpassword` is set, `dashd` writes a random cookie to a `.cookie` file in its data directory, and `dash-cli` reads that file to authenticate (see the `-rpccookiefile` option). To use a fixed password instead, add it to your `dash.conf` file. Both programs will read from the same file if both run on the same system as the same user, so any long random password will work:
+`dashd` and `dash-cli` don't need an RPC password when they run on the same system as the same user and use the same data directory. If no `rpcpassword` is set, `dashd` writes a random cookie to a `.cookie` file in its data directory (in the network subdirectory, such as `testnet3/` or `regtest/`, on test networks), and `dash-cli` reads that file to authenticate (see the `-rpccookiefile` option). To use a fixed password instead, add it to your `dash.conf` file. Both programs will read from the same file if both run on the same system as the same user, so any long random password will work:
 
 ``` text
 rpcpassword=change_this_to_a_long_random_password

@@ -121,7 +121,7 @@ class ZMQHandler():
             body = msg[1]
 
             print('Received {} containing:\n{}\n'.format(
-                topic.decode("utf-8"),
+                topic.decode("utf-8").upper(),
                 binascii.hexlify(body).decode("utf-8")))
 
     async def start(self):
