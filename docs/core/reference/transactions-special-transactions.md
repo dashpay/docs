@@ -49,6 +49,8 @@ A ProRegTx is created and sent using the [`protx` RPC](../api/remote-procedure-c
 
 **Note**: The version 3 wire format differs from the version 3 format defined in Dash Core 23.0.0. In Dash Core 23.0.0, version 3 only replaced the `ipAddress` and `port` fields with `netInfo` and kept the single `scriptPayout`. In Dash Core 24.0.0, version 3 also replaces `scriptPayout` with the `payouts` list and adds the `shares`, `joinSigs`, `earlyPeriodBlocks`, and `earlyPenalty` fields. Software that parses version 3 provider transactions using the Dash Core 23.0.0 format must be updated.
 
+**Updated in Dash Core 24.0.0**: Operator keys must be unique across the masternode list. After the v24 hard fork activates, this check covers both BLS schemes. A ProRegTx, [ProUpRegTx](#proupregtx), or [ProUpSharedRegTx](#proupsharedregtx) that sets an operator key already used by another masternode is invalid even if that masternode's key uses the other BLS scheme. The same check applies when a [ProUpServTx](#proupservtx) or ProUpRegTx moves a legacy BLS scheme masternode to the basic BLS scheme.
+
 The special transaction type is 1 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
@@ -121,9 +123,11 @@ A shared masternode registration lists its participants in the `shares` field of
 
 A version 3 ProRegTx with a non-zero `sharesCount` registers a shared masternode whose collateral is funded by 2 to 8 participants. Each share must be at least 100 DASH, and the share amounts must sum to exactly the required collateral. The collateral must be an output of the ProRegTx itself that pays the shared collateral script `04445348437551` (`0x04 "DSHC" OP_DROP OP_TRUE`). `KeyIdOwner` must be null and `payoutsCount` must be 0, since the share owner keys and share table replace them. Shared EvoNode registrations also require the `evo_shares` deployment to be active.
 
+Each share's `keyIdOwner` must be non-null and unique within the share table, and each share's `refundScript` must be unique. No share's `refundScript` or `rewardScript` may pay to the masternode's `KeyIdVoting` or to any share's `keyIdOwner`. These payee restrictions also apply to later reward script changes ([ProUpShareTx](#proupsharetx)) and voting key changes ([ProUpSharedRegTx](#proupsharedregtx)).
+
 Instead of `payloadSig` (which is left empty), each participant consents to the registration by signing it with their share's `keyIdOwner`. These signatures are stored in `joinSigs`. An unsigned shared registration is created using the [`protx shared_register_prepare` RPC](../api/remote-procedure-calls-evo.md#protx-shared-register-prepare). It is then signed with [`protx shared_sign`](../api/remote-procedure-calls-evo.md#protx-shared-sign) and submitted with [`protx shared_combine`](../api/remote-procedure-calls-evo.md#protx-shared-combine).
 
-The shared collateral script has no keys. Consensus rules protect it instead: once v24 activates, it can only be spent by a [ProDisTx](#prodistx).
+The shared collateral script has no keys. Consensus rules protect it instead: once v24 activates, it can only be spent by a [ProDisTx](#prodistx). Once v24 activates, any transaction output paying the shared collateral script is also invalid unless it is the collateral output (`collateralOutpoint.n`) of a shared masternode ProRegTx. This applies to every transaction, including ordinary transactions, the coinbase, and asset unlock transactions. Outputs paying the script that were created before v24 activation can never be spent.
 
 The owner reward of a shared masternode is split across the share table in proportion to each share's `amount`. Each portion is paid to the share's `rewardScript`, or to its `refundScript` if no reward script is set. Operator rewards are unchanged.
 
@@ -340,6 +344,10 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 
 ```
 
+:::{note}
+This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. The `proRegTx` object now shows an `addresses` object instead of `service`, which is only shown with `-deprecatedrpc=service`. Version 3 payloads show `payouts` (or `shares` for a shared masternode) instead of `payoutAddress`.
+:::
+
 ```{eval-rst}
 .. _ref-txs-proupservtx:
 ```
@@ -486,6 +494,10 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
   "chainlock": true
 }
 ```
+
+:::{note}
+This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. The `proUpServTx` object now shows an `addresses` object instead of `service`, which is only shown with `-deprecatedrpc=service`.
+:::
 
 ```{eval-rst}
 .. _ref-txs-proupregtx:
@@ -636,6 +648,10 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 
 ```
 
+:::{note}
+This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. Version 3 payloads show `payouts` instead of `payoutAddress`.
+:::
+
 ```{eval-rst}
 .. _ref-txs-prouprevtx:
 ```
@@ -763,6 +779,10 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 }
 ```
 
+:::{note}
+This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`.
+:::
+
 ```{eval-rst}
 .. _ref-txs-prodistx:
 ```
@@ -785,7 +805,9 @@ The special transaction type used for ProDisTx Transactions is 10 and the extra 
 | 1 | sigCount | uint8_t | Number of signatures. Selects the dissolution mode:<br>`1` - Unilateral, signed by the share at `actorIndex`<br>`sharesCount` - Unanimous, signed by every share
 | 65 * sigCount | sigs | byte[65][] | Compact ECDSA signatures by the share owner keys, in share order. Each signature is serialized without a length prefix.
 
-A ProDisTx has a single input, the collateral outpoint, and outputs that refund each participant's `amount` to their `refundScript` in share order. A unilateral dissolution made within `earlyPeriodBlocks` of registration must also pay `earlyPenalty` to the other participants, split in proportion to their shares. A unanimous dissolution, or a unilateral one after the early period, has no penalty. The transaction fee is taken from the initiating participant's share and is limited to 0.01 DASH.
+A ProDisTx has exactly one input, the shared collateral outpoint, with an empty signature script. Its outputs are one output for each participant other than the actor (the share at `actorIndex`), in share order, each paying that share's `refundScript`, followed by an optional final output paying the actor's `refundScript`. The actor output must be omitted if its value would be zero. No other outputs are allowed. Each non-actor output must pay at least the share's `amount`.
+
+A unilateral dissolution made within `earlyPeriodBlocks` of registration must also pay `earlyPenalty` to the other participants, split in proportion to their shares: each non-actor output must pay at least its proportional part of the penalty (rounded down) above its `amount`, and these extra amounts must total at least `earlyPenalty`. A unanimous dissolution, or a unilateral one after the early period, has no penalty. A unilateral dissolution can never pay the other participants more than `earlyPenalty` in total above their `amount`, even after the early period. The transaction fee is taken from the actor's share and is limited to 0.01 DASH.
 
 ```{eval-rst}
 .. _ref-txs-proupsharetx:
@@ -1010,6 +1032,10 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
   "chainlock": true
 }
 ```
+
+:::{note}
+This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`.
+:::
 
 ```{eval-rst}
 .. _ref-txs-qctx:

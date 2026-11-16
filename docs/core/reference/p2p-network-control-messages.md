@@ -403,7 +403,7 @@ Dash Core 21.0.0 [hardened all spork values on mainnet](https://github.com/dashp
 :::
 
 The list of all active sporks can be found in
-[`src/spork.h`](https://github.com/dashpay/dash/blob/v20.x/src/spork.h#L36). See the [removed
+[`src/spork.h`](https://github.com/dashpay/dash/blob/v24.0.0/src/spork.h#L34). See the [removed
 sporks section](#removed-sporks) for a list of previously removed sporks.
 
 | Spork ID | Num. | Name | Description |

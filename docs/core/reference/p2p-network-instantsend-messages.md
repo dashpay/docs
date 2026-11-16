@@ -56,6 +56,8 @@ The request ID for an isdlock can be calculated deterministically using the form
 
 As of Dash Core 24.0.0, version 2 asset unlock transactions can be locked by InstantSend. Since these transactions have no inputs, the `isdlock` carries a single synthetic outpoint consisting of the asset unlock's signing request ID (`hash("plwdtx" + withdrawal_index)`) and an index of `0`. This binds the withdrawal index to one TXID so any other transaction claiming the same index conflicts with the lock.
 
+Provider transactions are never locked by InstantSend. Since Dash Core 23.1.9, masternodes do not create an `isdlock` for a [ProRegTx](../reference/transactions-special-transactions.md#proregtx), [ProUpServTx](../reference/transactions-special-transactions.md#proupservtx), [ProUpRegTx](../reference/transactions-special-transactions.md#proupregtx), or [ProUpRevTx](../reference/transactions-special-transactions.md#prouprevtx) (types 1-4). As of Dash Core 24.0.0, this also applies to the shared masternode transactions: [ProDisTx](../reference/transactions-special-transactions.md#prodistx), [ProUpShareTx](../reference/transactions-special-transactions.md#proupsharetx), and [ProUpSharedRegTx](../reference/transactions-special-transactions.md#proupsharedregtx) (types 10-12).
+
 Since Dash Core 23.1.3, `isdlock` inventory announcements are not sent to masternode peers that have requested recovered signatures via the [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendrecsigs), since they can reconstruct the `isdlock` from the recovered signature.
 
 | Bytes | Name | Data type | Description |

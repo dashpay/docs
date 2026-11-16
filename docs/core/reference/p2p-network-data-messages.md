@@ -732,14 +732,15 @@ Simplified Masternode List (SML) Entry
 | 2 | nVersion | uint_16 | **_Added in protocol version 70228_**<br>The version of the simplified masternode list
 | 32 | proRegTxHash | uint256 | The hash of the ProRegTx that identifies the masternode
 | 32 | confirmedHash | uint256 | The hash of the block at which the masternode got confirmed
-| 16 | ipAddress | byte[] | IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)
-| 2 | port | uint_16 | Port (network byte order)
-| 48 | pubKeyOperator | BLSPubKey | The operator public key<br>**Note**: serialization varies based on `nVersion`:<br>-  1 - legacy BLS scheme<br>- 2 - basic BLS scheme
+| 16 | ipAddress | byte[] | ***`nVersion` < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
+| 2 | port | uint_16 | ***`nVersion` < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
+| Variable | netInfo | NetInfo | ***`nVersion` 3 and later***<br>Network address information, using the same encoding as the ProRegTx `netInfo` field. See [NetInfo Structure](../reference/transactions-special-transactions.md#netinfo-structure) for details.
+| 48 | pubKeyOperator | BLSPubKey | The operator public key<br>**Note**: serialization varies based on `nVersion`:<br>-  1 - legacy BLS scheme<br>- 2 and 3 - basic BLS scheme
 | 20 |keyIDVoting | CKeyID | The public key hash used for voting.
 | 1 | isValid | bool | True if a masternode is not PoSe-banned
-| 0 or 2 | type | uint_16  | Masternode type:<br>0 - regular masternode<br>1 - Evolution masternode<br>**Note**: Only present after the Dash v19.0.0 hard fork. |
-| 0 or 2 | platformHTTPPort | uint_16 | TCP port of Platform HTTP/API interface (network byte order).<br>**Note**: Only present when mnlistdiff `version` is 2 and `type` is 1. |
-0 or 20 | platformNodeID | byte[] | Dash Platform P2P node ID, derived from P2P public key.<br>**Note**: Only present when mnlistdiff `version` is 2 and `type` is 1. |
+| 0 or 2 | type | uint_16  | Masternode type:<br>0 - regular masternode<br>1 - Evolution masternode<br>**Note**: Only present when the peer's protocol version is 70227 or higher and the entry's `nVersion` is 2 or higher. |
+| 0 or 2 | platformHTTPPort | uint_16 | TCP port of Platform HTTP/API interface (network byte order).<br>**Note**: Only present when `type` is 1 and `nVersion` is 2. In version 3 entries, the Platform ports are part of `netInfo`. |
+0 or 20 | platformNodeID | byte[] | Dash Platform P2P node ID, derived from P2P public key.<br>**Note**: Only present when `type` is 1 and `nVersion` is 2 or higher. |
 
 The content of `quorumsCLSigsObject`:
 

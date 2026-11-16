@@ -43,7 +43,7 @@ As header hashes and TXIDs are widely used as global identifiers in other Dash s
 |---------------|---------------------|-----------------|
 | Example: SHA256(SHA256(0x00))  | Hash: 1406...539a         | Hash: 9a53...0614     |
 |---------------|---------------------|-----------------|
-| Header Hashes: SHA256(SHA256(block header))  | Used when constructing block headers  | Used by RPCs such as `getblock`; widely used in block explorers |
+| Header Hashes: X11(block header)  | Used when constructing block headers  | Used by RPCs such as `getblock`; widely used in block explorers |
 |---------------|---------------------|-----------------|
 | Merkle Roots: SHA256(SHA256(TXIDs and merkle rows))  | Used when constructing block headers  | Returned by RPCs such as `getblock` |
 |---------------|---------------------|-----------------|
