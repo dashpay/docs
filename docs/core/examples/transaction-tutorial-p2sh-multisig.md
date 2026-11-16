@@ -18,15 +18,15 @@ Recall from the Guide that the hashed public keys used in addresses obfuscate th
 
 ``` bash
     > dash-cli -regtest getnewaddress
-    yYtWtpW7akCc2a5En8NsXeTGENyYbNgv9q
+    yU22rE8oEUVYgsPMwNUgGWceVvKVCTMgvf
     > dash-cli -regtest getnewaddress
-    yarm2x9eDFd9dKCycyPigwwj1vfJcYFxsH
+    yfnfDrJCPhs3WMNz3tQhAQYUbY912MnW2n
     > dash-cli -regtest getnewaddress
-    yLknHbtnjJRVWQr78aTfCPfNB42jfNkDWK
+    yS6zsGiF1CNzuGsXn3qRrnuHvh3Hopqrpd
 
-    > NEW_ADDRESS1=yYtWtpW7akCc2a5En8NsXeTGENyYbNgv9q
-    > NEW_ADDRESS2=yarm2x9eDFd9dKCycyPigwwj1vfJcYFxsH
-    > NEW_ADDRESS3=yLknHbtnjJRVWQr78aTfCPfNB42jfNkDWK
+    > NEW_ADDRESS1=yU22rE8oEUVYgsPMwNUgGWceVvKVCTMgvf
+    > NEW_ADDRESS2=yfnfDrJCPhs3WMNz3tQhAQYUbY912MnW2n
+    > NEW_ADDRESS3=yS6zsGiF1CNzuGsXn3qRrnuHvh3Hopqrpd
 ```
 
 ## 2. Get public key
@@ -41,23 +41,31 @@ We save the address returned to a shell variable.
 
 ``` json
 {
-  "address": "yLknHbtnjJRVWQr78aTfCPfNB42jfNkDWK",
-  "scriptPubKey": "76a91404caa000366b99780f8e606ccc818883ca7f48f888ac",
+  "address": "yS6zsGiF1CNzuGsXn3qRrnuHvh3Hopqrpd",
+  "scriptPubKey": "76a9143f76132859fde08a490213d02a4760b898fcce8a88ac",
   "ismine": true,
   "solvable": true,
+  "desc": "pkh([6ef61e0b/44h/1h/0h/0/10]035a8135bb28040114988a819343420f3a859\
+           f188b738851e10774209077da3dd7)#ct7gtdex",
   "iswatchonly": false,
   "isscript": false,
-  "pubkey": "038007ef6fd812d73da054271b68a42dae06672cff2a30b2814935537e5930ebf6",
+  "pubkey": "035a8135bb28040114988a819343420f3a859f188b738851e10774209077da3dd7",
   "iscompressed": true,
-  "label": "",
   "ischange": false,
+  "timestamp": 1794849414,
+  "hdchainid": "9afcce9229fdba00c43f320be67543f7d435dc229b3edde300dd8436fbdbbb98",
+  "hdkeypath": "m/44'/1'/0'/0/10",
+  "hdmasterfingerprint": "6ef61e0b",
+  "labels": [
+    ""
+  ]
 }
 
 ```
 
 ``` bash
 
-> NEW_ADDRESS3_PUBLIC_KEY=038007ef6fd812d73da054271b68a42dae0667[...]
+> NEW_ADDRESS3_PUBLIC_KEY=035a8135bb28040114988a819343420f3a859f[...]
 ```
 
 ## 3. Create multisig address
@@ -83,18 +91,22 @@ Neither the address nor the redeem script are stored in the wallet when you use 
 
 ``` json
 {
-  "address": "8meEZF54K7GxhHhdLCCeNwFQjHENv4CK86",
-  "redeemScript": "522103fa8866cccae3c975a72884443a351801a0ea9721cbe721558\
-                  6ddd6fab5f39f262103b2259f42a241f4870e794521594f2af7aadf0\
-                  e4c580a43582e58630e4618634621038007ef6fd812d73da054271b6\
-                  8a42dae06672cff2a30b2814935537e5930ebf653ae"
+  "address": "8p2Rx8VUP4XJATHcm29VpqAkeFyyf2kHYG",
+  "redeemScript": "522103fb039547a8655522aee01d6b2e4bd9c8f29ddf10862c4ac9d29d\
+                   209212e74b4a21022f44ad116f6b73ca45b62b16964a44037399ca18a2\
+                   54abadbe32abe1ddcfaf7921035a8135bb28040114988a819343420f3a\
+                   859f188b738851e10774209077da3dd753ae",
+  "descriptor": "sh(multi(2,03fb039547a8655522aee01d6b2e4bd9c8f29ddf10862c4ac\
+                 9d29d209212e74b4a,022f44ad116f6b73ca45b62b16964a44037399ca18\
+                 a254abadbe32abe1ddcfaf79,035a8135bb28040114988a819343420f3a8\
+                 59f188b738851e10774209077da3dd7))#3wjr4a3w"
 }
 ```
 
 ``` bash
 
-> P2SH_ADDRESS=8meEZF54K7GxhHhdLCCeNwFQjHENv4CK86
-> P2SH_REDEEM_SCRIPT=522103fa8866cccae3c975a72884443a351801a0ea9[...]
+> P2SH_ADDRESS=8p2Rx8VUP4XJATHcm29VpqAkeFyyf2kHYG
+> P2SH_REDEEM_SCRIPT=522103fb039547a8655522aee01d6b2e4bd9c8f29[...]
 ```
 
 ## 4. Fund multisig address
@@ -105,9 +117,9 @@ We save that [TXID](../resources/glossary.md#transaction-identifiers) to a shell
 
 ``` bash
 > dash-cli -regtest sendtoaddress $P2SH_ADDRESS 10.00
-ddb2a2eb2402a9ae61d7db93a9a48c0747859d899e704b10f5b72145779f9c52
+b5da10d99d994600a2a3d86a8065be8151d77605a644c157b4551945b21e2b81
 
-> UTXO_TXID=ddb2a2eb2402a9ae61d7db93a9a48c0747859d899e704b10f5b7[...]
+> UTXO_TXID=b5da10d99d994600a2a3d86a8065be8151d77605a644c157b455[...]
 ```
 
 ## 5. Get decoded transaction
@@ -120,31 +132,25 @@ We use the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transacti
 
 ``` json
 {
-  "hex": "010000000130d100f7762956100a2396403c60e13e7a13520167acc6d38978ec\
-          33ada44cf8010000006b48304502210084effe3132550e6ba43a7f4cc54ad30d\
-          001c0dbc3ea66d638e5f3d6039a28c2b022044c8cd89cf455b8650fe259306eb\
-          2a30b0112969717e469a722bca0263e0975d01210324c2226564b19f0948306b\
-          b7160a735c28001bbd046cd46059df9f8434f41254feffffff0200ca9a3b0000\
-          000017a9144f334f26e350c8903c92ff25b733670902cfad5a8700e0052d0b00\
-          00001976a91479165c2155b8fec5c702ec7f251d0982f27b402988ac67000000",
-  "txid": "ddb2a2eb2402a9ae61d7db93a9a48c0747859d899e704b10f5b72145779f9c52",
-  "size": 224,
-  "version": 1,
+  "txid": "b5da10d99d994600a2a3d86a8065be8151d77605a644c157b4551945b21e2b81",
+  "version": 2,
+  "type": 0,
+  "size": 223,
   "locktime": 103,
   "vin": [
     {
-      "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f70\
-                0d130",
+      "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
       "vout": 1,
       "scriptSig": {
-        "asm": "304502210084effe3132550e6ba43a7f4cc54ad30d001c0dbc3ea66d63\
-                8e5f3d6039a28c2b022044c8cd89cf455b8650fe259306eb2a30b01129\
-                69717e469a722bca0263e0975d[ALL] 0324c2226564b19f0948306bb7\
-                160a735c28001bbd046cd46059df9f8434f41254",
-        "hex": "48304502210084effe3132550e6ba43a7f4cc54ad30d001c0dbc3ea66d\
-                638e5f3d6039a28c2b022044c8cd89cf455b8650fe259306eb2a30b011\
-                2969717e469a722bca0263e0975d01210324c2226564b19f0948306bb7\
-                160a735c28001bbd046cd46059df9f8434f41254"
+        "asm": "30440220284202dced1c634241d4a8443336122c59feb8d79ece4a9e85034\
+                924c850428c0220028dd652b1dde3527d1b5368e26509e70c6296df1aa023\
+                5e4fe20c159c5745ef[ALL]\
+                025a561f14893e47dc233bdd10ee71baf40aa41cc0016d40eb7c2ce533c72\
+                1dc85",
+        "hex": "4730440220284202dced1c634241d4a8443336122c59feb8d79ece4a9e850\
+                34924c850428c0220028dd652b1dde3527d1b5368e26509e70c6296df1aa0\
+                235e4fe20c159c5745ef0121025a561f14893e47dc233bdd10ee71baf40aa\
+                41cc0016d40eb7c2ce533c721dc85"
       },
       "sequence": 4294967294
     }
@@ -155,38 +161,44 @@ We use the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transacti
       "valueSat": 1000000000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_HASH160 4f334f26e350c8903c92ff25b733670902cfad5a OP_EQUAL",
-        "hex": "a9144f334f26e350c8903c92ff25b733670902cfad5a87",
-        "reqSigs": 1,
-        "type": "scripthash",
-        "addresses": [
-          "8meEZF54K7GxhHhdLCCeNwFQjHENv4CK86"
-        ]
+        "asm": "OP_HASH160 69563940b81d56670418ddb0d83c2245c07c19e2 OP_EQUAL",
+        "desc": "addr(8p2Rx8VUP4XJATHcm29VpqAkeFyyf2kHYG)#wdpwlup7",
+        "hex": "a91469563940b81d56670418ddb0d83c2245c07c19e287",
+        "address": "8p2Rx8VUP4XJATHcm29VpqAkeFyyf2kHYG",
+        "type": "scripthash"
       }
     },
     {
-      "value": 480.00000000,
-      "valueSat": 48000000000,
+      "value": 479.99999552,
+      "valueSat": 47999999552,
       "n": 1,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 79165c2155b8fec5c702ec7f251d0982f27b4029\
+        "asm": "OP_DUP OP_HASH160 091621776dd32076999341a3d80ca20a4d19c80d\
                 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a91479165c2155b8fec5c702ec7f251d0982f27b402988ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "yXMhQ1L5q3PcnJgEhyAFztQPPRaEr8Mh8s"
-        ]
+        "desc": "addr(yM9VSbj1EqXARjavbPTq2Nt2JNN7RkRDNx)#mhpmvzp2",
+        "hex": "76a914091621776dd32076999341a3d80ca20a4d19c80d88ac",
+        "address": "yM9VSbj1EqXARjavbPTq2Nt2JNN7RkRDNx",
+        "type": "pubkeyhash"
       }
     }
-  ]
+  ],
+  "hex": "02000000010bf9d56cc19de7fe0ab29f7a41a6f582b4ccc29a686512dee78c7369e\
+          a7cd4e3010000006a4730440220284202dced1c634241d4a8443336122c59feb8d7\
+          9ece4a9e85034924c850428c0220028dd652b1dde3527d1b5368e26509e70c6296d\
+          f1aa0235e4fe20c159c5745ef0121025a561f14893e47dc233bdd10ee71baf40aa4\
+          1cc0016d40eb7c2ce533c721dc85feffffff0200ca9a3b0000000017a9146956394\
+          0b81d56670418ddb0d83c2245c07c19e28740de052d0b0000001976a91409162177\
+          6dd32076999341a3d80ca20a4d19c80d88ac67000000",
+  "instantlock": false,
+  "instantlock_internal": false,
+  "chainlock": false
 }
 ```
 
 ``` bash
 
 > UTXO_VOUT=0
-> UTXO_OUTPUT_SCRIPT=a9144f334f26e350c8903c92ff25b733670902cfad5a87
+> UTXO_OUTPUT_SCRIPT=a91469563940b81d56670418ddb0d83c2245c07c19e287
 ```
 
 ## 6. Get new address
@@ -195,9 +207,9 @@ We generate a new P2PKH address to use in the output we're about to create.
 
 ``` bash
 > dash-cli -regtest getnewaddress
-yZSxAakpoWGG3vcsvpk9qNtsYREhump4Cr
+yVAck79kZPLKcAigYMgZ4kwKpWWXCCtRpG
 
-> NEW_ADDRESS4=yZSxAakpoWGG3vcsvpk9qNtsYREhump4Cr
+> NEW_ADDRESS4=yVAck79kZPLKcAigYMgZ4kwKpWWXCCtRpG
 ```
 
 ## 7. Create raw transaction
@@ -217,16 +229,11 @@ We generate the [raw transaction](../resources/glossary.md#raw-transaction) the 
    {
      "'$NEW_ADDRESS4'": 9.998
    }'''
+0200000001812b1eb2451955b457c144a60576d75181be65806ad8a3a2004699\
+9dd910dab50000000000ffffffff01c0bc973b000000001976a914610da5f2fb\
+0015ccd58160ffdf13742b2f06fb5388ac00000000
 
-0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd761aea902\
-24eba2b2dd0000000000ffffffff01c0bc973b000000001976a914900504f96c\
-55d6ebe1c33581ba9430ca05b12a1488ac00000000
-
-010000000175e1769813db8418fea17576694af1ff31cb2b512b7333e6eb42f0\
-30d0d778720000000000ffffffff01c0bc973b000000001976a914b6f64f5bf3\
-e38f25ead28817df7929c06fe847ee88ac00000000
-
-> RAW_TX=0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd[...]
+> RAW_TX=0200000001812b1eb2451955b457c144a60576d75181be65806ad8a[...]
 ```
 
 ## 8. Get private key
@@ -243,12 +250,12 @@ The `dumpprivkey` RPC only works with legacy wallets. See the [tutorial setup](.
 
 ``` bash
 > dash-cli -regtest dumpprivkey $NEW_ADDRESS1
-cThhxbQUtBDzHZbZrW6XAR4XkXfaQf4Abo7BQaTK2zVp7sVrHdmv
+cThkdLpDvXmGkHnAYAV9wyeF4DwzbPSVNkZiX3PPYGVvfxGGDorQ
 > dash-cli -regtest dumpprivkey $NEW_ADDRESS3
-cUbYymPeHhRszTn64Xg7dzYKez8YC83M39ZTPJDiBDu8dRD3EjzF
+cTQKdUistYTdzjmwVywWMNEcfsgpupU1Dk7dnCTaBdL95HSAULWM
 
-> NEW_ADDRESS1_PRIVATE_KEY=cThhxbQUtBDzHZbZrW6XAR4XkXfaQf4Abo7BQ[...]
-> NEW_ADDRESS3_PRIVATE_KEY=cUbYymPeHhRszTn64Xg7dzYKez8YC83M39ZTP[...]
+> NEW_ADDRESS1_PRIVATE_KEY=cThkdLpDvXmGkHnAYAV9wyeF4DwzbPSVNkZiX[...]
+> NEW_ADDRESS3_PRIVATE_KEY=cTQKdUistYTdzjmwVywWMNEcfsgpupU1Dk7dn[...]
 ```
 
 ## 9. Sign raw transaction
@@ -275,30 +282,29 @@ We make the first [signature](../resources/glossary.md#signature). The input arg
 
 ``` json
 {
-  "hex": "0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd761aea902\
-          24eba2b2dd00000000b40047304402201cc50eac6d2db04dabd8ccd68b3116c0\
-          a8d37e7e41335e0d0ab441a5aa08cdcd02204011d184dca2489758c05e01556f\
-          f2ff9c48c39ff434fdfb1d9e0284fbde7701014c69522103fa8866cccae3c975\
-          a72884443a351801a0ea9721cbe7215586ddd6fab5f39f262103b2259f42a241\
-          f4870e794521594f2af7aadf0e4c580a43582e58630e4618634621038007ef6f\
-          d812d73da054271b68a42dae06672cff2a30b2814935537e5930ebf653aeffff\
-          ffff01c0bc973b000000001976a914900504f96c55d6ebe1c33581ba9430ca05\
-          b12a1488ac00000000",
+  "hex": "0200000001812b1eb2451955b457c144a60576d75181be65806ad8a3a20046999dd\
+          910dab500000000b500473044022015c04240ce607fcdddd81f2a77ed8950fa7b51\
+          02f70219e1412c0f4e924addf202201022ee2a35b0c19cbce07b848779c36d47db3\
+          db066a18467cc039db0dd69baf001004c69522103fb039547a8655522aee01d6b2e\
+          4bd9c8f29ddf10862c4ac9d29d209212e74b4a21022f44ad116f6b73ca45b62b169\
+          64a44037399ca18a254abadbe32abe1ddcfaf7921035a8135bb28040114988a8193\
+          43420f3a859f188b738851e10774209077da3dd753aeffffffff01c0bc973b00000\
+          0001976a914610da5f2fb0015ccd58160ffdf13742b2f06fb5388ac00000000",
   "complete": false,
   "errors": [
     {
-      "txid": "ddb2a2eb2402a9ae61d7db93a9a48c0747859d899e704b10f5b72145779\
-                f9c52",
+      "txid": "b5da10d99d994600a2a3d86a8065be8151d77605a644c157b4551945b21e2b81",
       "vout": 0,
-      "scriptSig": "0047304402201cc50eac6d2db04dabd8ccd68b3116c0a8d37e7e41\
-                    335e0d0ab441a5aa08cdcd02204011d184dca2489758c05e01556f\
-                    f2ff9c48c39ff434fdfb1d9e0284fbde7701014c69522103fa8866\
-                    cccae3c975a72884443a351801a0ea9721cbe7215586ddd6fab5f3\
-                    9f262103b2259f42a241f4870e794521594f2af7aadf0e4c580a43\
-                    582e58630e4618634621038007ef6fd812d73da054271b68a42dae\
-                    06672cff2a30b2814935537e5930ebf653ae",
+      "scriptSig": "00473044022015c04240ce607fcdddd81f2a77ed8950fa7b5102f7021\
+                    9e1412c0f4e924addf202201022ee2a35b0c19cbce07b848779c36d47\
+                    db3db066a18467cc039db0dd69baf001004c69522103fb039547a8655\
+                    522aee01d6b2e4bd9c8f29ddf10862c4ac9d29d209212e74b4a21022f\
+                    44ad116f6b73ca45b62b16964a44037399ca18a254abadbe32abe1ddc\
+                    faf7921035a8135bb28040114988a819343420f3a859f188b738851e1\
+                    0774209077da3dd753ae",
       "sequence": 4294967295,
-      "error": "Signature must be zero for failed CHECK(MULTI)SIG operation"
+      "error": "CHECK(MULTI)SIG failing with non-zero signature (possibly\
+                need more signatures)"
     }
   ]
 }
@@ -306,7 +312,7 @@ We make the first [signature](../resources/glossary.md#signature). The input arg
 
 ``` bash
 
-> PARTLY_SIGNED_RAW_TX=010000000175e1769813db8418fea17576694af1f[...]
+> PARTLY_SIGNED_RAW_TX=0200000001812b1eb2451955b457c144a60576d75[...]
 ```
 
 ### 9b. Private Key 3
@@ -331,24 +337,24 @@ The [`signrawtransactionwithkey`](../api/remote-procedure-calls-raw-transactions
 
 ``` json
 {
-  "hex": "0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd761aea902\
-          24eba2b2dd00000000fdfd000047304402201cc50eac6d2db04dabd8ccd68b31\
-          16c0a8d37e7e41335e0d0ab441a5aa08cdcd02204011d184dca2489758c05e01\
-          556ff2ff9c48c39ff434fdfb1d9e0284fbde770101483045022100e0e1f95f1a\
-          b85814ee0920d5bd28c6831086e838af4bec344fd8654a0b58525f022075989f\
-          d3a677e1522aa85d45c41720aec9e7c127acadb6c14338c3b1a768ab28014c69\
-          522103fa8866cccae3c975a72884443a351801a0ea9721cbe7215586ddd6fab5\
-          f39f262103b2259f42a241f4870e794521594f2af7aadf0e4c580a43582e5863\
-          0e4618634621038007ef6fd812d73da054271b68a42dae06672cff2a30b28149\
-          35537e5930ebf653aeffffffff01c0bc973b000000001976a914900504f96c55\
-          d6ebe1c33581ba9430ca05b12a1488ac00000000",
+  "hex": "0200000001812b1eb2451955b457c144a60576d75181be65806ad8a3a20046999dd\
+          910dab500000000fc00473044022015c04240ce607fcdddd81f2a77ed8950fa7b51\
+          02f70219e1412c0f4e924addf202201022ee2a35b0c19cbce07b848779c36d47db3\
+          db066a18467cc039db0dd69baf001473044022068b211eff43d5163c4c2bb588792\
+          1a673b958248d13c9f20c921f4c841a02981022046dbd6951369ac6bdb94022b17c\
+          e8ae8373e9c2a8922d8fd7b2a7b260d9dea95014c69522103fb039547a8655522ae\
+          e01d6b2e4bd9c8f29ddf10862c4ac9d29d209212e74b4a21022f44ad116f6b73ca4\
+          5b62b16964a44037399ca18a254abadbe32abe1ddcfaf7921035a8135bb28040114\
+          988a819343420f3a859f188b738851e10774209077da3dd753aeffffffff01c0bc9\
+          73b000000001976a914610da5f2fb0015ccd58160ffdf13742b2f06fb5388ac0000\
+          0000",
   "complete": true
 }
 ```
 
 ``` bash
 
-> SIGNED_RAW_TX=0100000001529c9f774521b7f5104b709e899d8547078ca4[...]
+> SIGNED_RAW_TX=0200000001812b1eb2451955b457c144a60576d75181be65[...]
 ```
 
 ## 10. Send raw transaction
@@ -357,5 +363,5 @@ We send the transaction spending the P2SH multisig output to the local [node](..
 
 ``` bash
 > dash-cli -regtest sendrawtransaction $SIGNED_RAW_TX
-483061b32894aacf6c4050291252a480c2a4c869eb85bd45082fb87d6b175ae8
+707fd6b1d7114769fc635f0c550f484eee785efe9b9523720805cfd5094bbfdb
 ```

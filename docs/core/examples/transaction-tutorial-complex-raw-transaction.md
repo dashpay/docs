@@ -17,51 +17,71 @@ In this example, we'll create a [transaction](../resources/glossary.md#transacti
 ``` json
 [
   {
-    "txid": "fa0f4105b0a2b2706d65581c5e6411d3970253c7f231944fa2f978b4a3d9010d",
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
     "vout": 0,
-    "address": "yfV9Wirf5RkYHgNDttjpBz8Wdi8BavLHcP",
-    "account": "",
-    "scriptPubKey": "76a914d240140859744755d73e5967081c3bedceffc5db88ac",
-    "amount": 499.99990000,
-    "confirmations": 1,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
-  },
-  {
-    "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f700d130",
-    "vout": 0,
-    "address": "yRdk89fwSW1mUBxQo5fCmEfTva7b4wh2H5",
-    "account": "",
-    "scriptPubKey": "76a9143a4e8960f26c1fa82d937046959b656e4dd7966688ac",
+    "address": "yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu",
+    "label": "",
+    "scriptPubKey": "76a9143b74b256a0c92f4067cb90981a685ddc171287ff88ac",
     "amount": 10.00000000,
     "confirmations": 2,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/1]03c57deb98b55a6cc22112d93159862b1a25\
+             abe79fb6ab325e724d4f9ac4fbe677)#slt9lygj",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   },
   {
-    "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f700d130",
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
     "vout": 1,
-    "address": "yavnyFMebbfX4F2VC25P18FW6LS66h2wqJ",
-    "scriptPubKey": "76a914a0411dbed3eab4341d5c41496d61b4fa1b22037e88ac",
-    "amount": 490.00000000,
+    "address": "ycMSBzw2NMP22qU5nhdz3XbAsBfc5P9H1R",
+    "scriptPubKey": "76a914afe24b6c9a80114f63baeabed947bd12e6d6eebd88ac",
+    "amount": 489.99999775,
     "confirmations": 2,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/1/0]025a561f14893e47dc233bdd10ee71baf40a\
+             a41cc0016d40eb7c2ce533c721dc85)#tkfjlxrl",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   },
   {
-    "txid": "ea6d596da55a137846f8b08bfd414b4667ce456f9e3b3182e6f05810e8613d84",
+    "txid": "b9ac624b328011e0f0aeacd10d829ebb3e554cac7ce3ef3400a4d58952e291de",
     "vout": 0,
-    "address": "yWtgzKSckhedxtJ8NXhShWGjfBivkvBGgG",
-    "scriptPubKey": "21023fff9c9dc9088c0aeba90d75413705091111311d761054de23\
-                      acdd217450869aac",
+    "address": "yM5cqJZfUStpqia5AtR2sKU2freV7V2tL2",
+    "label": "",
+    "scriptPubKey": "76a914085aa30f61bfb687797c53fa3f74f2fffd7a0e5788ac",
+    "amount": 499.99990000,
+    "confirmations": 1,
+    "spendable": true,
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/3]0345caa704995a682ea218ce0a9f7f5885d5\
+             51a86a4aaef3a8129176a623530d01)#sh9jyyan",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
+  },
+  {
+    "txid": "98802e900642cbfe57964dbfde077024c4c61255a64e3a68f29ea45c04617870",
+    "vout": 0,
+    "address": "yLgzqH8HvvCxeRfYowgA7LkEyhhkFitSLa",
+    "label": "",
+    "scriptPubKey": "76a91404136f24814f9b811672d7425679cda1251e43c188ac",
     "amount": 500.00000000,
     "confirmations": 101,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/0]03c756577227d8a9e4759ac018065139155b\
+             0955aebc1d2f2712f0d33153e6500a)#sl4kxe3l",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   }
 ]
 ```
@@ -71,13 +91,13 @@ In this example, we'll create a [transaction](../resources/glossary.md#transacti
 For our two inputs, we select two UTXOs by placing the txid and output index numbers (vouts) in shell variables.  We also save the addresses corresponding to the public keys (hashed or unhashed) used in those transactions. We need the addresses so we can get the corresponding private keys from our wallet.
 
 ``` bash
-> UTXO1_TXID=ea6d596da55a137846f8b08bfd414b4667ce456f9e3b3182e6f05810e8613d84
+> UTXO1_TXID=98802e900642cbfe57964dbfde077024c4c61255a64e3a68f29ea45c04617870
 > UTXO1_VOUT=0
-> UTXO1_ADDRESS=yWtgzKSckhedxtJ8NXhShWGjfBivkvBGgG
+> UTXO1_ADDRESS=yLgzqH8HvvCxeRfYowgA7LkEyhhkFitSLa
 
-> UTXO2_TXID=f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f700d130
+> UTXO2_TXID=e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b
 > UTXO2_VOUT=0
-> UTXO2_ADDRESS=yRdk89fwSW1mUBxQo5fCmEfTva7b4wh2H5
+> UTXO2_ADDRESS=yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu
 ```
 
 ## 3. Get private keys
@@ -95,14 +115,14 @@ The `dumpprivkey` RPC only works with legacy wallets. See the [tutorial setup](.
 
 ``` bash
 > dash-cli -regtest dumpprivkey $UTXO1_ADDRESS
-cNL522MEQUnQxsZJo4ryPH8sPd2uVZaFKjKnZivo9DyVjpAGU7qP
+cNKWXVsXySq1zNBmLBgYGM6X7f2tcsesTsVeXRF4VJ3n7nw3r5v4
 
 > dash-cli -regtest dumpprivkey $UTXO2_ADDRESS
-cPtZ9nagmjQ5bRKMuqoDz8xni6hRPfZ1zp3TSrqH3j3RyUThTYGN
+cS9sTckDJu9iQPnNnZquwNBeb3Uh84xDwub5x6USBp3pyfkNodP2
 
-> UTXO1_PRIVATE_KEY=cNL522MEQUnQxsZJo4ryPH8sPd2uVZaFKjKnZivo9DyVjpAGU7qP
+> UTXO1_PRIVATE_KEY=cNKWXVsXySq1zNBmLBgYGM6X7f2tcsesTsVeXRF4VJ3n7nw3r5v4
 
-> UTXO2_PRIVATE_KEY=cPtZ9nagmjQ5bRKMuqoDz8xni6hRPfZ1zp3TSrqH3j3RyUThTYGN
+> UTXO2_PRIVATE_KEY=cS9sTckDJu9iQPnNnZquwNBeb3Uh84xDwub5x6USBp3pyfkNodP2
 ```
 
 ## 4. Get new addresses
@@ -111,12 +131,12 @@ For our two outputs, get two new [addresses](../resources/glossary.md#address).
 
 ``` bash
 > dash-cli -regtest getnewaddress
-yhshGrdbh3rWt9EPaSi7xSGRFMvFdzTZ8n
+yfi5MkKmkWJi4xA64SPndcrTEN3932pZb6
 > dash-cli -regtest getnewaddress
-yesLaP5XFTaLZiWAo2zK8mFfUCtV8rRhKw
+yeUDgzDdtckNTViCXY4N4gWr4XUN2Hq1Gj
 
-> NEW_ADDRESS1=yhshGrdbh3rWt9EPaSi7xSGRFMvFdzTZ8n
-> NEW_ADDRESS2=yesLaP5XFTaLZiWAo2zK8mFfUCtV8rRhKw
+> NEW_ADDRESS1=yfi5MkKmkWJi4xA64SPndcrTEN3932pZb6
+> NEW_ADDRESS2=yeUDgzDdtckNTViCXY4N4gWr4XUN2Hq1Gj
 ```
 
 ## 5. Create raw transaction
@@ -141,13 +161,13 @@ Create the [raw transaction](../resources/glossary.md#raw-transaction) using the
       "'$NEW_ADDRESS1'": 499.9999,
       "'$NEW_ADDRESS2'": 10
     }'''
-0100000002843d61e81058f0e682313b9e6f45ce67464b41fd8bb0f84678135a\
-a56d596dea0000000000ffffffff30d100f7762956100a2396403c60e13e7a13\
-520167acc6d38978ec33ada44cf80000000000ffffffff02f04c3ba40b000000\
-1976a914ec73fe6129b249617bb5f20c8760708055fb6fdb88ac00ca9a3b0000\
-00001976a914cb7a56b046479f8c247875d672d3e1aed18c33f488ac00000000
+0200000002707861045ca49ef2683a4ea65512c6c4247007debf4d9657fecb42\
+06902e80980000000000ffffffff0bf9d56cc19de7fe0ab29f7a41a6f582b4cc\
+c29a686512dee78c7369ea7cd4e30000000000ffffffff02f04c3ba40b000000\
+1976a914d4b2047e9631219a2f08af6f34d58407d98985de88ac00ca9a3b0000\
+00001976a914c71b05f54f89c6c3c6be23973be4c2695b80266f88ac00000000
 
-> RAW_TX=0100000002843d61e81058f0e682313b9e6f45ce67464b41fd8bb0f[...]
+> RAW_TX=0200000002707861045ca49ef2683a4ea65512c6c4247007debf4d9[...]
 ```
 
 ## 6. Sign raw transaction
@@ -171,19 +191,18 @@ The result is a raw transaction with only one input signed; the fact that the tr
 
 ``` json
 {
-  "hex": "0100000002843d61e81058f0e682313b9e6f45ce67464b41fd8bb0\
-  f84678135aa56d596dea00000000494830450221009f7f356c0cc2d3337b5f\
-  76dfc6de9f9be7c8c5ac2074cbeeba4815b90329602002207790f23361480e\
-  2a5a2d1fa6e293ccd5cd01279ad301176f091b84d6dd8e8f6501ffffffff30\
-  d100f7762956100a2396403c60e13e7a13520167acc6d38978ec33ada44cf8\
-  0000000000ffffffff02f04c3ba40b0000001976a914ec73fe6129b249617b\
-  b5f20c8760708055fb6fdb88ac00ca9a3b000000001976a914cb7a56b04647\
-  9f8c247875d672d3e1aed18c33f488ac00000000",
+  "hex": "0200000002707861045ca49ef2683a4ea65512c6c4247007debf4d9657fecb42069\
+          02e8098000000006a47304402201fdc7c17bc71a4e3c2e6f871841cda450a22306d\
+          c6188180cf387af4e73e396c0220196a6d659b58c41ff204b8087cd459cd365cdc7\
+          f2564ed826b30da2a1d185c1a012103c756577227d8a9e4759ac018065139155b09\
+          55aebc1d2f2712f0d33153e6500affffffff0bf9d56cc19de7fe0ab29f7a41a6f58\
+          2b4ccc29a686512dee78c7369ea7cd4e30000000000ffffffff02f04c3ba40b0000\
+          001976a914d4b2047e9631219a2f08af6f34d58407d98985de88ac00ca9a3b00000\
+          0001976a914c71b05f54f89c6c3c6be23973be4c2695b80266f88ac00000000",
   "complete": false,
   "errors": [
     {
-      "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a1\
-                0562976f700d130",
+      "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
       "vout": 0,
       "scriptSig": "",
       "sequence": 4294967295,
@@ -195,7 +214,7 @@ The result is a raw transaction with only one input signed; the fact that the tr
 
 ``` bash
 
-> PARTLY_SIGNED_RAW_TX=0100000002843d61e81058f0e682313b9e6f45ce6[...]
+> PARTLY_SIGNED_RAW_TX=0200000002707861045ca49ef2683a4ea65512c6c[...]
 ```
 
 ### 6b. Second input
@@ -211,18 +230,18 @@ To sign the second input, we repeat the process we used to sign the first input 
 
 ``` json
 {
-  "hex": "0100000002843d61e81058f0e682313b9e6f45ce67464b41fd8bb0\
-  f84678135aa56d596dea00000000494830450221009f7f356c0cc2d3337b5f\
-  76dfc6de9f9be7c8c5ac2074cbeeba4815b90329602002207790f23361480e\
-  2a5a2d1fa6e293ccd5cd01279ad301176f091b84d6dd8e8f6501ffffffff30\
-  d100f7762956100a2396403c60e13e7a13520167acc6d38978ec33ada44cf8\
-  000000006a47304402207867e88e3fe2c926df29376d77eba81daf9f4a5573\
-  44d4f02e9c7dcee96a51e4022076274c2365dc069e7ef797c95c75ab6e01ca\
-  3757342f3e6f21a3d9d01086efb7012102ff9005f79aa4c22ac48fa93d9b7f\
-  40f321db1c13cd70cf08bdab3e23c8d19620ffffffff02f04c3ba40b000000\
-  1976a914ec73fe6129b249617bb5f20c8760708055fb6fdb88ac00ca9a3b00\
-  0000001976a914cb7a56b046479f8c247875d672d3e1aed18c33f488ac0000\
-  0000",
+  "hex": "0200000002707861045ca49ef2683a4ea65512c6c4247007debf4d9657fecb42069\
+          02e8098000000006a47304402201fdc7c17bc71a4e3c2e6f871841cda450a22306d\
+          c6188180cf387af4e73e396c0220196a6d659b58c41ff204b8087cd459cd365cdc7\
+          f2564ed826b30da2a1d185c1a012103c756577227d8a9e4759ac018065139155b09\
+          55aebc1d2f2712f0d33153e6500affffffff0bf9d56cc19de7fe0ab29f7a41a6f58\
+          2b4ccc29a686512dee78c7369ea7cd4e3000000006a47304402207559b898160ba1\
+          3ae9a86004193acdfb5913c46a89fc040cf64b81612bfd4bc20220135ba08acb7e5\
+          4b2981f5a74fcc91c20818a743dd1ea92ae234bd6c4eff97aae012103c57deb98b5\
+          5a6cc22112d93159862b1a25abe79fb6ab325e724d4f9ac4fbe677ffffffff02f04\
+          c3ba40b0000001976a914d4b2047e9631219a2f08af6f34d58407d98985de88ac00\
+          ca9a3b000000001976a914c71b05f54f89c6c3c6be23973be4c2695b80266f88ac0\
+          0000000",
   "complete": true
 }
 ```

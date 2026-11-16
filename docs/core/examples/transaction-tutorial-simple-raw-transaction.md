@@ -25,46 +25,61 @@ dash-cli -regtest listunspent
 ``` json
 [
   {
-    "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f700d130",
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
     "vout": 0,
-    "address": "yRdk89fwSW1mUBxQo5fCmEfTva7b4wh2H5",
-    "account": "",
-    "scriptPubKey": "76a9143a4e8960f26c1fa82d937046959b656e4dd7966688ac",
+    "address": "yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu",
+    "label": "",
+    "scriptPubKey": "76a9143b74b256a0c92f4067cb90981a685ddc171287ff88ac",
     "amount": 10.00000000,
     "confirmations": 1,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/1]03c57deb98b55a6cc22112d93159862b1a25\
+             abe79fb6ab325e724d4f9ac4fbe677)#slt9lygj",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   },
   {
-    "txid": "f84ca4ad33ec7889d3c6ac670152137a3ee1603c4096230a10562976f700d130",
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
     "vout": 1,
-    "address": "yavnyFMebbfX4F2VC25P18FW6LS66h2wqJ",
-    "scriptPubKey": "76a914a0411dbed3eab4341d5c41496d61b4fa1b22037e88ac",
-    "amount": 490.00000000,
+    "address": "ycMSBzw2NMP22qU5nhdz3XbAsBfc5P9H1R",
+    "scriptPubKey": "76a914afe24b6c9a80114f63baeabed947bd12e6d6eebd88ac",
+    "amount": 489.99999775,
     "confirmations": 1,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/1/0]025a561f14893e47dc233bdd10ee71baf40a\
+             a41cc0016d40eb7c2ce533c721dc85)#tkfjlxrl",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   },
   {
-    "txid": "9036265a8f577421e556cd4f729752d73469953deea759de11efa9ba354936a8",
+    "txid": "ceb86b5198a0750bddc0c1e8f8a9e1d64fa6e8ae59f4b92bd8723494b8854874",
     "vout": 0,
-    "address": "yWtgzKSckhedxtJ8NXhShWGjfBivkvBGgG",
-    "scriptPubKey": "21023fff9c9dc9088c0aeba90d75413705091111311d761054de23ac\
-                      dd217450869aac",
+    "address": "yLgzqH8HvvCxeRfYowgA7LkEyhhkFitSLa",
+    "label": "",
+    "scriptPubKey": "76a91404136f24814f9b811672d7425679cda1251e43c188ac",
     "amount": 500.00000000,
     "confirmations": 101,
-    "ps_rounds": -2,
     "spendable": true,
-    "solvable": true
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/0]03c756577227d8a9e4759ac018065139155b\
+             0955aebc1d2f2712f0d33153e6500a)#sl4kxe3l",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
   }
 ]
 ```
 
 ``` bash
 
-> UTXO_TXID=9036265a8f577421e556cd4f729752d73469953deea759de11ef[...]
+> UTXO_TXID=ceb86b5198a0750bddc0c1e8f8a9e1d64fa6e8ae59f4b92bd872[...]
 > UTXO_VOUT=0
 ```
 
@@ -75,9 +90,9 @@ dash-cli -regtest getnewaddress
 ```
 
 ``` bash
-yfV9Wirf5RkYHgNDttjpBz8Wdi8BavLHcP
+yM5cqJZfUStpqia5AtR2sKU2freV7V2tL2
 
-> NEW_ADDRESS=yfV9Wirf5RkYHgNDttjpBz8Wdi8BavLHcP
+> NEW_ADDRESS=yM5cqJZfUStpqia5AtR2sKU2freV7V2tL2
 ```
 
 ## 3. Create raw transaction
@@ -92,25 +107,25 @@ In this example, our input had 500.0000 DASH and our output (`$NEW_ADDRESS`) is 
 
 ```shell
 ## Outputs - inputs = transaction fee, so always double-check your math!
-dash-cli -regtest createrawtransaction ''' \
-    [ \
-      { \
-        "txid": "'$UTXO_TXID'", \
-        "vout": '$UTXO_VOUT' \
-      } \
-    ] \
-    ''' ''' \
-    { \
-      "'$NEW_ADDRESS'": 499.9999 \
+dash-cli -regtest createrawtransaction '''
+    [
+      {
+        "txid": "'$UTXO_TXID'",
+        "vout": '$UTXO_VOUT'
+      }
+    ]
+    ''' '''
+    {
+      "'$NEW_ADDRESS'": 499.9999
     }'''
 ```
 
 ``` bash
-0100000001a8364935baa9ef11de59a7ee3d956934d75297724fcd56e5217457\
-8f5a2636900000000000ffffffff01f04c3ba40b0000001976a914d240140859\
-744755d73e5967081c3bedceffc5db88ac00000000
+0200000001744885b8943472d82bb9f459aee8a64fd6e1a9f8e8c1c0dd0b75a0\
+98516bb8ce0000000000ffffffff01f04c3ba40b0000001976a914085aa30f61\
+bfb687797c53fa3f74f2fffd7a0e5788ac00000000
 
-> RAW_TX=0100000001a8364935baa9ef11de59a7ee3d956934d75297724fcd5[...]
+> RAW_TX=0200000001744885b8943472d82bb9f459aee8a64fd6e1a9f8e8c1c[...]
 ```
 
 ## 4. Decode raw transaction
@@ -123,13 +138,14 @@ dash-cli -regtest decoderawtransaction $RAW_TX
 
 ``` json
 {
-  "txid": "7cbd2245ee5d824c00fc08b3bf2f694ad9a215d38d897fcf2df64a43c59bb97b",
+  "txid": "496465afb721213ecf535ca5fff0f9f54315e19679c03fc84f88ef24aee8c1be",
+  "version": 2,
+  "type": 0,
   "size": 85,
-  "version": 1,
   "locktime": 0,
   "vin": [
     {
-      "txid": "9036265a8f577421e556cd4f729752d73469953deea759de11efa9ba354936a8",
+      "txid": "ceb86b5198a0750bddc0c1e8f8a9e1d64fa6e8ae59f4b92bd8723494b8854874",
       "vout": 0,
       "scriptSig": {
         "asm": "",
@@ -144,14 +160,12 @@ dash-cli -regtest decoderawtransaction $RAW_TX
       "valueSat": 49999990000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 d240140859744755d73e5967081c3bedceffc5db\
-                  OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914d240140859744755d73e5967081c3bedceffc5db88ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "yfV9Wirf5RkYHgNDttjpBz8Wdi8BavLHcP"
-        ]
+        "asm": "OP_DUP OP_HASH160 085aa30f61bfb687797c53fa3f74f2fffd7a0e57\
+                OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yM5cqJZfUStpqia5AtR2sKU2freV7V2tL2)#jtxrmka0",
+        "hex": "76a914085aa30f61bfb687797c53fa3f74f2fffd7a0e5788ac",
+        "address": "yM5cqJZfUStpqia5AtR2sKU2freV7V2tL2",
+        "type": "pubkeyhash"
       }
     }
   ]
@@ -168,19 +182,19 @@ dash-cli -regtest signrawtransactionwithwallet $RAW_TX
 
 ``` json
 {
-  "hex": "0100000001a8364935baa9ef11de59a7ee3d956934d75297724fcd\
-          56e52174578f5a2636900000000049483045022100b4e5e9224afa\
-          de8686bb22a957d1ec1587a66ee84943761b2d9061d5f751cd7602\
-          203c88d4064641a413ce3d0824264d6d87908960487afe9a3a133e\
-          7d67a22fd05101ffffffff01f04c3ba40b0000001976a914d24014\
-          0859744755d73e5967081c3bedceffc5db88ac00000000",
+  "hex": "0200000001744885b8943472d82bb9f459aee8a64fd6e1a9f8e8c1c0dd0b75a0985\
+          16bb8ce000000006a4730440220614a134314045dbd412224847179da21cf8a25cc\
+          e8e4b44cca58a784ac401b3d0220349e562cc1142a52ad991b8a3dce2b737025286\
+          f74c6710cde4d41cf66f43c17012103c756577227d8a9e4759ac018065139155b09\
+          55aebc1d2f2712f0d33153e6500affffffff01f04c3ba40b0000001976a914085aa\
+          30f61bfb687797c53fa3f74f2fffd7a0e5788ac00000000",
   "complete": true
 }
 ```
 
 ``` bash
 
-> SIGNED_RAW_TX=0100000001a8364935baa9ef11de59a7ee3d956934d75297[...]
+> SIGNED_RAW_TX=0200000001744885b8943472d82bb9f459aee8a64fd6e1a9[...]
 ```
 
 Even though the transaction is now complete, the Dash Core [node](../resources/glossary.md#node) we're connected to doesn't know anything about the transaction, nor does any other part of the [network](../resources/glossary.md#network). We've created a spend, but we haven't actually spent anything because we could simply unset the `$SIGNED_RAW_TX` variable to eliminate the transaction.
@@ -194,7 +208,7 @@ dash-cli -regtest sendrawtransaction $SIGNED_RAW_TX
 ```
 
 ``` bash
-fa0f4105b0a2b2706d65581c5e6411d3970253c7f231944fa2f978b4a3d9010d
+b9ac624b328011e0f0aeacd10d829ebb3e554cac7ce3ef3400a4d58952e291de
 ```
 
 ## 7. Mine a block
@@ -202,7 +216,7 @@ fa0f4105b0a2b2706d65581c5e6411d3970253c7f231944fa2f978b4a3d9010d
 Generate a block to confirm the transaction and then clear our shell variables.
 
 ```shell
-dash-cli -regtest generate 1
+dash-cli -regtest -generate 1
 
 unset UTXO_TXID UTXO_VOUT NEW_ADDRESS RAW_TX SIGNED_RAW_TX
 ```
