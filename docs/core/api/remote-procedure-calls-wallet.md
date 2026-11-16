@@ -257,9 +257,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
 
 :::{note}
 In the example above, a new directory named `new-wallet` was created in the current data directory (`~/.dashcore/testnet3/`). This new directory contains the wallet.dat file and other related wallet files for the new wallet.
@@ -2658,9 +2656,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
 
 _See also_
 

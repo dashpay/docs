@@ -14,7 +14,7 @@ A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Das
 
 ## Asset lock
 
-A special transaction ([AssetLockTx](../reference/transactions-special-transactions.md#assetlocktx)) that locks Dash on the Core chain and adds it to the [credit pool](#credit-pool) so Dash Platform can assign the equivalent credits to identities or, after the v24 hard fork activates, to [Dash Platform addresses](#dash-platform-address).
+A special transaction ([AssetLockTx](../reference/transactions-special-transactions.md#assetlocktx)) that locks Dash on the Core chain and adds it to the [credit pool](#credit-pool) so Dash Platform can assign the equivalent credits to identities or [Dash Platform addresses](#dash-platform-address).
 
 ## Asset unlock
 

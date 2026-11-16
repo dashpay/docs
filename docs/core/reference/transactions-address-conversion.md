@@ -58,8 +58,6 @@ To convert addresses back into hashes, reverse the base58 encoding, extract the 
 
 ## Dash Platform Addresses
 
-*Added in Dash Core 24.0.0*
-
 Dash Core also encodes and decodes Dash Platform addresses, which [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) defines. A Platform address uses the same P2PKH or P2SH hash, but encodes it with [bech32m](https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki) instead of Base58Check:
 
 1. Add a type byte in front of the 20-byte hash to create a 21-byte payload. The type bytes are:

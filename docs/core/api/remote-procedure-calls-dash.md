@@ -335,9 +335,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `sessions[].service` with `-deprecatedrpc=service`.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `sessions[].service` with `-deprecatedrpc=service`.
 
 *See also: none*
 
@@ -1569,9 +1567,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0. Current versions report this masternode type as `Evo` and return `dmnState.addresses` (added in Dash Core 23.0.0). Dash Core 24.0.0 also returns `quorumParticipation`, and only returns `dmnState.service`, `platformP2PPort` and `platformHTTPPort` with `-deprecatedrpc=service`.
-:::
+% TODO: Refresh this example for Dash Core 24. Current versions report this masternode type as `Evo` and return `dmnState.addresses` (added in Dash Core 23.0.0). Dash Core 24.0.0 also returns `quorumParticipation`, and only returns `dmnState.service`, `platformP2PPort` and `platformHTTPPort` with `-deprecatedrpc=service`.
 
 ### Masternode Winners
 
@@ -1965,9 +1961,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0, which no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
-:::
+% TODO: Refresh this example for Dash Core 24. Current versions no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
 
 **Command Mode - `active`**
 
@@ -1998,9 +1992,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0, which no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
-:::
+% TODO: Refresh this example for Dash Core 24. Current versions no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
 
 *See also:*
 

@@ -45,11 +45,11 @@ The [masternode](../resources/glossary.md#masternode) Registration (ProRegTx) sp
 
 A ProRegTx is created and sent using the [`protx` RPC](../api/remote-procedure-calls-evo.md#protx). The ProRegTx must either include an [output](../resources/glossary.md#output) with 1000 DASH (`protx register`) or refer to an existing unspent output holding 1000 DASH (`protx fund_register`). If the 1000 DASH is an output of the ProRegTx, the collateralOutpoint hash field should be null.
 
+Operator keys must be unique across the masternode list, regardless of BLS scheme. A ProRegTx, [ProUpRegTx](#proupregtx), or [ProUpSharedRegTx](#proupsharedregtx) that sets an operator key already used by another masternode is invalid even if that masternode's key uses the other BLS scheme. The same check applies when a [ProUpServTx](#proupservtx) or ProUpRegTx moves a legacy BLS scheme masternode to the basic BLS scheme.
+
 **Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a version 3 ProRegTx replaces the single owner payout script with a list of up to 8 owner payouts ([multi-party payouts](https://github.com/dashpay/dips/blob/master/dip-0026.md)). It can also register a shared masternode whose collateral is funded by 2 to 8 participants (see [Shared Masternode Registration](#shared-masternode-registration)). New version 1 (legacy BLS scheme) registrations are not valid after v24 activation.
 
 **Note**: The version 3 wire format differs from the version 3 format defined in Dash Core 23.0.0. In Dash Core 23.0.0, version 3 only replaced the `ipAddress` and `port` fields with `netInfo` and kept the single `scriptPayout`. In Dash Core 24.0.0, version 3 also replaces `scriptPayout` with the `payouts` list and adds the `shares`, `joinSigs`, `earlyPeriodBlocks`, and `earlyPenalty` fields. Software that parses version 3 provider transactions using the Dash Core 23.0.0 format must be updated.
-
-**Updated in Dash Core 24.0.0**: Operator keys must be unique across the masternode list. After the v24 hard fork activates, this check covers both BLS schemes. A ProRegTx, [ProUpRegTx](#proupregtx), or [ProUpSharedRegTx](#proupsharedregtx) that sets an operator key already used by another masternode is invalid even if that masternode's key uses the other BLS scheme. The same check applies when a [ProUpServTx](#proupservtx) or ProUpRegTx moves a legacy BLS scheme masternode to the basic BLS scheme.
 
 The special transaction type is 1 and the extra payload consists of the following data:
 
@@ -127,7 +127,7 @@ Each share's `keyIdOwner` must be non-null and unique within the share table, an
 
 Instead of `payloadSig` (which is left empty), each participant consents to the registration by signing it with their share's `keyIdOwner`. These signatures are stored in `joinSigs`. An unsigned shared registration is created using the [`protx shared_register_prepare` RPC](../api/remote-procedure-calls-evo.md#protx-shared-register-prepare). It is then signed with [`protx shared_sign`](../api/remote-procedure-calls-evo.md#protx-shared-sign) and submitted with [`protx shared_combine`](../api/remote-procedure-calls-evo.md#protx-shared-combine).
 
-The shared collateral script has no keys. Consensus rules protect it instead: once v24 activates, it can only be spent by a [ProDisTx](#prodistx). Once v24 activates, any transaction output paying the shared collateral script is also invalid unless it is the collateral output (`collateralOutpoint.n`) of a shared masternode ProRegTx. This applies to every transaction, including ordinary transactions, the coinbase, and asset unlock transactions. Outputs paying the script that were created before v24 activation can never be spent.
+The shared collateral script has no keys. Consensus rules protect it instead: it can only be spent by a [ProDisTx](#prodistx), and any transaction output paying the shared collateral script is invalid unless it is the collateral output (`collateralOutpoint.n`) of a shared masternode ProRegTx. This applies to every transaction, including ordinary transactions, the coinbase, and asset unlock transactions. Outputs paying the script that were created before v24 activation can never be spent.
 
 The owner reward of a shared masternode is split across the share table in proportion to each share's `amount`. Each portion is paid to the share's `rewardScript`, or to its `refundScript` if no reward script is set. Operator rewards are unchanged.
 
@@ -344,9 +344,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proRegTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`, and version 3 payloads show `payouts` (or `shares` for a shared masternode) instead of `payoutAddress`.
-:::
+% TODO: Refresh this example for Dash Core 24. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proRegTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`, and version 3 payloads show `payouts` (or `shares` for a shared masternode) instead of `payoutAddress`.
 
 ```{eval-rst}
 .. _ref-txs-proupservtx:
@@ -495,9 +493,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 }
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proUpServTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`.
-:::
+% TODO: Refresh this example for Dash Core 24. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proUpServTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`.
 
 ```{eval-rst}
 .. _ref-txs-proupregtx:
@@ -648,9 +644,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`. Since Dash Core 24.0.0, version 3 payloads show `payouts` instead of `payoutAddress`.
-:::
+% TODO: Refresh this example for Dash Core 24. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`. Since Dash Core 24.0.0, version 3 payloads show `payouts` instead of `payoutAddress`.
 
 ```{eval-rst}
 .. _ref-txs-prouprevtx:
@@ -779,9 +773,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 }
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0, which shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
-:::
+% TODO: Refresh this example for Dash Core 24. Current versions shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
 
 ```{eval-rst}
 .. _ref-txs-prodistx:
@@ -1033,9 +1025,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 }
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0, which shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
-:::
+% TODO: Refresh this example for Dash Core 24. Current versions shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
 
 ```{eval-rst}
 .. _ref-txs-qctx:

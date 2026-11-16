@@ -432,9 +432,7 @@ Result (truncated):
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `mnList[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `mnList[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
 
 *See also: none*
 
@@ -577,9 +575,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `state.service` with `-deprecatedrpc=service`. Use `addresses` instead.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `state.service` with `-deprecatedrpc=service`. Use `addresses` instead.
 
 ### ProTx List
 
@@ -1633,13 +1629,13 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name              | Type   | Presence                | Description                                                   |
 | ----------------- | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection. A bare port number (e.g. `26656`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API. A bare port number (e.g. `443`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1769,13 +1765,13 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection. A bare port number (e.g. `26656`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #10---platform HTTPS addresses*
 
 | Name               | Type   | Presence                | Description                                                   |
 | ------------------ | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API. A bare port number (e.g. `443`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---fund address*
 
@@ -1908,13 +1904,13 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection. A bare port number (e.g. `26656`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API. A bare port number (e.g. `443`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1956,7 +1952,7 @@ Result:
 
 The `protx update_service_evo` RPC creates and sends a ProUpServTx to the network. This will update the IP address and the Platform fields of an evonode. If this is done for an evonode that was PoSe-banned, the ProUpServTx will also revive this evonode.
 
-**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, this RPC creates a version 3 ProUpServTx, which also upgrades a version 2 evonode to version 3. A version 2 evonode ProUpServTx is invalid after activation.
+**Updated in Dash Core 24.0.0**: This RPC creates a version 3 ProUpServTx, which also upgrades a version 2 evonode to version 3.
 
 *Parameter #1---initial provider registration transaction hash*
 
@@ -1986,13 +1982,13 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>A bare port number (e.g. `26656`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection. A bare port number (e.g. `26656`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. |
 
 *Parameter #6---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>A bare port number (e.g. `443`) is also accepted. Before the v24 hard fork activates, the RPC creates a legacy ProTx, which only accepts a bare port. For a version 3 ProTx, a bare port is shorthand for the first `coreP2PAddrs` address with that port.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API. A bare port number (e.g. `443`) is shorthand for the first `coreP2PAddrs` address with that port.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. |
 
 *Parameter #7---operator payout address*
 
@@ -3016,9 +3012,7 @@ Result (truncated):
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `members[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `members[].service` with `-deprecatedrpc=service`. Use `addresses` instead.
 
 ### Quorum DKGInfo
 
@@ -3083,9 +3077,9 @@ The `quorum dkgstatus` RPC displays the status of the current DKG process.
 | Name                                      | Type             | Presence                | Description                                                                                                                                                                      |
 | ----------------------------------------- | ---------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `result`                                  | object           | Required<br>(exactly 1) | An object describing the status of the current DKG process |
-| →<br>`time`                               | number           | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a Unix epoch time                                                                                                                                                              |
-| →<br>`timeStr`                            | string           | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a UTC time string                                                                                                                                                         |
-| →<br>`session`                            | array of objects | Optional<br>(0 or 1)    | **Updated in Dash Core 23.1.0**<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>Array of objects containing DKG Session information                                                                                                                              |
+| →<br>`time`                               | number           | Optional<br>(0 or 1)    | *Updated in Dash Core 23.1.0*<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a Unix epoch time                                                                                                                                                              |
+| →<br>`timeStr`                            | string           | Optional<br>(0 or 1)    | *Updated in Dash Core 23.1.0*<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>The adjusted time of the last update, as a UTC time string                                                                                                                                                         |
+| →<br>`session`                            | array of objects | Optional<br>(0 or 1)    | *Updated in Dash Core 23.1.0*<br>Only present on an active masternode or a node started with `-watchquorums`<br><br>Array of objects containing DKG Session information                                                                                                                              |
 | → →<br>Session                            | object           | Optional<br>(0 or more) | DKG session object                                                                                                                                                               |
 | → → →<br>`llmqType`                       | string           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>[Quorum type name](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md)                                                          |
 | → → →<br>`quorumIndex`                    | number           | Required<br>(exactly 1) | *Added in Dash Core 18.0.0*<br>The index of the quorum                                                                                                                         |
@@ -4795,7 +4789,7 @@ The `quorum rotationinfo` RPC returns  quorum rotation information. The response
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `baseBlockHashes` | array | Optional<br>(0 or 1) | **Updated in Dash Core 23.0.0** (previously `baseBlockHash...`)<br>Array of block hashes (default: empty array)<br>**Updated in Dash Core 24.0.0**<br>At most 4096 block hashes. More returns an error |
+| `baseBlockHashes` | array | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Array of block hashes (default: empty array). At most 4096 block hashes; more returns an error |
 
 *Result---rotation info*
 
@@ -4964,9 +4958,7 @@ Result (truncated):
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `service` in `mnList` entries with `-deprecatedrpc=service`. Use `addresses` instead.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `service` in `mnList` entries with `-deprecatedrpc=service`. Use `addresses` instead.
 
 ### Quorum SelectQuorum
 

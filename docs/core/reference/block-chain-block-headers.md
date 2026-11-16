@@ -49,7 +49,7 @@ fe9f0864 ........................... Nonce
 
 The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSuperMajority() after the function added to Dash Core to manage those soft forking changes. See [BIP34](https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki) for a full description of this method.
 
-Later forks use *version bits* as described in [BIP9](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki). Each deployment is assigned a bit of the block version, and miners signal support for it by setting that bit. Some deployments only start their miner signaling period after a [masternode hard fork signal](../reference/transactions-special-transactions.md#mnhftx) ([DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md)) is mined. Dash Core 24.0.0 defines the following deployments, both of which require a masternode hard fork signal:
+Later forks use *version bits* as described in [BIP9](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki). Each deployment is assigned a bit of the block version, and miners signal support for it by setting that bit. Some deployments only start their miner signaling period after a [masternode hard fork signal](../reference/transactions-special-transactions.md#mnhftx) ([DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md)) is mined. The following deployments both require a masternode hard fork signal:
 
 * `v24`: bit 13
 

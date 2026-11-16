@@ -178,14 +178,14 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetAddressInfo](../api/remote-procedure-calls-wallet.md#getaddressinfo): returns information about the given Dash address. **Updated in Dash Core 24.0.0**
 * [GetAddressesByLabel](../api/remote-procedure-calls-wallet.md#getaddressesbylabel): returns a list of every address assigned to a particular label. _New in Dash Core 0.17.0_
 * [GetBalance](../api/remote-procedure-calls-wallet.md#getbalance): gets the balance in decimal dash across all accounts or for a particular account. _Updated in Dash Core 18.1.0_
-* [GetBalances](../api/remote-procedure-calls-wallet.md#getbalances): returns an object with all balances denominated in DASH. **Updated in Dash Core 23.1.0**
+* [GetBalances](../api/remote-procedure-calls-wallet.md#getbalances): returns an object with all balances denominated in DASH. _Updated in Dash Core 23.1.0_
 * [GetNewAddress](../api/remote-procedure-calls-wallet.md#getnewaddress): returns a new Dash address for receiving payments. If an account is specified, payments received with the address will be credited to that account. _Updated in Dash Core 0.17.0_
 * [GetRawChangeAddress](../api/remote-procedure-calls-wallet.md#getrawchangeaddress): returns a new Dash address for receiving change. This is for use with raw transactions, not normal use.
 * [GetReceivedByAddress](../api/remote-procedure-calls-wallet.md#getreceivedbyaddress): returns the total amount received by the specified address in transactions with the specified number of confirmations. **Updated in Dash Core 24.0.0**
 * [GetReceivedByLabel](../api/remote-procedure-calls-wallet.md#getreceivedbylabel): returns the total amount received by addresses with the specified label in transactions with the specified number of confirmations. **Updated in Dash Core 24.0.0**
 * [GetTransaction](../api/remote-procedure-calls-wallet.md#gettransaction): gets detailed information about an in-wallet transaction. **Updated in Dash Core 24.0.0**
 * [GetUnconfirmedBalance](../api/remote-procedure-calls-wallet.md#getunconfirmedbalance): returns the wallet's total unconfirmed balance.
-* [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet. **Updated in Dash Core 23.1.0**
+* [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet. _Updated in Dash Core 23.1.0_
 * [ImportAddress](../api/remote-procedure-calls-wallet.md#importaddress): adds an address or pubkey script to the wallet without the associated private key, allowing you to watch for transactions affecting that address or pubkey script without being able to spend any of its outputs.
 * [ImportElectrumWallet](../api/remote-procedure-calls-wallet.md#importelectrumwallet): imports keys from an Electrum wallet export file (.csv or .json) **Updated in Dash Core 24.0.0**
 * [ImportDescriptors](../api/remote-procedure-calls-wallet.md#importdescriptors): imports multiple descriptors into the wallet. _New in Dash Core 21.0.0_

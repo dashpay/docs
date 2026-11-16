@@ -593,9 +593,7 @@ Result:
 }
 ```
 
-:::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 only returns `softforks` with `-deprecatedrpc=softforks`. Use the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) for deployment status instead.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `softforks` with `-deprecatedrpc=softforks`. Use the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) for deployment status instead.
 
 *See also*
 
@@ -2147,9 +2145,7 @@ Result:
 ]
 ```
 
-:::{note}
-This example predates Dash Core 23.0.0. Dash Core 23.0.0 and later return `scriptPubKey.address` and `scriptPubKey.desc` instead of the removed `reqSigs` and `addresses` fields.
-:::
+% TODO: Refresh this example for Dash Core 24. Dash Core 23.0.0 and later return `scriptPubKey.address` and `scriptPubKey.desc` instead of the removed `reqSigs` and `addresses` fields.
 
 *See also:*
 

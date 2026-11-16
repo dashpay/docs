@@ -6,7 +6,7 @@
 
 # P2P Networks
 
-This section describes the Dash P2P network protocol (but it is not a specification). It does not describe the [BIP70 payment protocol](../resources/glossary.md#bip70-payment-protocol) (removed in Dash Core 18.1.0), the [GetBlockTemplate mining protocol](../guide/mining-block-prototypes.md#getblocktemplate-rpc), or any network protocol never implemented in an official version of Dash Core.
+This section describes the Dash P2P network protocol (but it is not a specification). It does not describe the [GetBlockTemplate mining protocol](../guide/mining-block-prototypes.md#getblocktemplate-rpc) or any network protocol never implemented in an official version of Dash Core.
 
 All peer-to-peer communication occurs entirely over TCP.
 

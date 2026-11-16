@@ -688,13 +688,13 @@ For a [special transaction](../resources/glossary.md#special-transactions), the 
 | `mnhfTx` | 7 | [MnHfTx](../reference/transactions-special-transactions.md#mnhftx) |
 | `assetLockTx` | 8 | [AssetLockTx](../reference/transactions-special-transactions.md#assetlocktx) |
 | `assetUnlockTx` | 9 | [AssetUnlockTx](../reference/transactions-special-transactions.md#assetunlocktx) |
-| `proDisTx` | 10 | [ProDisTx](../reference/transactions-special-transactions.md#prodistx)<br>_Added in Dash Core 24.0.0_ |
-| `proUpShareTx` | 11 | [ProUpShareTx](../reference/transactions-special-transactions.md#proupsharetx)<br>_Added in Dash Core 24.0.0_ |
-| `proUpSharedRegTx` | 12 | [ProUpSharedRegTx](../reference/transactions-special-transactions.md#proupsharedregtx)<br>_Added in Dash Core 24.0.0_ |
+| `proDisTx` | 10 | [ProDisTx](../reference/transactions-special-transactions.md#prodistx) |
+| `proUpShareTx` | 11 | [ProUpShareTx](../reference/transactions-special-transactions.md#proupsharetx) |
+| `proUpSharedRegTx` | 12 | [ProUpSharedRegTx](../reference/transactions-special-transactions.md#proupsharedregtx) |
 
 In `proRegTx` and `proUpServTx`, the `service`, `platformP2PPort` and `platformHTTPPort` fields are deprecated and only returned with `-deprecatedrpc=service`. Use `addresses` instead.
 
-The following tables describe the objects and fields added in Dash Core 24.0.0.
+The following tables describe the shared masternode, payout share and Platform address fields.
 
 _Owner payout and share fields of `proRegTx` and `proUpRegTx`_
 

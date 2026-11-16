@@ -27,7 +27,7 @@ Minimum Masternode Protocol Version Since Dash Core 0.16.0, masternodes perform 
 check](https://github.com/dashpay/dash/pull/3390) on their quorum peers during DKG. Masternodes that
 do not meet the `MIN_MASTERNODE_PROTO_VERSION` are voted as having a bad connection and can receive
 increases in [PoSe](../guide/dash-features-proof-of-service.md) score. There is no network upgrade
-percentage threshold for this check. As of Dash Core 24.0.0, `MIN_MASTERNODE_PROTO_VERSION` is 70242, so
+percentage threshold for this check. `MIN_MASTERNODE_PROTO_VERSION` is 70242, so
 masternodes running Dash Core 23.x do not meet it.
 :::
 
