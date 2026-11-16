@@ -22,7 +22,7 @@ A raw transaction has the following top-level format:
 
 | Bytes    | Name         | Data Type           | Description
 |----------|--------------|---------------------|-------------
-| 2        | version      | int16_t             | *Converted from 4 bytes to 2 bytes by DIP2 in v0.13.0*<br><br>Transaction version number; currently version 3.  Programs creating transactions using newer consensus rules may use higher version numbers.<br><br>*Updated in Dash Core 23.1.9*: The version is a signed integer. Once DIP3 is active, a transaction with a negative version is invalid (`bad-txns-version`).
+| 2        | version      | int16_t             | *Converted from 4 bytes to 2 bytes by DIP2 in v0.13.0*<br><br>Transaction version number (a signed integer); currently version 3.  Programs creating transactions using newer consensus rules may use higher version numbers.<br><br>*Updated in Dash Core 23.1.9*: Once DIP3 is active, a transaction with a negative version is invalid (`bad-txns-version`).
 | 2        | type         | uint16_t            | *Added by DIP2 in v0.13.0. Uses 2 bytes that were previously part of `version`*<br><br>Transaction type number; 0 for classical transactions; Non-zero for DIP2 special transactions.
 | *Varies* | tx_in count  | compactSize uint    | Number of inputs in this transaction.
 | *Varies* | tx_in        | txIn                | Transaction inputs.  See description of txIn below.

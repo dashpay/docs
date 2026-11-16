@@ -153,7 +153,7 @@ The HD protocol uses different index numbers to indicate whether a normal or har
 :::{note}
 Dash developers typically use the ASCII apostrophe rather than the unicode prime symbol, a convention we will henceforth follow.
 
-Output script descriptors and the key paths in Dash Core RPC output use `h` instead (for example, `m/44h/5h/0h`). Dash Core descriptor wallets write new descriptors with `h`, and descriptors imported with apostrophes keep them. Legacy wallets still use the apostrophe in key paths such as `hdkeypath`.
+Output script descriptors and the key paths in Dash Core RPC output use `h` instead (for example, `m/44h/5h/0h`). Dash Core descriptor wallets write new descriptors with `h`. A descriptor imported with apostrophes keeps them in the wallet, and the [`listdescriptors` RPC](../api/remote-procedure-calls-wallet.md#listdescriptors) shows the original marker only with `private=true`. Legacy wallets still use the apostrophe in key paths such as `hdkeypath`.
 :::
 
 This compact description is further combined with slashes prefixed by *m* or *M* to indicate hierarchy and key type, with *m* being a private key and *M* being a public key. For example, m/0'/0/122' refers to the 123rd hardened private child (by index number) of the first normal child (by index) of the first hardened child (by index) of the master private key. The following hierarchy illustrates prime notation and hardened key firewalls.

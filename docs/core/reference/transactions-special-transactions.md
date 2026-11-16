@@ -345,7 +345,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. The `proRegTx` object now shows an `addresses` object instead of `service`, which is only shown with `-deprecatedrpc=service`. Version 3 payloads show `payouts` (or `shares` for a shared masternode) instead of `payoutAddress`.
+This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proRegTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`, and version 3 payloads show `payouts` (or `shares` for a shared masternode) instead of `payoutAddress`.
 :::
 
 ```{eval-rst}
@@ -496,7 +496,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. The `proUpServTx` object now shows an `addresses` object instead of `service`, which is only shown with `-deprecatedrpc=service`.
+This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`, and the `proUpServTx` object includes an `addresses` object. Since Dash Core 24.0.0, `service` is only shown with `-deprecatedrpc=service`.
 :::
 
 ```{eval-rst}
@@ -649,7 +649,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`. Version 3 payloads show `payouts` instead of `payoutAddress`.
+This example predates Dash Core 23.0.0. Since Dash Core 23.0.0, each `scriptPubKey` shows `desc` and `address` fields instead of `reqSigs` and `addresses`. Since Dash Core 24.0.0, version 3 payloads show `payouts` instead of `payoutAddress`.
 :::
 
 ```{eval-rst}
@@ -780,7 +780,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`.
+This example predates Dash Core 23.0.0, which shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
 :::
 
 ```{eval-rst}
@@ -1034,7 +1034,7 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Each `scriptPubKey` now shows `desc` and `address` fields instead of `reqSigs` and `addresses`.
+This example predates Dash Core 23.0.0, which shows `desc` and `address` fields in each `scriptPubKey` instead of `reqSigs` and `addresses`.
 :::
 
 ```{eval-rst}

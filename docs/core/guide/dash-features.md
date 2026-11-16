@@ -30,7 +30,7 @@ New in Dash Core v19.0
 
 Evolution Masternodes (evonodes) are a new type of masternode created to host [Dash Platform](inv:platform:std#intro-dash-platform) – a Web3 technology stack for building decentralized applications on the Dash network. The collateral required to own an evonode is 4000 DASH, as opposed to 1000 DASH for regular masternodes.
 
-Evonodes serve Platform along with Core, while regular masternodes only serve Core. The recommended specs for evonodes are higher than those for regular masternodes. Evonodes receive 100% of the fees generated from Platform and 37.5% of the masternode portion of Core block rewards. Regular MNs receive the remaining 62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
+Evonodes serve Platform along with Core, while regular masternodes only serve Core. The recommended specs for evonodes are higher than those for regular masternodes. Evonodes receive 100% of the fees generated from Platform and 37.5% of the masternode portion of the Core block subsidy. Regular MNs receive the remaining 62.5% of the masternode portion of the Core block subsidy and 0% of Platform fees.
 
 ### Full nodes
 

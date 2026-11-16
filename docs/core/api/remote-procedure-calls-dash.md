@@ -1515,7 +1515,7 @@ The `masternode status` RPC prints masternode status information.
 | → → → →<br>`script`            | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
 | → → → →<br>`reward`            | int          | Required<br>(exactly 1) | Owner payout share in basis points |
 | → →<br>`shares`                | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
-| → → →<br>Share                 | object       | Required<br>(1 or more) | Collateral share |
+| → → →<br>Share                 | object       | Required<br>(2 or more) | Collateral share |
 | → → → →<br>`amount`            | int          | Required<br>(exactly 1) | Collateral contribution in duffs |
 | → → → →<br>`refundAddress`     | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
 | → → → →<br>`refundScript`      | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
@@ -1570,7 +1570,7 @@ Result:
 ```
 
 :::{note}
-This example predates Dash Core 24.0.0. Dash Core 24.0.0 reports this masternode type as `Evo`, returns `dmnState.addresses` and `quorumParticipation`, and only returns `dmnState.service`, `platformP2PPort` and `platformHTTPPort` with `-deprecatedrpc=service`.
+This example predates Dash Core 23.0.0. Current versions report this masternode type as `Evo` and return `dmnState.addresses` (added in Dash Core 23.0.0). Dash Core 24.0.0 also returns `quorumParticipation`, and only returns `dmnState.service`, `platformP2PPort` and `platformHTTPPort` with `-deprecatedrpc=service`.
 :::
 
 ### Masternode Winners

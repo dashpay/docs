@@ -740,7 +740,7 @@ Simplified Masternode List (SML) Entry
 | 1 | isValid | bool | True if a masternode is not PoSe-banned
 | 0 or 2 | type | uint_16  | Masternode type:<br>0 - regular masternode<br>1 - Evolution masternode<br>**Note**: Only present when the peer's protocol version is 70227 or higher and the entry's `nVersion` is 2 or higher. |
 | 0 or 2 | platformHTTPPort | uint_16 | TCP port of Platform HTTP/API interface (network byte order).<br>**Note**: Only present when `type` is 1 and `nVersion` is 2. In version 3 entries, the Platform ports are part of `netInfo`. |
-0 or 20 | platformNodeID | byte[] | Dash Platform P2P node ID, derived from P2P public key.<br>**Note**: Only present when `type` is 1 and `nVersion` is 2 or higher. |
+| 0 or 20 | platformNodeID | byte[] | Dash Platform P2P node ID, derived from P2P public key.<br>**Note**: Only present when `type` is 1 and `nVersion` is 2 or higher. |
 
 The content of `quorumsCLSigsObject`:
 

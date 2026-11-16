@@ -58,7 +58,7 @@ The block reward is divided into three main parts: [miner](../resources/glossary
 of the block subsidy with the remainder allocated to the governance system.
 
 Since the `mn_rr` hard fork activated (mainnet block 2,128,896), Dash Core divides the masternode
-reward into Core (62.5%) and Platform (37.5%) portions. The Core portion is paid out directly in the
+portion of the block subsidy into Core (62.5%) and Platform (37.5%) portions. The Core portion is paid out directly in the
 coinbase. The Platform portion goes into the Platform credit pool and is then distributed by Platform
 to [evonodes](../resources/glossary.md#evolution-masternode-evonode) providing Platform services.
 
