@@ -120,7 +120,7 @@ yesLaP5XFTaLZiWAo2zK8mFfUCtV8rRhKw
 Create the [raw transaction](../resources/glossary.md#raw-transaction) using the [`createrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#createrawtransaction) much the same as before, except now we have two inputs and two outputs.
 
 ``` bash
-## Outputs - inputs = transaction fee, so always double-check your math!
+## Inputs - outputs = transaction fee, so always double-check your math!
 > dash-cli -regtest createrawtransaction '''
     [
       {

@@ -29,11 +29,11 @@ Recall from the Guide that the hashed public keys used in addresses obfuscate th
     > NEW_ADDRESS3=yLknHbtnjJRVWQr78aTfCPfNB42jfNkDWK
 ```
 
-## 2. Get public key
+## 2. Get public keys
 
 Use the [`getaddressinfo` RPC](../api/remote-procedure-calls-wallet.md#getaddressinfo) to display the full (unhashed) public key for the addresses.  This is the information which will actually be included in the multisig redeem script.  This is also the information you would give another person or device as part of creating a multisig output or P2SH multisig redeem script.
 
-We save the address returned to a shell variable.
+Run `getaddressinfo` for each of the three addresses and save each returned `pubkey` to the corresponding shell variable. For example, the third address gives:
 
 ``` bash
 > dash-cli -regtest getaddressinfo $NEW_ADDRESS3
@@ -50,19 +50,21 @@ We save the address returned to a shell variable.
   "pubkey": "038007ef6fd812d73da054271b68a42dae06672cff2a30b2814935537e5930ebf6",
   "iscompressed": true,
   "label": "",
-  "ischange": false,
+  "ischange": false
 }
 
 ```
 
 ``` bash
 
-> NEW_ADDRESS3_PUBLIC_KEY=038007ef6fd812d73da054271b68a42dae0667[...]
+> NEW_ADDRESS1_PUBLIC_KEY=03fa8866cccae3c975a72884443a351801a0ea9721cbe7215586ddd6fab5f39f26
+> NEW_ADDRESS2_PUBLIC_KEY=03b2259f42a241f4870e794521594f2af7aadf0e4c580a43582e58630e46186346
+> NEW_ADDRESS3_PUBLIC_KEY=038007ef6fd812d73da054271b68a42dae06672cff2a30b2814935537e5930ebf6
 ```
 
 ## 3. Create multisig address
 
-Use the [`createmultisig` RPC](../api/remote-procedure-calls-util.md#createmultisig) with two arguments, the number (*n*) of signatures required and a list of public keys. The P2SH address is returned along with the redeem script which must be provided when we spend duffs sent to the P2SH address.
+Use the [`createmultisig` RPC](../api/remote-procedure-calls-util.md#createmultisig) with two arguments, the number (*m*) of signatures required and a list of public keys. The P2SH address is returned along with the redeem script which must be provided when we spend duffs sent to the P2SH address.
 
 :::{attention}
 You must not lose the redeem script, especially if you don't have a record of which public keys you used to create the P2SH multisig address. You need the redeem script to spend any dash sent to the P2SH address.
@@ -205,7 +207,7 @@ yZSxAakpoWGG3vcsvpk9qNtsYREhump4Cr
 We generate the [raw transaction](../resources/glossary.md#raw-transaction) the same way we did in the [Simple Raw Transaction subsection](../examples/transaction-tutorial-simple-raw-transaction.md).
 
 ``` bash
-## Outputs - inputs = transaction fee, so always double-check your math!
+## Inputs - outputs = transaction fee, so always double-check your math!
 > dash-cli -regtest createrawtransaction '''
     [
       {
@@ -221,10 +223,6 @@ We generate the [raw transaction](../resources/glossary.md#raw-transaction) the 
 0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd761aea902\
 24eba2b2dd0000000000ffffffff01c0bc973b000000001976a914900504f96c\
 55d6ebe1c33581ba9430ca05b12a1488ac00000000
-
-010000000175e1769813db8418fea17576694af1ff31cb2b512b7333e6eb42f0\
-30d0d778720000000000ffffffff01c0bc973b000000001976a914b6f64f5bf3\
-e38f25ead28817df7929c06fe847ee88ac00000000
 
 > RAW_TX=0100000001529c9f774521b7f5104b709e899d8547078ca4a993dbd[...]
 ```
@@ -302,7 +300,7 @@ We make the first [signature](../resources/glossary.md#signature). The input arg
 
 ``` bash
 
-> PARTLY_SIGNED_RAW_TX=010000000175e1769813db8418fea17576694af1f[...]
+> PARTLY_SIGNED_RAW_TX=0100000001529c9f774521b7f5104b709e899d854[...]
 ```
 
 ### 9b. Private Key 3

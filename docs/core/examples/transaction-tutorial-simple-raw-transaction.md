@@ -16,7 +16,7 @@ The following steps pick up where the [Simple Spending Tutorial](../examples/tra
 
 ## 1. List unspent outputs
 
-Re-rerun `listunspent`. We now have three UTXOs: the two transactions we created before plus the [coinbase transaction](../resources/glossary.md#coinbase-transaction) from block #2. We save the [TXID](../resources/glossary.md#transaction-identifiers) and [output index](../resources/glossary.md#output-index) number (vout) of that [coinbase](../resources/glossary.md#coinbase) UTXO to shell variables.
+Re-run `listunspent`. We now have three UTXOs: the two outputs we created before plus the [coinbase transaction](../resources/glossary.md#coinbase-transaction) from block #2. We save the [TXID](../resources/glossary.md#transaction-identifiers) and [output index](../resources/glossary.md#output-index) number (vout) of that [coinbase](../resources/glossary.md#coinbase) UTXO to shell variables.
 
 ```shell
 dash-cli -regtest listunspent
@@ -91,17 +91,17 @@ Using two arguments to the [`createrawtransaction` RPC](../api/remote-procedure-
 In this example, our input had 500.0000 DASH and our output (`$NEW_ADDRESS`) is being paid 499.9999 DASH, so the transaction will include a fee of 0.0001 DASH. If we had paid `$NEW_ADDRESS` only 100 DASH with no other changes to this transaction, the [transaction fee](../resources/glossary.md#transaction-fee) would be a whopping 400 DASH. See the [Complex Raw Transaction subsection](../examples/transaction-tutorial-complex-raw-transaction.md) below for how to create a transaction with multiple outputs so you can send the change back to yourself.
 
 ```shell
-## Outputs - inputs = transaction fee, so always double-check your math!
-dash-cli -regtest createrawtransaction ''' \
-    [ \
-      { \
-        "txid": "'$UTXO_TXID'", \
-        "vout": '$UTXO_VOUT' \
-      } \
-    ] \
-    ''' ''' \
-    { \
-      "'$NEW_ADDRESS'": 499.9999 \
+## Inputs - outputs = transaction fee, so always double-check your math!
+dash-cli -regtest createrawtransaction '''
+    [
+      {
+        "txid": "'$UTXO_TXID'",
+        "vout": '$UTXO_VOUT'
+      }
+    ]
+    ''' '''
+    {
+      "'$NEW_ADDRESS'": 499.9999
     }'''
 ```
 
@@ -202,7 +202,7 @@ fa0f4105b0a2b2706d65581c5e6411d3970253c7f231944fa2f978b4a3d9010d
 Generate a block to confirm the transaction and then clear our shell variables.
 
 ```shell
-dash-cli -regtest generate 1
+dash-cli -regtest -generate 1
 
 unset UTXO_TXID UTXO_VOUT NEW_ADDRESS RAW_TX SIGNED_RAW_TX
 ```
