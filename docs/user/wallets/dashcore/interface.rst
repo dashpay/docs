@@ -144,6 +144,30 @@ passed, while a circular progress indicator indicates the number of
 confirmations. A lightning bolt indicates a transaction with an existing
 InstantSend lock.
 
+Besides sent, received and mined transactions, the Type column can show the
+following types. You can use the type filter above the table to show only one
+type of transaction.
+
+Masternode Registration and Masternode Update
+  A transaction that registers a masternode or updates a masternode
+  registration. The amount is the change in your wallet balance, which is
+  normally only the network fee. The **Masternode** filter shows both types.
+
+Asset Lock
+  A transaction that locks funds for use on Dash Platform. The amount is the
+  change in your wallet balance, including the network fee.
+
+Platform Transfer
+  A withdrawal of funds from Dash Platform to your wallet.
+
+Data Transaction
+  A transaction output that stores data instead of transferring funds.
+
+Dust Receive
+  A very small amount received from another wallet and locked by dust attack
+  protection (see the Options dialog's Wallet tab). To unlock it, right-click
+  the transaction and select **Unlock dust UTXO**.
+
 .. figure:: img/transactions.png
 
    The Transactions tab
