@@ -8,8 +8,9 @@ Windows Installation Guide
 ==========================
 
 This guide describes how to download, install and encrypt the Dash Core
-wallet for Windows. The guide is written for Windows 10, but the steps
-should be similar for other versions of Windows.
+wallet for Windows. Dash Core requires Windows 10 or later. The guide is
+written for Windows 10, but the steps should be similar for later versions
+of Windows.
 
 Downloading the Dash Core wallet
 --------------------------------

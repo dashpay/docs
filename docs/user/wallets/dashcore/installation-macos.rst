@@ -8,8 +8,7 @@ macOS Installation Guide
 ========================
 
 This guide describes how to download, install and encrypt the Dash Core
-wallet for macOS. The guide is written for macOS Sierra, but the steps
-should be similar for other versions.
+wallet for macOS. Dash Core requires macOS 14 (Sonoma) or later.
 
 Downloading the Dash Core wallet
 --------------------------------

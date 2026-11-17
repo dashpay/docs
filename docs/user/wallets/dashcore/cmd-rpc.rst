@@ -28,9 +28,7 @@ using the -datadir and -conf command-line arguments.
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 | macOS    | ~/Library/Application Support/ | /Users/username/Library/Application Support/DashCore/dash.conf                                |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
-| Windows  | %APPDATA%                      | (Vista-10) C:\\Users\\username\\AppData\\Roaming\\DashCore\\dash.conf                         |
-|          |                                |                                                                                               |
-|          |                                | (2000-XP) C:\\Documents and Settings\\username\\Application Data\\DashCore\\dash.conf         |
+| Windows  | %APPDATA%                      | C:\\Users\\username\\AppData\\Roaming\\DashCore\\dash.conf                                    |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 
 Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will
