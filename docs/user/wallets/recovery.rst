@@ -120,7 +120,7 @@ Leave ``.conf`` files and the folders (such as ``backups``, ``blocks``,
 faster by providing a copy of the blockchain and your settings.
 
 Now open Dash Core and wait for blockchain synchronization to complete.
-Your wallet will be restored/upgraded and all balances should be
+Your wallet will be restored and all balances should be
 displayed. You should ensure you have the correct password by trying to
 unlock your wallet from **Settings > Unlock Wallet** to make sure you
 can actually create transactions using your balances. If you have any
@@ -137,6 +137,11 @@ restarting. **Rebuild Index** may also help, but it restarts Dash Core.
 .. TODO: Retake img/recovery-rescan.png: it shows the old Wallet Repair tab,
    whose buttons restarted Dash Core. The Repair tab has Rescan Chain,
    Rescan Chain (full) and Rebuild Index.
+
+If you restored a legacy wallet, such as a wallet created by an older
+version of Dash Core, you can convert it to a descriptor wallet by
+clicking **File > Migrate Wallet**. See :ref:`dashcore-migrate-wallet`
+for details.
 
 At this stage, recovery is complete and you should make another backup
 using **File > Backup Wallet** or following the instructions :ref:`here
