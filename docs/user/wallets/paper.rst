@@ -223,14 +223,27 @@ the wallet into another Dash wallet that is connected to the internet.
 We will use the Dash Core Wallet in this example, although Dash Electrum
 and mobile wallets are also supported. Open Dash Core Wallet, click
 **Settings** and **Unlock Wallet**. Enter your wallet passphrase. Then
-click **Tools > Console**. The console appears. Enter the following command::
+click **Window > Console**. The console appears. Enter the following
+command to calculate the checksum of a descriptor containing the key::
 
-  importprivkey <your private key in WIF>
+  getdescriptorinfo "pkh(<your private key in WIF>)"
+
+Copy the value of the ``checksum`` field from the result. Then enter the
+following command to import the key::
+
+  importdescriptors '[{"desc": "pkh(<your private key in WIF>)#<checksum>", "timestamp": 0}]'
+
+If you are using a legacy wallet, enter
+``importprivkey <your private key in WIF>`` instead.
 
 .. figure:: img/paper-import.png
    :width: 400px
 
    Dash Core Wallet importing a private key
+
+.. TODO: Retake img/paper-import.png: it shows importprivkey, which fails on
+   descriptor wallets, and the old Wallet Repair tab label. Show
+   getdescriptorinfo and importdescriptors instead.
 
 This process requires rescanning the entire downloaded blockchain for
 transactions involving this address, and will therefore take some time.
