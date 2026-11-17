@@ -191,8 +191,10 @@ The Masternodes Tab
 
 The Masternodes tab shows an overview of the masternodes currently
 registered on the Dash network. You can filter the data by entering a
-value in the Filter List field, or display only masternodes with owner
-keys stored in the loaded wallet.
+value in the Filter List field. Check **Owned** to display only
+masternodes the loaded wallet has keys for, such as the collateral, owner,
+voting or payout keys, or the keys of a share in a shared masternode.
+Check **Hide banned** to hide masternodes that are currently PoSe banned.
 
 The type filter can show all masternodes, or only regular masternodes,
 evonodes or shared masternodes. Click **Register Masternode…** to register a
