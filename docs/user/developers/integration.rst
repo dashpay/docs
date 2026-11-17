@@ -183,7 +183,8 @@ This documentation is also available as a `PDF <https://github.com/dashpay/docs/
 InstantSend is a feature provided by the Dash network that allows for
 zero-confirmation transactions to be safely accepted and re-spent. The
 network attempts to lock the inputs of every valid transaction when it
-is broadcast to the network. Every secured transaction is included in a
+is broadcast to the network, except for masternode provider
+transactions. Every secured transaction is included in a
 following block in accordance with standard blockchain principles.
 Transactions are typically locked by InstantSend within 3 seconds of
 being propagated to the network.
@@ -280,12 +281,14 @@ Broadcasting InstantSend Transactions
 
 .. tip::
    
-   Because all transactions on the Dash network are automatically InstantSend,
+   Because transactions on the Dash network are automatically InstantSend,
    no procedural changes are required to broadcast transactions as InstantSend.
 
-Since Dash v0.14.0 established LLMQs on the Dash network, quorums will
-now attempt to lock every valid transaction by default without any
-additional fee or action by the sending wallet or user. A transaction is
+Quorums attempt to lock every valid transaction by default without any
+additional fee or action by the sending wallet or user. Masternode
+provider transactions are the exception: they are never locked, so
+wait for a ChainLock or block confirmations before treating one as
+final (see :ref:`InstantSend <guide-features-instantsend>`). A transaction is
 eligible for InstantSend when each of its inputs is considered
 confirmed. This is the case when at least one of the following
 circumstances is true: 
