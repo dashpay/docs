@@ -213,7 +213,7 @@ A value related to a public key which could only have reasonably been created by
 
 ## Enhanced hard fork (EHF)
 
-A hard fork activation method defined in [DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md). A masternode quorum signs a hard fork signal that is mined in a [MnHfTx](../reference/transactions-special-transactions.md#mnhftx); only then can miners signal for the deployment using version bits. The `v24` and `evo_shares` deployments use EHF. See [Consensus Rule Changes](../guide/block-chain-consensus-rule-changes.md).
+A hard fork activation method defined in [DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md). A masternode quorum signs a hard fork signal that is mined in a [MnHfTx](../reference/transactions-special-transactions.md#mnhftx); only then can miners signal for the deployment using version bits. See [Consensus Rule Changes](../guide/block-chain-consensus-rule-changes.md).
 
 ## Escrow contract
 
