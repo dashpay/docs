@@ -280,6 +280,12 @@ The Options Dialog
 This documentation describes the functionality of the Dash Core Options
 dialog, available under the **Settings > Options** menu in Dash Core.
 
+Many options, such as pruning, proxy, CoinJoin and dust protection
+settings, are saved to the *settings.json* file in the data directory. They
+also apply when you run ``dashd`` and take precedence over the same
+settings in *dash.conf*. Options set on the command line take precedence
+over this dialog and are listed at the bottom of the dialog.
+
 Main tab
 --------
 
@@ -370,6 +376,13 @@ Enable coin control features
   different addresses in your wallet. See :ref:`here <coin-control>` for
   a more detailed explanation of Coin Control.
 
+Enable PSBT controls
+  Enabling this option adds a **Create Unsigned** button to the send
+  confirmation dialog. This creates a partially signed transaction (PSBT)
+  instead of sending the transaction, which you can save or copy and then
+  sign with, for example, an offline Dash Core wallet or a PSBT-compatible
+  hardware wallet.
+
 Keep custom change address
   Whether to keep the specified custom change address or not.
   
@@ -387,6 +400,28 @@ Enable CoinJoin features
   Enabling this option displays the CoinJoin tab in the main Dash
   Core window and the Options dialog, and allows you to process and
   spend your balance using CoinJoin.
+
+Enable dust attack protection
+  Enabling this option automatically locks very small amounts received
+  from other wallets, which may be part of a dust attack intended to
+  link your addresses. Locked amounts are not spent together with your
+  other funds. Incoming amounts at or below the **Dust threshold** (in
+  duffs) are locked, and appear as **Dust Receive** on the
+  **Transactions** tab. To unlock an amount, right-click the transaction
+  on the **Transactions** tab and select **Unlock dust UTXO**. Locks
+  remain in place if you later lower the threshold or disable the
+  option, but the transaction then no longer appears as **Dust Receive**.
+  To unlock such an amount, use **Unlock unspent** in :ref:`Coin Control
+  <coin-control>`. This is the same setting as the
+  ``-dustprotectionthreshold`` command-line option.
+
+External signer script path
+  This experimental option allows Dash Core to use an external signing
+  device, such as a hardware wallet. Enter the full path to a compatible
+  signer script. Changing this option requires restarting Dash Core.
+  Only use scripts from a trusted source, since malware can steal your
+  funds. This option is not available in the Windows version of Dash
+  Core.
 
 CoinJoin tab
 ------------
@@ -560,6 +595,10 @@ Font Family
 
 Font Scale and Weight
   These options control the size and weight of fonts in the window.
+
+Font in the Overview tab
+  This option allows you to select a different font to display the
+  balances on the Overview tab.
 
 The Tools Dialog
 ================
