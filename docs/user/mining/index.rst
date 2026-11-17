@@ -100,6 +100,18 @@ In addition to joining a pool, you will also need to create a Dash
 address to receive your payout. To do this in Dash Core wallet, see
 :ref:`here <dashcore-send-receive>`.
 
+.. note::
+
+   **Pool operators:** Once the Dash Core v24 hard fork activates, each
+   entry in the ``masternode`` and ``superblock`` arrays returned by
+   ``getblocktemplate`` must be paid by its own coinbase output, even
+   when entries have the same script and amount. A single masternode
+   payment can also span several entries. Blocks that merge these
+   payments into fewer outputs are invalid. Before v24 activates, make
+   sure your pool software creates one coinbase output per entry, in the
+   order the template lists them. See :doc:`Block Prototypes
+   </docs/core/guide/mining-block-prototypes>` for details.
+
 .. toctree::
    :hidden:
    :includehidden:
