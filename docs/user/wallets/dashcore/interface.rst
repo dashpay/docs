@@ -726,11 +726,11 @@ Rebuild Index
   block files. This can be useful to recover missing or stuck balances.
 
 .. note::
-  The wallet salvage option was moved to the standalone dash-wallet
-  command-line application in Dash Core v18.0. Running dash-wallet
-  with the ``salvage`` command assumes the wallet file provide by
-  the ``-wallet`` parameter  is corrupted and cannot be read. It
-  makes a copy of the wallet file as <wallet name>.<date>.bak and
-  scans it to attempt to recover any private keys.
+  The wallet salvage option is available in the standalone dash-wallet
+  command-line application and only works with legacy wallets. Running
+  dash-wallet with the ``salvage`` command assumes the wallet provided by
+  the ``-wallet`` parameter is corrupted and cannot be read. It renames
+  the wallet file to *wallet.dat.<timestamp>.bak* and scans it to attempt
+  to recover any private keys into a new *wallet.dat* file.
 
-  Example: ``dash-wallet -wallet=mywallet/wallet.dat salvage``
+  Example: ``dash-wallet -wallet=mywallet salvage``
