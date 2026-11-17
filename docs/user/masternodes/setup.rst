@@ -842,13 +842,12 @@ syntax::
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-.. note::
-  
-  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
-
 - ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
-- ``coreP2PAddrs``: Array of masternode address(es), in the format ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format ``x.x.x.x:yyyy``. A single
+  address string is also accepted. The first address must be an IPv4 address using port 9999.
+  Private (RFC 1918) addresses are rejected. Enter ``""`` to register without an address and set it
+  later with a :ref:`ProUpServTx <dip3-update-service>`.
 - ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
 - ``operatorPubKey``: The BLS public key generated above (or provided by your hosting service)
 - ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for

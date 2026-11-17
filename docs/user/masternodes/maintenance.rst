@@ -216,14 +216,11 @@ button, or from Dash Core using the following syntax::
 
 Where:
 
-.. note::
-  
-  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
-
-
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``coreP2PAddrs``: Array of masternode address(es), in the format 
-  ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format
+  ``x.x.x.x:yyyy``. A single address string is also accepted. On mainnet,
+  the first address must be an IPv4 address using port 9999. Private
+  (RFC 1918) addresses are rejected.
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``operatorPayoutAddress`` (optional): The address used for operator 
@@ -258,19 +255,21 @@ button, or from Dash Core using the following syntax::
 
 Where:
 
-.. note::
-  
-  As of Dash Core v23.0, ``coreP2PAddrs``, ``platformP2PAddrs``, and ``platformHTTPSAddrs``
-  fields accept backwards-compatible input.
-
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``coreP2PAddrs``: Array of masternode address(es), in the format 
-  ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format
+  ``x.x.x.x:yyyy``. A single address string is also accepted. On mainnet,
+  the first address must be an IPv4 address using port 9999. Private
+  (RFC 1918) addresses are rejected.
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
-- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for peer-to-peer connection (must include 26656 for mainnet). Must be unique on the network.
-- ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for their HTTPS API (must include 443 for mainnet). Must be unique on the network.
+- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT", or a bare port number such as
+  ``26656``, used by Platform for peer-to-peer connection. On mainnet, the first entry must use
+  port 26656 and the same IPv4 address as the first ``coreP2PAddrs`` entry. Must be unique on the
+  network.
+- ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT", or a bare port number such as
+  ``443``, used by Platform for their HTTPS API. On mainnet, the first entry must use port 443 and
+  the same IPv4 address as the first ``coreP2PAddrs`` entry. Must be unique on the network.
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
