@@ -402,7 +402,8 @@ functions in Dash Core.
 Enable advanced interface
   Enabling this option changes the interface on the Overview
   tab of the Dash Core wallet to include more information, such as the
-  remaining keys, percentage completion and current operation. See
+  remaining keys (legacy wallets only), percentage completion and current
+  operation. See
   :ref:`here <dashcore-coinjoin-instantsend>` for a full explanation
   of how to use CoinJoin.
 
@@ -412,11 +413,13 @@ Show popups for mixing transactions
 
 Warn if the wallet is running out of keys
   Enabling this option will cause Dash Core to display a warning when
-  your original set of 1000 addresses is running out, which may affect
-  CoinJoin processing. When 900 addresses are used, your wallet must
-  create more addresses. It can only do this if you have automatic
-  backups enabled. Consequently, users who have backups disabled will
-  also have CoinJoin disabled.
+  the original set of 1000 addresses in a legacy wallet is running out,
+  which may affect CoinJoin processing. When 900 addresses are used, a
+  legacy wallet must create more addresses. It can only do this if you
+  have automatic backups enabled. Descriptor wallets do not need
+  automatic backups for CoinJoin and do not show this warning. However,
+  if automatic backups are disabled (``-createwalletbackups=0``), Dash
+  Core disables CoinJoin on the Overview tab for all wallets.
 
 Enable multi-session
   Normally CoinJoin processing is completed in several consecutive
@@ -424,7 +427,7 @@ Enable multi-session
   multi-session, which means you can use multiple masternode servers at
   the same time, greatly increasing the speed of the CoinJoin process at
   the cost of creating more addresses and thus requiring more frequent
-  wallet backups.
+  backups of legacy wallets.
 
 Mixing rounds
   Use this option to control the number of rounds of CoinJoin to be
