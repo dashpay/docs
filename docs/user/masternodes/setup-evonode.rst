@@ -478,7 +478,7 @@ corresponding public key has been created.
 If you are using a hosting service, they may provide you with their public key,
 and you can skip this step. If you are hosting your own masternode or have
 agreed to provide your host with the BLS private key, generate a BLS
-public/private keypair in Dash Core by clicking **Tools > Console** and entering
+public/private keypair in Dash Core by clicking **Window > Console** and entering
 the following command::
 
   bls generate

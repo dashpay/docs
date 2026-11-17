@@ -59,5 +59,5 @@ Detailed documentation for all available RPC commands is accessible via
 the :ref:`Dash Core developer documentation RPC page <api-rpc-quick-reference>`.
 For full documentation of arguments, results and examples, type 
 ``help ( "command" )`` to view full details at the console. You can enter
-commands either from **Tools > Console** in the QT wallet, or using
+commands either from **Window > Console** in the QT wallet, or using
 *dash-cli* for headless wallets and *dashd*.
