@@ -82,23 +82,26 @@ send("filterload",
 We set a [bloom filter](../resources/glossary.md#bloom-filter) with the [`filterload` message](../reference/p2p-network-control-messages.md#filterload). This filter is described in the preceding sections.
 
 ``` python
+## Block header hash from the command line, converted from RPC byte
+## order to internal byte order
+block_hash = bytes.fromhex(sys.argv[1])[::-1].hex()
+
 send("getdata",
       "01" # ................................. Number of inventories: 1
     + "03000000" # ........................... Inventory type: filtered block
-    + "a4deb66c0d726b0aefb03ed51be407fb"
-    + "ad7331c6e8f9eef231b7000000000000" # ... Block header hash
+    + block_hash # ........................... Block header hash
 )
 ```
 
-We request a merkle block for transactions matching our filter, completing our script.
+We request a merkle block for transactions matching our filter, completing our script. The node only returns blocks it has, so the script takes the block header hash as a command-line argument. RPCs such as [`getbestblockhash`](../api/remote-procedure-calls-blockchain.md#getbestblockhash) display hashes in [RPC byte order](../resources/glossary.md#rpc-byte-order), and P2P messages use [internal byte order](../resources/glossary.md#internal-byte-order), so the script reverses the bytes. The node replies with a [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock) even if no transactions in the block match the filter.
 
-% TODO: Replace the Bitcoin filter, block header hash and merkle block in these examples with Dash data (the parsing page's SVGs would need updating too).
+% TODO: Replace the Bitcoin filter and the merkle block on the parsing page with Dash data (the parsing page's SVGs would need updating too).
 
 To run the script, we simply pipe it to the Unix [`netcat` command](https://en.wikipedia.org/wiki/Netcat) or one of its many clones, one of which is available for practically any platform. For example, with the original netcat and using hexdump (`hd`) to display the output:
 
 ``` bash
 ## Connect to the Dash Core peer running on localhost
-python3 get-merkle.py | nc localhost 9999 | hd
+python3 get-merkle.py "$(dash-cli getbestblockhash)" | nc localhost 9999 | hd
 ```
 
-Part of the response is shown in the [Parsing a MerkleBlock](../examples/p2p-network-parsing-a-merkleblock.md) section.
+The [Parsing a MerkleBlock](../examples/p2p-network-parsing-a-merkleblock.md) section walks through part of an example response.
