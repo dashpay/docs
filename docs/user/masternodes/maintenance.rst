@@ -29,6 +29,10 @@ using the legacy dashman installer, see the legacy update documentation
 Manual update
 -------------
 
+Major releases can be mandatory and can change configuration requirements,
+so read the `release notes <https://github.com/dashpay/dash/releases/latest>`__
+before upgrading.
+
 To update Dash manually, log in to your server using ssh or PuTTY. If
 your crontab contains an entry to automatically restart dashd, invoke
 ``crontab -e`` and comment out the appropriate line by adding the ``#``
