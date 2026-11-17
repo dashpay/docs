@@ -292,13 +292,7 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``externalip``: this is the IP address of your VPS
 
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
-
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
-
-   Entering key data in dash.conf on the masternode
+Leave the ``masternodeblsprivkey`` field commented out for now.
 
 .. _masternode-config-requirements:
 
