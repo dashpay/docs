@@ -125,16 +125,18 @@ displayed. You should ensure you have the correct password by trying to
 unlock your wallet from **Settings > Unlock Wallet** to make sure you
 can actually create transactions using your balances. If you have any
 problems with your balance not appearing, try to force a rescan of the
-blockchain by going to **Window > Wallet Repair** and selecting **Rescan
-blockchain files**. **Rebuild index** may also help. Dash Core will
-restart and perform a full scan of the blockchain.
+blockchain by going to **Window > Repair** and clicking **Rescan Chain
+(full)**. Dash Core will perform a full scan of the blockchain without
+restarting. **Rebuild Index** may also help, but it restarts Dash Core.
 
 .. figure:: img/recovery-rescan.png
    :width: 400px
-.. figure:: img/recovery-rescanning.png
-   :width: 300px
 
    Forcing Dash Core to rescan the blockchain
+
+.. TODO: Retake img/recovery-rescan.png: it shows the old Wallet Repair tab,
+   whose buttons restarted Dash Core. The Repair tab has Rescan Chain,
+   Rescan Chain (full) and Rebuild Index.
 
 At this stage, recovery is complete and you should make another backup
 using **File > Backup Wallet** or following the instructions :ref:`here

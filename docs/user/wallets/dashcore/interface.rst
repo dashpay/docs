@@ -696,33 +696,34 @@ that peer.
 
    The Peers tab of the Dash Core Tools dialog
 
-Wallet Repair tab
------------------
+Repair tab
+----------
 
-The Wallet Repair tab offers a range of startup commands to restore a
-wallet to a functional state. Selecting any of these commands will
-restart Dash Core with the specified command-line option.
+The Repair tab offers a range of commands to restore a wallet to a
+functional state. The rescan commands run without restarting Dash Core and
+apply to the wallet shown at the top of the tab. If more than one wallet is
+loaded, select the wallet in the **Wallet** dropdown on the Console tab.
 
 .. figure:: img/tools-wallet-repair.png
    :scale: 50 %
 
-   The Wallet Repair tab of the Dash Core Tools dialog
+   The Repair tab of the Dash Core Tools dialog
 
-Rescan blockchain files 1
+Rescan Chain
   Rescans the already downloaded blockchain for any transactions affecting
-  accounts contained in the wallet. This may be necessary if you replace
-  your wallet.dat file with a different wallet or a backup - the wallet
-  logic will not know about these transactions, so a rescan is necessary
-  to determine balances.
+  accounts contained in the wallet, starting from the wallet creation time.
+  This may be necessary if you replace your wallet.dat file with a different
+  wallet or a backup - the wallet logic will not know about these
+  transactions, so a rescan is necessary to determine balances.
 
-Rescan blockchain files 2
-  Performs the same operation as *Rescan blockchain files 1* but scans from the
-  genesis block instead of the wallet creation time.
+Rescan Chain (full)
+  Performs the same operation as *Rescan Chain* but scans from the genesis
+  block instead of the wallet creation time.
 
-Rebuild index
-  Discards the current blockchain and chainstate indexes (the database of
-  unspent transaction outputs) and rebuilds it from existing block files.
-  This can be useful to recover missing or stuck balances.
+Rebuild Index
+  Restarts Dash Core, discards the current blockchain and chainstate indexes
+  (the database of unspent transaction outputs) and rebuilds it from existing
+  block files. This can be useful to recover missing or stuck balances.
 
 .. note::
   The wallet salvage option was moved to the standalone dash-wallet
