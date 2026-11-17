@@ -2516,7 +2516,7 @@ The registration flow is:
 4. Have the funding inputs signed (for example, with [`signrawtransactionwithwallet`](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet)) and broadcast the transaction with [`sendrawtransaction`](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction).
 
 :::{important}
-Consent is required from each share in the table, not from each funding input. An input is not tied to any share. Before signing its funding inputs, each participant should check the share table (`proRegTx.shares` in [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoded-special-transaction-payloads), or `terms` from `protx shared_sign`) for its own share, with its own amount and addresses. Signing inputs into a table without that share gives the contribution to the other shares.
+Consent is required from each share in the table, not from each funding input. An input is not tied to any share. Before signing its funding inputs, each participant should check the share table (`proRegTx` in [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction), or `terms` from `protx shared_sign`) for its own share, with its own amount and addresses. Signing inputs into a table without that share gives the contribution to the other shares.
 :::
 
 :::{important}
