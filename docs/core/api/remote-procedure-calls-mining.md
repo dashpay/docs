@@ -69,14 +69,14 @@ Name | Type | Presence | Description
 →<br>`bits` | string | Required<br>(exactly 1) | The compressed target of next block
 →<br>`previousbits` | string | Required<br>(exactly 1) | The compressed target of  the current highest block
 →<br>`height` | number | Required<br>(exactly 1) | The height of the next block
-→<br>`masternode` | array (objects) | Required<br>(0 or more) | Required masternode payments that must be included in the next block
+→<br>`masternode` | array (objects) | Required<br>(0 or more) | Required masternode payments that must be included in the next block<br><br>**Updated in Dash Core 24.0.0**<br>Each entry must be paid by its own coinbase output. Entries with the same script and amount can't share an output, but their order isn't enforced. See [Block Reward](../reference/block-chain-serialized-blocks.md#block-reward)
 → →<br>Masternode Payee | object | Optional<br>(0 or more) | Object containing a masternode payee's information  
 → → →<br>`payee` | string | Required<br>(exactly 1) | Payee address
 → → →<br>`script` | string | Required<br>(exactly 1) | Payee scriptPubKey
 → → →<br>`amount` | number | Required<br>(exactly 1) | Required amount to pay
 →<br>`masternode_payments_started` | boolean | Required<br>(exactly 1) | True if masternode payments started
 →<br>`masternode_payments_enforced` | boolean | Required<br>(exactly 1) | True if masternode payments enforced
-→<br>`superblock` | array (objects) | Required<br>(0 or more) | The superblock payees that must be included in the next block
+→<br>`superblock` | array (objects) | Required<br>(0 or more) | The superblock payees that must be included in the next block, in this order<br><br>**Updated in Dash Core 24.0.0**<br>Each entry must be paid by its own coinbase output, after the output that pays the previous entry. Entries with the same script and amount can't share an output. See [Block Reward](../reference/block-chain-serialized-blocks.md#block-reward)
 → →<br>Superblock Payee | object | Optional<br>(0 or more) | Object containing a superblock payee's information
 → → →<br>`payee` | string | Required<br>(exactly 1) | Payee address
 → → →<br>`script` | string | Required<br>(exactly 1) | Payee scriptPubKey

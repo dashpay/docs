@@ -12,6 +12,14 @@ The ability of someone controlling a majority of network hash rate to revise tra
 
 A 20-byte hash formatted using base58check to produce either a P2PKH or P2SH Dash address. Currently the most common way users exchange payment information.
 
+## Asset lock
+
+A special transaction ([AssetLockTx](../reference/transactions-special-transactions.md#assetlocktx)) that locks Dash on the Core chain and adds it to the [credit pool](#credit-pool) so Dash Platform can assign the equivalent credits to identities or [Dash Platform addresses](#dash-platform-address).
+
+## Asset unlock
+
+A special transaction ([AssetUnlockTx](../reference/transactions-special-transactions.md#assetunlocktx)) that withdraws Platform credits back to Dash on the Core chain. It has no inputs, is signed by a Platform quorum, and is paid from the [credit pool](#credit-pool) subject to a withdrawal limit. See also [Version 2 Asset Unlocks](../reference/transactions-special-transactions.md#version-2-asset-unlocks).
+
 ## Base58
 
 The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses. Also used in other parts of Dash, such as encoding private keys for backup in WIP format. Not the same as other base58 implementations.
@@ -143,6 +151,10 @@ When several nodes (usually most nodes on the network) all have the same blocks 
 
 The block validation rules that full nodes follow to stay in consensus with other nodes.
 
+## Credit pool
+
+The balance of Dash held for Dash Platform. [Asset locks](#asset-lock) and the Platform portion of the masternode block reward add to it, and [asset unlocks](#asset-unlock) are paid from it. Each block's [CbTx](../reference/transactions-special-transactions.md#cbtx) records the balance, which the [`getcreditpoolinfo` RPC](../api/remote-procedure-calls-blockchain.md#getcreditpoolinfo) also returns.
+
 ## Dark Gravity Wave
 
 An open source difficulty-adjusting algorithm for Bitcoin-based cryptocurrencies that was first used in Dash. Difficulty adjusts every block based on historical statistical data to ensure consistent block issuance regardless of hash rate fluctuation.
@@ -150,6 +162,10 @@ An open source difficulty-adjusting algorithm for Bitcoin-based cryptocurrencies
 ## Dash address encoding
 
 The method used in Dash for converting 160-bit hashes into P2PKH and P2SH addresses. Also used in other parts of Dash, such as encoding private keys for backup in WIP format. Not the same as other base58 implementations.
+
+## Dash Platform address
+
+An address used by Dash Platform as defined in [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md). It encodes the same P2PKH or P2SH hash as a regular Dash address, but with bech32m instead of Base58Check. See [Dash Platform Addresses](../reference/transactions-address-conversion.md#dash-platform-addresses).
 
 ## Data-pushing opcode
 
@@ -162,6 +178,10 @@ The method used in Dash for funding development and making decisions regarding t
 ## Denominations
 
 Denominations of Dash value, usually measured in fractions of a dash but sometimes measured in multiples of a duff. One dash equals 100,000,000 duffs.
+
+## Descriptor wallet
+
+A wallet that uses output script descriptors to describe the scripts it watches and how their keys are derived. New Dash Core wallets are descriptor wallets by default and are stored in an SQLite database. See [Descriptor Wallets](../guide/wallets-wallet-files.md#descriptor-wallets).
 
 ## Devnet
 
@@ -190,6 +210,10 @@ The private portion of a keypair which can create signatures that other people c
 ## ECDSA signatures
 
 A value related to a public key which could only have reasonably been created by someone who has the private key that created that public key. Used in Dash to authorize spending duffs previously sent to a public key.
+
+## Enhanced hard fork (EHF)
+
+A hard fork activation method defined in [DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md). A masternode quorum signs a hard fork signal that is mined in a [MnHfTx](../reference/transactions-special-transactions.md#mnhftx); only then can miners signal for the deployment using version bits. See [Consensus Rule Changes](../guide/block-chain-consensus-rule-changes.md).
 
 ## Escrow contract
 
@@ -380,6 +404,10 @@ The minimum transaction fee a transaction must pay for a full node to relay that
 
 Mining is the act of creating valid Dash blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices.
 
+## Multi-party payout
+
+Splitting a masternode's owner reward across 1 to 8 payout addresses, each assigned a share of the reward in basis points. Available after the v24 hard fork activates (for EvoNodes, after the `evo_shares` deployment activates). See [Multi-Party Payouts](../guide/dash-features-masternode-payment.md#multi-party-payouts) and the [Payout Share Structure](../reference/transactions-special-transactions.md#payout-share-structure).
+
 ## Multi-phased fork
 
 A spork is a mechanism unique to Dash used to safely deploy new features to the network through network-level variables to avoid the risk of unintended network forking during upgrades. Dash Core 21.0.0 [hardened all spork values on mainnet](https://github.com/dashpay/dash/blob/v21.0.0/doc/release-notes.md#mainnet-spork-hardening). On test networks, spork values can still be updated dynamically.
@@ -500,9 +528,21 @@ The private portion of a keypair which can create signatures that other people c
 
 A masternode managed, decentralized CoinJoin service for creating an on-demand system of removing the history from coins on the network. CoinJoin processes inputs while allowing each participant to retain control of their coins at all times so the process can be done without trusting a third party.
 
+## ProDisTx
+
+The Provider Dissolution special transaction (type 10). It dissolves a [shared masternode](#shared-masternode) and refunds each participant's share of the collateral. See [ProDisTx](../reference/transactions-special-transactions.md#prodistx).
+
 ## Proof of work
 
 A hash below a target value which can only be obtained, on average, by performing a certain amount of brute force work---therefore demonstrating proof of work.
+
+## ProUpSharedRegTx
+
+The Provider Update Shared Registrar special transaction (type 12). It updates the operator key and voting key of a [shared masternode](#shared-masternode) and requires a signature from every share owner. See [ProUpSharedRegTx](../reference/transactions-special-transactions.md#proupsharedregtx).
+
+## ProUpShareTx
+
+The Provider Update Share special transaction (type 11). It lets one participant of a [shared masternode](#shared-masternode) change the reward address of their share. See [ProUpShareTx](../reference/transactions-special-transactions.md#proupsharetx).
 
 ## Pubkey script
 
@@ -567,6 +607,10 @@ A complete block in its binary format---the same format used to calculate total 
 ## Serialized transaction
 
 Complete transactions in their binary format; often represented using hexadecimal. Sometimes called raw format because of the various Dash Core commands with "raw" in their names.
+
+## Shared masternode
+
+A [masternode](#masternode) whose collateral is funded jointly by 2 to 8 participants, each contributing at least 100 DASH. The owner reward is split among the participants in proportion to their contributions. Available after the v24 hard fork activates (for EvoNodes, after the `evo_shares` deployment activates). See [Shared Masternode Registration](../reference/transactions-special-transactions.md#shared-masternode-registration), [ProUpShareTx](#proupsharetx), [ProUpSharedRegTx](#proupsharedregtx), and [ProDisTx](#prodistx).
 
 ## SIGHASH flag
 

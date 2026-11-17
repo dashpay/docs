@@ -152,6 +152,8 @@ The HD protocol uses different index numbers to indicate whether a normal or har
 
 :::{note}
 Dash developers typically use the ASCII apostrophe rather than the unicode prime symbol, a convention we will henceforth follow.
+
+Output script descriptors and the key paths in Dash Core RPC output use `h` instead (for example, `m/44h/5h/0h`). Dash Core descriptor wallets write new descriptors with `h`. Legacy wallets still use the apostrophe in key paths such as `hdkeypath`.
 :::
 
 This compact description is further combined with slashes prefixed by *m* or *M* to indicate hierarchy and key type, with *m* being a private key and *M* being a public key. For example, m/0'/0/122' refers to the 123rd hardened private child (by index number) of the first normal child (by index) of the first hardened child (by index) of the master private key. The following hierarchy illustrates prime notation and hardened key firewalls.
@@ -182,7 +184,13 @@ For implementation details, please see [BIP39](https://github.com/bitcoin/bips/b
 
 ## Descriptor Wallets
 
-As of Dash Core 24.0.0, new Dash Core wallets are descriptor wallets by default. A descriptor wallet uses [output script descriptors](https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki) to describe the scripts it watches and how their keys are derived. A legacy wallet can still be created by setting `descriptors` to `false` in the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet) or by running `dash-wallet create` with the `-legacy` option. The experimental [`migratewallet` RPC](../api/remote-procedure-calls-wallet.md#migratewallet) converts an existing legacy wallet to a descriptor wallet.
+New Dash Core wallets are descriptor wallets by default. A descriptor wallet uses [output script descriptors](https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki) to describe the scripts it watches and how their keys are derived. Descriptor wallets are stored in an SQLite database, while legacy wallets use Berkeley DB (BDB). A legacy wallet can still be created by setting `descriptors` to `false` in the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet) or by running `dash-wallet create` with the `-legacy` option. The `createwallet` RPC requires `load_on_startup` whenever `descriptors` is specified, for example:
+
+``` bash
+dash-cli -named createwallet wallet_name=legacy descriptors=false load_on_startup=true
+```
+
+Legacy wallets require Dash Core built with BDB support, which the release binaries include. The experimental [`migratewallet` RPC](../api/remote-procedure-calls-wallet.md#migratewallet) converts an existing legacy wallet to a descriptor wallet.
 
 ## Loose-Key Wallets
 

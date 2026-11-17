@@ -10,13 +10,13 @@ In both solo and pool mining, the mining software needs to get the information n
 
 ## getwork RPC
 
-The simplest and earliest method was the now-deprecated Dash Core `getwork` RPC, which constructed a [header](../resources/glossary.md#header) for the miner directly. Since a header only contains a single 4-byte nonce good for about 4 gigahashes, many modern miners need to make dozens or hundreds of `getwork` requests a second.
+The simplest and earliest method was the Dash Core `getwork` RPC (since removed), which constructed a [header](../resources/glossary.md#header) for the miner directly. Since a header only contains a single 4-byte nonce good for about 4 gigahashes, many modern miners need to make dozens or hundreds of `getwork` requests a second.
 
 ## getblocktemplate RPC
 
 An improved method is the Dash Core [`getblocktemplate` RPC](../api/remote-procedure-calls-mining.md#getblocktemplate). This provides the mining software with much more information:
 
-1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet. This includes the `masternode` and `superblock` payments the coinbase transaction must make. Once the v24 hard fork activates, each entry in these arrays must be paid by its own coinbase output. A shared masternode or a masternode with multiple owner payouts can produce several entries, and identical entries (same script and amount) each need a separate output.
+1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet. This includes the `masternode` and `superblock` payments the coinbase transaction must make. Each entry in these arrays must be paid by its own coinbase output. A shared masternode or a masternode with multiple owner payouts can produce several entries, and identical entries (same script and amount) each need a separate output. Masternode payments can be paid in any order, but `superblock` payments must appear in the coinbase in the order the template lists them: each one must be paid by a later output than the one paying the previous payment. The coinbase must also be a [CbTx](../reference/transactions-special-transactions.md#cbtx) special transaction whose extra payload is the `coinbase_payload` value returned with that template.
 
 2. A complete dump of the [transactions](../resources/glossary.md#transaction) `dashd` or the mining pool suggests including in the block, allowing the mining software to inspect the transactions, optionally add additional transactions, and optionally remove non-required transactions.
 

@@ -335,6 +335,8 @@ Result:
 }
 ```
 
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `sessions[].service` with `-deprecatedrpc=service`.
+
 *See also: none*
 
 ## GetSuperblockBudget
@@ -1338,47 +1340,6 @@ Result:
 }
 ```
 
-### Masternode Current
-
-:::{attention}
-**REMOVED in Dash Core 23.0.0**
-
-This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
-:::
-
-The `masternode current` RPC prints info on current masternode winner to be paid the next block (calculated locally).
-
-*Parameters: none*
-
-*Result---current winning masternode info*
-
-| Name             | Type   | Presence                | Description                                             |
-| ---------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| Result           | object | Required<br>(exactly 1) | Winning masternode info                                 |
-| →<br>`height`    | int    | Required<br>(exactly 1) | Block height                                            |
-| →<br>`IP:port`   | string | Required<br>(exactly 1) | The IP address/port of the masternode                   |
-| →<br>`proTxHash` | string | Required<br>(exactly 1) | The masternode's Provider Registration transaction hash |
-| →<br>`outpoint`  | string | Required<br>(exactly 1) | The masternode's outpoint                               |
-| →<br>`payee`     | string | Required<br>(exactly 1) | Payee address                                           |
-
-*Example from Dash Core 0.14.0*
-
-``` bash
-dash-cli -testnet masternode current
-```
-
-Result:
-
-``` json
-{
-  "height": 76179,
-  "IP:port": "34.242.53.163:26155",
-  "proTxHash": "9de76b8291d00026ab0af86306023c7b90f8e9229dc04916fe1335bf5e11f15d",
-  "outpoint": "9de76b8291d00026ab0af86306023c7b90f8e9229dc04916fe1335bf5e11f15d-1",
-  "payee": "yZnU7YJJgGQKvKPQFqXJ4k4DGSsRMhgLXx"
-}
-```
-
 ### Masternode List
 
 The `masternode list` prints a list of all known masternodes.
@@ -1507,7 +1468,6 @@ Result (block 407822):
 
 *See also:*
 
-* [Masternode Winner](#masternode-winner): prints info on the next masternode winner to vote for.
 * [Masternode Winners](#masternode-winners): prints the list of masternode winners.
 
 ### Masternode Status
@@ -1553,7 +1513,7 @@ The `masternode status` RPC prints masternode status information.
 | → → → →<br>`script`            | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
 | → → → →<br>`reward`            | int          | Required<br>(exactly 1) | Owner payout share in basis points |
 | → →<br>`shares`                | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
-| → → →<br>Share                 | object       | Required<br>(1 or more) | Collateral share |
+| → → →<br>Share                 | object       | Required<br>(2 or more) | Collateral share |
 | → → → →<br>`amount`            | int          | Required<br>(exactly 1) | Collateral contribution in duffs |
 | → → → →<br>`refundAddress`     | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
 | → → → →<br>`refundScript`      | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
@@ -1607,51 +1567,7 @@ Result:
 }
 ```
 
-### Masternode Winner
-
-:::{attention}
-**REMOVED in Dash Core 23.0.0**
-
-This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
-:::
-
-The `masternode winner` RPC prints info on the next masternode winner to vote for.
-
-*Parameters: none*
-
-*Result---next masternode winner info*
-
-| Name             | Type   | Presence                | Description                                             |
-| ---------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| Result           | object | Required<br>(exactly 1) | Winning masternode info                                 |
-| →<br>`height`    | int    | Required<br>(exactly 1) | Block height                                            |
-| →<br>`IP:port`   | string | Required<br>(exactly 1) | The IP address/port of the masternode                   |
-| →<br>`proTxHash` | string | Required<br>(exactly 1) | The masternode's Provider Registration transaction hash |
-| →<br>`outpoint`  | string | Required<br>(exactly 1) | The masternode's outpoint                               |
-| →<br>`payee`     | string | Required<br>(exactly 1) | Payee address                                           |
-
-*Example from Dash Core 0.14.0*
-
-``` bash
-dash-cli -testnet masternode winner
-```
-
-Result:
-
-``` json
-{
-  "height": 76191,
-  "IP:port": "34.242.53.163:26173",
-  "proTxHash": "024608d03beb6a6065f14a29a837c68ae449ac1e17056819366ca0b72b6dd81f",
-  "outpoint": "024608d03beb6a6065f14a29a837c68ae449ac1e17056819366ca0b72b6dd81f-1",
-  "payee": "yhp182AnF7gUAyHiWgSbDrKqHKt2dzhoyW"
-}
-```
-
-*See also:*
-
-* [Masternode Payments](#masternode-payments): prints an array of deterministic masternodes and their payments for the specified block.
-* [Masternode Winners](#masternode-winners): prints the list of masternode winners.
+% TODO: Refresh this example for Dash Core 24. Current versions report this masternode type as `Evo` and return `dmnState.addresses` (added in Dash Core 23.0.0). Dash Core 24.0.0 also returns `quorumParticipation`, and only returns `dmnState.service`, `platformP2PPort` and `platformHTTPPort` with `-deprecatedrpc=service`.
 
 ### Masternode Winners
 
@@ -1742,7 +1658,6 @@ Result:
 
 * [MasternodeList](#masternodelist): returns a list of masternodes in different modes.
 * [Masternode Payments](#masternode-payments): prints an array of deterministic masternodes and their payments for the specified block.
-* [Masternode Winner](#masternode-winner): prints info on the next masternode winner to vote for.
 
 ## Masternodelist
 
@@ -2046,6 +1961,8 @@ Result:
 }
 ```
 
+% TODO: Refresh this example for Dash Core 24. Current versions no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
+
 **Command Mode - `active`**
 
 *Result---spork active status*
@@ -2074,6 +1991,8 @@ Result:
   "SPORK_23_QUORUM_POSE": true
 }
 ```
+
+% TODO: Refresh this example for Dash Core 24. Current versions no longer returns `SPORK_3_INSTANTSEND_BLOCK_FILTERING` or `SPORK_9_SUPERBLOCKS_ENABLED`.
 
 *See also:*
 

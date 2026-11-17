@@ -49,7 +49,7 @@ fe9f0864 ........................... Nonce
 
 The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSuperMajority() after the function added to Dash Core to manage those soft forking changes. See [BIP34](https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki) for a full description of this method.
 
-As of this writing, a newer method called *version bits* is being designed to manage future soft forking changes, although it's not known whether version 4 will be the last soft fork to use the IsSuperMajority() function. Draft [BIP9](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki) describes the version bits design as of this writing, although it is still being actively edited and may substantially change while in the draft state.
+Later forks use *version bits* as described in [BIP9](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki). Each deployment is assigned a bit of the block version, and miners signal support for it by setting that bit. Some deployments only start their miner signaling period after a [masternode hard fork signal](../reference/transactions-special-transactions.md#mnhftx) ([DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md)) is mined. The [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) reports each deployment's bit and status.
 
 ## Merkle Trees
 

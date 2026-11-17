@@ -30,7 +30,7 @@ New in Dash Core v19.0
 
 Evolution Masternodes (evonodes) are a new type of masternode created to host [Dash Platform](inv:platform:std#intro-dash-platform) – a Web3 technology stack for building decentralized applications on the Dash network. The collateral required to own an evonode is 4000 DASH, as opposed to 1000 DASH for regular masternodes.
 
-Evonodes serve Platform along with Core, while regular masternodes only serve Core. The recommended specs for evonodes are higher than those for regular masternodes. Evonodes will receive 100% of the fees generated from Platform and 37.5% of the masternode portion of Core block rewards. Regular MNs will receive the remaining 62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
+Evonodes serve Platform along with Core, while regular masternodes only serve Core. The recommended specs for evonodes are higher than those for regular masternodes. Evonodes receive 100% of the fees generated from Platform and 37.5% of the masternode portion of the Core block subsidy. Regular MNs receive the remaining 62.5% of the masternode portion of the Core block subsidy and 0% of Platform fees.
 
 ### Full nodes
 
@@ -42,7 +42,9 @@ Prior to Dash Core v0.16.0, Lite Mode disabled all Dash-specific functionality. 
 
 As with the previous Lite Mode, masternodes **_cannot_** be run in disable governance mode since they are paid to provide governance services that the mode disables.
 
-Disable governance mode is enable by setting `disablegovernance=1` in the `dash.conf` file or by running Dash Core with the command line parameter `-disablegovernance=1`.
+Disable governance mode is enabled by setting `disablegovernance=1` in the `dash.conf` file or by running Dash Core with the command line parameter `-disablegovernance=1`.
+
+Governance validation requires the transaction index to look up proposal collateral transactions. Outside of regtest, a node started with the transaction index disabled (`-txindex=0`) refuses to start unless disable governance mode is also enabled. Enabling block pruning (`-prune`) turns on disable governance mode and turns off the transaction index unless those options are set explicitly; pruning with `-txindex=1` is a startup error.
 
 ```{toctree}
 :maxdepth: 3

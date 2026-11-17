@@ -18,7 +18,7 @@ Transactions are also chained together. Dash [wallet](../resources/glossary.md#w
 
 A single transaction can create multiple [outputs](../resources/glossary.md#output), as would be the case when sending to multiple [addresses](../resources/glossary.md#address), but each output of a particular transaction can only be used as an [input](../resources/glossary.md#input) once in the blockchain. Any subsequent reference is a forbidden double spend---an attempt to spend the same duffs twice.
 
-Outputs are tied to [transaction identifiers](../resources/glossary.md#transaction-identifiers) ( TXIDs), which are the hashes of signed transactions.
+Outputs are tied to [transaction identifiers](../resources/glossary.md#transaction-identifiers) ( TXIDs), which are the hashes of signed transactions (see [Transaction Data](../guide/block-chain-transaction-data.md) for the version 2 asset unlock exception).
 
 Because each output of a particular transaction can only be spent once, the outputs of a transaction included in the blockchain can be categorized as either an [unspent transaction output](../resources/glossary.md#unspent-transaction-output) or a spent transaction output. For a payment to be valid, it must only use UTXOs as inputs.
 

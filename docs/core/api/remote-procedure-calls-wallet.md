@@ -257,6 +257,8 @@ Result:
 }
 ```
 
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
+
 :::{note}
 In the example above, a new directory named `new-wallet` was created in the current data directory (`~/.dashcore/testnet3/`). This new directory contains the wallet.dat file and other related wallet files for the new wallet.
 :::
@@ -1830,9 +1832,9 @@ _Result---execution result_
 | → →<br>`active`   | bool           | Required<br>(exactly 1) | Indicates whether this descriptor is currently used to generate new addresses |
 | → →<br>`internal` | bool           | Optional<br>(0 or 1)    | True if this descriptor is used to generate change addresses; False if used for receiving |
 | → →<br>`coinjoin` | bool           | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Whether this descriptor is used for CoinJoin transactions |
-| → →<br>`range`    | array          | Optional<br>(0 or 1)    | Defined only for ranged descriptors |
-| → →→<br>`start`   | number (int)   | Required<br>(exactly 1) | Range start inclusive |
-| → →→<br>`end`     | number (int)   | Required<br>(exactly 1) | Range end inclusive |
+| → →<br>`range`    | array          | Optional<br>(0 or 1)    | A two-number array `[start, end]`. Defined only for ranged descriptors |
+| → →→<br>Start     | number (int)   | Required<br>(exactly 1) | Range start inclusive |
+| → →→<br>End       | number (int)   | Required<br>(exactly 1) | Range end inclusive |
 | → →<br>`next`     | number (int)   | Optional<br>(0 or 1)    | The next index to generate addresses from; defined only for ranged descriptors |
 | → →<br>`next_index` | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The next index for key derivation |
 
@@ -2331,6 +2333,7 @@ _Result---payment details_
 | --------------------------- | --------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `result`                    | array           | Required<br>(exactly 1) | An array containing objects, with each object describing a **payment** or internal accounting entry (not a transaction).  More than one object in this array may come from a single transaction.  Array may be empty                                                                                                                                                               |
 | →<br>Payment                | object          | Optional<br>(0 or more) | A payment or internal accounting entry                                                                                                                                                                                                                                                                                                                                             |
+| → →<br>`involvesWatchonly`  | bool            | Optional<br>(0 or 1)    | Set to `true` if imported addresses were involved in the transaction. Otherwise not returned |
 | → →<br>`address`            | string (base58) | Optional<br>(0 or 1)    | The address paid in this payment, which may be someone else's address not belonging to this wallet.  May be empty if the address is unknown, such as when paying to a non-standard pubkey script or if this is in the _move_ category                                                                                                                                              |
 | → →<br>`category`           | string          | Required<br>(exactly 1) | Set to one of the following values:<br>• `send` if sending payment<br>• `coinjoin` if sending CoinJoin funds<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain<br>• `platform-transfer` if a Platform Transfer transaction was received |
 | → →<br>`amount`             | number (dash)   | Required<br>(exactly 1) | A negative dash amount if sending payment; a positive dash amount if receiving payment (including coinbases)                                                                                                                                                                                                                                                                       |
@@ -2652,6 +2655,8 @@ Result:
   "warning": ""
 }
 ```
+
+% TODO: Refresh this example for Dash Core 24. Dash Core 24.0.0 only returns `warning` with `-deprecatedrpc=walletwarningfield`. Warnings are returned in the `warnings` array, which is omitted when there are none.
 
 _See also_
 
