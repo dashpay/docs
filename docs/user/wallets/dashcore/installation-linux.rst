@@ -190,13 +190,9 @@ Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
 Creating your Dash Wallet
 -------------------------
 
-.. versionadded:: v20.1.0
-
-   HD wallets are now created by default.
-
 If no wallet files are loaded, you will get this prompt in the Overview tab. To
 create a wallet, click the **Create a new wallet** button or click **File** ->
-**Create Wallet**. HD wallets are created by default. See the
+**Create Wallet**. New wallets are HD descriptor wallets. See the
 :hoverxref:`advanced topics section <dashcore-hd>` for information about HD
 wallets.
 
@@ -207,6 +203,12 @@ You will be prompted to create a new wallet with a custom wallet name. By
 default, your wallet will be encrypted. You may choose to uncheck the box and
 encrypt the wallet later. We have included instructions on how to encrypt your
 wallet in the following section.
+
+Click **Show Advanced Options** to see the wallet type. The **Descriptor
+Wallet** box is checked by default. Unchecking it creates a legacy wallet, which
+is only needed for commands that do not support descriptor wallets. Dash Core
+does not create automatic backups of descriptor wallets, so make your own
+:ref:`backup <dashcore-backup>` and keep your recovery phrase safe.
 
 .. figure:: img/linux/dash-name-wallet.png
    :width: 300px
