@@ -300,6 +300,26 @@ result should look something like this:
 
    Entering key data in dash.conf on the masternode
 
+.. _masternode-config-requirements:
+
+Once you add the ``masternodeblsprivkey`` setting, Dash Core runs in masternode
+mode and refuses to start unless its settings meet the masternode requirements.
+The default values meet these requirements. If you set any of the following
+options in ``dash.conf``, make sure they match:
+
+- ``txindex=1``, ``peerbloomfilters=1`` and ``listen=1``
+- ``prune=0``
+- ``maxconnections`` set to at least 125
+- ``disablegovernance`` not set
+- ``blocksonly=0``, so the masternode relays transactions
+- ``peerblockfilters=1`` and ``blockfilterindex`` enabled, so the masternode
+  serves compact block filters. Masternode mode enables both unless you set
+  them.
+- ``maxuploadtarget=0``, so uploads are not limited
+- No transaction relay or mempool limit stricter than the default, such as a
+  smaller ``maxmempool``, a shorter ``mempoolexpiry`` or a higher
+  ``minrelaytxfee``
+
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
 file. You can now start running Dash on the masternode to begin
 synchronization with the blockchain::
@@ -401,11 +421,11 @@ private key generated above::
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
 the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
+masternode mode, and Dash Core refuses to start unless its settings meet
+the :ref:`masternode requirements <masternode-config-requirements>`. We
+now need to restart the masternode for this change to take effect.
+Enter the following commands, waiting a few seconds in between to give
+Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
@@ -751,11 +771,11 @@ key generated above::
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
 the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
+masternode mode, and Dash Core refuses to start unless its settings meet
+the :ref:`masternode requirements <masternode-config-requirements>`. We
+now need to restart the masternode for this change to take effect.
+Enter the following commands, waiting a few seconds in between to give
+Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
