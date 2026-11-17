@@ -140,12 +140,14 @@ Note that CoinJoin transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
 transaction fee.
 
-**IMPORTANT:** Your wallet only contains 1000 of these change addresses.
-Every time a CoinJoin transaction is created, one of your addresses is
-used up. Once enough of them are used, your wallet must create more
-addresses. It can only do this, however, if you have automatic backups
-enabled. Consequently, users who have backups disabled will also have
-CoinJoin disabled.
+**IMPORTANT:** A legacy (non-descriptor) wallet only contains 1000 of
+these change addresses. Every time a CoinJoin transaction is created,
+one of your addresses is used up. Once enough of them are used, your
+wallet must create more addresses. It can only do this, however, if you
+have automatic backups enabled. Descriptor wallets, which are the
+default for new wallets, can create more addresses without automatic
+backups. However, the Dash Core desktop wallet disables CoinJoin for
+any wallet type if automatic backups are disabled.
 
 
 .. _instantsend:
