@@ -138,6 +138,18 @@ Integration notes:
    that this data is not part of the calculated hash and is provided for
    convenience.
 
+6. Provider transactions (types 1-4) have a version 3 payload format.
+   In ProRegTx and ProUpRegTx it replaces the single owner payout script
+   with a list of payouts, and a ProRegTx can also register a shared
+   masternode. As a result, the owner part of the masternode reward can
+   be split across several coinbase outputs. Software that parses
+   provider transactions or coinbase payments must support these
+   formats. See :ref:`ProRegTx <ref-txs-proregtx>` for details.
+
+7. The txid of a version 2 :ref:`Asset Unlock <ref-txs-assetunlocktx>`
+   is calculated with its quorum signing fields set to zero, so it
+   doesn't match a hash of the raw transaction bytes.
+
 See the `transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
 
