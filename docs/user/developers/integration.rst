@@ -54,6 +54,23 @@ Note that the following commands have been modified to support InstantSend:
    - :ref:`listtransactions <api-rpc-wallet-listtransactions>`
    - :ref:`listsinceblock <api-rpc-wallet-listsinceblock>`
 
+Platform Addresses
+------------------
+
+`DIP18 <https://github.com/dashpay/dips/blob/master/dip-0018.md>`__ Dash
+Platform addresses start with ``dash1`` (``tdash1`` on test networks).
+Funds sent to a Platform address are converted to Dash Platform credits
+instead of being paid to a regular Dash output. ``validateaddress``
+reports a Platform address as valid and adds ``"isplatform": true`` to
+its result. Systems that check withdrawal addresses with
+``validateaddress`` should check this field and reject Platform
+addresses unless they intend to support them.
+
+Paying a Platform address requires a version 2 :ref:`asset lock
+transaction <ref-txs-assetlocktx>`. Dash Core currently treats these
+transactions as non-standard and does not relay them, so paying a Platform
+address from Dash Core fails.
+
 Special Transactions
 --------------------
 
