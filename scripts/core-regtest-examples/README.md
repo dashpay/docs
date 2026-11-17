@@ -1,12 +1,15 @@
 # Dash Core Regtest Example Capture
 
-This directory contains a tool to regenerate the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page from a real Dash Core node.
+This directory contains tools that run Dash Core examples from the docs on a real regtest node:
+
+* `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
+* `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
 
 ## Overview
 
 `capture-rest-examples.sh`:
 
-1. Starts a fresh, isolated regtest node (`-rest -txindex -server -listen=0 -disablewallet`)
+1. Starts a fresh, isolated regtest node (`-rest -txindex -blockfilterindex=basic -server -listen=0 -disablewallet`)
 2. Builds a small, deterministic chain and mempool (see [Chain Contents](#chain-contents))
 3. Requests every REST endpoint shown on the page, in every format the page shows, plus several error cases
 4. Writes each response to a named file in the output directory
@@ -55,7 +58,7 @@ All coins are mined to and spent from a fixed, hard-coded **regtest-only** key. 
 | Height | Contents |
 |--------|----------|
 | 1-605 | Coinbase-only blocks paying the miner address. DIP0003, v20, and MN_RR activate at 432 and withdrawals at 600 (regtest `CRegTestParams` in `src/chainparams.cpp`), so later blocks carry a version 3 CbTx (`cbTx` in the JSON) |
-| 606 | Coinbase plus one confirmed transaction: spends the block 1 coinbase, pays 10 DASH to the recipient address and the change to the miner address. Used for the Block, Block/NoTxDetails, BlockHashByHeight, Headers, DeploymentInfo, Tx, and GetUtxos examples |
+| 606 | Coinbase plus one confirmed transaction: spends the block 1 coinbase, pays 10 DASH to the recipient address and the change to the miner address. Used for the Block, Block/NoTxDetails, BlockFilter, BlockFilterHeaders, BlockHashByHeight, Headers, DeploymentInfo, Tx, and GetUtxos examples |
 | 607-610 | Coinbase-only blocks (tip is 610, so block 606 has 5 confirmations) |
 | Mempool | Parent: spends the block 2 coinbase, pays 5 DASH to the recipient address. Child: spends the parent's change output, pays 1 DASH to the recipient address. The child depends on the parent, so `depends` and `spentby` are populated |
 
@@ -69,11 +72,14 @@ No masternodes or quorums exist, so `chainlock` and `instantlock` are always `fa
 |------|----------|
 | `block.hex`, `block.json` | `/rest/block/<hash>` |
 | `block-notxdetails.hex`, `block-notxdetails.json` | `/rest/block/notxdetails/<hash>` |
+| `blockfilter.hex`, `blockfilter.json` | `/rest/blockfilter/basic/<hash>` |
+| `blockfilterheaders.hex`, `blockfilterheaders.json` | `/rest/blockfilterheaders/basic/<hash>?count=2` |
 | `blockhashbyheight.hex`, `blockhashbyheight.json` | `/rest/blockhashbyheight/<height>` |
 | `chaininfo.json` | `/rest/chaininfo` |
 | `deploymentinfo.json`, `deploymentinfo-block.json` | `/rest/deploymentinfo` (tip and block 606) |
 | `getutxos.hex`, `getutxos.json` | `/rest/getutxos/checkmempool/...` |
-| `headers.hex`, `headers.json` | `/rest/headers/2/<hash>` (deprecated path form, still served) |
+| `headers.hex`, `headers.json` | `/rest/headers/<hash>?count=2` |
+| `headers-deprecated.hex`, `headers-deprecated.json` | `/rest/headers/2/<hash>` (deprecated path form, still served) |
 | `mempool-contents.json`, `mempool-contents-txids.json`, `mempool-contents-txids-sequence.json` | `/rest/mempool/contents` (default, `verbose=false`, and `verbose=false&mempool_sequence=true`) |
 | `mempool-info.json` | `/rest/mempool/info` |
 | `tx.hex`, `tx.json` | `/rest/tx/<txid>` |
@@ -94,3 +100,15 @@ Other files:
 * Two consecutive runs on the same machine produced byte-identical output, including `size_on_disk` (ChainInfo) and `usage` (MemPool/Info).
 * `size_on_disk` and `usage` depend on on-disk and in-memory layout, so they may differ between platforms or Dash Core builds even when everything else matches.
 * Any change to the chain layout constants at the top of the script (start time, spacing, heights, fee, keys) changes every hash in the output. Change them only on purpose, and then regenerate every example on the page.
+
+## Transaction Tutorials
+
+`run-transaction-tutorials.sh` starts a fresh, isolated regtest node, creates the legacy wallet from the tutorial setup, and runs the equivalent of the commands on each transaction tutorial page in order: simple spending, simple raw transaction, complex raw transaction, offline signing, and P2SH multisig. Each step's output goes to a numbered file in the output directory, followed by an `exit=<status>` line. The script fails if any step other than offline signing step 5a (which is meant to fail) returns an error.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorials.sh
+```
+
+It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26671`), and `RPC_PORT` (default `26672`) variables as `capture-rest-examples.sh`. Legacy wallets need Dash Core built with Berkeley DB support, which the release binaries include.
+
+The output is not deterministic: the wallet creates new keys on every run, so addresses, keys, and TXIDs change. When you refresh a tutorial page, paste the output from a single run so that values the text refers to later (TXIDs, addresses, and amounts) stay consistent.

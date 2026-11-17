@@ -29,7 +29,7 @@ Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of t
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -320,7 +320,7 @@ Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of t
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -438,6 +438,153 @@ Result (whitespace added):
 * [GetBlockHash](../api/remote-procedure-calls-blockchain.md#getblockhash) RPC: returns the header hash of a block at the given height in the local best block chain.
 * [GetBestBlockHash](../api/remote-procedure-calls-blockchain.md#getbestblockhash) RPC: returns the header hash of the most recent block on the best block chain.
 
+## GET BlockFilter
+
+The `GET blockfilter` operation gets the [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) compact block filter for a block either as a JSON object or as a serialized filter. Requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled (masternodes enable it automatically).
+
+*Request*
+
+``` text
+GET /blockfilter/<filtertype>/<hash>.<format>
+```
+
+*Parameter #1---the filter type*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Filter Type | path (string) | Required<br>(exactly 1) | The type of filter to get.  Only `basic` is supported.  An unknown type returns HTTP 400 with `Unknown filtertype <type>`, and a type whose index is not enabled returns HTTP 400 with `Index is not enabled for filtertype <type>`
+
+*Parameter #2---the header hash of the block*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of the block whose filter to get, encoded as hex in RPC byte order.  A hash not found in the local block index returns HTTP 404 with `<hash> not found`
+
+*Parameter #3---the output format*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for the filter in JSON, or `.bin` or `.hex` for a serialized filter in binary or hex.  The serialized filter is the filter type (1 byte), the block hash (32 bytes, internal byte order), and the encoded filter (compactSize length followed by the filter data)
+
+*Response as JSON*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object | Required<br>(exactly 1) | An object containing the block filter
+→<br>`filter` | string (hex) | Required<br>(exactly 1) | The hex-encoded filter data
+
+*Examples from Dash Core 24.0.2*
+
+Request the basic filter for a block in hex-encoded serialized format:
+
+``` bash
+curl http://localhost:19898/rest/blockfilter/basic/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex
+```
+
+Result (wrapped):
+
+``` text
+00798b062ea8524b1b17c52d9ce38da7819f78c6f62b452c263292038e7069b8\
+7e0702c777e41ff9c0
+```
+
+Get the same filter in JSON:
+
+``` bash
+curl http://localhost:19898/rest/blockfilter/basic/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
+```
+
+Result (whitespace added):
+
+``` json
+{
+  "filter": "02c777e41ff9c0"
+}
+```
+
+*See also*
+
+* [GET BlockFilterHeaders](../api/http-rest-requests.md#get-blockfilterheaders) gets the compact block filter headers for a range of blocks.
+* [GetBlockFilter](../api/remote-procedure-calls-blockchain.md#getblockfilter) RPC: retrieves a BIP157 content filter for a particular block.
+
+## GET BlockFilterHeaders
+
+The `GET blockfilterheaders` operation returns the [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) compact block filter headers for a specified amount of blocks in upward direction, either as a JSON array or serialized. Requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled (masternodes enable it automatically).
+
+*Request*
+
+``` text
+GET /blockfilterheaders/<filtertype>/<hash>.<format>?count=<count>
+```
+
+The older `GET /blockfilterheaders/<filtertype>/<count>/<hash>.<format>` form is deprecated but still supported.
+
+*Parameter #1---the filter type*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Filter Type | path (string) | Required<br>(exactly 1) | The type of filter to use.  Only `basic` is supported.  An unknown type returns HTTP 400 with `Unknown filtertype <type>`, and a type whose index is not enabled returns HTTP 400 with `Index is not enabled for filtertype <type>`
+
+*Parameter #2---the header hash of the first block*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of the first block whose filter header to get, encoded as hex in RPC byte order
+
+*Parameter #3---the output format*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for filter headers in JSON, or `.bin` or `.hex` for serialized filter headers (32 bytes each, internal byte order) in binary or hex
+
+*Parameter #4---the amount of filter headers to retrieve*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`count` | query (int) | Optional<br>(0 or 1) | The amount of filter headers in upward direction to return, starting with the filter header of the requested block.  Default: `5`.  Must be between 1 and 2000; other values return HTTP 400 with `Header count is invalid or out of acceptable range (1-2000): <count>`
+
+*Response as JSON*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | array | Required<br>(exactly 1) | An array containing the requested filter headers
+→<br>Filter Header | string (hex) | Optional<br>(0 or more) | A filter header, encoded as hex in RPC byte order.  The array contains the amount of filter headers requested with `count`, or fewer if the chain tip is reached first. It is empty if the block hash is not in the active chain
+
+*Examples from Dash Core 24.0.2*
+
+Request 2 filter headers in hex-encoded serialized format:
+
+``` bash
+curl "http://localhost:19898/rest/blockfilterheaders/basic/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex?count=2"
+```
+
+Result (wrapped):
+
+``` text
+d42e01b64f76ecb51cd354098d21d3ff483c219e1bf1b148f397db0bde48afa7\
+4f3a98c5abab7b241bb0ecbee79be7c6e18ebd11c1f1c6fc1de97b11d0369ace
+```
+
+Get the same filter headers in JSON:
+
+``` bash
+curl "http://localhost:19898/rest/blockfilterheaders/basic/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json?count=2"
+```
+
+Result (whitespace added):
+
+``` json
+[
+  "a7af48de0bdb97f348b1f11b9e213c48ffd3218d0954d31cb5ec764fb6012ed4",
+  "ce9a36d0117be91dfcc6f1c111bd8ee1c6e79be7beecb01b247bababc5983a4f"
+]
+```
+
+*See also*
+
+* [GET BlockFilter](../api/http-rest-requests.md#get-blockfilter) gets the compact block filter for a block.
+* [GetBlockFilter](../api/remote-procedure-calls-blockchain.md#getblockfilter) RPC: retrieves a BIP157 content filter for a particular block.
+
 ## GET BlockHashByHeight
 
 The `GET blockhashbyheight` operation returns the hash of a block in best-block-chain at the height provided. The hash can be returned as a JSON object or serialized as binary or hex.
@@ -458,7 +605,7 @@ Block Height | number (int) | Required<br>(exactly 1) | The height of the block 
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block hash contents in JSON, or `.bin` or `hex` for a serialized block hash in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block hash contents in JSON, or `.bin` or `.hex` for a serialized block hash in binary or hex
 
 *Response as JSON*
 
@@ -680,7 +827,7 @@ Outpoint | vector | Required<br>(1 or more) | The list of outpoints to be querie
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `.hex` for a serialized block in binary or hex
 
 *Response as JSON*
 
@@ -769,34 +916,36 @@ The `GET headers` operation returns a specified amount of block headers in upwar
 *Request*
 
 ``` text
-GET /headers/<count>/<hash>.<format>
+GET /headers/<hash>.<format>?count=<count>
 ```
 
-*Parameter #1---the amount of block headers to retrieve*
+The older `GET /headers/<count>/<hash>.<format>` form is deprecated but still supported.
 
-Name | Type | Presence | Description
---- | --- | --- | ---
-Amount | number (int) | Required<br>(exactly 1) | The amount of block headers in upward direction to return (including the start header hash)
-
-*Parameter #2---the header hash of the block to retrieve*
+*Parameter #1---the header hash of the block to retrieve*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 Header Hash | path (hex) | Required<br>(exactly 1) | The hash of the header of the block to get, encoded as hex in RPC byte order
 
-*Parameter #3---the output format*
+*Parameter #2---the output format*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block contents in JSON, or `.bin` or `hex` for a serialized block in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block headers in JSON, or `.bin` or `.hex` for serialized block headers in binary or hex
+
+*Parameter #3---the amount of block headers to retrieve*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`count` | query (int) | Optional<br>(0 or 1) | The amount of block headers in upward direction to return (including the start header hash).  Default: `5`.  Must be between 1 and 2000; other values return HTTP 400 with `Header count is invalid or out of acceptable range (1-2000): <count>`
 
 *Response as JSON*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 Result | array | Required<br>(exactly 1) | An array containing the requested block headers
-→<br>Block Header | object | Required<br>(1 or more) | An object containing a block header.  The amount of the objects is the same as the amount provided in parameter #1
-→ →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #2
+→<br>Block Header | object | Optional<br>(0 or more) | An object containing a block header.  The array contains the amount of headers requested with `count`, or fewer if the chain tip is reached first. It is empty if the block hash is not in the active chain
+→ →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #1
 → →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
@@ -813,12 +962,12 @@ Result | array | Required<br>(exactly 1) | An array containing the requested blo
 → →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
 → →<br>`chainlock` | bool | Required<br>(exactly 1) | If set to `true`, this block is locked by a ChainLock
 
-*Examples from Dash Core 24.0.0*
+*Examples from Dash Core 24.0.2*
 
 Request 2 block headers in hex-encoded serialized block format:
 
 ``` bash
-curl http://localhost:19898/rest/headers/2/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex
+curl "http://localhost:19898/rest/headers/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex?count=2"
 ```
 
 Result (wrapped):
@@ -834,7 +983,7 @@ a14244e881eb7c2ed29d6d39d9f406dbd431a28c141c5769ffff7f2001000000
 Get the same block headers in JSON:
 
 ``` bash
-curl http://localhost:19898/rest/headers/2/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
+curl "http://localhost:19898/rest/headers/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json?count=2"
 ```
 
 Result (whitespace added):
@@ -1130,7 +1279,7 @@ TXID | path (hex) | Required<br>(exactly 1) | The TXID of the transaction to get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded transaction contents in JSON, or `.bin` or `hex` for a serialized transaction in binary or hex
+Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded transaction contents in JSON, or `.bin` or `.hex` for a serialized transaction in binary or hex
 
 *Response as JSON*
 

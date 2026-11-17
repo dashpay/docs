@@ -10,7 +10,7 @@ Using a [bloom filter](../resources/glossary.md#bloom-filter) to find matching d
 
 ``` python
 vData = bitarray(endian='little')
-vData.frombytes("b50f".decode("hex"))
+vData.frombytes(bytes.fromhex("b50f"))
 nHashFuncs = 11
 nTweak = 0
 nFlags = 0
@@ -25,10 +25,10 @@ def contains(nHashFuncs, data_to_hash):
         nIndex = bloom_hash(nHashNum, data_to_hash)
 
         if vData[nIndex] != True:
-            print "MATCH FAILURE: Index {0} not set in {1}".format(
+            print("MATCH FAILURE: Index {0} not set in {1}".format(
                 hex(int(nIndex)),
                 vData.to01()
-            )
+            ))
             return False
 ```
 
@@ -38,7 +38,7 @@ We define a function to check an element against the provided filter. When check
 ## Test 1: Same TXID as previously added to filter
 data_to_hash = "019f5b01d4195ecbc9398fbf3c3b1fa9" \
                + "bb3183301d7a1fb3bd174fcfa40a2b65"
-data_to_hash = data_to_hash.decode("hex")
+data_to_hash = bytes.fromhex(data_to_hash)
 contains(nHashFuncs, data_to_hash)
 ```
 

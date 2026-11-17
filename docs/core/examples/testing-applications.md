@@ -31,17 +31,25 @@ Many developers consider regtest mode the preferred way to develop new applicati
 
 ``` bash
 > dashd -regtest -daemon
-Dash Core server starting
+Dash Core starting
 ```
 
 Start `dashd` in regtest mode to create a private block chain.
 
-``` text
-## Dash Core
-dash-cli -regtest generate 101
+``` bash
+> dash-cli -regtest createwallet test
+{
+  "name": "test"
+}
 ```
 
-Generate 101 blocks using a special RPC which is only available in regtest mode. This takes less than a second on a generic PC. Because this is a new block chain using Dash's default rules, the first blocks pay a [block reward](../resources/glossary.md#block-reward) of 500 dash.  Unlike [mainnet](../resources/glossary.md#mainnet), in regtest mode only the first 150 blocks pay a reward of 500 dash. However, a block must have 100 [confirmations](../resources/glossary.md#confirmations) before that reward can be spent, so we generate 101 blocks to get access to the [coinbase transaction](../resources/glossary.md#coinbase-transaction) from block #1.
+Create and load a [wallet](../resources/glossary.md#wallet) using the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet). Dash Core doesn't create a wallet automatically, so wallet RPCs fail until one is loaded. If you plan to follow the [transaction tutorial](../examples/transaction-tutorial.md#setup), create the legacy wallet described there instead.
+
+``` bash
+dash-cli -regtest -generate 101
+```
+
+Generate 101 blocks. The `-generate` option tells `dash-cli` to get a new address from the wallet and mine blocks to it using the [`generatetoaddress` RPC](../api/remote-procedure-calls-generating.md#generatetoaddress). This takes less than a second on a generic PC. Because this is a new block chain using Dash's default rules, the first blocks pay a [block reward](../resources/glossary.md#block-reward) of 500 dash.  Unlike [mainnet](../resources/glossary.md#mainnet), in regtest mode only the first 150 blocks pay a reward of 500 dash. However, a block must have 100 [confirmations](../resources/glossary.md#confirmations) before that reward can be spent, so we generate 101 blocks to get access to the [coinbase transaction](../resources/glossary.md#coinbase-transaction) from block #1.
 
 ``` bash
 dash-cli -regtest getbalance
@@ -80,7 +88,7 @@ Example devnet start command:
 
 ``` bash
 > dashd -devnet=mydevnet -rpcport=18998 -port=18999 -daemon
-Dash Core server starting
+Dash Core starting
 ```
 
 #### Devnet-specific options
