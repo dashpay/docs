@@ -95,10 +95,10 @@ Upgrade to HD
   A new :ref:`backup <dashcore-backup>` must be created after upgrading to an HD
   wallet.
 
-Dash Core includes the ability upgrade a non-hierarchical deterministic (HD)
-wallet to an HD wallet via the ``upgradetohd`` command. The command can be run
-by either opening the console from **Window > Console** or issuing the following
-RPC command from ``dash-cli``::
+Dash Core includes the ability upgrade a legacy non-hierarchical deterministic
+(HD) wallet to an HD wallet via the ``upgradetohd`` command. The command can be
+run by either opening the console from **Window > Console** or issuing the
+following RPC command from ``dash-cli``::
 
   upgradetohd "" "" <walletpassphrase>
 
@@ -151,6 +151,11 @@ Note that the wallet passphrase is different to the mnemonic passphrase, which
 is often also referred to as the "25th word" or "extension word". The wallet
 passphrase encrypts the wallet file itself, while the mnemonic passphrase is
 used to specify different derivation branches from the same mnemonic seed.
+
+The mnemonic passphrase can be at most 248 bytes long. To restore a wallet
+that was created with a longer mnemonic passphrase (up to 256 bytes), start
+Dash Core with the ``-allow-deprecated-long-mnemonics`` option. This only
+works for wallets created by Dash Core 19.2.0 or later.
 
 .. _dashcore-hd-default:
 
