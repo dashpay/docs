@@ -114,14 +114,21 @@ or ``dash-cli``::
 View HD wallet information
 --------------------------
 
-Open the console from **Window > Console** or issue the following RPC command
-from ``dash-cli`` to view the mnemonic seed::
+To view the recovery phrase (BIP39 mnemonic) of the active wallet, click
+**Settings > Show Recovery Phrase…**. If the wallet is encrypted, you will be
+asked to enter your wallet passphrase first.
 
-  dumphdinfo
+You can also open the console from **Window > Console** or issue the following
+RPC command from ``dash-cli`` to view the mnemonic seed. If the wallet is
+encrypted, unlock it with ``walletpassphrase`` first::
 
-Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
-formats. It will also display the mnemonic passphrase if one was used when
-creating the wallet.
+  listdescriptors true
+
+Dash Core will display the BIP39 mnemonic in the ``mnemonic`` field of the
+wallet's descriptors. It will also display the mnemonic passphrase in the
+``mnemonicpassphrase`` field if one was used when creating the wallet. For a
+legacy wallet, use ``dumphdinfo`` instead, which displays the HD seed in both
+hexadecimal and BIP39 mnemonic formats.
 
 .. _dashcore-hd-restore:
 

@@ -38,8 +38,9 @@ four menus available:
 File
   The File menu is used to manage your wallet and messages.
 Settings
-  The Settings menu provides access to wallet encryption options and
-  general software settings.
+  The Settings menu provides access to wallet encryption options, the
+  wallet's recovery phrase (**Show Recovery Phrase…**) and general software
+  settings.
 Window
   The Window menu provides access to your wallet addresses, information on the
   network and other advanced functions.

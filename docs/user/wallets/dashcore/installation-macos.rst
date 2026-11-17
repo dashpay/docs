@@ -230,8 +230,9 @@ successfully verified your mnemonic, click **Continue** to complete the wallet c
 
 .. note::
 
-   For more information about HD wallets and how to view or restore your mnemonic phrase later, see
-   the :hoverxref:`advanced topics section <dashcore-hd>`.
+   To view your mnemonic phrase later, click **Settings > Show Recovery Phrase…**. For more
+   information about HD wallets and how to restore your mnemonic phrase, see the
+   :hoverxref:`advanced topics section <dashcore-hd>`.
 
 The following section will detail the steps you need to follow if you
 choose to encrypt your Dash wallet later.
