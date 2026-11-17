@@ -72,6 +72,12 @@ their own fonts anyway.
 ```bash
 sudo apt-get install --no-install-recommends \
   xvfb xauth fonts-ubuntu fontconfig imagemagick xdotool locales
+# Libraries dash-qt's xcb platform plugin loads (a desktop already has them)
+sudo apt-get install --no-install-recommends \
+  libfontconfig1 libfreetype6 libxcb1 libxcb-icccm4 libxcb-image0 \
+  libxcb-keysyms1 libxcb-randr0 libxcb-render0 libxcb-render-util0 \
+  libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-xinerama0 \
+  libxcb-xkb1 libxkbcommon0 libxkbcommon-x11-0
 sudo sed -i 's/^# *en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sudo locale-gen
 
