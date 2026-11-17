@@ -41,7 +41,9 @@ JSON-RPC Interface
 The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. For a complete listing of RPC
 commands please refer to the :ref:`Dash Developer Guide
-<guide-index>`.
+<guide-index>`. Major Dash Core releases can change RPC arguments and
+results, so review the `release notes
+<https://github.com/dashpay/dash/releases>`__ before upgrading.
 
 Note that the following commands have been modified to support InstantSend:
 
