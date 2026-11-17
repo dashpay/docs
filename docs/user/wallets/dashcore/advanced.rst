@@ -183,12 +183,13 @@ Multisignature
 ==============
 
 This section presents a worked example to demonstrate multisig
-functionality in Dash Core. While the transactions may no longer be visible
-on the current testnet blockchain and some address formats or RPC
-responses may differ slightly from the version shown here, the principle
-and commands are the same. The example demonstrates how to set up a
-2-of-3 multisig address and create a transaction. The example parties
-involved are a buyer, a seller and an arbiter. This example is based on:
+functionality in Dash Core. Some address formats or RPC responses may
+differ slightly from the version shown here, but the principle and
+commands are the same. The example demonstrates how to set up a 2-of-3
+multisig address and spend from it using a partially signed transaction
+(PSBT), so that each party only shares public keys and signs with their
+own wallet. The example parties involved are a buyer, a seller and an
+arbiter. This example is based on:
 
 - https://gist.github.com/jashmenn/9811198
 - https://gist.github.com/gavinandresen/3966071
@@ -198,87 +199,87 @@ Step 1: Create three addresses
 
 Seller::
 
-  seller@testnet03:~$ ./dash-cli getnewaddress
-  yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm
+  seller@dash:~$ ./dash-cli getnewaddress seller
+  yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh
   
-  seller@testnet03:~$ ./dash-cli getaddressinfo yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm
+  seller@dash:~$ ./dash-cli getaddressinfo yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh
   {
-    "address": "yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm",
-    "scriptPubKey": "76a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac",
+    "address": "yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh",
+    "scriptPubKey": "76a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([d728be76]02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e)#7y7rcew8",
+    "desc": "pkh([95da92f9/44h/1h/0h/0/0]03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef)#qvsnp4mv",
+    "parent_desc": "pkh([95da92f9/44h/1h/0h]tpubDDcXZSVSEUTA64WDJrK2LwvchZUsv9NaB5ZtDQhXTPfUuoTwSktwNfeqcEppzxt61xzuoHab9Ejf3xGih3skJJcbQjcKxNUuRDTSUJ44j8p/0/*)#28z5cny0",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e",
+    "pubkey": "03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1,
+    "timestamp": 1794954770,
+    "hdkeypath": "m/44h/1h/0h/0/0",
+    "hdmasterfingerprint": "95da92f9",
     "labels": [
       "seller"
     ]
   }
-  
-  seller@testnet03:~$ ./dash-cli dumpprivkey yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm
-  cVQVgBr8sW4FTPYz16BSCo1PcAfDhpJArgMPdLxKZQWcVFwMXRXx
 
 Buyer::
 
-  buyer@testnet03:~$ ./dash-cli getnewaddress
-  yUtJQSYvqoicEpUiMiaiSy16Fimpjz6Kjj
+  buyer@dash:~$ ./dash-cli getnewaddress buyer
+  yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE
   
-  buyer@testnet03:~$ ./dash-cli getaddressinfo yUtJQSYvqoicEpUiMiaiSy16Fimpjz6Kjj
+  buyer@dash:~$ ./dash-cli getaddressinfo yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE
   {
-    "address": "yUtJQSYvqoicEpUiMiaiSy16Fimpjz6Kjj",
-    "scriptPubKey": "76a9145df7af25fa0654c90f359034ac756de71f5f25dc88ac",
+    "address": "yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE",
+    "scriptPubKey": "76a9145ecc16192070d5ada77ab2d1864d8fda0b3394dc88ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([5df7af25]0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c)#795y6m9z",
+    "desc": "pkh([0d1f2523/44h/1h/0h/0/0]021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5)#v45x5j9q",
+    "parent_desc": "pkh([0d1f2523/44h/1h/0h]tpubDCG7VbJRhs6n6gXNZWbvcRqgzYa7Nr8JQHeNznVauPuGiybKyY8MB4F1tUMAMoiGWJsonmgTwysrpUyJa29tWumwPKszyQmTjRTB7m5N6C8/0/*)#fvezqy7r",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c",
+    "pubkey": "021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1,
+    "timestamp": 1794954771,
+    "hdkeypath": "m/44h/1h/0h/0/0",
+    "hdmasterfingerprint": "0d1f2523",
     "labels": [
       "buyer"
     ]
   }
-  
-  buyer@testnet03:~$ ./dash-cli dumpprivkey yUtJQSYvqoicEpUiMiaiSy16Fimpjz6Kjj
-  cP9DFmEDb11waWbQ8eG1YUoZCGe59BBxJF3kk95PTMXuG9HzcxnU
 
 Arbiter::
 
-  arbiter@testnet03:~$ ./dash-cli getnewaddress
-  ygR4183tHp46oRuEk4RL1Jz7SkNubE7osu
+  arbiter@dash:~$ ./dash-cli getnewaddress arbiter
+  yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt
   
-  arbiter@testnet03:~$ ./dash-cli getaddressinfo ygR4183tHp46oRuEk4RL1Jz7SkNubE7osu
+  arbiter@dash:~$ ./dash-cli getaddressinfo yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt
   {
-    "address": "ygR4183tHp46oRuEk4RL1Jz7SkNubE7osu",
-    "scriptPubKey": "76a914dc71f0bcf448f9198cdbb1e6f5ca7ba96689fbe188ac",
+    "address": "yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt",
+    "scriptPubKey": "76a914727b66603171ae6442194c010aac857c5a20babe88ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([dc71f0bc]0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce)#3u5h82dc",
+    "desc": "pkh([44da79bf/44h/1h/0h/0/0]03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e)#nrkehyx0",
+    "parent_desc": "pkh([44da79bf/44h/1h/0h]tpubDD1f6iys5Bx4zBimuS37eMnUL1oBXyZ1SGPxqHbSYzqQAeCFnBTwhBS4cbL9j5BJPnFAcaorSSAZopCA5HVgtSj9L4GSUWXTwoJkND8w3Fv/0/*)#43lkp399",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce",
+    "pubkey": "03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1,
+    "timestamp": 1794954771,
+    "hdkeypath": "m/44h/1h/0h/0/0",
+    "hdmasterfingerprint": "44da79bf",
     "labels": [
       "arbiter"
     ]
   }
-  
-  arbiter@testnet03:~$ ./dash-cli dumpprivkey ygR4183tHp46oRuEk4RL1Jz7SkNubE7osu
-  cUbDFL81a2w6urAGZf7ecGbdzM82pdHLeCaPXdDp71s96SzDV49M
 
-This results in three keypairs (public/private)::
+This results in three public keys::
 
-  seller:    02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e / cVQVgBr8sW4FTPYz16BSCo1PcAfDhpJArgMPdLxKZQWcVFwMXRXx
-  buyer:     0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c / cP9DFmEDb11waWbQ8eG1YUoZCGe59BBxJF3kk95PTMXuG9HzcxnU
-  arbiter:   0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce / cUbDFL81a2w6urAGZf7ecGbdzM82pdHLeCaPXdDp71s96SzDV49M
+  seller:    03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef
+  buyer:     021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5
+  arbiter:   03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e
 
 Step 2: Create multisig address 
 -------------------------------
@@ -293,29 +294,29 @@ identical, see below).
 
 Seller::
 
-  seller@testnet03:~$ ./dash-cli createmultisig 2 '["02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e","0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c","0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce"]'
+  seller@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
   {
-    "address": "8gQdvLw7pF7jd8mjGU3nRNESdWi9gkHRZy",
-    "redeemScript": "522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae",
-    "descriptor": "sh(multi(2,02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e,0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c,0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce))#36ymhjhs"
+    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
+    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
+    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
   }
 
 Buyer::
 
-  buyer@testnet03:~$ ./dash-cli createmultisig 2 '["02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e","0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c","0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce"]'
+  buyer@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
   {
-    "address": "8gQdvLw7pF7jd8mjGU3nRNESdWi9gkHRZy",
-    "redeemScript": "522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae",
-    "descriptor": "sh(multi(2,02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e,0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c,0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce))#36ymhjhs"
+    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
+    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
+    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
   }
 
 Arbiter::
 
-  arbiter@testnet03:~$ ./dash-cli createmultisig 2 '["02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e","0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c","0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce"]'
+  arbiter@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
   {
-    "address": "8gQdvLw7pF7jd8mjGU3nRNESdWi9gkHRZy",
-    "redeemScript": "522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae",
-    "descriptor": "sh(multi(2,02a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e,0315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c,0287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce))#36ymhjhs"
+    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
+    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
+    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
   }
 
 Step 3: Buyer funds the multisig address
@@ -325,46 +326,57 @@ This works the same as a usual transaction.
 
 Buyer::
 
-  buyer@testnet03:~$ ./dash-cli sendtoaddress 8gQdvLw7pF7jd8mjGU3nRNESdWi9gkHRZy 0.25
-  48e6f8f0108549bf932e4d6833fe707d7edafe490788c2ebde688635a995538e
+  buyer@dash:~$ ./dash-cli sendtoaddress 8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx 0.25
+  faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233
 
 The seller/arbiter can trace the transaction by its txid in the block
 explorer. Or from the console as follows.
 
-Buyer::
+Seller::
 
-  seller@testnet03:~$ ./dash-cli getrawtransaction 48e6f8f0108549bf932e4d6833fe707d7edafe490788c2ebde688635a995538e 1
+  seller@dash:~$ ./dash-cli getrawtransaction faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233 1
   {
-    "hex" : "02000000068ad5c86eae519b0ba11f8314d5cdf50c872331e7c7efa2eece2107d669cc8926010000006a473044022060e3e8a5194adc690a1d39db181214c56596bdcfef67a5deb2c0932112a56c20022043acb1cb88eb590076ac41ec345c491cab8368befd2513bc7d8cebf378559737012103207b3ed8ce5b61e1dbd1b967e9dc5729d096274e41f43ec3dcff897012425e2dfeffffff2d6d9c0d3dafb66744da94676f4e7f76461241e60dc9cba3bcaa9ac6033b052e000000006a47304402207abaa4b6b4c7fdbd41d1885303dd3f0ae6b350ec5af19546f3fe616cbc5b5b7802201868fdda71c29364c52e6359868c22376a1091b19f6e1184de93d95eb61f3289012103e531f14fdace3f41ce041c366413aaabf26ed837ea6483d4a4f36af376c93b42feffffff1bd67d51fb6c6552c7241a6631a0c08c69517f06f84c4921a3130d74fe722475000000006a47304402203dcbbb063efe24b93c4a37b4efcbc22b2def077610810e1659a236922857393502202b034ab74554b79ca34e21d10a7b9dbf2517f1a79e028a6ed11cd4a28a684376012103622883e8029d188581291e26783991a450b2e38a8b832a5924171e961d8fc7affefffffff2c54c61c55079f0e63eed06c0b3c261e640d985690cefb487370b714ef4ca8c000000006a4730440220462da4ec78ab804fc66844615019979273c20b6c3dbd73e58def7539ac47817102201572a458013e29753b87a390ab06eb7ca71789136f8b8183e19897f30bd49847012103900531aa50569ad35a555726d703b8455e53567e3788369d68f47210e771b61bfeffffff435365937ffb7cc39acc1a8a4678a9273fe0c1384a37565f3748293e717333c7000000006a4730440220233497587ae0377eae2aee5c879893bf6eba0a463c67ac2f995370249730d8390220176e9e818e256c653888046a150bdde0f2e99dcc56c4b339a8615af56695b85f0121035c0a7d6e4e95d2e2802f1c8d8cf37b1597b7b67b4e1a277745b982ae4485156afeffffffcc0aa97c5b5e1ab12d808108285a38e54bd2fe98fe9489cb78bb1fde6b740fff000000006a4730440220731f21d1e766e6408e404fcfc317d507cc03ad09b9d63e76abac83b9b512ad5a022073b73bccd272e4d52a4fe0533887c3a7280a9f440ec78c54e484e1c0e8051e6d012103207b3ed8ce5b61e1dbd1b967e9dc5729d096274e41f43ec3dcff897012425e2dfeffffff02a1910f00000000001976a9147ab95aa3133061fbe7ad020cc638b82451c9acdc88ac40787d010000000017a91415c85c2472f5941b60a49462a2cfd0d17ab49d1c8768500f00",
-    "txid" : "48e6f8f0108549bf932e4d6833fe707d7edafe490788c2ebde688635a995538e",
-    "version" : 2,
-    "locktime" : 1003624,
-  [...]
-    "vout" : [
-        {
-          "value": 0.25000000,
-          "valueSat": 25000000,
-          "n": 1,
-          "scriptPubKey": {
-            "asm": "OP_HASH160 15c85c2472f5941b60a49462a2cfd0d17ab49d1c OP_EQUAL",
-            "hex": "a91415c85c2472f5941b60a49462a2cfd0d17ab49d1c87",
-            "reqSigs": 1,
-            "type": "scripthash",
-            "addresses": [
-              "8gQdvLw7pF7jd8mjGU3nRNESdWi9gkHRZy"
-            ]
-          }
+    "txid": "faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233",
+    "version": 2,
+    "type": 0,
+    "size": 223,
+    "locktime": 110,
+    [...]
+    "vout": [
+      {
+        "value": 0.25000000,
+        "valueSat": 25000000,
+        "n": 0,
+        "scriptPubKey": {
+          "asm": "OP_HASH160 66373d80314490375d948b6fd2bee74865df9bd8 OP_EQUAL",
+          "desc": "addr(8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx)#ncq8ygr4",
+          "hex": "a91466373d80314490375d948b6fd2bee74865df9bd887",
+          "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
+          "type": "scripthash"
         }
-  [...]
-      ],
-    "blockhash": "000000bd679c0934333da72d25b85df9a120e2a166d945a8ace514ccd894e809",
-    "height": 1003625,
-    "confirmations": 9,
-    "time": 1712596571,
-    "blocktime": 1712596571,
-    "instantlock": true,
-    "instantlock_internal": true,
-    "chainlock": true
+      },
+      {
+        "value": 499.74999777,
+        "valueSat": 49974999777,
+        "n": 1,
+        "scriptPubKey": {
+          "asm": "OP_DUP OP_HASH160 dc0360231cf766ee4501844d72663bf92d59d97a OP_EQUALVERIFY OP_CHECKSIG",
+          "desc": "addr(ygNmYwbS5hZjS4S1GFhs97gjf7PZyNcXDK)#sfvcgypq",
+          "hex": "76a914dc0360231cf766ee4501844d72663bf92d59d97a88ac",
+          "address": "ygNmYwbS5hZjS4S1GFhs97gjf7PZyNcXDK",
+          "type": "pubkeyhash"
+        }
+      }
+    ],
+    [...]
+    "blockhash": "675860327c6cb72e2d7febc8c380c27e7bc94299c6e120d1c0ba301d01292789",
+    "height": 111,
+    "confirmations": 1,
+    "time": 1794954791,
+    "blocktime": 1794954791,
+    "instantlock": false,
+    "instantlock_internal": false,
+    "chainlock": false
   }
 
 Step 4: Spending the multisig
@@ -373,83 +385,86 @@ Step 4: Spending the multisig
 Now we assume the deal is complete, the buyer got the goods and everyone
 is happy. Now the seller wants to get his Dash. As a 2-of-3 multisig was
 used, the transaction must be signed by 2 parties (seller + buyer or
-arbiter). The seller creates a transaction (we will reuse his public
-address from above).
+arbiter). The seller creates a PSBT that spends the multisig output to
+the seller's address from above.
 
 Seller::
 
-  seller@testnet03:~$ ./dash-cli createrawtransaction '[{"txid":"48e6f8f0108549bf932e4d6833fe707d7edafe490788c2ebde688635a995538e","vout":1}]' '{"yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm":0.249}'
-  02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e6480100000000ffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000
+  seller@dash:~$ ./dash-cli createpsbt '[{"txid":"faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233","vout":0}]' '{"yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh":0.249}'
+  cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAAA
 
-And partially signs it, using the redeemScript, scriptPubKey and his
-private key
+The seller passes the multisig descriptor from step 2 to
+``utxoupdatepsbt``. This adds the funding transaction and the
+redeemScript to the PSBT, which the signers' wallets need to sign it.
 
 Seller::
 
-  seller@testnet03:~$ ./dash-cli signrawtransactionwithkey '02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e6480100000000ffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000' '["cVQVgBr8sW4FTPYz16BSCo1PcAfDhpJArgMPdLxKZQWcVFwMXRXx"]' '[{"txid":"a8b3bf5bcace91a8dbbddbf9b7eb027efb9bd001792f043ecf7b558aaa3cb951","vout":0,"scriptPubKey":"a91415c85c2472f5941b60a49462a2cfd0d17ab49d1c87","redeemScript":"522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae"}]'
+  seller@dash:~$ ./dash-cli utxoupdatepsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAAA '["sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"]'
+  cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABBGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64iBgIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtQRezBYZIgYDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w4EcntmYCIGA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvBMrbZ6wAAA==
+
+The seller then partially signs the PSBT with their own wallet.
+
+Seller::
+
+  seller@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABBGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64iBgIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtQRezBYZIgYDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w4EcntmYCIGA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvBMrbZ6wAAA==
   {
-    "hex": "02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e64801000000b50047304402207574d2af348ba67768849fa630dc42af546a382ecc85e941574b04dd419edd3002201c5704eb32d1df724c258e8bc4d6aa607abe4c01b9a295c3fdfca1763a328edd01004c69522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53aeffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000",
-    "complete": false,
-    "errors": [
-      {
-        "txid": "48e6f8f0108549bf932e4d6833fe707d7edafe490788c2ebde688635a995538e",
-        "vout": 1,
-        "scriptSig": "0047304402207574d2af348ba67768849fa630dc42af546a382ecc85e941574b04dd419edd3002201c5704eb32d1df724c258e8bc4d6aa607abe4c01b9a295c3fdfca1763a328edd01004c69522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae",
-        "sequence": 4294967295,
-        "error": "CHECK(MULTI)SIG failing with non-zero signature (possibly need more signatures)"
-      }
-    ]
+    "psbt": "cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz770cwRAIgZKg+MELXjlK369SsXSIcPe3/eBaRGOED6aznlfJ3TK0CIEQ1BBEEWn6czLyAlhuuxChnjmrvCS5LA/CfqOjeQ9EKAQEEaVIhA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvIQIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtSEDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w5TriIGAhstf5qwEL5fJfYxwRgiZ9zvhxYq9D1S74f0V0ACiAy1BF7MFhkiBgO08jzyTImT0fyuyj7Oi6djSdO9Ll7lsScjH8joNZP7DgRye2ZgIgYDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8EyttnrAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77xiV2pL5LAAAgAEAAIAAAACAAAAAAAAAAAAA",
+    "complete": false
   }
 
-Note that the output hex is getting longer, but complete flag is "false"
-as the transaction needs another signature. So now either the buyer or
-the arbiter can complete the signature of the transaction, using the
-output from above and their private key. Let's assume the buyer is
-completing the signature.
+Note that the complete flag is "false" as the transaction needs another
+signature. The seller passes the ``psbt`` value from above to the buyer
+or the arbiter, who can complete the signature with their own wallet.
+Let's assume the buyer is completing the signature.
 
 Buyer::
 
-  buyer@testnet03:~$ ./dash-cli signrawtransactionwithkey '02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e64801000000b50047304402207574d2af348ba67768849fa630dc42af546a382ecc85e941574b04dd419edd3002201c5704eb32d1df724c258e8bc4d6aa607abe4c01b9a295c3fdfca1763a328edd01004c69522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53aeffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000' '["cP9DFmEDb11waWbQ8eG1YUoZCGe59BBxJF3kk95PTMXuG9HzcxnU"]' '[{"txid":"a8b3bf5bcace91a8dbbddbf9b7eb027efb9bd001792f043ecf7b558aaa3cb951","vout":0,"scriptPubKey":"a91415c85c2472f5941b60a49462a2cfd0d17ab49d1c87","redeemScript":"522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53ae"}]'
+  buyer@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz770cwRAIgZKg+MELXjlK369SsXSIcPe3/eBaRGOED6aznlfJ3TK0CIEQ1BBEEWn6czLyAlhuuxChnjmrvCS5LA/CfqOjeQ9EKAQEEaVIhA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvIQIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtSEDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w5TriIGAhstf5qwEL5fJfYxwRgiZ9zvhxYq9D1S74f0V0ACiAy1BF7MFhkiBgO08jzyTImT0fyuyj7Oi6djSdO9Ll7lsScjH8joNZP7DgRye2ZgIgYDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8EyttnrAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77xiV2pL5LAAAgAEAAIAAAACAAAAAAAAAAAAA
   {
-    "hex": "02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e64801000000fc0047304402207574d2af348ba67768849fa630dc42af546a382ecc85e941574b04dd419edd3002201c5704eb32d1df724c258e8bc4d6aa607abe4c01b9a295c3fdfca1763a328edd014730440220764019282400fab0e3bb431b04fada7daca528054e903f13d08deadee01d7c5a02204c7e4e484820e16af0951bc48371c3d0175de4114cee11dc86707b2489432b15014c69522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53aeffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000",
-    "complete": true
+    "psbt": "cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABB/wARzBEAiBkqD4wQteOUrfr1KxdIhw97f94FpEY4QPprOeV8ndMrQIgRDUEEQRafpzMvICWG67EKGeOau8JLksD8J+o6N5D0QoBRzBEAiBgoRQLuyqcgucfyVRzxxkAEINdxvN/OVk/EY7cdvP+2QIgQxRGrp2UKzj77rjPwxhJJlAMnl47MWQZpGfWizzQsDEBTGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64AIgIDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8YldqS+SwAAIABAACAAAAAgAAAAAAAAAAAAA==",
+    "complete": true,
+    "hex": "02000000013312f1caeaa7e1023c90c9113ebf276d70257141b43bf7cfadfbfe983ce4a6fa00000000fc00473044022064a83e3042d78e52b7ebd4ac5d221c3dedff78169118e103e9ace795f2774cad022044350411045a7e9cccbc80961baec428678e6aef092e4b03f09fa8e8de43d10a01473044022060a1140bbb2a9c82e71fc95473c7190010835dc6f37f39593f118edc76f3fed90220431446ae9d942b38fbeeb8cfc3184926500c9e5e3b316419a467d68b3cd0b031014c69522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53aeffffffff01a0f17b01000000001976a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac00000000"
   }
 
-The signature is complete now, and either of the parties can transmit
-the transaction to the network.
+The signature is complete now, and the ``hex`` field contains the signed
+transaction. Either of the parties can transmit the transaction to the
+network.
 
 Buyer::
 
-  buyer@testnet03:~$ ./dash-cli sendrawtransaction 02000000018e5395a9358668deebc2880749feda7e7d70fe33684d2e93bf498510f0f8e64801000000fc0047304402207574d2af348ba67768849fa630dc42af546a382ecc85e941574b04dd419edd3002201c5704eb32d1df724c258e8bc4d6aa607abe4c01b9a295c3fdfca1763a328edd014730440220764019282400fab0e3bb431b04fada7daca528054e903f13d08deadee01d7c5a02204c7e4e484820e16af0951bc48371c3d0175de4114cee11dc86707b2489432b15014c69522102a862b412ff9e3afd01a2873a02622897f6df92e3fc85597788b898309fec882e210315617694c9d93f0ce92769e050a6868ffc74d229077379c0af8bfb193c3d351c210287ce6cf69b85593ce7db801874c9a2fb1b653dbe5dd9ebfa73e98b710af9e9ce53aeffffffff01a0f17b01000000001976a914d728be76cd74b5d148eba2a49246b80dac12f73e88ac00000000
-  d6b27fb30be3d79588900c3f2fb433f8a68fdae70bfa9d6dbad5dd33ed25ba2c
+  buyer@dash:~$ ./dash-cli sendrawtransaction 02000000013312f1caeaa7e1023c90c9113ebf276d70257141b43bf7cfadfbfe983ce4a6fa00000000fc00473044022064a83e3042d78e52b7ebd4ac5d221c3dedff78169118e103e9ace795f2774cad022044350411045a7e9cccbc80961baec428678e6aef092e4b03f09fa8e8de43d10a01473044022060a1140bbb2a9c82e71fc95473c7190010835dc6f37f39593f118edc76f3fed90220431446ae9d942b38fbeeb8cfc3184926500c9e5e3b316419a467d68b3cd0b031014c69522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53aeffffffff01a0f17b01000000001976a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac00000000
+  29f50fec1298ee5664f5433f4592804dbe70af6c898d8a94d8a0e8dc8ece39d1
 
 Again, this transaction can be traced in a block explorer. And the
 seller is happy to receive his coins at his public address as follows.
 
 Seller::
 
-  seller@testnet03:~$ dash-cli listtransactions "*" 1
+  seller@dash:~$ ./dash-cli listtransactions "*" 1
   [
     {
-      "involvesWatchonly": true,
-      "address": "yfw6wPY5eo6sWxcU93ej3fRD9VXzppEYkm",
+      "address": "yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh",
+      "parent_descs": [
+        "pkh(tpubD6NzVbkrYhZ4WzsaLtjcxHB8kgGgw2KX6cw4LRaE8wcLneLMcL33rqkwoHduGo3uLmfdrAfXAxetDNVNMFd6BgFGAqmTVieEoBjFQ7iLu3n/44h/1h/0h/0/*)#a3z879y6"
+      ],
       "category": "receive",
       "amount": 0.24900000,
       "label": "seller",
       "vout": 0,
+      "abandoned": false,
       "confirmations": 1,
-      "instantlock": true,
-      "instantlock_internal": true,
-      "chainlock": true,
-      "blockhash": "000000f25253e46db14c5a0316321ea45e0d7c747d00398fc06becd71e93be44",
-      "blockheight": 1003642,
-      "blockindex": 4,
-      "blocktime": 1712598497,
-      "txid": "d6b27fb30be3d79588900c3f2fb433f8a68fdae70bfa9d6dbad5dd33ed25ba2c",
+      "instantlock": false,
+      "instantlock_internal": false,
+      "chainlock": false,
+      "blockhash": "7cd1da7343415271f3e633ec46fc37124d31f1f25bdf44fe03a1dbd16b5be035",
+      "blockheight": 112,
+      "blockindex": 1,
+      "blocktime": 1794954791,
+      "txid": "29f50fec1298ee5664f5433f4592804dbe70af6c898d8a94d8a0e8dc8ece39d1",
       "walletconflicts": [
       ],
-      "time": 1712598489,
-      "timereceived": 1712598489
+      "time": 1794954771,
+      "timereceived": 1794954771
     }
   ]
 
