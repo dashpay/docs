@@ -353,10 +353,15 @@ registered masternodes. If the score reaches the number of registered
 masternodes, a PoSe ban is enacted and the masternode must be repaired
 to ensure it provides reliable service and registered in the list again
 using a :ref:`ProUpServTx <dip3-update-service>`. The current scoring
-rules as of Dash 0.14 are:
+rules are:
 
 - Failure to participate in `DKG <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-protocol>`__\ = 66% punishment
 - Each subsequent block reduces PoSe score by 1
+
+During DKG, quorum members also vote against a masternode that runs an
+outdated protocol version, or whose connections to other masternodes don't
+relay transactions or serve compact block filters. This counts as a failure to
+participate.
 
 Quorum selection
 ================

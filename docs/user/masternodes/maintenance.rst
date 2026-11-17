@@ -369,7 +369,12 @@ with the current consensus rules, it will receive a :ref:`Proof of Service Ban <
 If your masternode is in the ``POSE_BANNED`` status, you should check
 the following settings are configured correctly:
 
-- Ensure you are running the :ref:`latest version of Dash <masternode-update>`
+- Ensure you are running the :ref:`latest version of Dash <masternode-update>`.
+  During DKG, quorum members vote against a masternode that runs an outdated
+  protocol version.
+- Ensure your masternode relays transactions (``blocksonly`` is not enabled)
+  and serves compact block filters to other masternodes. See the
+  :ref:`masternode requirements <masternode-config-requirements>`.
 - Ensure your masternode has sufficient memory, swap, processing power 
   and hard drive space
 - Ensure you are fully synced to the `correct blockheight <https://insight.dash.org/insight/>`__, 
