@@ -729,15 +729,15 @@ created.
 If you are using a hosting service, they may provide you with their
 public key, and you can skip this step. If you are hosting your own
 masternode or have agreed to provide your host with the BLS private key,
-generate a BLS public/private keypair in Dash Core by clicking **Tools >
+generate a BLS public/private keypair in Dash Core by clicking **Window >
 Console** and entering the following command::
 
   bls generate
 
   {
-    "secret": "395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e",
-    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e",
-    "scheme": "legacy"
+    "secret": "6e075b1b372b239e28c9cba00fb5b4046ffb67f4d0b6588c9f81519b1592f559",
+    "public": "949c23ec884541fef11718c2341843b7cabca10e3ebbf38f6cd250cfb363e32136f143b874e2ddb43f3310458970081e",
+    "scheme": "basic"
   }
 
 **These keys are NOT stored by the wallet and must be kept secure,
@@ -760,7 +760,7 @@ The editor appears with the existing masternode configuration. Add or
 uncomment this line in the file, replacing the key with your BLS private
 key generated above::
 
-  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
+  masternodeblsprivkey=6e075b1b372b239e28c9cba00fb5b4046ffb67f4d0b6588c9f81519b1592f559
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -871,11 +871,17 @@ Example (remove line breaks if copying)::
     1 
     '["45.76.230.239:19999"]' 
     yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip 
-    99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
+    949c23ec884541fef11718c2341843b7cabca10e3ebbf38f6cd250cfb363e32136f143b874e2ddb43f3310458970081e 
     yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg 
     0 
     yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN 
     yR83WsikBaBaNusTnHZf28kAcL8oVmp1TE
+
+.. TODO: Refresh this example for Dash Core 24: the tx hex and signMessage were
+   built with the earlier legacy-scheme operator key and an older ProRegTx version,
+   so they don't match the operator public key above. The register_submit example
+   below reuses the same tx hex. The example also uses testnet addresses and port
+   19999; a mainnet example needs X addresses and port 9999.
 
 Output::
 
