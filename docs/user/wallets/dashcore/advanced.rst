@@ -194,30 +194,34 @@ arbiter. This example is based on:
 - https://gist.github.com/jashmenn/9811198
 - https://gist.github.com/gavinandresen/3966071
 
+.. The example output in this section comes from
+   scripts/core-regtest-examples/capture-multisig-example.sh, which produces
+   the same output on every run. Don't hand-edit it; rerun the script instead.
+
 Step 1: Create three addresses
 ------------------------------
 
 Seller::
 
   seller@dash:~$ ./dash-cli getnewaddress seller
-  yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh
+  yYCL8XUL91NSmMnrnnsmZBzZAhdLy98Css
   
-  seller@dash:~$ ./dash-cli getaddressinfo yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh
+  seller@dash:~$ ./dash-cli getaddressinfo yYCL8XUL91NSmMnrnnsmZBzZAhdLy98Css
   {
-    "address": "yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh",
-    "scriptPubKey": "76a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac",
+    "address": "yYCL8XUL91NSmMnrnnsmZBzZAhdLy98Css",
+    "scriptPubKey": "76a9148248fd427b579eccad53c7e30b2aa5f9a2578d3188ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([95da92f9/44h/1h/0h/0/0]03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef)#qvsnp4mv",
-    "parent_desc": "pkh([95da92f9/44h/1h/0h]tpubDDcXZSVSEUTA64WDJrK2LwvchZUsv9NaB5ZtDQhXTPfUuoTwSktwNfeqcEppzxt61xzuoHab9Ejf3xGih3skJJcbQjcKxNUuRDTSUJ44j8p/0/*)#28z5cny0",
+    "desc": "pkh([964e4980/44h/1h/0h/0/0]02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c)#64q3l8vc",
+    "parent_desc": "pkh([964e4980/44h/1h/0h]tpubDCxpcJGdpZTHm7VeAzmagaWyRQGgbWmR1YH1gGsXomYmm6iP9mEsqi5MTuNfrqATzQwD24RYx2t3JAHpgdVztnrGSJkrt8Ca7aiB69AhzfM/0/*)#06pz7kzv",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef",
+    "pubkey": "02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1794954770,
+    "timestamp": 1767225600,
     "hdkeypath": "m/44h/1h/0h/0/0",
-    "hdmasterfingerprint": "95da92f9",
+    "hdmasterfingerprint": "964e4980",
     "labels": [
       "seller"
     ]
@@ -226,24 +230,24 @@ Seller::
 Buyer::
 
   buyer@dash:~$ ./dash-cli getnewaddress buyer
-  yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE
+  yceWp1Kk1NWJ4p4C9LLeRsCay51gfGcZzf
   
-  buyer@dash:~$ ./dash-cli getaddressinfo yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE
+  buyer@dash:~$ ./dash-cli getaddressinfo yceWp1Kk1NWJ4p4C9LLeRsCay51gfGcZzf
   {
-    "address": "yUxgrQEBcZkEdmQA2bFHfwHHZrpkHL54mE",
-    "scriptPubKey": "76a9145ecc16192070d5ada77ab2d1864d8fda0b3394dc88ac",
+    "address": "yceWp1Kk1NWJ4p4C9LLeRsCay51gfGcZzf",
+    "scriptPubKey": "76a914b31d3925aab4586c0186e16364ccf1da0ddb0be488ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([0d1f2523/44h/1h/0h/0/0]021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5)#v45x5j9q",
-    "parent_desc": "pkh([0d1f2523/44h/1h/0h]tpubDCG7VbJRhs6n6gXNZWbvcRqgzYa7Nr8JQHeNznVauPuGiybKyY8MB4F1tUMAMoiGWJsonmgTwysrpUyJa29tWumwPKszyQmTjRTB7m5N6C8/0/*)#fvezqy7r",
+    "desc": "pkh([c5f97bbc/44h/1h/0h/0/0]03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2)#5mfwqhx6",
+    "parent_desc": "pkh([c5f97bbc/44h/1h/0h]tpubDCEt4PYU28Qfa3D5S9aE2psf9pu3bxyGvB2xrU8kUcYTHAAVX6kZiovhq4vs52anKUXEw288G9KYotghGncEVwVLKaxHa6fdhnHCqznGg1w/0/*)#sudmvufr",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5",
+    "pubkey": "03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1794954771,
+    "timestamp": 1767225600,
     "hdkeypath": "m/44h/1h/0h/0/0",
-    "hdmasterfingerprint": "0d1f2523",
+    "hdmasterfingerprint": "c5f97bbc",
     "labels": [
       "buyer"
     ]
@@ -252,24 +256,24 @@ Buyer::
 Arbiter::
 
   arbiter@dash:~$ ./dash-cli getnewaddress arbiter
-  yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt
+  yjD3FEgVHSBBiGtMTzsnmwrUM7u2NGeBrZ
   
-  arbiter@dash:~$ ./dash-cli getaddressinfo yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt
+  arbiter@dash:~$ ./dash-cli getaddressinfo yjD3FEgVHSBBiGtMTzsnmwrUM7u2NGeBrZ
   {
-    "address": "yWkmi3htqzJYGYvozxDr9Sk9AAvVEQPqPt",
-    "scriptPubKey": "76a914727b66603171ae6442194c010aac857c5a20babe88ac",
+    "address": "yjD3FEgVHSBBiGtMTzsnmwrUM7u2NGeBrZ",
+    "scriptPubKey": "76a914fb14b1cf980df8022ffcedbb0bfb96eb74e7a66588ac",
     "ismine": true,
     "solvable": true,
-    "desc": "pkh([44da79bf/44h/1h/0h/0/0]03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e)#nrkehyx0",
-    "parent_desc": "pkh([44da79bf/44h/1h/0h]tpubDD1f6iys5Bx4zBimuS37eMnUL1oBXyZ1SGPxqHbSYzqQAeCFnBTwhBS4cbL9j5BJPnFAcaorSSAZopCA5HVgtSj9L4GSUWXTwoJkND8w3Fv/0/*)#43lkp399",
+    "desc": "pkh([06c6ea99/44h/1h/0h/0/0]03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5)#e6ygfwx6",
+    "parent_desc": "pkh([06c6ea99/44h/1h/0h]tpubDCcCpBTPfmiQf1DbixLtch3D7pAe5Ws9UWiky1AddBJ8tckFsRD2BLntnc2n3BhBKkA7RZopATAeubf2jqSXUnuEueJ5S4KgawxrSc8zhcG/0/*)#y0m67cz6",
     "iswatchonly": false,
     "isscript": false,
-    "pubkey": "03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e",
+    "pubkey": "03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5",
     "iscompressed": true,
     "ischange": false,
-    "timestamp": 1794954771,
+    "timestamp": 1767225600,
     "hdkeypath": "m/44h/1h/0h/0/0",
-    "hdmasterfingerprint": "44da79bf",
+    "hdmasterfingerprint": "06c6ea99",
     "labels": [
       "arbiter"
     ]
@@ -277,9 +281,9 @@ Arbiter::
 
 This results in three public keys::
 
-  seller:    03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef
-  buyer:     021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5
-  arbiter:   03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e
+  seller:    02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c
+  buyer:     03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2
+  arbiter:   03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5
 
 Step 2: Create multisig address 
 -------------------------------
@@ -294,29 +298,29 @@ identical, see below).
 
 Seller::
 
-  seller@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
+  seller@dash:~$ ./dash-cli createmultisig 2 '["02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c","03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2","03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5"]'
   {
-    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
-    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
-    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
+    "address": "8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF",
+    "redeemScript": "522102aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c2103e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b22103f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e553ae",
+    "descriptor": "sh(multi(2,02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c,03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2,03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5))#9cn7nu82"
   }
 
 Buyer::
 
-  buyer@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
+  buyer@dash:~$ ./dash-cli createmultisig 2 '["02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c","03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2","03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5"]'
   {
-    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
-    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
-    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
+    "address": "8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF",
+    "redeemScript": "522102aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c2103e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b22103f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e553ae",
+    "descriptor": "sh(multi(2,02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c,03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2,03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5))#9cn7nu82"
   }
 
 Arbiter::
 
-  arbiter@dash:~$ ./dash-cli createmultisig 2 '["03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef","021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5","03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e"]'
+  arbiter@dash:~$ ./dash-cli createmultisig 2 '["02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c","03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2","03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5"]'
   {
-    "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
-    "redeemScript": "522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53ae",
-    "descriptor": "sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"
+    "address": "8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF",
+    "redeemScript": "522102aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c2103e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b22103f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e553ae",
+    "descriptor": "sh(multi(2,02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c,03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2,03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5))#9cn7nu82"
   }
 
 Step 3: Buyer funds the multisig address
@@ -326,21 +330,21 @@ This works the same as a usual transaction.
 
 Buyer::
 
-  buyer@dash:~$ ./dash-cli sendtoaddress 8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx 0.25
-  faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233
+  buyer@dash:~$ ./dash-cli sendtoaddress 8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF 0.25
+  1eddc72cac99d1964ea98e3f0fc82439f2bb1f0d33b744cd92f721f74f0ee2e6
 
 The seller/arbiter can trace the transaction by its txid in the block
 explorer. Or from the console as follows.
 
 Seller::
 
-  seller@dash:~$ ./dash-cli getrawtransaction faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233 1
+  seller@dash:~$ ./dash-cli getrawtransaction 1eddc72cac99d1964ea98e3f0fc82439f2bb1f0d33b744cd92f721f74f0ee2e6 1
   {
-    "txid": "faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233",
+    "txid": "1eddc72cac99d1964ea98e3f0fc82439f2bb1f0d33b744cd92f721f74f0ee2e6",
     "version": 2,
     "type": 0,
-    "size": 223,
-    "locktime": 110,
+    "size": 189,
+    "locktime": 0,
     [...]
     "vout": [
       {
@@ -348,32 +352,20 @@ Seller::
         "valueSat": 25000000,
         "n": 0,
         "scriptPubKey": {
-          "asm": "OP_HASH160 66373d80314490375d948b6fd2bee74865df9bd8 OP_EQUAL",
-          "desc": "addr(8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx)#ncq8ygr4",
-          "hex": "a91466373d80314490375d948b6fd2bee74865df9bd887",
-          "address": "8ojvonkf7536jJW2X5tytr8QuzpAzBjkCx",
+          "asm": "OP_HASH160 86e0e72bb5fe2b7b3ce71275e665ae1c4a9f50c6 OP_EQUAL",
+          "desc": "addr(8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF)#cv0kwqjd",
+          "hex": "a91486e0e72bb5fe2b7b3ce71275e665ae1c4a9f50c687",
+          "address": "8ridgJcDxFBSWNp4spps1AFaXu3o6qZvqF",
           "type": "scripthash"
-        }
-      },
-      {
-        "value": 499.74999777,
-        "valueSat": 49974999777,
-        "n": 1,
-        "scriptPubKey": {
-          "asm": "OP_DUP OP_HASH160 dc0360231cf766ee4501844d72663bf92d59d97a OP_EQUALVERIFY OP_CHECKSIG",
-          "desc": "addr(ygNmYwbS5hZjS4S1GFhs97gjf7PZyNcXDK)#sfvcgypq",
-          "hex": "76a914dc0360231cf766ee4501844d72663bf92d59d97a88ac",
-          "address": "ygNmYwbS5hZjS4S1GFhs97gjf7PZyNcXDK",
-          "type": "pubkeyhash"
         }
       }
     ],
     [...]
-    "blockhash": "675860327c6cb72e2d7febc8c380c27e7bc94299c6e120d1c0ba301d01292789",
-    "height": 111,
+    "blockhash": "2d7dbdbb4bdee94a8eab36cf2573070df1eacfefb38f9ddce1fb803817a349f4",
+    "height": 103,
     "confirmations": 1,
-    "time": 1794954791,
-    "blocktime": 1794954791,
+    "time": 1767273450,
+    "blocktime": 1767273450,
     "instantlock": false,
     "instantlock_internal": false,
     "chainlock": false
@@ -390,8 +382,8 @@ the seller's address from above.
 
 Seller::
 
-  seller@dash:~$ ./dash-cli createpsbt '[{"txid":"faa6e43c98fefbadcff73bb4417125706d27bf3e11c9903c02e1a7eacaf11233","vout":0}]' '{"yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh":0.249}'
-  cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAAA
+  seller@dash:~$ ./dash-cli createpsbt '[{"txid":"1eddc72cac99d1964ea98e3f0fc82439f2bb1f0d33b744cd92f721f74f0ee2e6","vout":0}]' '{"yYCL8XUL91NSmMnrnnsmZBzZAhdLy98Css":0.249}'
+  cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAAA
 
 The seller passes the multisig descriptor from step 2 to
 ``utxoupdatepsbt``. This adds the funding transaction and the
@@ -399,16 +391,16 @@ redeemScript to the PSBT, which the signers' wallets need to sign it.
 
 Seller::
 
-  seller@dash:~$ ./dash-cli utxoupdatepsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAAA '["sh(multi(2,03ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef,021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb5,03b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e))#sfgj429d"]'
-  cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABBGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64iBgIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtQRezBYZIgYDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w4EcntmYCIGA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvBMrbZ6wAAA==
+  seller@dash:~$ ./dash-cli utxoupdatepsbt cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAAA '["sh(multi(2,02aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c,03e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b2,03f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e5))#9cn7nu82"]'
+  cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAEAvQIAAAABAKjNpHUAS5vcu1L5k5lfBLww7iYHDj6rDs0k35PGvScAAAAAakcwRAIgKDmwDepLg5LtZUT8VV5GUCCoM+AChToDPKm1f7KnUlcCIGeNwH3o4lZ/0iXwDOYYioypFxnxFh4okFDi/4wy7QhUASECmBkbErj+s/WEPKa/dIx6eTcF/e9A3t1rqNaNwP9E4NT+////AUB4fQEAAAAAF6kUhuDnK7X+K3s85xJ15mWuHEqfUMaHAAAAAAEEaVIhAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8IQPoJpH8yca9MQt4tND7BKBfKB8GpKZF9lTAV37GE+gUsiED8SD9d3lR+2IDKbZ/bHPLM59FrinjrpHe+tTvguoUhOVTriIGAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8BIJI/UIiBgPoJpH8yca9MQt4tND7BKBfKB8GpKZF9lTAV37GE+gUsgSzHTklIgYD8SD9d3lR+2IDKbZ/bHPLM59FrinjrpHe+tTvguoUhOUE+xSxzwAA
 
 The seller then partially signs the PSBT with their own wallet.
 
 Seller::
 
-  seller@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABBGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64iBgIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtQRezBYZIgYDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w4EcntmYCIGA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvBMrbZ6wAAA==
+  seller@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAEAvQIAAAABAKjNpHUAS5vcu1L5k5lfBLww7iYHDj6rDs0k35PGvScAAAAAakcwRAIgKDmwDepLg5LtZUT8VV5GUCCoM+AChToDPKm1f7KnUlcCIGeNwH3o4lZ/0iXwDOYYioypFxnxFh4okFDi/4wy7QhUASECmBkbErj+s/WEPKa/dIx6eTcF/e9A3t1rqNaNwP9E4NT+////AUB4fQEAAAAAF6kUhuDnK7X+K3s85xJ15mWuHEqfUMaHAAAAAAEEaVIhAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8IQPoJpH8yca9MQt4tND7BKBfKB8GpKZF9lTAV37GE+gUsiED8SD9d3lR+2IDKbZ/bHPLM59FrinjrpHe+tTvguoUhOVTriIGAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8BIJI/UIiBgPoJpH8yca9MQt4tND7BKBfKB8GpKZF9lTAV37GE+gUsgSzHTklIgYD8SD9d3lR+2IDKbZ/bHPLM59FrinjrpHe+tTvguoUhOUE+xSxzwAA
   {
-    "psbt": "cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz770cwRAIgZKg+MELXjlK369SsXSIcPe3/eBaRGOED6aznlfJ3TK0CIEQ1BBEEWn6czLyAlhuuxChnjmrvCS5LA/CfqOjeQ9EKAQEEaVIhA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvIQIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtSEDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w5TriIGAhstf5qwEL5fJfYxwRgiZ9zvhxYq9D1S74f0V0ACiAy1BF7MFhkiBgO08jzyTImT0fyuyj7Oi6djSdO9Ll7lsScjH8joNZP7DgRye2ZgIgYDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8EyttnrAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77xiV2pL5LAAAgAEAAIAAAACAAAAAAAAAAAAA",
+    "psbt": "cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAEAvQIAAAABAKjNpHUAS5vcu1L5k5lfBLww7iYHDj6rDs0k35PGvScAAAAAakcwRAIgKDmwDepLg5LtZUT8VV5GUCCoM+AChToDPKm1f7KnUlcCIGeNwH3o4lZ/0iXwDOYYioypFxnxFh4okFDi/4wy7QhUASECmBkbErj+s/WEPKa/dIx6eTcF/e9A3t1rqNaNwP9E4NT+////AUB4fQEAAAAAF6kUhuDnK7X+K3s85xJ15mWuHEqfUMaHAAAAACICAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8RzBEAiBF76aXL/4txadkY/fxOLJjLCMuzYx+77bWopxCBgrPiwIgabdOgjH0XpP9aHkKFRWCAkbA+bMGF+fFJYZj6Bhdl+YBAQRpUiECqqEGF8Zxt77p58pc+r/Sas3s9DWfMI9gnOuIKzI0EjwhA+gmkfzJxr0xC3i00PsEoF8oHwakpkX2VMBXfsYT6BSyIQPxIP13eVH7YgMptn9sc8szn0WuKeOukd761O+C6hSE5VOuIgYCqqEGF8Zxt77p58pc+r/Sas3s9DWfMI9gnOuIKzI0EjwEgkj9QiIGA+gmkfzJxr0xC3i00PsEoF8oHwakpkX2VMBXfsYT6BSyBLMdOSUiBgPxIP13eVH7YgMptn9sc8szn0WuKeOukd761O+C6hSE5QT7FLHPACICAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8GJZOSYAsAACAAQAAgAAAAIAAAAAAAAAAAAA=",
     "complete": false
   }
 
@@ -419,11 +411,11 @@ Let's assume the buyer is completing the signature.
 
 Buyer::
 
-  buyer@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz770cwRAIgZKg+MELXjlK369SsXSIcPe3/eBaRGOED6aznlfJ3TK0CIEQ1BBEEWn6czLyAlhuuxChnjmrvCS5LA/CfqOjeQ9EKAQEEaVIhA8paD+mU6Sx43UJGDkX4w4ljmiVbe9a5/fVyhS2dXPvvIQIbLX+asBC+XyX2McEYImfc74cWKvQ9Uu+H9FdAAogMtSEDtPI88kyJk9H8rso+zounY0nTvS5e5bEnIx/I6DWT+w5TriIGAhstf5qwEL5fJfYxwRgiZ9zvhxYq9D1S74f0V0ACiAy1BF7MFhkiBgO08jzyTImT0fyuyj7Oi6djSdO9Ll7lsScjH8joNZP7DgRye2ZgIgYDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8EyttnrAAiAgPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77xiV2pL5LAAAgAEAAIAAAACAAAAAAAAAAAAA
+  buyer@dash:~$ ./dash-cli walletprocesspsbt cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAEAvQIAAAABAKjNpHUAS5vcu1L5k5lfBLww7iYHDj6rDs0k35PGvScAAAAAakcwRAIgKDmwDepLg5LtZUT8VV5GUCCoM+AChToDPKm1f7KnUlcCIGeNwH3o4lZ/0iXwDOYYioypFxnxFh4okFDi/4wy7QhUASECmBkbErj+s/WEPKa/dIx6eTcF/e9A3t1rqNaNwP9E4NT+////AUB4fQEAAAAAF6kUhuDnK7X+K3s85xJ15mWuHEqfUMaHAAAAACICAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8RzBEAiBF76aXL/4txadkY/fxOLJjLCMuzYx+77bWopxCBgrPiwIgabdOgjH0XpP9aHkKFRWCAkbA+bMGF+fFJYZj6Bhdl+YBAQRpUiECqqEGF8Zxt77p58pc+r/Sas3s9DWfMI9gnOuIKzI0EjwhA+gmkfzJxr0xC3i00PsEoF8oHwakpkX2VMBXfsYT6BSyIQPxIP13eVH7YgMptn9sc8szn0WuKeOukd761O+C6hSE5VOuIgYCqqEGF8Zxt77p58pc+r/Sas3s9DWfMI9gnOuIKzI0EjwEgkj9QiIGA+gmkfzJxr0xC3i00PsEoF8oHwakpkX2VMBXfsYT6BSyBLMdOSUiBgPxIP13eVH7YgMptn9sc8szn0WuKeOukd761O+C6hSE5QT7FLHPACICAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8GJZOSYAsAACAAQAAgAAAAIAAAAAAAAAAAAA=
   {
-    "psbt": "cHNidP8BAFUCAAAAATMS8crqp+ECPJDJET6/J21wJXFBtDv3z637/pg85Kb6AAAAAAD/////AaDxewEAAAAAGXapFMrbZ6xSW8vMFGypLRLGmteCv3zkiKwAAAAAAAEA3wIAAAABwXumP5BAJQillD4KwYgVU7yRqMXxYVMU5RGU3Ub5zMEAAAAAakcwRAIgVsSFjDyYeYfniuA0nBU07BlYkRwdYc5LsJTETP1YYWoCIG1cM/9LoAQopGlK0fy8zCBzN4Wm0sE3b/oo/I4gsQ4TASECGyuLJsB6556diDVL5NMSf4i0vKWuAMfKGrK73Ba2ua7+////AkB4fQEAAAAAF6kUZjc9gDFEkDddlItv0r7nSGXfm9iH4fq9ogsAAAAZdqkU3ANgIxz3Zu5FAYRNcmY7+S1Z2XqIrG4AAAABB/wARzBEAiBkqD4wQteOUrfr1KxdIhw97f94FpEY4QPprOeV8ndMrQIgRDUEEQRafpzMvICWG67EKGeOau8JLksD8J+o6N5D0QoBRzBEAiBgoRQLuyqcgucfyVRzxxkAEINdxvN/OVk/EY7cdvP+2QIgQxRGrp2UKzj77rjPwxhJJlAMnl47MWQZpGfWizzQsDEBTGlSIQPKWg/plOkseN1CRg5F+MOJY5olW3vWuf31coUtnVz77yECGy1/mrAQvl8l9jHBGCJn3O+HFir0PVLvh/RXQAKIDLUhA7TyPPJMiZPR/K7KPs6Lp2NJ070uXuWxJyMfyOg1k/sOU64AIgIDyloP6ZTpLHjdQkYORfjDiWOaJVt71rn99XKFLZ1c++8YldqS+SwAAIABAACAAAAAgAAAAAAAAAAAAA==",
+    "psbt": "cHNidP8BAFUCAAAAAebiDk/3IfeSzUS3Mw0fu/I5JMgPP46pTpbRmawsx90eAAAAAAD/////AaDxewEAAAAAGXapFIJI/UJ7V57MrVPH4wsqpfmiV40xiKwAAAAAAAEAvQIAAAABAKjNpHUAS5vcu1L5k5lfBLww7iYHDj6rDs0k35PGvScAAAAAakcwRAIgKDmwDepLg5LtZUT8VV5GUCCoM+AChToDPKm1f7KnUlcCIGeNwH3o4lZ/0iXwDOYYioypFxnxFh4okFDi/4wy7QhUASECmBkbErj+s/WEPKa/dIx6eTcF/e9A3t1rqNaNwP9E4NT+////AUB4fQEAAAAAF6kUhuDnK7X+K3s85xJ15mWuHEqfUMaHAAAAAAEH/ABHMEQCIEXvppcv/i3Fp2Rj9/E4smMsIy7NjH7vttainEIGCs+LAiBpt06CMfRek/1oeQoVFYICRsD5swYX58UlhmPoGF2X5gFHMEQCIHhZlYUBGe/xzzgqzqs5RCXEpga/DZbgUaHLcSfEMdnmAiAI0zrId8XgCgGxguVJFi99cu4ObXHrqJMY1eezzaknWwFMaVIhAqqhBhfGcbe+6efKXPq/0mrN7PQ1nzCPYJzriCsyNBI8IQPoJpH8yca9MQt4tND7BKBfKB8GpKZF9lTAV37GE+gUsiED8SD9d3lR+2IDKbZ/bHPLM59FrinjrpHe+tTvguoUhOVTrgAiAgKqoQYXxnG3vunnylz6v9Jqzez0NZ8wj2Cc64grMjQSPBiWTkmALAAAgAEAAIAAAACAAAAAAAAAAAAA",
     "complete": true,
-    "hex": "02000000013312f1caeaa7e1023c90c9113ebf276d70257141b43bf7cfadfbfe983ce4a6fa00000000fc00473044022064a83e3042d78e52b7ebd4ac5d221c3dedff78169118e103e9ace795f2774cad022044350411045a7e9cccbc80961baec428678e6aef092e4b03f09fa8e8de43d10a01473044022060a1140bbb2a9c82e71fc95473c7190010835dc6f37f39593f118edc76f3fed90220431446ae9d942b38fbeeb8cfc3184926500c9e5e3b316419a467d68b3cd0b031014c69522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53aeffffffff01a0f17b01000000001976a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac00000000"
+    "hex": "0200000001e6e20e4ff721f792cd44b7330d1fbbf23924c80f3f8ea94e96d199ac2cc7dd1e00000000fc00473044022045efa6972ffe2dc5a76463f7f138b2632c232ecd8c7eefb6d6a29c42060acf8b022069b74e8231f45e93fd68790a1515820246c0f9b30617e7c5258663e8185d97e6014730440220785995850119eff1cf382aceab394425c4a606bf0d96e051a1cb7127c431d9e6022008d33ac877c5e00a01b182e549162f7d72ee0e6d71eba89318d5e7b3cda9275b014c69522102aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c2103e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b22103f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e553aeffffffff01a0f17b01000000001976a9148248fd427b579eccad53c7e30b2aa5f9a2578d3188ac00000000"
   }
 
 The signature is complete now, and the ``hex`` field contains the signed
@@ -432,8 +424,8 @@ network.
 
 Buyer::
 
-  buyer@dash:~$ ./dash-cli sendrawtransaction 02000000013312f1caeaa7e1023c90c9113ebf276d70257141b43bf7cfadfbfe983ce4a6fa00000000fc00473044022064a83e3042d78e52b7ebd4ac5d221c3dedff78169118e103e9ace795f2774cad022044350411045a7e9cccbc80961baec428678e6aef092e4b03f09fa8e8de43d10a01473044022060a1140bbb2a9c82e71fc95473c7190010835dc6f37f39593f118edc76f3fed90220431446ae9d942b38fbeeb8cfc3184926500c9e5e3b316419a467d68b3cd0b031014c69522103ca5a0fe994e92c78dd42460e45f8c389639a255b7bd6b9fdf572852d9d5cfbef21021b2d7f9ab010be5f25f631c1182267dcef87162af43d52ef87f4574002880cb52103b4f23cf24c8993d1fcaeca3ece8ba76349d3bd2e5ee5b127231fc8e83593fb0e53aeffffffff01a0f17b01000000001976a914cadb67ac525bcbcc146ca92d12c69ad782bf7ce488ac00000000
-  29f50fec1298ee5664f5433f4592804dbe70af6c898d8a94d8a0e8dc8ece39d1
+  buyer@dash:~$ ./dash-cli sendrawtransaction 0200000001e6e20e4ff721f792cd44b7330d1fbbf23924c80f3f8ea94e96d199ac2cc7dd1e00000000fc00473044022045efa6972ffe2dc5a76463f7f138b2632c232ecd8c7eefb6d6a29c42060acf8b022069b74e8231f45e93fd68790a1515820246c0f9b30617e7c5258663e8185d97e6014730440220785995850119eff1cf382aceab394425c4a606bf0d96e051a1cb7127c431d9e6022008d33ac877c5e00a01b182e549162f7d72ee0e6d71eba89318d5e7b3cda9275b014c69522102aaa10617c671b7bee9e7ca5cfabfd26acdecf4359f308f609ceb882b3234123c2103e82691fcc9c6bd310b78b4d0fb04a05f281f06a4a645f654c0577ec613e814b22103f120fd777951fb620329b67f6c73cb339f45ae29e3ae91defad4ef82ea1484e553aeffffffff01a0f17b01000000001976a9148248fd427b579eccad53c7e30b2aa5f9a2578d3188ac00000000
+  7fa6a7319a107a2330a5bce181995555bcb23f4537a8c034e0ae5619e8766903
 
 Again, this transaction can be traced in a block explorer. And the
 seller is happy to receive his coins at his public address as follows.
@@ -443,9 +435,9 @@ Seller::
   seller@dash:~$ ./dash-cli listtransactions "*" 1
   [
     {
-      "address": "yep4BUesW2zD2RV9QwTrxyxSwTWuVanreh",
+      "address": "yYCL8XUL91NSmMnrnnsmZBzZAhdLy98Css",
       "parent_descs": [
-        "pkh(tpubD6NzVbkrYhZ4WzsaLtjcxHB8kgGgw2KX6cw4LRaE8wcLneLMcL33rqkwoHduGo3uLmfdrAfXAxetDNVNMFd6BgFGAqmTVieEoBjFQ7iLu3n/44h/1h/0h/0/*)#a3z879y6"
+        "pkh(tpubD6NzVbkrYhZ4YA2qLALX5PodFkNBgFfFi4VAtSgkqDbhQFmXAN5NeZEPCQMQ1MeokxEqwKHmDf6tNFDxHbH6thUysbw6kLhARXyH9TT6BAF/44h/1h/0h/0/*)#w7rzhmdr"
       ],
       "category": "receive",
       "amount": 0.24900000,
@@ -456,15 +448,15 @@ Seller::
       "instantlock": false,
       "instantlock_internal": false,
       "chainlock": false,
-      "blockhash": "7cd1da7343415271f3e633ec46fc37124d31f1f25bdf44fe03a1dbd16b5be035",
-      "blockheight": 112,
+      "blockhash": "15f820de30e19d2a250f037a69adf606e3646279feac7cd22f5aee4dcabafaf8",
+      "blockheight": 104,
       "blockindex": 1,
-      "blocktime": 1794954791,
-      "txid": "29f50fec1298ee5664f5433f4592804dbe70af6c898d8a94d8a0e8dc8ece39d1",
+      "blocktime": 1767273600,
+      "txid": "7fa6a7319a107a2330a5bce181995555bcb23f4537a8c034e0ae5619e8766903",
       "walletconflicts": [
       ],
-      "time": 1794954771,
-      "timereceived": 1794954771
+      "time": 1767273450,
+      "timereceived": 1767273450
     }
   ]
 

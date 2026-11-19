@@ -4,6 +4,7 @@ This directory contains tools that run Dash Core examples from the docs on a rea
 
 * `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
 * `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
+* `capture-multisig-example.sh` regenerates the multisig example in the [Dash Core advanced topics](../../docs/user/wallets/dashcore/advanced.rst) page (see [Multisig Example](#multisig-example)).
 
 ## Overview
 
@@ -112,3 +113,24 @@ DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorial
 It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26671`), and `RPC_PORT` (default `26672`) variables as `capture-rest-examples.sh`. Legacy wallets need Dash Core built with Berkeley DB support, which the release binaries include.
 
 The output is not deterministic: the wallet creates new keys on every run, so addresses, keys, and TXIDs change. When you refresh a tutorial page, paste the output from a single run so that values the text refers to later (TXIDs, addresses, and amounts) stay consistent.
+
+## Multisig Example
+
+`capture-multisig-example.sh` starts a fresh, isolated regtest node, creates descriptor wallets named `seller`, `buyer`, and `arbiter` (and a `miner` wallet that mines the blocks), funds the buyer, and runs the commands from the Multisignature section of the [Dash Core advanced topics](../../docs/user/wallets/dashcore/advanced.rst) page in order: create the three addresses, create the 2-of-3 multisig address, fund it, and spend it with a PSBT that the seller and buyer each sign.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/multisig ./capture-multisig-example.sh
+```
+
+It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26681`), and `RPC_PORT` (default `26682`) variables as `capture-rest-examples.sh`. `OUT_DIR` must not hold output from an earlier run. The script fails if any command returns an error or the PSBT is not complete after the second signature.
+
+Each command and its output go to a numbered file (`NN-<party>-<rpc>.txt`) whose first line is the command as the page shows it. `multisig-example.rst` has every literal block from the page, in page order, with the `<party>@dash:~$ ./dash-cli` prompts and the same trimming as the page (`vin` and the raw `hex` in the `getrawtransaction` output become `[...]`). Each block starts with an RST comment naming its step, which is not part of the page.
+
+**Rule:** Examples in the Multisignature section come from this script. Do not hand-edit them; change the script and regenerate instead.
+
+Running the script twice with the same Dash Core build produces identical output:
+
+* Each wallet comes from the BIP39 test mnemonic (`abandon abandon ... about`, also used by `scripts/dash-qt-screenshots`) with the wallet's name as the mnemonic passphrase. These keys are public; never use them on mainnet or testnet.
+* The node starts with `-mocktime`, and each block is mined after `setmocktime` advances the clock by 150 seconds (block 1 is at `1767225600`, 2026-01-01 UTC). Before step 1 the clock jumps 9 hours ahead.
+* The wallet makes two random choices when it sends, and the buyer's `sendtoaddress` in step 3 avoids both. The buyer's only coin is 0.250005 DASH, so the payment leaves no change output to place at a random position. The tip is more than 8 hours old when the buyer sends, so the wallet sets the locktime to 0 instead of the tip height, which it sometimes lowers at random. The script fails if the funding transaction has a change output or a nonzero locktime.
+* The setup transaction that pays the buyer's coin is a raw transaction with fixed inputs and outputs, and all signatures are deterministic (RFC 6979).
