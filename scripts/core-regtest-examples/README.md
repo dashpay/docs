@@ -4,6 +4,7 @@ This directory contains tools that run Dash Core examples from the docs on a rea
 
 * `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
 * `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
+* `run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work (see [Wallet Recovery Checks](#wallet-recovery-checks)).
 
 ## Overview
 
@@ -112,3 +113,15 @@ DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorial
 It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26671`), and `RPC_PORT` (default `26672`) variables as `capture-rest-examples.sh`. Legacy wallets need Dash Core built with Berkeley DB support, which the release binaries include.
 
 The output is not deterministic: the wallet creates new keys on every run, so addresses, keys, and TXIDs change. When you refresh a tutorial page, paste the output from a single run so that values the text refers to later (TXIDs, addresses, and amounts) stay consistent.
+
+## Wallet Recovery Checks
+
+`run-wallet-recovery-checks.sh` runs the wallet backup, restore, and recovery commands from the user docs (the Dash Core advanced, backup, and interface pages, and the recovery and paper wallet pages) on a fresh regtest node and checks that they still work the way the pages describe. Run it for each new Dash Core release. A failed check means a documented command changed.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" ./run-wallet-recovery-checks.sh
+```
+
+`DASH_BIN` must contain `dashd`, `dash-cli`, and `dash-wallet` built with Berkeley DB support, as the release binaries are. The script header describes the optional `OUT_DIR`, `DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables.
+
+The script never deletes anything. Each run creates a new, private temp directory (about 30 MB), and a given `OUT_DIR` or `DATADIR` must not exist. In that directory, `checks.txt` lists each check as `PASS` or `FAIL`, the numbered files hold each command and its output, and `datadir/` keeps the wallets for inspection.
