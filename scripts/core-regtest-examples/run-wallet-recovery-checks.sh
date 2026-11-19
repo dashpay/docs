@@ -419,6 +419,9 @@ check "salvaged wallet loads" ok salvage-loadwallet
 check "salvaged wallet keeps the imported keys' funds after a rescan" same "$(balance import-legacy)" "$KEY_BALANCE"
 cli -rpcwallet=import-legacy walletpassphrase "$WALLET_PASSPHRASE" 600
 check "salvaged wallet keeps the HD mnemonic" same "$(cli -rpcwallet=import-legacy dumphdinfo | jq_py 'd["mnemonic"]')" "$HD_BEFORE"
+# Salvage keeps only key, ckey, mkey, and hdchain records (src/wallet/salvage.cpp),
+# not hdpubkey, so an HD legacy wallet loses its derived addresses. Not a
+# docs claim, so it is a note, not a check.
 if ! ismine import-legacy "$HD_ADDR_BEFORE"; then
   note "salvage drops HD-derived addresses (hdpubkey records); $HD_ADDR_BEFORE is no longer in the salvaged wallet. Restore the mnemonic to recover their funds."
 fi

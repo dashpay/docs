@@ -116,51 +116,12 @@ The output is not deterministic: the wallet creates new keys on every run, so ad
 
 ## Wallet Recovery Checks
 
-`run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work with a Dash Core build. Those pages show commands to type but no output, so the script captures no examples. It runs each command as the pages give it on a fresh, isolated regtest node, checks the result, and exits non-zero if any check fails. Run it when a new Dash Core release comes out. A failure usually means the release changed a command the docs rely on.
+`run-wallet-recovery-checks.sh` runs the wallet backup, restore, and recovery commands from the user docs (the Dash Core advanced, backup, and interface pages, and the recovery and paper wallet pages) on a fresh regtest node and checks that they still work the way the pages describe. Run it for each new Dash Core release. A failed check means a documented command changed.
 
 ```bash
-# Each run writes to a new temp directory
 DASH_BIN="$HOME/code/dash/src" ./run-wallet-recovery-checks.sh
-
-# Choose the output directory; it must be empty or not exist
-DASH_BIN="$HOME/dashcore-24.0.0/bin" OUT_DIR=/tmp/wallet-recovery-24.0.0 ./run-wallet-recovery-checks.sh
 ```
 
-`DASH_BIN` must also contain `dash-wallet`. The legacy wallet checks need Dash Core built with Berkeley DB support, which the release binaries include. A run takes about 15 seconds.
+`DASH_BIN` must contain `dashd`, `dash-cli`, and `dash-wallet` built with Berkeley DB support, as the release binaries are. The script header describes the optional `OUT_DIR`, `DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables.
 
-**Configuration via Environment Variables**:
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `DASH_BIN` | (required) | Directory containing `dashd`, `dash-cli`, and `dash-wallet` |
-| `OUT_DIR` | New temp dir | Where output is written. Must be empty or not exist |
-| `DATADIR` | `OUT_DIR/datadir` | Node data directory. Must be empty or not exist |
-| `P2P_PORT` | `26701` | P2P port (the node does not listen, but the port is set explicitly) |
-| `RPC_PORT` | `26702` | RPC port |
-
-The script never deletes anything. It refuses to run in a non-empty `OUT_DIR` or `DATADIR`, so it cannot overwrite earlier output or touch an existing wallet. On exit it stops the node and keeps every file, so you can inspect the wallets after a failed check. Delete the run's directory when you no longer need it. A run uses about 30 MB, most of it the datadir.
-
-What it checks:
-
-| Page | Checks |
-|------|--------|
-| [advanced.rst](../../docs/user/wallets/dashcore/advanced.rst), Restore HD wallet | `createwallet "name" false true "password"` and `upgradetohd "mnemonic" "mnemonic passphrase" "wallet passphrase"`, with and without a wallet password and with a mnemonic passphrase. The first `getnewaddress` must be `yRd4FhXfVGHXpsuZXPNkMrfD9GVj46pnjt` for the BIP39 test mnemonic (`abandon ... about`), or `ya4hijmdfG9gtJHZoDWhedMYT8da2e3zu5` with the mnemonic passphrase `TREZOR`. The same restore into a legacy wallet. Mnemonic passphrases are limited to 248 bytes, or 256 bytes with `-allow-deprecated-long-mnemonics` (the node restarts for this check) |
-| advanced.rst, View HD wallet information | `listdescriptors true` shows `mnemonic` and `mnemonicpassphrase`, and needs `walletpassphrase` on an encrypted wallet. `dumphdinfo` works on a legacy wallet and fails on a descriptor wallet |
-| advanced.rst, Upgrade to HD | `upgradetohd "" "" <walletpassphrase>` gives a legacy non-HD wallet a new mnemonic and encrypts it, and fails on a descriptor wallet |
-| advanced.rst, Migrate wallet | `migratewallet` on an encrypted legacy wallet needs the passphrase, keeps the wallet name, balance, addresses, and mnemonic, moves watch-only addresses to `<name>_watchonly`, and leaves a `.legacy.bak` backup in the wallet's directory |
-| [recovery.rst](../../docs/user/wallets/recovery.rst), [paper.rst](../../docs/user/wallets/paper.rst) | On a descriptor wallet, `getdescriptorinfo "pkh(<WIF>)"` then `importdescriptors '[{"desc": "pkh(<WIF>)#<checksum>", "timestamp": 0}]'` imports a funded key and its balance appears; `importprivkey` fails. On a legacy wallet, `importprivkey <WIF>` does the same; `importdescriptors` fails. Both an uncompressed key (like the example on recovery.rst) and a compressed key are imported |
-| [backup.rst](../../docs/user/wallets/dashcore/backup.rst) | `backupwallet` then `restorewallet`, for a descriptor and a legacy wallet, and copying `wallet.dat` of an unloaded wallet into a new wallet directory, give a wallet with the same balance and addresses. Loading a legacy wallet creates an automatic backup in `backups/`; loading a descriptor wallet does not |
-| [interface.rst](../../docs/user/wallets/dashcore/interface.rst), salvage note | `dash-wallet -wallet=<name> salvage` and `-wallet=<name>/wallet.dat salvage` on a legacy wallet write `wallet.dat.<timestamp>.bak`, and the salvaged wallet loads with its imported keys' funds and its mnemonic. Salvage fails on a descriptor wallet |
-
-All keys are public and regtest-only: the BIP39 test mnemonic, and a private key that is the SHA-256 hash of `dash-docs regtest paper wallet`. Never use them on mainnet or testnet.
-
-Output in `OUT_DIR`:
-
-* `NN-<step>.txt` - each command (first line, starting with `$`), its output, and an `exit=<status>` line. Commands that only set up the test (mining, funding) are not saved
-* `checks.txt` - one `PASS` or `FAIL` line per check, grouped by page, plus `NOTE` lines
-* `version.txt` - `dashd -version` first line
-* `datadir/` - the node's data directory with all the test wallets (unless `DATADIR` is set)
-
-The run is not deterministic: the node runs on the real clock and the miner wallet gets new keys each run, so TXIDs and the miner's addresses change. The checked addresses and balances are the same on every run.
-
-`dash-wallet salvage` keeps only private key, encryption key, and HD chain records. On an HD legacy wallet it keeps the mnemonic and imported keys but drops the HD-derived addresses, so their funds do not show up until the mnemonic is restored. The script records this in a `NOTE` line instead of a check.
+The script never deletes anything. Each run writes to a new temp directory (about 30 MB), and a given `OUT_DIR` or `DATADIR` must be empty or not exist. In that directory, `checks.txt` lists each check as `PASS` or `FAIL`, the numbered files hold each command and its output, and `datadir/` keeps the wallets for inspection.
