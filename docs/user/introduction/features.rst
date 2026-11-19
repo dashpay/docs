@@ -620,8 +620,8 @@ As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
 US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
-1/50th of a cent. InstantSend locking will be attempted on all transactions
-without any extra charge.
+1/50th of a cent. InstantSend locking will be attempted without any extra
+charge.
 
 :ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01
 and 0.001 DASH and then creating CoinJoin transactions with other users
