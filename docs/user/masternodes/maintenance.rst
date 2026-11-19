@@ -29,6 +29,10 @@ using the legacy dashman installer, see the legacy update documentation
 Manual update
 -------------
 
+Major releases can be mandatory and can change configuration requirements,
+so read the `release notes <https://github.com/dashpay/dash/releases/latest>`__
+before upgrading.
+
 To update Dash manually, log in to your server using ssh or PuTTY. If
 your crontab contains an entry to automatically restart dashd, invoke
 ``crontab -e`` and comment out the appropriate line by adding the ``#``
@@ -216,14 +220,11 @@ button, or from Dash Core using the following syntax::
 
 Where:
 
-.. note::
-  
-  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
-
-
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``coreP2PAddrs``: Array of masternode address(es), in the format 
-  ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format
+  ``x.x.x.x:yyyy``. A single address string is also accepted. On mainnet,
+  the first address must be an IPv4 address using port 9999. Private
+  (RFC 1918) addresses are rejected.
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``operatorPayoutAddress`` (optional): The address used for operator 
@@ -258,19 +259,21 @@ button, or from Dash Core using the following syntax::
 
 Where:
 
-.. note::
-  
-  As of Dash Core v23.0, ``coreP2PAddrs``, ``platformP2PAddrs``, and ``platformHTTPSAddrs``
-  fields accept backwards-compatible input.
-
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``coreP2PAddrs``: Array of masternode address(es), in the format 
-  ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format
+  ``x.x.x.x:yyyy``. A single address string is also accepted. On mainnet,
+  the first address must be an IPv4 address using port 9999. Private
+  (RFC 1918) addresses are rejected.
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
-- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for peer-to-peer connection (must include 26656 for mainnet). Must be unique on the network.
-- ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for their HTTPS API (must include 443 for mainnet). Must be unique on the network.
+- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT", or a bare port number such as
+  ``26656``, used by Platform for peer-to-peer connection. On mainnet, the first entry must use
+  port 26656 and the same IPv4 address as the first ``coreP2PAddrs`` entry. Must be unique on the
+  network.
+- ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT", or a bare port number such as
+  ``443``, used by Platform for their HTTPS API. On mainnet, the first entry must use port 443 and
+  the same IPv4 address as the first ``coreP2PAddrs`` entry. Must be unique on the network.
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
@@ -369,7 +372,12 @@ with the current consensus rules, it will receive a :ref:`Proof of Service Ban <
 If your masternode is in the ``POSE_BANNED`` status, you should check
 the following settings are configured correctly:
 
-- Ensure you are running the :ref:`latest version of Dash <masternode-update>`
+- Ensure you are running the :ref:`latest version of Dash <masternode-update>`.
+  During DKG, quorum members vote against a masternode that runs an outdated
+  protocol version.
+- Ensure your masternode relays transactions (``blocksonly`` is not enabled)
+  and serves compact block filters to other masternodes. See the
+  :ref:`masternode requirements <masternode-config-requirements>`.
 - Ensure your masternode has sufficient memory, swap, processing power 
   and hard drive space
 - Ensure you are fully synced to the `correct blockheight <https://insight.dash.org/insight/>`__, 

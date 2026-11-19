@@ -292,13 +292,27 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``externalip``: this is the IP address of your VPS
 
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
+Leave the ``masternodeblsprivkey`` field commented out for now.
 
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
+.. _masternode-config-requirements:
 
-   Entering key data in dash.conf on the masternode
+Once you add the ``masternodeblsprivkey`` setting, Dash Core runs in masternode
+mode and refuses to start unless its settings meet the masternode requirements.
+The default values meet these requirements. If you set any of the following
+options in ``dash.conf``, make sure they match:
+
+- ``txindex=1``, ``peerbloomfilters=1`` and ``listen=1``
+- ``prune=0``
+- ``maxconnections`` set to at least 125
+- ``disablegovernance`` not set
+- ``blocksonly=0``, so the masternode relays transactions
+- ``peerblockfilters=1`` and ``blockfilterindex`` enabled, so the masternode
+  serves compact block filters. Masternode mode enables both unless you set
+  them.
+- ``maxuploadtarget=0``, so uploads are not limited
+- No transaction relay or mempool limit stricter than the default, such as a
+  smaller ``maxmempool``, a shorter ``mempoolexpiry`` or a higher
+  ``minrelaytxfee``
 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
 file. You can now start running Dash on the masternode to begin
@@ -401,11 +415,11 @@ private key generated above::
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
 the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
+masternode mode, and Dash Core refuses to start unless its settings meet
+the :ref:`masternode requirements <masternode-config-requirements>`. We
+now need to restart the masternode for this change to take effect.
+Enter the following commands, waiting a few seconds in between to give
+Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
@@ -715,15 +729,15 @@ created.
 If you are using a hosting service, they may provide you with their
 public key, and you can skip this step. If you are hosting your own
 masternode or have agreed to provide your host with the BLS private key,
-generate a BLS public/private keypair in Dash Core by clicking **Tools >
+generate a BLS public/private keypair in Dash Core by clicking **Window >
 Console** and entering the following command::
 
   bls generate
 
   {
-    "secret": "395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e",
-    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e",
-    "scheme": "legacy"
+    "secret": "6e075b1b372b239e28c9cba00fb5b4046ffb67f4d0b6588c9f81519b1592f559",
+    "public": "949c23ec884541fef11718c2341843b7cabca10e3ebbf38f6cd250cfb363e32136f143b874e2ddb43f3310458970081e",
+    "scheme": "basic"
   }
 
 **These keys are NOT stored by the wallet and must be kept secure,
@@ -746,16 +760,16 @@ The editor appears with the existing masternode configuration. Add or
 uncomment this line in the file, replacing the key with your BLS private
 key generated above::
 
-  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
+  masternodeblsprivkey=6e075b1b372b239e28c9cba00fb5b4046ffb67f4d0b6588c9f81519b1592f559
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
 the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
+masternode mode, and Dash Core refuses to start unless its settings meet
+the :ref:`masternode requirements <masternode-config-requirements>`. We
+now need to restart the masternode for this change to take effect.
+Enter the following commands, waiting a few seconds in between to give
+Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
@@ -828,13 +842,12 @@ syntax::
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-.. note::
-  
-  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
-
 - ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
-- ``coreP2PAddrs``: Array of masternode address(es), in the format ``x.x.x.x:yyyy``
+- ``coreP2PAddrs``: Array of masternode address(es), in the format ``x.x.x.x:yyyy``. A single
+  address string is also accepted. The first address must be an IPv4 address using port 9999.
+  Private (RFC 1918) addresses are rejected. Enter ``""`` to register without an address and set it
+  later with a :ref:`ProUpServTx <dip3-update-service>`.
 - ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
 - ``operatorPubKey``: The BLS public key generated above (or provided by your hosting service)
 - ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for
@@ -857,11 +870,17 @@ Example (remove line breaks if copying)::
     1 
     '["45.76.230.239:19999"]' 
     yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip 
-    99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
+    949c23ec884541fef11718c2341843b7cabca10e3ebbf38f6cd250cfb363e32136f143b874e2ddb43f3310458970081e 
     yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg 
     0 
     yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN 
     yR83WsikBaBaNusTnHZf28kAcL8oVmp1TE
+
+.. TODO: Refresh this example for Dash Core 24: the tx hex and signMessage were
+   built with the earlier legacy-scheme operator key and an older ProRegTx version,
+   so they don't match the operator public key above. The register_submit example
+   below reuses the same tx hex. The example also uses testnet addresses and port
+   19999; a mainnet example needs X addresses and port 9999.
 
 Output::
 

@@ -38,8 +38,9 @@ four menus available:
 File
   The File menu is used to manage your wallet and messages.
 Settings
-  The Settings menu provides access to wallet encryption options and
-  general software settings.
+  The Settings menu provides access to wallet encryption options, the
+  wallet's recovery phrase (**Show Recovery Phrase…**) and general software
+  settings.
 Window
   The Window menu provides access to your wallet addresses, information on the
   network and other advanced functions.
@@ -143,6 +144,30 @@ passed, while a circular progress indicator indicates the number of
 confirmations. A lightning bolt indicates a transaction with an existing
 InstantSend lock.
 
+Besides sent, received and mined transactions, the Type column can show the
+following types. You can use the type filter above the table to show only one
+type of transaction.
+
+Masternode Registration and Masternode Update
+  A transaction that registers a masternode or updates a masternode
+  registration. The amount is the change in your wallet balance, which is
+  normally only the network fee. The **Masternode** filter shows both types.
+
+Asset Lock
+  A transaction that locks funds for use on Dash Platform. The amount is the
+  change in your wallet balance, including the network fee.
+
+Platform Transfer
+  A withdrawal of funds from Dash Platform to your wallet.
+
+Data Transaction
+  A transaction output that stores data instead of transferring funds.
+
+Dust Receive
+  A very small amount received from another wallet and locked by dust attack
+  protection (see the Options dialog's Wallet tab). To unlock it, right-click
+  the transaction and select **Unlock dust UTXO**.
+
 .. figure:: img/transactions.png
 
    The Transactions tab
@@ -166,8 +191,10 @@ The Masternodes Tab
 
 The Masternodes tab shows an overview of the masternodes currently
 registered on the Dash network. You can filter the data by entering a
-value in the Filter List field, or display only masternodes with owner
-keys stored in the loaded wallet.
+value in the Filter List field. Check **Owned** to display only
+masternodes the loaded wallet has keys for, such as the collateral, owner,
+voting or payout keys, or the keys of a share in a shared masternode.
+Check **Hide banned** to hide masternodes that are currently PoSe banned.
 
 The type filter can show all masternodes, or only regular masternodes,
 evonodes or shared masternodes. Click **Register Masternode…** to register a
@@ -279,6 +306,12 @@ The Options Dialog
 This documentation describes the functionality of the Dash Core Options
 dialog, available under the **Settings > Options** menu in Dash Core.
 
+Many options, such as pruning, proxy, CoinJoin and dust protection
+settings, are saved to the *settings.json* file in the data directory. They
+also apply when you run ``dashd`` and take precedence over the same
+settings in *dash.conf*. Options set on the command line take precedence
+over this dialog and are listed at the bottom of the dialog.
+
 Main tab
 --------
 
@@ -369,6 +402,13 @@ Enable coin control features
   different addresses in your wallet. See :ref:`here <coin-control>` for
   a more detailed explanation of Coin Control.
 
+Enable PSBT controls
+  Enabling this option adds a **Create Unsigned** button to the send
+  confirmation dialog. This creates a partially signed transaction (PSBT)
+  instead of sending the transaction, which you can save or copy and then
+  sign with, for example, an offline Dash Core wallet or a PSBT-compatible
+  hardware wallet.
+
 Keep custom change address
   Whether to keep the specified custom change address or not.
   
@@ -387,6 +427,28 @@ Enable CoinJoin features
   Core window and the Options dialog, and allows you to process and
   spend your balance using CoinJoin.
 
+Enable dust attack protection
+  Enabling this option automatically locks very small amounts received
+  from other wallets, which may be part of a dust attack intended to
+  link your addresses. Locked amounts are not spent together with your
+  other funds. Incoming amounts at or below the **Dust threshold** (in
+  duffs) are locked, and appear as **Dust Receive** on the
+  **Transactions** tab. To unlock an amount, right-click the transaction
+  on the **Transactions** tab and select **Unlock dust UTXO**. Locks
+  remain in place if you later lower the threshold or disable the
+  option, but the transaction then no longer appears as **Dust Receive**.
+  To unlock such an amount, use **Unlock unspent** in :ref:`Coin Control
+  <coin-control>`. This is the same setting as the
+  ``-dustprotectionthreshold`` command-line option.
+
+External signer script path
+  This experimental option allows Dash Core to use an external signing
+  device, such as a hardware wallet. Enter the full path to a compatible
+  signer script. Changing this option requires restarting Dash Core.
+  Only use scripts from a trusted source, since malware can steal your
+  funds. This option is not available in the Windows version of Dash
+  Core.
+
 CoinJoin tab
 ------------
 
@@ -401,7 +463,8 @@ functions in Dash Core.
 Enable advanced interface
   Enabling this option changes the interface on the Overview
   tab of the Dash Core wallet to include more information, such as the
-  remaining keys, percentage completion and current operation. See
+  remaining keys (legacy wallets only), percentage completion and current
+  operation. See
   :ref:`here <dashcore-coinjoin-instantsend>` for a full explanation
   of how to use CoinJoin.
 
@@ -411,11 +474,13 @@ Show popups for mixing transactions
 
 Warn if the wallet is running out of keys
   Enabling this option will cause Dash Core to display a warning when
-  your original set of 1000 addresses is running out, which may affect
-  CoinJoin processing. When 900 addresses are used, your wallet must
-  create more addresses. It can only do this if you have automatic
-  backups enabled. Consequently, users who have backups disabled will
-  also have CoinJoin disabled.
+  the original set of 1000 addresses in a legacy wallet is running out,
+  which may affect CoinJoin processing. When 900 addresses are used, a
+  legacy wallet must create more addresses. It can only do this if you
+  have automatic backups enabled. Descriptor wallets do not need
+  automatic backups for CoinJoin and do not show this warning. However,
+  if automatic backups are disabled (``-createwalletbackups=0``), Dash
+  Core disables CoinJoin on the Overview tab for all wallets.
 
 Enable multi-session
   Normally CoinJoin processing is completed in several consecutive
@@ -423,7 +488,7 @@ Enable multi-session
   multi-session, which means you can use multiple masternode servers at
   the same time, greatly increasing the speed of the CoinJoin process at
   the cost of creating more addresses and thus requiring more frequent
-  wallet backups.
+  backups of legacy wallets.
 
 Mixing rounds
   Use this option to control the number of rounds of CoinJoin to be
@@ -556,6 +621,10 @@ Font Family
 
 Font Scale and Weight
   These options control the size and weight of fonts in the window.
+
+Font in the Overview tab
+  This option allows you to select a different font to display the
+  balances on the Overview tab.
 
 The Tools Dialog
 ================
@@ -692,40 +761,41 @@ that peer.
 
    The Peers tab of the Dash Core Tools dialog
 
-Wallet Repair tab
------------------
+Repair tab
+----------
 
-The Wallet Repair tab offers a range of startup commands to restore a
-wallet to a functional state. Selecting any of these commands will
-restart Dash Core with the specified command-line option.
+The Repair tab offers a range of commands to restore a wallet to a
+functional state. The rescan commands run without restarting Dash Core and
+apply to the wallet shown at the top of the tab. If more than one wallet is
+loaded, select the wallet in the **Wallet** dropdown on the Console tab.
 
 .. figure:: img/tools-wallet-repair.png
    :scale: 50 %
 
-   The Wallet Repair tab of the Dash Core Tools dialog
+   The Repair tab of the Dash Core Tools dialog
 
-Rescan blockchain files 1
+Rescan Chain
   Rescans the already downloaded blockchain for any transactions affecting
-  accounts contained in the wallet. This may be necessary if you replace
-  your wallet.dat file with a different wallet or a backup - the wallet
-  logic will not know about these transactions, so a rescan is necessary
-  to determine balances.
+  accounts contained in the wallet, starting from the wallet creation time.
+  This may be necessary if you replace your wallet.dat file with a different
+  wallet or a backup - the wallet logic will not know about these
+  transactions, so a rescan is necessary to determine balances.
 
-Rescan blockchain files 2
-  Performs the same operation as *Rescan blockchain files 1* but scans from the
-  genesis block instead of the wallet creation time.
+Rescan Chain (full)
+  Performs the same operation as *Rescan Chain* but scans from the genesis
+  block instead of the wallet creation time.
 
-Rebuild index
-  Discards the current blockchain and chainstate indexes (the database of
-  unspent transaction outputs) and rebuilds it from existing block files.
-  This can be useful to recover missing or stuck balances.
+Rebuild Index
+  Restarts Dash Core, discards the current blockchain and chainstate indexes
+  (the database of unspent transaction outputs) and rebuilds it from existing
+  block files. This can be useful to recover missing or stuck balances.
 
 .. note::
-  The wallet salvage option was moved to the standalone dash-wallet
-  command-line application in Dash Core v18.0. Running dash-wallet
-  with the ``salvage`` command assumes the wallet file provide by
-  the ``-wallet`` parameter  is corrupted and cannot be read. It
-  makes a copy of the wallet file as <wallet name>.<date>.bak and
-  scans it to attempt to recover any private keys.
+  The wallet salvage option is available in the standalone dash-wallet
+  command-line application and only works with legacy wallets. Running
+  dash-wallet with the ``salvage`` command assumes the wallet provided by
+  the ``-wallet`` parameter is corrupted and cannot be read. It renames
+  the wallet file to *wallet.dat.<timestamp>.bak* and scans it to attempt
+  to recover any private keys into a new *wallet.dat* file.
 
-  Example: ``dash-wallet -wallet=mywallet/wallet.dat salvage``
+  Example: ``dash-wallet -wallet=mywallet salvage``

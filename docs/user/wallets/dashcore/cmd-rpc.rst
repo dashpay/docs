@@ -28,9 +28,7 @@ using the -datadir and -conf command-line arguments.
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 | macOS    | ~/Library/Application Support/ | /Users/username/Library/Application Support/DashCore/dash.conf                                |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
-| Windows  | %APPDATA%                      | (Vista-10) C:\\Users\\username\\AppData\\Roaming\\DashCore\\dash.conf                         |
-|          |                                |                                                                                               |
-|          |                                | (2000-XP) C:\\Documents and Settings\\username\\Application Data\\DashCore\\dash.conf         |
+| Windows  | %APPDATA%                      | C:\\Users\\username\\AppData\\Roaming\\DashCore\\dash.conf                                    |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 
 Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will
@@ -61,5 +59,5 @@ Detailed documentation for all available RPC commands is accessible via
 the :ref:`Dash Core developer documentation RPC page <api-rpc-quick-reference>`.
 For full documentation of arguments, results and examples, type 
 ``help ( "command" )`` to view full details at the console. You can enter
-commands either from **Tools > Console** in the QT wallet, or using
+commands either from **Window > Console** in the QT wallet, or using
 *dash-cli* for headless wallets and *dashd*.
