@@ -4,6 +4,7 @@ This directory contains tools that run Dash Core examples from the docs on a rea
 
 * `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
 * `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
+* `run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work (see [Wallet Recovery Checks](#wallet-recovery-checks)).
 
 ## Overview
 
@@ -112,3 +113,39 @@ DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/tutorials ./run-transaction-tutorial
 It takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26671`), and `RPC_PORT` (default `26672`) variables as `capture-rest-examples.sh`. Legacy wallets need Dash Core built with Berkeley DB support, which the release binaries include.
 
 The output is not deterministic: the wallet creates new keys on every run, so addresses, keys, and TXIDs change. When you refresh a tutorial page, paste the output from a single run so that values the text refers to later (TXIDs, addresses, and amounts) stay consistent.
+
+## Wallet Recovery Checks
+
+`run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work with a Dash Core build. Those pages show commands to type but no output, so the script captures no examples. It runs each command as the pages give it on a fresh, isolated regtest node, checks the result, and exits non-zero if any check fails. Run it when a new Dash Core release comes out. A failure usually means the release changed a command the docs rely on.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/wallet-recovery ./run-wallet-recovery-checks.sh
+```
+
+`DASH_BIN` must also contain `dash-wallet`. The script takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables as `capture-rest-examples.sh`. The legacy wallet checks need Dash Core built with Berkeley DB support, which the release binaries include. A run takes about 15 seconds.
+
+What it checks:
+
+| Page | Checks |
+|------|--------|
+| [advanced.rst](../../docs/user/wallets/dashcore/advanced.rst), Restore HD wallet | `createwallet "name" false true "password"` and `upgradetohd "mnemonic" "mnemonic passphrase" "wallet passphrase"`, with and without a wallet password and with a mnemonic passphrase. The first `getnewaddress` must be `yRd4FhXfVGHXpsuZXPNkMrfD9GVj46pnjt` for the BIP39 test mnemonic (`abandon ... about`), or `ya4hijmdfG9gtJHZoDWhedMYT8da2e3zu5` with the mnemonic passphrase `TREZOR`. The same restore into a legacy wallet. Mnemonic passphrases are limited to 248 bytes, or 256 bytes with `-allow-deprecated-long-mnemonics` (the node restarts for this check) |
+| advanced.rst, View HD wallet information | `listdescriptors true` shows `mnemonic` and `mnemonicpassphrase`, and needs `walletpassphrase` on an encrypted wallet. `dumphdinfo` works on a legacy wallet and fails on a descriptor wallet |
+| advanced.rst, Upgrade to HD | `upgradetohd "" "" <walletpassphrase>` gives a legacy non-HD wallet a new mnemonic and encrypts it, and fails on a descriptor wallet |
+| advanced.rst, Migrate wallet | `migratewallet` on an encrypted legacy wallet needs the passphrase, keeps the wallet name, balance, addresses, and mnemonic, moves watch-only addresses to `<name>_watchonly`, and leaves a `.legacy.bak` backup in the wallet's directory |
+| [recovery.rst](../../docs/user/wallets/recovery.rst), [paper.rst](../../docs/user/wallets/paper.rst) | On a descriptor wallet, `getdescriptorinfo "pkh(<WIF>)"` then `importdescriptors '[{"desc": "pkh(<WIF>)#<checksum>", "timestamp": 0}]'` imports a funded key and its balance appears; `importprivkey` fails. On a legacy wallet, `importprivkey <WIF>` does the same; `importdescriptors` fails. Both an uncompressed key (like the example on recovery.rst) and a compressed key are imported |
+| [backup.rst](../../docs/user/wallets/dashcore/backup.rst) | `backupwallet` then `restorewallet`, for a descriptor and a legacy wallet, and copying `wallet.dat` of an unloaded wallet into a new wallet directory, give a wallet with the same balance and addresses. Loading a legacy wallet creates an automatic backup in `backups/`; loading a descriptor wallet does not |
+| [interface.rst](../../docs/user/wallets/dashcore/interface.rst), salvage note | `dash-wallet -wallet=<name> salvage` and `-wallet=<name>/wallet.dat salvage` on a legacy wallet write `wallet.dat.<timestamp>.bak`, and the salvaged wallet loads with its imported keys' funds and its mnemonic. Salvage fails on a descriptor wallet |
+
+All keys are public and regtest-only: the BIP39 test mnemonic, and a private key that is the SHA-256 hash of `dash-docs regtest paper wallet`. Never use them on mainnet or testnet.
+
+Output in `OUT_DIR`:
+
+* `NN-<step>.txt` - each command (first line, starting with `$`), its output, and an `exit=<status>` line. Commands that only set up the test (mining, funding) are not saved
+* `checks.txt` - one `PASS` or `FAIL` line per check, grouped by page, plus `NOTE` lines
+* `version.txt` - `dashd -version` first line
+
+To look into a failing check, rerun with `KEEP_DATADIR=1` to keep the datadir and its wallets.
+
+The run is not deterministic: the node runs on the real clock and the miner wallet gets new keys each run, so TXIDs and the miner's addresses change. The checked addresses and balances are the same on every run.
+
+`dash-wallet salvage` keeps only private key, encryption key, and HD chain records. On an HD legacy wallet it keeps the mnemonic and imported keys but drops the HD-derived addresses, so their funds do not show up until the mnemonic is restored. The script records this in a `NOTE` line instead of a check.
