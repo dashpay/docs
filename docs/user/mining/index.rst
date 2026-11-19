@@ -102,12 +102,13 @@ address to receive your payout. To do this in Dash Core wallet, see
 
 .. note::
 
-   **Pool operators:** Pay each entry in the ``masternode`` and
-   ``superblock`` arrays returned by ``getblocktemplate`` with its own
-   coinbase output, in the order the template lists them, even when
-   entries have the same script and amount. A single masternode payment
-   can span several entries. Blocks that merge these payments into fewer
-   outputs are invalid. See :doc:`Block Prototypes
+   **Pool operators:** Starting with the Dash Core v24 hard fork, each
+   entry in the ``masternode`` and ``superblock`` arrays returned by
+   ``getblocktemplate`` must be paid by its own coinbase output, even
+   when entries have the same script and amount. A single masternode
+   payment can span several entries. Blocks that merge these payments
+   into fewer outputs are invalid. Create the outputs in the order the
+   template lists them. See :doc:`Block Prototypes
    </docs/core/guide/mining-block-prototypes>` for details.
 
 .. toctree::
