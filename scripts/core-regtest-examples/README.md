@@ -138,7 +138,7 @@ DASH_BIN="$HOME/dashcore-24.0.0/bin" OUT_DIR=/tmp/wallet-recovery-24.0.0 ./run-w
 | `P2P_PORT` | `26701` | P2P port (the node does not listen, but the port is set explicitly) |
 | `RPC_PORT` | `26702` | RPC port |
 
-Unlike the other scripts in this directory, this one never deletes anything. It refuses to run in a non-empty `OUT_DIR` or `DATADIR`, so it cannot overwrite earlier output or touch an existing wallet. On exit it stops the node and keeps every file, so you can inspect the wallets after a failed check. Delete the run's directory when you no longer need it. A run uses about 30 MB, most of it the datadir.
+The script never deletes anything. It refuses to run in a non-empty `OUT_DIR` or `DATADIR`, so it cannot overwrite earlier output or touch an existing wallet. On exit it stops the node and keeps every file, so you can inspect the wallets after a failed check. Delete the run's directory when you no longer need it. A run uses about 30 MB, most of it the datadir.
 
 What it checks:
 
