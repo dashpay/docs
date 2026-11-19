@@ -603,9 +603,9 @@ transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
 InstantSend autolocks, which caused masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removed the additional fee for
-InstantSend. 0.14.0.0 then removed the limitation on 4 inputs, so the
-network will attempt to lock all transactions. Masternode provider
-transactions are not locked. The current fee schedule
+InstantSend. 0.14.0.0 then removed the limitation on 4 inputs. The
+network now attempts to lock all transactions except masternode provider
+transactions. The current fee schedule
 for Dash is as follows:
 
 +------------------------+------------------+-------------------------------------+
