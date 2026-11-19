@@ -378,7 +378,8 @@ of a descriptor containing the key::
   getdescriptorinfo "pkh(7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp)"
 
 Copy the value of the ``checksum`` field from the result. Then import the
-key by typing the following, replacing ``ywcdk0k6`` with your checksum::
+key by typing the following, replacing the example private key with your key
+and ``ywcdk0k6`` with your checksum::
 
   importdescriptors '[{"desc": "pkh(7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp)#ywcdk0k6", "timestamp": 0}]'
 
@@ -394,7 +395,9 @@ key by typing the following, replacing ``ywcdk0k6`` with your checksum::
 Dash Core will rescan the blockchain for transactions involving the
 public address of this key and enter the transactions and balance in
 your wallet. A ``timestamp`` of ``0`` scans the entire blockchain, so this
-may take some time. If you are using a legacy wallet, import the key with
+may take some time. The console keeps the commands you enter, including your
+private key, in its history until you close Dash Core, so restart Dash Core
+once the import finishes. If you are using a legacy wallet, import the key with
 ``importprivkey <your private key in WIF>`` instead.
 
 The private key must be in wallet import format (WIF). If your key is

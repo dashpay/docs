@@ -233,7 +233,9 @@ following command to import the key::
 
   importdescriptors '[{"desc": "pkh(<your private key in WIF>)#<checksum>", "timestamp": 0}]'
 
-If you are using a legacy wallet, enter
+The console keeps the commands you enter, including your private key, in
+its history until you close Dash Core, so restart Dash Core once the
+import finishes. If you are using a legacy wallet, enter
 ``importprivkey <your private key in WIF>`` instead.
 
 .. figure:: img/paper-import.png
