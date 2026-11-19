@@ -23,18 +23,23 @@
 #                  "exit=<status>" line
 #   checks.txt     One PASS or FAIL line per check, plus NOTE lines
 #   version.txt    dashd -version first line
+#   datadir/       The node's data directory, with all test wallets
+#
+# The script never deletes anything. Each run writes to a new directory,
+# which is kept so the wallets can be inspected after a failed check. Delete
+# it when you no longer need it.
 #
 # Usage:
 #   DASH_BIN=/path/to/dash/src ./run-wallet-recovery-checks.sh
 #
 # Overrides (environment variables):
 #   DASH_BIN   Directory containing dashd, dash-cli and dash-wallet (required)
-#   OUT_DIR    Where to write command output (default: new temp dir)
+#   OUT_DIR    Where to write command output; must be empty or not exist
+#              (default: new temp dir)
 #   DATADIR    Node data directory; must be empty or not exist
-#              (default: new temp dir, removed on exit)
+#              (default: OUT_DIR/datadir)
 #   P2P_PORT   P2P port (default: 26701; the node runs with -listen=0)
 #   RPC_PORT   RPC port (default: 26702)
-#   KEEP_DATADIR=1  Keep DATADIR after the run (default: remove a temp DATADIR)
 #
 # Dependencies: bash, python3. The legacy wallet checks need Dash Core built
 # with Berkeley DB support (release binaries are).
@@ -46,7 +51,6 @@ set -Eeuo pipefail
 DASHD="$DASH_BIN/dashd"
 CLI_BIN="$DASH_BIN/dash-cli"
 WALLET_BIN="$DASH_BIN/dash-wallet"
-OUT_DIR="${OUT_DIR:-$(mktemp -d -t dash-wallet-recovery-checks.XXXXXX)}"
 P2P_PORT="${P2P_PORT:-26701}"
 RPC_PORT="${RPC_PORT:-26702}"
 
@@ -78,19 +82,23 @@ for bin in "$DASHD" "$CLI_BIN" "$WALLET_BIN"; do
 done
 command -v python3 >/dev/null || { echo "error: python3 is required" >&2; exit 1; }
 
-TEMP_DATADIR=0
-if [[ -z "${DATADIR:-}" ]]; then
-  DATADIR="$(mktemp -d -t dash-wallet-recovery-datadir.XXXXXX)"
-  TEMP_DATADIR=1
-elif [[ -e "$DATADIR" && -n "$(ls -A "$DATADIR")" ]]; then
-  echo "error: DATADIR must be empty or not exist: $DATADIR" >&2
-  exit 1
-fi
+# The script deletes nothing, so it only writes to new or empty directories:
+# it never mixes with earlier output or touches existing wallets
+# require_empty <variable name> <dir>
+require_empty() {
+  if [[ -e "$2" ]] && { [[ ! -d "$2" ]] || [[ -n "$(ls -A "$2")" ]]; }; then
+    echo "error: $1 must be an empty directory or not exist: $2" >&2
+    exit 1
+  fi
+}
+# Check both before creating anything, so a refused run leaves nothing behind
+[[ -z "${OUT_DIR:-}" ]] || require_empty OUT_DIR "$OUT_DIR"
+[[ -z "${DATADIR:-}" ]] || require_empty DATADIR "$DATADIR"
+OUT_DIR="${OUT_DIR:-$(mktemp -d -t dash-wallet-recovery-checks.XXXXXX)}"
+DATADIR="${DATADIR:-$OUT_DIR/datadir}"
 mkdir -p "$DATADIR" "$OUT_DIR"
 # Dash Core reports absolute paths (migratewallet backup_path)
 DATADIR="$(cd "$DATADIR" && pwd)"
-# Drop output from an earlier run so checks.txt and the step files match
-rm -f "$OUT_DIR"/[0-9][0-9]-*.txt "$OUT_DIR/checks.txt"
 WALLETS_DIR="$DATADIR/regtest/wallets"
 BACKUPS_DIR="$DATADIR/regtest/backups"
 
@@ -110,14 +118,12 @@ stop_node() {
   done
   return 1
 }
+# On exit, stop the node but keep all files
 cleanup() {
   if [[ "$NODE_STARTED" == 1 ]] && ! stop_node; then
-    echo "warning: dashd did not stop; leaving datadir $DATADIR in place" >&2
-    return
+    echo "warning: dashd did not stop; stop it before deleting $DATADIR" >&2
   fi
-  if [[ "$TEMP_DATADIR" == 1 && "${KEEP_DATADIR:-0}" != 1 ]]; then
-    rm -rf "$DATADIR"
-  fi
+  echo "kept: output in $OUT_DIR, datadir in $DATADIR (delete them when done)"
 }
 trap cleanup EXIT
 # Setup commands (not logged steps) abort the run if they fail. Report the

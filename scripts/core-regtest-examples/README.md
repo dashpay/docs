@@ -119,10 +119,26 @@ The output is not deterministic: the wallet creates new keys on every run, so ad
 `run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work with a Dash Core build. Those pages show commands to type but no output, so the script captures no examples. It runs each command as the pages give it on a fresh, isolated regtest node, checks the result, and exits non-zero if any check fails. Run it when a new Dash Core release comes out. A failure usually means the release changed a command the docs rely on.
 
 ```bash
-DASH_BIN="$HOME/code/dash/src" OUT_DIR=/tmp/wallet-recovery ./run-wallet-recovery-checks.sh
+# Each run writes to a new temp directory
+DASH_BIN="$HOME/code/dash/src" ./run-wallet-recovery-checks.sh
+
+# Choose the output directory; it must be empty or not exist
+DASH_BIN="$HOME/dashcore-24.0.0/bin" OUT_DIR=/tmp/wallet-recovery-24.0.0 ./run-wallet-recovery-checks.sh
 ```
 
-`DASH_BIN` must also contain `dash-wallet`. The script takes the same `DASH_BIN`, `OUT_DIR`, `DATADIR`, `KEEP_DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables as `capture-rest-examples.sh`. The legacy wallet checks need Dash Core built with Berkeley DB support, which the release binaries include. A run takes about 15 seconds.
+`DASH_BIN` must also contain `dash-wallet`. The legacy wallet checks need Dash Core built with Berkeley DB support, which the release binaries include. A run takes about 15 seconds.
+
+**Configuration via Environment Variables**:
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `DASH_BIN` | (required) | Directory containing `dashd`, `dash-cli`, and `dash-wallet` |
+| `OUT_DIR` | New temp dir | Where output is written. Must be empty or not exist |
+| `DATADIR` | `OUT_DIR/datadir` | Node data directory. Must be empty or not exist |
+| `P2P_PORT` | `26701` | P2P port (the node does not listen, but the port is set explicitly) |
+| `RPC_PORT` | `26702` | RPC port |
+
+Unlike the other scripts in this directory, this one never deletes anything. It refuses to run in a non-empty `OUT_DIR` or `DATADIR`, so it cannot overwrite earlier output or touch an existing wallet. On exit it stops the node and keeps every file, so you can inspect the wallets after a failed check. Delete the run's directory when you no longer need it. A run uses about 30 MB, most of it the datadir.
 
 What it checks:
 
@@ -143,8 +159,7 @@ Output in `OUT_DIR`:
 * `NN-<step>.txt` - each command (first line, starting with `$`), its output, and an `exit=<status>` line. Commands that only set up the test (mining, funding) are not saved
 * `checks.txt` - one `PASS` or `FAIL` line per check, grouped by page, plus `NOTE` lines
 * `version.txt` - `dashd -version` first line
-
-To look into a failing check, rerun with `KEEP_DATADIR=1` to keep the datadir and its wallets.
+* `datadir/` - the node's data directory with all the test wallets (unless `DATADIR` is set)
 
 The run is not deterministic: the node runs on the real clock and the miner wallet gets new keys each run, so TXIDs and the miner's addresses change. The checked addresses and balances are the same on every run.
 
