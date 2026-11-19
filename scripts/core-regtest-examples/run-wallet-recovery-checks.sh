@@ -25,18 +25,18 @@
 #   version.txt    dashd -version first line
 #   datadir/       The node's data directory, with all test wallets
 #
-# The script never deletes anything. Each run writes to a new directory,
-# which is kept so the wallets can be inspected after a failed check. Delete
-# it when you no longer need it.
+# The script never deletes anything. Each run creates a new, private
+# directory, which is kept so the wallets can be inspected after a failed
+# check. Delete it when you no longer need it.
 #
 # Usage:
 #   DASH_BIN=/path/to/dash/src ./run-wallet-recovery-checks.sh
 #
 # Overrides (environment variables):
 #   DASH_BIN   Directory containing dashd, dash-cli and dash-wallet (required)
-#   OUT_DIR    Where to write command output; must be empty or not exist
+#   OUT_DIR    Where to write command output; must not exist
 #              (default: new temp dir)
-#   DATADIR    Node data directory; must be empty or not exist
+#   DATADIR    Node data directory; must not exist
 #              (default: OUT_DIR/datadir)
 #   P2P_PORT   P2P port (default: 26701; the node runs with -listen=0)
 #   RPC_PORT   RPC port (default: 26702)
@@ -45,6 +45,8 @@
 # with Berkeley DB support (release binaries are).
 #
 set -Eeuo pipefail
+# Everything the script creates is readable by the current user only
+umask 077
 
 # ---- Config ------------------------------------------------------------------
 : "${DASH_BIN:?set DASH_BIN to the directory containing dashd, dash-cli and dash-wallet}"
@@ -82,21 +84,32 @@ for bin in "$DASHD" "$CLI_BIN" "$WALLET_BIN"; do
 done
 command -v python3 >/dev/null || { echo "error: python3 is required" >&2; exit 1; }
 
-# The script deletes nothing, so it only writes to new or empty directories:
-# it never mixes with earlier output or touches existing wallets
-# require_empty <variable name> <dir>
-require_empty() {
-  if [[ -e "$2" ]] && { [[ ! -d "$2" ]] || [[ -n "$(ls -A "$2")" ]]; }; then
-    echo "error: $1 must be an empty directory or not exist: $2" >&2
+# The script deletes nothing, so it only writes to directories it creates:
+# it never mixes with earlier output or touches existing wallets. Each
+# directory is created with a plain mkdir, which fails if anything (a
+# directory, file, or symlink) is already at that path.
+# refuse_existing <variable name> <path>
+refuse_existing() {
+  if [[ -e "$2" || -L "$2" ]]; then
+    echo "error: $1 must not exist: $2" >&2
     exit 1
   fi
 }
+# make_new_dir <variable name> <path> - create the directory, not its parents
+make_new_dir() {
+  mkdir -p -- "$(dirname -- "$2")"
+  mkdir -- "$2" 2>/dev/null || { echo "error: $1 must not exist: $2" >&2; exit 1; }
+}
 # Check both before creating anything, so a refused run leaves nothing behind
-[[ -z "${OUT_DIR:-}" ]] || require_empty OUT_DIR "$OUT_DIR"
-[[ -z "${DATADIR:-}" ]] || require_empty DATADIR "$DATADIR"
-OUT_DIR="${OUT_DIR:-$(mktemp -d -t dash-wallet-recovery-checks.XXXXXX)}"
+[[ -z "${OUT_DIR:-}" ]] || refuse_existing OUT_DIR "$OUT_DIR"
+[[ -z "${DATADIR:-}" ]] || refuse_existing DATADIR "$DATADIR"
+if [[ -z "${OUT_DIR:-}" ]]; then
+  OUT_DIR="$(mktemp -d -t dash-wallet-recovery-checks.XXXXXX)"
+else
+  make_new_dir OUT_DIR "$OUT_DIR"
+fi
 DATADIR="${DATADIR:-$OUT_DIR/datadir}"
-mkdir -p "$DATADIR" "$OUT_DIR"
+make_new_dir DATADIR "$DATADIR"
 # Dash Core reports absolute paths (migratewallet backup_path)
 DATADIR="$(cd "$DATADIR" && pwd)"
 WALLETS_DIR="$DATADIR/regtest/wallets"
@@ -359,10 +372,14 @@ check "importdescriptors fails on a legacy wallet" fails import-legacy-importdes
 # ---- Backup and restore (backup.rst) -----------------------------------------
 section "Backup and restore (backup.rst)"
 mkdir -p "$DATADIR/manual-backups"
-# same_wallet <a> <b> - same balance, same address book, same next address
-same_wallet() {
+# same_funds <a> <b> - same balance and address book (a failed lookup fails)
+same_funds() {
   same "$(balance "$1")" "$(balance "$2")" &&
-    same "$(addresses "$1")" "$(addresses "$2")" &&
+    same "$(addresses "$1")" "$(addresses "$2")"
+}
+# same_wallet <a> <b> - same_funds, and the same next address
+same_wallet() {
+  same_funds "$1" "$2" &&
     same "$(cli -rpcwallet="$1" getnewaddress)" "$(cli -rpcwallet="$2" getnewaddress)"
 }
 log backup-backupwallet cli -rpcwallet=backup-source backupwallet "$DATADIR/manual-backups/backup-source.dat"
@@ -374,17 +391,22 @@ check "restored backup has the same balance and addresses (descriptor wallet)" s
 # Backup by copying wallet.dat while the wallet is not loaded, then restore
 # by putting the copy in place and loading it
 log copy-unloadwallet cli unloadwallet backup-source
-mkdir "$WALLETS_DIR/backup-copied"
-cp "$WALLETS_DIR/backup-source/wallet.dat" "$WALLETS_DIR/backup-copied/wallet.dat"
+check "unloadwallet before copying wallet.dat" ok copy-unloadwallet
+# Never copy a loaded wallet; the checks below then fail
+if ok copy-unloadwallet; then
+  mkdir "$WALLETS_DIR/backup-copied"
+  cp "$WALLETS_DIR/backup-source/wallet.dat" "$WALLETS_DIR/backup-copied/wallet.dat"
+fi
 log copy-loadwallet-source cli loadwallet backup-source
 log copy-loadwallet-copy cli loadwallet backup-copied
+check "original wallet loads again after the copy" ok copy-loadwallet-source
 check "copied wallet.dat loads" ok copy-loadwallet-copy
 check "copied wallet.dat has the same balance and addresses" same_wallet backup-source backup-copied
 
 log backup-legacy-backupwallet cli -rpcwallet=legacy backupwallet "$DATADIR/manual-backups/legacy.dat"
 log backup-legacy-restorewallet cli restorewallet legacy-restored "$DATADIR/manual-backups/legacy.dat"
 check "backupwallet and restorewallet (legacy wallet)" ok backup-legacy-restorewallet
-check "restored backup has the same balance and addresses (legacy wallet)" same "$(balance legacy)/$(addresses legacy)" "$(balance legacy-restored)/$(addresses legacy-restored)"
+check "restored backup has the same balance and addresses (legacy wallet)" same_funds legacy legacy-restored
 
 # Automatic backups: only legacy wallets, made when the wallet loads
 section "Automatic backups (backup.rst)"
@@ -427,7 +449,7 @@ if ! ismine import-legacy "$HD_ADDR_BEFORE"; then
 fi
 cli unloadwallet restore-plain >/dev/null
 log salvage-descriptor wallet_tool -wallet=restore-plain salvage
-check "salvage fails on a descriptor wallet" eval '! ok salvage-descriptor'
+check "salvage fails on a descriptor wallet" fails salvage-descriptor "Data is not in required format"
 
 # ---- Migrate wallet (advanced.rst) -------------------------------------------
 section "Migrate wallet (advanced.rst)"

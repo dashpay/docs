@@ -124,4 +124,4 @@ DASH_BIN="$HOME/code/dash/src" ./run-wallet-recovery-checks.sh
 
 `DASH_BIN` must contain `dashd`, `dash-cli`, and `dash-wallet` built with Berkeley DB support, as the release binaries are. The script header describes the optional `OUT_DIR`, `DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables.
 
-The script never deletes anything. Each run writes to a new temp directory (about 30 MB), and a given `OUT_DIR` or `DATADIR` must be empty or not exist. In that directory, `checks.txt` lists each check as `PASS` or `FAIL`, the numbered files hold each command and its output, and `datadir/` keeps the wallets for inspection.
+The script never deletes anything. Each run creates a new, private temp directory (about 30 MB), and a given `OUT_DIR` or `DATADIR` must not exist. In that directory, `checks.txt` lists each check as `PASS` or `FAIL`, the numbered files hold each command and its output, and `datadir/` keeps the wallets for inspection.
