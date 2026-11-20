@@ -37,6 +37,9 @@ Usage:
        The format of the wallet file to create. Either "bdb" or "sqlite". Only
        used with 'createfromdump'
 
+  -legacy
+       Create legacy wallet. Only for 'create'
+
   -usehd
        Create HD (hierarchical deterministic) wallet (default: 1)
 
@@ -67,7 +70,7 @@ Usage:
 
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
-       regtest
+       devnet, regtest
 
   -devnet=<name>
        Use devnet chain with provided name

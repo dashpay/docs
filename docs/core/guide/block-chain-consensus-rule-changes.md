@@ -26,6 +26,8 @@ Consensus rule changes may be activated in various ways. During Bitcoin's first 
 
 Later soft forks waited for a majority of hash rate (typically 75% or 95%) to signal their readiness for enforcing the new consensus rules. Once the signaling threshold has been passed, all nodes will begin enforcing the new rules. Such a fork is known as a [Miner Activated Soft Fork](../resources/glossary.md#miner-activated-soft-fork) (MASF) as it is dependent on miners for activation.
 
+Dash also uses masternode-signaled [enhanced hard forks](../resources/glossary.md#enhanced-hard-fork-ehf) (EHF) as described in [DIP23](https://github.com/dashpay/dips/blob/master/dip-0023.md). A masternode quorum first signs a hard fork signal, which is mined in a [MnHfTx](../reference/transactions-special-transactions.md#mnhftx). Only after that signal is mined can miners begin signaling for the deployment.
+
 **Resources:** [BIP16](https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki), [BIP30](https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki), and [BIP34](https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki) were implemented as changes which might have lead to soft forks. [BIP50](https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki) describes both an accidental hard fork, resolved by temporary downgrading the capabilities of upgraded nodes, and an intentional hard fork when the temporary downgrade was removed. A document from Gavin Andresen outlines [how future rule changes may be implemented](https://gist.github.com/gavinandresen/2355445).
 
 ## Detecting Forks

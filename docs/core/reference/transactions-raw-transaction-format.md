@@ -8,6 +8,10 @@
 
 Dash transactions are broadcast between [peers](../resources/glossary.md#peer) in a serialized byte format, called [raw format](../resources/glossary.md#raw-format). It is this form of a transaction which is SHA256(SHA256()) hashed to create the [TXID](../resources/glossary.md#transaction-identifiers) and, ultimately, the [merkle root](../resources/glossary.md#merkle-root) of a [block](../resources/glossary.md#block) containing the transaction---making the transaction format part of the [consensus rules](../resources/glossary.md#consensus-rules).
 
+:::{note}
+As of Dash Core 24.0.0, the TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) is calculated with the payload's quorum signing info set to zero, so it is not the hash of the transaction's full raw format.
+:::
+
 Dash Core and many other tools print and accept [raw transactions](../resources/glossary.md#raw-transaction) encoded as hex.
 
 Transactions prior to protocol version 70209 defaulted to version 1. Transaction version 2 was the default in protocol versions => 70209 and < 70213. Version 2 transactions have the same format, but the `lock_time` parameter was redefined by [BIP68](https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki) to enable relative lock-times. (Note: transactions in the [block chain](../resources/glossary.md#block-chain) are allowed to list a higher version number to permit [soft forks](../resources/glossary.md#soft-fork), but they are treated as version 2 transactions by current software.)
@@ -18,7 +22,7 @@ A raw transaction has the following top-level format:
 
 | Bytes    | Name         | Data Type           | Description
 |----------|--------------|---------------------|-------------
-| 2        | version      | uint16_t            | *Converted from 4 bytes to 2 bytes by DIP2 in v0.13.0*<br><br>Transaction version number; currently version 3.  Programs creating transactions using newer consensus rules may use higher version numbers.
+| 2        | version      | int16_t             | *Converted from 4 bytes to 2 bytes by DIP2 in v0.13.0*<br><br>Transaction version number (a signed integer); currently version 3.  Programs creating transactions using newer consensus rules may use higher version numbers. A transaction with a negative version is invalid (`bad-txns-version`).
 | 2        | type         | uint16_t            | *Added by DIP2 in v0.13.0. Uses 2 bytes that were previously part of `version`*<br><br>Transaction type number; 0 for classical transactions; Non-zero for DIP2 special transactions.
 | *Varies* | tx_in count  | compactSize uint    | Number of inputs in this transaction.
 | *Varies* | tx_in        | txIn                | Transaction inputs.  See description of txIn below.

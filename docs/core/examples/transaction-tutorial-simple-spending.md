@@ -4,6 +4,9 @@
   :description: Dash Core provides several RPCs which handle all the details of spending, including creating a change output and paying an appropriate transaction fee. 
 ```
 
+% Example output on this page comes from scripts/core-regtest-examples/run-transaction-tutorials.sh.
+% Use the output of a single run for all tutorial pages so values stay consistent between them.
+
 # Simple Spending
 
 Dash Core provides several RPCs which handle all the details of spending, including creating a [change output](../resources/glossary.md#change-output) and paying an appropriate [transaction fee](../resources/glossary.md#transaction-fee). Even advanced users should use these RPCs whenever possible to decrease the chance that [duffs](../resources/glossary.md#duffs) will be lost by mistake.
@@ -14,9 +17,9 @@ Get a new Dash [address](../resources/glossary.md#address) and save it in the sh
 
 ``` bash
 > dash-cli -regtest getnewaddress
-yLp6ZJueuigiF4s9E1Pv8tEunDPEsjyQfd
+yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu
 
-> NEW_ADDRESS=yLp6ZJueuigiF4s9E1Pv8tEunDPEsjyQfd
+> NEW_ADDRESS=yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu
 ```
 
 ## 2. Send to address
@@ -27,7 +30,7 @@ The [`sendtoaddress` RPC](../api/remote-procedure-calls-wallet.md#sendtoaddress)
 
 ``` bash
 > dash-cli -regtest sendtoaddress $NEW_ADDRESS 10.00
-c7e5ae1240fdd83bb94c94a93816ed2ab7bcb56ec3ff8a9725c5c1e0482684ea
+e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b
 ```
 
 ## 3. List unspent outputs
@@ -44,37 +47,53 @@ Use the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent)
 
 ### 3b. All outputs
 
-Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent) with the argument "0" to also display each [unconfirmed transaction](../resources/glossary.md#unconfirmed-transaction) shows that we have two UTXOs, both with the same [TXID](../resources/glossary.md#transaction-identifiers). The first UTXO shown is a change output that `sendtoaddress` created using a new address from the key pool. The second UTXO shown is the spend to the address we provided. If we had spent those duffs to someone else, that second transaction would not be displayed in our list of UTXOs.
+Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent) with the argument "0" to also display each [unconfirmed transaction](../resources/glossary.md#unconfirmed-transaction) shows that we have two UTXOs, both with the same [TXID](../resources/glossary.md#transaction-identifiers). The first UTXO shown is the spend to the address we provided. The second UTXO shown is a change output that `sendtoaddress` created using a new address from the key pool. If we had spent those duffs to someone else, that first UTXO would not be displayed in our list of UTXOs.
 
 ``` bash
 > dash-cli -regtest listunspent 0
 ```
 
 ``` json
-[  
-   {  
-      "txid":"c7e5ae1240fdd83bb94c94a93816ed2ab7bcb56ec3ff8a9725c5c1e0482684ea",
-      "vout":0,
-      "address":"yLp6ZJueuigiF4s9E1Pv8tEunDPEsjyQfd",
-      "account":"",
-      "scriptPubKey":"76a914056b1fe57914236149feb21dcbc6b86f4bdd9f4988ac",
-      "amount":10.00000000,
-      "confirmations":0,
-      "ps_rounds":-2,
-      "spendable":true,
-      "solvable":true
-   },
-   {  
-      "txid":"c7e5ae1240fdd83bb94c94a93816ed2ab7bcb56ec3ff8a9725c5c1e0482684ea",
-      "vout":1,
-      "address":"yeP6Tw2uW4nWAFWRytw8TyshErTq59dUkN",
-      "scriptPubKey":"76a914c622e98a6ccf34d02620612f58f20a50061cf4b188ac",
-      "amount":490.00000000,
-      "confirmations":0,
-      "ps_rounds":-2,
-      "spendable":true,
-      "solvable":true
-   }
+[
+  {
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
+    "vout": 0,
+    "address": "yRjpWkBcjoBY6L9GDRsYYFMJ4aXQTHMQTu",
+    "label": "",
+    "scriptPubKey": "76a9143b74b256a0c92f4067cb90981a685ddc171287ff88ac",
+    "amount": 10.00000000,
+    "confirmations": 0,
+    "ancestorcount": 1,
+    "ancestorsize": 225,
+    "ancestorfees": 225,
+    "spendable": true,
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/0/1]03c57deb98b55a6cc22112d93159862b1a25\
+             abe79fb6ab325e724d4f9ac4fbe677)#slt9lygj",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
+  },
+  {
+    "txid": "e3d47cea69738ce7de1265689ac2ccb482f5a6417a9fb20afee79dc16cd5f90b",
+    "vout": 1,
+    "address": "ycMSBzw2NMP22qU5nhdz3XbAsBfc5P9H1R",
+    "scriptPubKey": "76a914afe24b6c9a80114f63baeabed947bd12e6d6eebd88ac",
+    "amount": 489.99999775,
+    "confirmations": 0,
+    "ancestorcount": 1,
+    "ancestorsize": 225,
+    "ancestorfees": 225,
+    "spendable": true,
+    "solvable": true,
+    "desc": "pkh([6ef61e0b/44h/1h/0h/1/0]025a561f14893e47dc233bdd10ee71baf40a\
+             a41cc0016d40eb7c2ce533c721dc85)#tkfjlxrl",
+    "parent_descs": [
+    ],
+    "safe": true,
+    "coinjoin_rounds": -2
+  }
 ]
 ```
 
@@ -83,7 +102,7 @@ Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listu
 Create a new block to confirm the transaction above (takes less than a second) and clear the shell variable.
 
 ``` bash
-> dash-cli -regtest generate 1
+> dash-cli -regtest -generate 1
 
 > unset NEW_ADDRESS
 ```
@@ -95,17 +114,16 @@ Shell script to run the previous example ([view as a GitHub Gist](https://gist.g
 ``` shell
 #!/bin/bash
 
-# Set RPCUSER and RPCPWD to the username and password configure in dash.conf
-RPCUSER="user"
-RPCPWD="pass"
-REGTEST_CMD="dash-cli -regtest -rpcuser=$RPCUSER -rpcpassword=$RPCPWD"
+# Uses cookie authentication. If dash.conf sets rpcuser and rpcpassword,
+# add -rpcuser=<user> -rpcpassword=<password> to REGTEST_CMD.
+REGTEST_CMD="dash-cli -regtest"
 
 # SIMPLE SPENDING EXAMPLE
 # -----------------------
 
 BLOCKTOGEN=101
 printf "\nGenerating %s block(s)...\n" $BLOCKTOGEN
-COMMAND="$REGTEST_CMD generate $BLOCKTOGEN"
+COMMAND="$REGTEST_CMD -generate $BLOCKTOGEN"
 echo $COMMAND
 GENERATED=$($COMMAND)
 echo "Generated $BLOCKTOGEN block(s)"
@@ -143,7 +161,7 @@ echo "Unspent (including unconfirmed): " $UNSPENT
 
 BLOCKTOGEN=1
 printf "\nGenerating %s block(s) to confirm...\n" $BLOCKTOGEN
-COMMAND="$REGTEST_CMD generate $BLOCKTOGEN"
+COMMAND="$REGTEST_CMD -generate $BLOCKTOGEN"
 echo $COMMAND
 GENERATED=$($COMMAND)
 echo "Generated $BLOCKTOGEN block(s)"

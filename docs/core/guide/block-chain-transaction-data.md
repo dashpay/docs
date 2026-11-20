@@ -16,6 +16,10 @@ All transactions, including the coinbase transaction, are encoded into blocks in
 
 The rawtransaction format is hashed to create the transaction identifier ([TXID](../resources/glossary.md#transaction-identifiers)). From these txids, the [merkle tree](../resources/glossary.md#merkle-tree) is constructed by pairing each txid with one other txid and then hashing them together. If there are an odd number of txids, the txid without a partner is hashed with a copy of itself.
 
+:::{note}
+[Version 2 asset unlock transactions](../reference/transactions-special-transactions.md#version-2-asset-unlocks) (valid once the v24 hard fork activates) are an exception: their txid is calculated with the quorum signing fields set to zero, so it is not the hash of the raw transaction.
+:::
+
 The resulting hashes themselves are each paired with one other hash and hashed together. Any hash without a partner is hashed with itself. The process repeats until only one hash remains, the [merkle root](../resources/glossary.md#merkle-root).
 
 For example, if transactions were merely joined (not hashed), a five-transaction merkle tree would look like the following text diagram:

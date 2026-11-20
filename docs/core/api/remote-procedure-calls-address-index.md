@@ -12,24 +12,29 @@
 Requires `-addressindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The address index is now built in the background. While it is syncing, this RPC returns an `Address index is syncing` error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 The [`getaddressbalance` RPC](../api/remote-procedure-calls-address-index.md#getaddressbalance) returns the balance for address(es).
 
 *Parameter #1---an array of [addresses](../resources/glossary.md#address)*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---the current balance in [duffs](../resources/glossary.md#duffs) and the total number of duffs received (including change)*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | An object listing the current balance and total amount received (including change), or an error if any address is invalid
-→<br>`balance` | string | Required<br>(exactly 1) | The current balance in duffs
-→<br>`balance_immature` | string | Required<br>(exactly 1) | The current immature balance in duffs
-→<br>`balance_spendable` | string | Required<br>(exactly 1) | The current spendable balance in duffs
-→<br>`received` | string | Required<br>(exactly 1) | The total number of duffs received (including change)
+→<br>`balance` | number (int) | Required<br>(exactly 1) | The current balance in duffs
+→<br>`balance_immature` | number (int) | Required<br>(exactly 1) | The current immature balance in duffs
+→<br>`balance_spendable` | number (int) | Required<br>(exactly 1) | The current spendable balance in duffs
+→<br>`received` | number (int) | Required<br>(exactly 1) | The total number of duffs received (including change)
 
 *Example from Dash Core 0.17.0*
 
@@ -61,26 +66,21 @@ Result:
 Requires `-addressindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The address index is now built in the background. While it is syncing, this RPC returns an `Address index is syncing` error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 The [`getaddressdeltas` RPC](../api/remote-procedure-calls-address-index.md#getaddressdeltas) returns all changes for an address.
 
-*Parameter #1---an array of addresses*
+*Parameter #1---an array of addresses and an optional block height range*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
-
-*Parameter #2---the start block height*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-`start` | number (int) | Optional<br>(exactly 1) | The start block height
-
-*Parameter #3---the end block height*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-`end` | number (int) | Optional<br>(exactly 1) | The end block height
+Request | object | Required<br>(exactly 1) | A JSON object with the addresses and an optional block height range
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+→<br>`start` | number (int) | Optional<br>(0 or 1) | The start block height. The range is only applied if `start` and `end` are both set and greater than `0`
+→<br>`end` | number (int) | Optional<br>(0 or 1) | The end block height. Must not be lower than `start`
 
 *Result---information about all changes for the address(es)*
 
@@ -90,7 +90,8 @@ Name | Type | Presence | Description
 →<br>Delta | object | Required<br>(1 or more) | An object describing a particular address delta
 →→<br>`satoshis` | number | Required<br>(exactly 1) | The difference of duffs
 →→<br>`txid` | string | Required<br>(exactly 1) | The related txid
-→→<br>`blockindex` | number | Required<br>(exactly 1) | The related input or output index
+→→<br>`index` | number | Required<br>(exactly 1) | The related input or output index
+→→<br>`blockindex` | number | Required<br>(exactly 1) | The position of the transaction within its block
 →→<br>`height` | number | Required<br>(exactly 1) | The block height
 →→<br>`address` | string | Required<br>(exactly 1) | The base58check encoded address
 
@@ -137,8 +138,9 @@ The [`getaddressmempool` RPC](../api/remote-procedure-calls-address-index.md#get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---information about mempool deltas for the address(es)*
 
@@ -150,9 +152,9 @@ Name | Type | Presence | Description
 →→<br>`txid` | string | Required<br>(exactly 1) | The related txid
 →→<br>`index` | number | Required<br>(exactly 1) | The related input or output index
 →→<br>`satoshis` | number | Required<br>(exactly 1) | The difference of duffs
-→→<br>`timestamp` | string | Required<br>(exactly 1) | The time the transaction entered the mempool (seconds)
-→→<br>`prevtxid` | string | Required<br>(exactly 1) | The previous txid (if spending)
-→→<br>`prevout` | string | Required<br>(exactly 1) | The previous transaction output index (if spending)
+→→<br>`timestamp` | number (int) | Required<br>(exactly 1) | The time the transaction entered the mempool (seconds)
+→→<br>`prevtxid` | string (hex) | Optional<br>(0 or 1) | The previous txid (if spending)
+→→<br>`prevout` | number (int) | Optional<br>(0 or 1) | The previous transaction output index (if spending)
 
 *Example from Dash Core 0.12.2*
 
@@ -182,26 +184,21 @@ Result:
 Requires `-addressindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The address index is now built in the background. While it is syncing, this RPC returns an `Address index is syncing` error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 The [`getaddresstxids` RPC](../api/remote-procedure-calls-address-index.md#getaddresstxids) returns the txids for an address(es).
 
-*Parameter #1---an array of addresses*
+*Parameter #1---an array of addresses and an optional block height range*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
-
-*Parameter #2---the start block height*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-`start` | number (int) | Optional<br>(exactly 1) | The start block height
-
-*Parameter #3---the end block height*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-`end` | number (int) | Optional<br>(exactly 1) | The end block height
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses and an optional block height range, or a single address as a string (no height range)
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+→<br>`start` | number (int) | Optional<br>(0 or 1) | The start block height. The range is only applied if `start` and `end` are both set and greater than `0`
+→<br>`end` | number (int) | Optional<br>(0 or 1) | The end block height
 
 *Result---information about txids for the address(es)*
 
@@ -233,14 +230,19 @@ Result:
 Requires `-addressindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The address index is now built in the background. While it is syncing, this RPC returns an `Address index is syncing` error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 The [`getaddressutxos` RPC](../api/remote-procedure-calls-address-index.md#getaddressutxos) returns all unspent outputs for an address.
 
 *Parameter #1---an array of addresses*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---information about unspent outputs for the address(es)*
 

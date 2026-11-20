@@ -55,3 +55,23 @@ output_string.reverse();
 Dash's own code can be traced using the [base58 header file](https://github.com/dashpay/dash/blob/master/src/base58.h).
 
 To convert addresses back into hashes, reverse the base58 encoding, extract the checksum, repeat the steps to create the checksum and compare it against the extracted checksum, and then remove the version byte.
+
+## Dash Platform Addresses
+
+Dash Core also encodes and decodes Dash Platform addresses, which [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) defines. A Platform address uses the same P2PKH or P2SH hash, but encodes it with [bech32m](https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki) instead of Base58Check:
+
+1. Add a type byte in front of the 20-byte hash to create a 21-byte payload. The type bytes are:
+
+    * 0xb0 for P2PKH addresses
+
+    * 0x80 for P2SH addresses
+
+2. Encode the payload as a bech32m string using the human-readable part (HRP) for the network:
+
+    * `dash` on [mainnet](../resources/glossary.md#mainnet)
+
+    * `tdash` on [testnet](../resources/glossary.md#testnet), devnets, and [regtest](../resources/glossary.md#regression-test-mode)
+
+Because of the type bytes, P2PKH Platform addresses start with `dash1k` (`tdash1k`) and P2SH Platform addresses start with `dash1s` (`tdash1s`). For example, the P2PKH hash `f7da0a2b5cbd4ff6bb2c4d89b67d2f3ffeec0525` encodes as `dash1krma5z3ttj75la4m93xcndna9ullamq9y5e9n5rs` on mainnet and `tdash1krma5z3ttj75la4m93xcndna9ullamq9y5fzq2j7` on testnet. Decoding rejects an address with a bech32 (not bech32m) checksum, the wrong HRP for the network, a payload that isn't 21 bytes, or an unknown type byte.
+
+The [`validateaddress` RPC](../api/remote-procedure-calls-util.md#validateaddress) and [`getaddressinfo` RPC](../api/remote-procedure-calls-wallet.md#getaddressinfo) accept Platform addresses. The [`sendtoaddress` RPC](../api/remote-procedure-calls-wallet.md#sendtoaddress) and [`sendmany` RPC](../api/remote-procedure-calls-wallet.md#sendmany) also accept them once the `v24` hard fork activates. Paying a Platform address creates an [asset lock transaction](../reference/transactions-special-transactions.md#assetlocktx) with a version 2 payload, whose credit output pays the standard P2PKH or P2SH script for the address's hash. Version 2 asset locks are currently non-standard, so the wallet only sends to Platform addresses on a node started with `-acceptnonstdtxn=1`, which is only available on testnet, devnets and regtest.

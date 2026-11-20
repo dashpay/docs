@@ -9,27 +9,27 @@
 For the [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock) documentation on the reference page, an actual [merkle block](../resources/glossary.md#merkle-block) was retrieved from the [network](../resources/glossary.md#network) and manually processed.  This section walks through each step of the process, demonstrating basic network communication and merkle block processing.
 
 ``` python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from time import sleep
 from hashlib import sha256
 import struct
 import sys
 
-network_string = "f9beb4d9".decode("hex")  # Mainnet
+network_string = bytes.fromhex("bf0c6bbd")  # Mainnet
 
 def send(msg,payload):
     ## Command is ASCII text, null padded to 12 bytes
-    command = msg + ( ( 12 - len(msg) ) * "\00" )
+    command = msg.encode() + ( ( 12 - len(msg) ) * b"\00" )
 
     ## Payload length is a uint32_t
-    payload_raw = payload.decode("hex")
-    payload_len = struct.pack("I", len(payload_raw))
+    payload_raw = bytes.fromhex(payload)
+    payload_len = struct.pack("<I", len(payload_raw))
 
     ## Checksum is first 4 bytes of SHA256(SHA256(<payload>))
     checksum = sha256(sha256(payload_raw).digest()).digest()[:4]
 
-    sys.stdout.write(
+    sys.stdout.buffer.write(
         network_string
         + command
         + payload_len
@@ -39,28 +39,28 @@ def send(msg,payload):
     sys.stdout.flush()
 ```
 
-To connect to the P2P [network](../resources/glossary.md#network), the trivial Python function above was developed to compute message headers and send payloads decoded from hex.
+To connect to the P2P [network](../resources/glossary.md#network), the trivial Python function above was developed to compute message headers and send payloads decoded from hex. The [message header](../reference/p2p-network-message-headers.md) starts with the mainnet [start string](../resources/glossary.md#start-string). To connect to a testnet or regtest node instead, change it to `cee2caff` or `fcc1b7dc` and connect to that network's port (19999 or 19899).
 
 ``` python
 ## Create a version message
 send("version",
-      "71110100" # ........................ Protocol Version: 70001
+      "62120100" # ........................ Protocol Version: 70242
     + "0000000000000000" # ................ Services: Headers Only (SPV)
     + "c6925e5400000000" # ................ Time: 1415484102
     + "00000000000000000000000000000000"
-    + "0000ffff7f000001208d" # ............ Receiver IP Address/Port
+    + "0000ffff7f000001270f" # ............ Receiver IP Address/Port
     + "00000000000000000000000000000000"
-    + "0000ffff7f000001208d" # ............ Sender IP Address/Port
+    + "0000ffff7f000001270f" # ............ Sender IP Address/Port
     + "0000000000000000" # ................ Nonce (not used here)
-    + "1b" # .............................. Bytes in version string
-    + "2f426974636f696e2e6f726720457861"
-    + "6d706c653a302e392e332f" # .......... Version string
+    + "17" # .............................. Bytes in version string
+    + "2f4461736820446f6373204578616d70"
+    + "6c653a312e302f" # .................. Version string
     + "93050500" # ........................ Starting block height: 329107
     + "00" # .............................. Relay transactions: false
 )
 ```
 
-Peers on the network will not accept any requests until you send them a [`version` message](../reference/p2p-network-control-messages.md#version). The receiving node will reply with their [`version` message](../reference/p2p-network-control-messages.md#version) and a [`verack` message](../reference/p2p-network-control-messages.md#verack).
+Peers on the network will not accept any requests until you send them a [`version` message](../reference/p2p-network-control-messages.md#version). Dash Core disconnects peers whose protocol version is below its minimum supported version (`MIN_PEER_PROTO_VERSION` in [`src/version.h`](https://github.com/dashpay/dash/blob/v24.0.1/src/version.h)). The receiving node will reply with their [`version` message](../reference/p2p-network-control-messages.md#version) and a [`verack` message](../reference/p2p-network-control-messages.md#verack).
 
 ``` python
 sleep(1)
@@ -82,21 +82,26 @@ send("filterload",
 We set a [bloom filter](../resources/glossary.md#bloom-filter) with the [`filterload` message](../reference/p2p-network-control-messages.md#filterload). This filter is described in the preceding sections.
 
 ``` python
+## Block header hash from the command line, converted from RPC byte
+## order to internal byte order
+block_hash = bytes.fromhex(sys.argv[1])[::-1].hex()
+
 send("getdata",
       "01" # ................................. Number of inventories: 1
     + "03000000" # ........................... Inventory type: filtered block
-    + "a4deb66c0d726b0aefb03ed51be407fb"
-    + "ad7331c6e8f9eef231b7000000000000" # ... Block header hash
+    + block_hash # ........................... Block header hash
 )
 ```
 
-We request a merkle block for transactions matching our filter, completing our script.
+We request a merkle block for transactions matching our filter, completing our script. The node only returns blocks it has, so the script takes the block header hash as a command-line argument. RPCs such as [`getbestblockhash`](../api/remote-procedure-calls-blockchain.md#getbestblockhash) display hashes in [RPC byte order](../resources/glossary.md#rpc-byte-order), and P2P messages use [internal byte order](../resources/glossary.md#internal-byte-order), so the script reverses the bytes. The node replies with a [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock) even if no transactions in the block match the filter.
+
+% TODO: Replace the Bitcoin filter and the merkle block on the parsing page with Dash data (the parsing page's SVGs would need updating too).
 
 To run the script, we simply pipe it to the Unix [`netcat` command](https://en.wikipedia.org/wiki/Netcat) or one of its many clones, one of which is available for practically any platform. For example, with the original netcat and using hexdump (`hd`) to display the output:
 
 ``` bash
-## Connect to the Bitcoin Core peer running on localhost
-python get-merkle.py | nc localhost 8333 | hd
+## Connect to the Dash Core peer running on localhost
+python3 get-merkle.py "$(dash-cli getbestblockhash)" | nc localhost 9999 | hd
 ```
 
-Part of the response is shown in the [Parsing a MerkleBlock](../examples/p2p-network-parsing-a-merkleblock.md) section.
+The [Parsing a MerkleBlock](../examples/p2p-network-parsing-a-merkleblock.md) section walks through part of an example response.

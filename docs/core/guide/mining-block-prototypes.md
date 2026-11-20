@@ -10,13 +10,13 @@ In both solo and pool mining, the mining software needs to get the information n
 
 ## getwork RPC
 
-The simplest and earliest method was the now-deprecated Dash Core `getwork` RPC, which constructed a [header](../resources/glossary.md#header) for the miner directly. Since a header only contains a single 4-byte nonce good for about 4 gigahashes, many modern miners need to make dozens or hundreds of `getwork` requests a second.
+The simplest and earliest method was the Dash Core `getwork` RPC (since removed), which constructed a [header](../resources/glossary.md#header) for the miner directly. Since a header only contains a single 4-byte nonce good for about 4 gigahashes, many modern miners need to make dozens or hundreds of `getwork` requests a second.
 
 ## getblocktemplate RPC
 
 An improved method is the Dash Core [`getblocktemplate` RPC](../api/remote-procedure-calls-mining.md#getblocktemplate). This provides the mining software with much more information:
 
-1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet.
+1. The information necessary to construct a [coinbase transaction](../resources/glossary.md#coinbase-transaction) paying the pool or the solo miner's `dashd` wallet. This includes the `masternode` and `superblock` payments the coinbase transaction must make. Each entry in these arrays must be paid by its own coinbase output. A shared masternode or a masternode with multiple owner payouts can produce several entries, and identical entries (same script and amount) each need a separate output. Masternode payments can be paid in any order, but `superblock` payments must appear in the coinbase in the order the template lists them: each one must be paid by a later output than the one paying the previous payment. The coinbase must also be a [CbTx](../reference/transactions-special-transactions.md#cbtx) special transaction whose extra payload is the `coinbase_payload` value returned with that template.
 
 2. A complete dump of the [transactions](../resources/glossary.md#transaction) `dashd` or the mining pool suggests including in the block, allowing the mining software to inspect the transactions, optionally add additional transactions, and optionally remove non-required transactions.
 
@@ -25,6 +25,8 @@ An improved method is the Dash Core [`getblocktemplate` RPC](../api/remote-proce
 4. The mining pool's current [target threshold](../resources/glossary.md#target) for accepting shares. (For solo miners, this is the network target.)
 
 Using the transactions received, the mining software adds a nonce to the coinbase extra nonce field and then converts all the transactions into a [merkle tree](../resources/glossary.md#merkle-tree) to derive a [merkle root](../resources/glossary.md#merkle-root) it can use in a block header. Whenever the extra nonce field needs to be changed, the mining software rebuilds the necessary parts of the merkle tree and updates the time and merkle root fields in the block header.
+
+The merkle tree is built from [TXIDs](../resources/glossary.md#transaction-identifiers), which the template provides in each transaction's `hash` field. The TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) (valid once the v24 hard fork activates) is not the hash of its `data` bytes, so mining software should use `hash` rather than hashing `data` itself.
 
 Like all `dashd` RPCs, `getblocktemplate` is sent over HTTP. To ensure they get the most recent work, most miners use [HTTP longpoll](https://en.wikipedia.org/wiki/Push_technology#Long_polling) to leave a `getblocktemplate` request open at all times. This allows the mining pool to push a new `getblocktemplate` to the miner as soon as any [miner](../resources/glossary.md#miner) on the peer-to-peer [network](../resources/glossary.md#network) publishes a new block or the pool wants to send more transactions to the mining software.
 

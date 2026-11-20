@@ -20,10 +20,12 @@ Standard transactions must also meet the following conditions:
 
 * The transaction must be smaller than 100,000 bytes. That's around 200 times larger than a typical single-input, single-output P2PKH transaction.
 
+* The transaction must be at least 65 bytes. *Lowered from 83 bytes in Dash Core 24.0.0.*
+
 * Each of the transaction's signature scripts must be smaller than 1,650 bytes. That's large enough to allow 15-of-15 multisig transactions in P2SH using compressed [public keys](../resources/glossary.md#public-key).
 
 * Bare (non-P2SH) multisig transactions which require more than 3 public keys are currently non-standard.
 
 * The transaction's [signature script](../resources/glossary.md#signature-script) must only push data to the script evaluation stack. It cannot push new opcodes, with the exception of opcodes which solely push data to the stack.
 
-* The transaction must not include any [outputs](../resources/glossary.md#output) which receive fewer than 1/3 as many [duffs](../resources/glossary.md#duffs) as it would take to spend it in a typical [input](../resources/glossary.md#input). That's currently 5460 duffs for a P2PKH or P2SH output on a Dash Core node with the default relay fee. **Exception: standard null data outputs must receive zero duffs.**
+* The transaction must not include any dust [outputs](../resources/glossary.md#output). An output is dust if spending it in a typical [input](../resources/glossary.md#input) would cost more in fees than its value at the dust relay fee (`-dustrelayfee`, default 0.00003 DASH/kB). This is three times the default minimum relay fee, so an output is dust if spending it would cost more than 1/3 of its value at the minimum relay fee. That's currently 546 [duffs](../resources/glossary.md#duffs) for a P2PKH output (540 duffs for a P2SH output) on a Dash Core node with the default settings. **Exception: standard null data outputs must receive zero duffs.**

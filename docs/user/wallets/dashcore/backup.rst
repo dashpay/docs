@@ -14,12 +14,13 @@ Backup
 This documentation describes how to safely back up your wallet file for safe
 storage in case your computer or laptop is damaged or lost. Dash Core stores all
 data necessary to control your Dash addresses in a single file called
-*wallet.dat*. This wallet is in the Berkeley DB format and stores the pairs of
-private/public cryptographic keys used to manage your balances on the Dash
-blockchain. For HD wallets, the mnemonic, passphrase, and seed are also stored
-in *wallet.dat*. Dash Core makes most of these operations transparent and even
-generates automatic backups of your wallet file in case it is corrupted, but the
-user is responsible for ensuring that these backups are stored in a safe place.
+*wallet.dat*. New wallets are descriptor wallets, which store this file in the
+SQLite format. Older legacy wallets use the Berkeley DB format. The file stores
+the pairs of private/public cryptographic keys used to manage your balances on
+the Dash blockchain. For HD wallets, the mnemonic, passphrase, and seed are also
+stored in *wallet.dat*. Dash Core makes most of these operations transparent,
+but the user is responsible for creating backups and ensuring that they are
+stored in a safe place.
 **If you lose access to your wallet file, you will permanently lose access to
 your Dash.**
 
@@ -107,8 +108,14 @@ move) the file!
 Automatic backups
 -----------------
 
-Every time you open Dash Core, it will automatically create a backup
-copy of *wallet.dat* in the *dashcore/backups* folder. Up to 10
+Dash Core only creates automatic backups of legacy wallets. Descriptor
+wallets, which Dash Core creates by default, are not backed up automatically.
+Back them up using **File > Backup Wallet** as described above, and keep a
+secure copy of the wallet's recovery phrase, which you can view using
+**Settings > Show Recovery Phrase…**.
+
+For legacy wallets, every time you open Dash Core, it will automatically
+create a backup copy of *wallet.dat* in the *dashcore/backups* folder. Up to 10
 backups can be kept here by default, and the oldest backup will be
 deleted as each additional new backup is created. You can modify the
 number of backups kept here using the ``-createwalletbackups=n``
@@ -127,10 +134,10 @@ HD wallet information
 ---------------------
 
 Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
-deterministic (HD) key generation. HD wallets are created by default since Dash
-Core v20.1; however, it is still possible to import private keys into the
-wallet. Since imported keys are not associated with the HD-derived keys, **it is
-still critical to back up wallet.dat for HD wallets.**
+deterministic (HD) key generation. New wallets are HD wallets; however, it is
+still possible to import private keys into the wallet. Since imported keys are
+not associated with the HD-derived keys, **it is still critical to back up
+wallet.dat for HD wallets.**
 
 If the HD wallet mnemonic from Dash Core is imported into another HD-compatible
 wallet, the new wallet will have access to any funds associated with the

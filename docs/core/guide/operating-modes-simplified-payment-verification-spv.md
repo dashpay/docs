@@ -12,6 +12,8 @@ As described in the white paper, the [merkle root](../resources/glossary.md#merk
 
 The block's depth in the block chain corresponds to the cumulative [difficulty](../resources/glossary.md#difficulty) that has been performed to build on top of that particular block. The SPV client knows the merkle root and associated transaction information, and requests the respective merkle branch from a full node. Once the merkle branch has been retrieved, proving the existence of the transaction in the block, the SPV client can then look to block *depth* as a proxy for transaction validity and security. The cost of an attack on a user by a malicious node who inserts an invalid transaction grows with the cumulative difficulty built on top of that block, since the malicious node alone will be mining this forged chain.
 
+Dash light clients can also rely on [ChainLocks](../resources/glossary.md#chainlock) and quorum data instead of block depth alone. The [`getquorumproofchain` RPC](../api/remote-procedure-calls-evo.md#getquorumproofchain) returns a compact proof linking a trusted checkpoint block to a later ChainLocked block, which can be checked with the [`verifyquorumproofchain` RPC](../api/remote-procedure-calls-evo.md#verifyquorumproofchain). The [`getchainlockbyheight` RPC](../api/remote-procedure-calls-evo.md#getchainlockbyheight) returns a historical ChainLock for a given height.
+
 ## Potential SPV Weaknesses
 
 If implemented naively, an SPV client has a few important weaknesses.
