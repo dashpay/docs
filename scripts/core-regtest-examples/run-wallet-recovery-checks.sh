@@ -217,9 +217,11 @@ section() { echo "## $*" | tee -a "$OUT_DIR/checks.txt"; }
 
 # Helpers that are setup, not checks
 balance() { cli -rpcwallet="$1" getbalance 2>/dev/null || true; }
-# addresses <wallet> - sorted addresses in the wallet's address book
+# addresses <wallet> - sorted addresses in the wallet's address book, used or
+# not (watch-only addresses only in a watch-only wallet). Named arguments,
+# because Dash Core's second positional argument is addlocked.
 addresses() {
-  cli -rpcwallet="$1" listreceivedbyaddress 0 true 2>/dev/null |
+  cli -rpcwallet="$1" -named listreceivedbyaddress minconf=0 include_empty=true 2>/dev/null |
     jq_py '" ".join(sorted(a["address"] for a in d))'
 }
 ismine() { [[ "$(cli -rpcwallet="$1" getaddressinfo "$2" | jq_py 'd["ismine"]')" == True ]]; }
@@ -465,7 +467,10 @@ check "migration backup ending in .legacy.bak is in the wallet's directory" eval
 log migrate-getwalletinfo cli -rpcwallet=legacy getwalletinfo
 check "migrated wallet is a descriptor wallet" true_in migrate-getwalletinfo 'd["descriptors"] and d["format"] == "sqlite"'
 check "migrated wallet keeps its balance" same "$(balance legacy)" "$LEGACY_BALANCE"
-check "migrated wallet keeps its addresses" same "$(addresses legacy)" "$LEGACY_ADDRESSES"
+# Migration moves the watch-only address to legacy_watchonly
+without() { local a kept=(); for a in $1; do [[ "$a" == "$2" ]] || kept+=("$a"); done; echo "${kept[*]}"; }
+check "migrated wallet keeps its other addresses" same "$(addresses legacy)" "$(without "$LEGACY_ADDRESSES" "$WATCH_ADDR")"
+check "legacy_watchonly's address book is the watch-only address" same "$(addresses legacy_watchonly)" "$WATCH_ADDR"
 check "migrated wallet owns its first address" ismine legacy "$RESTORED_ADDR"
 check "watch-only address is in legacy_watchonly" ismine legacy_watchonly "$WATCH_ADDR"
 cli -rpcwallet=legacy walletpassphrase "$WALLET_PASSPHRASE" 600
