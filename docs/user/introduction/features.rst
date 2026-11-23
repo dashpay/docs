@@ -66,8 +66,9 @@ are also given **voting rights** on proposals. Each masternode can vote on budge
 important decisions that affect Dash.
 
 Several participants can also :ref:`share the 1000 DASH <shared-masternode-setup>` of one
-masternode. Shared collateral cannot be moved or spent by any one participant and is locked until
-the masternode is dissolved.
+masternode. Shared collateral can only be spent by dissolving the masternode, which any participant
+can do. Dissolving returns each participant's contribution to their refund address, less the
+transaction fee and any early-exit penalty.
 
 Masternodes cost money and effort to host so they are paid a percentage
 of the block reward as an incentive. Because only one masternode is paid
@@ -137,9 +138,9 @@ The CoinJoin process works like this:
    given denomination by up to three extra rounds to further improve
    privacy.
 #. After the v24 hard fork activates, a CoinJoin session can also
-   combine ten fully mixed inputs of one denomination into one input of
-   the next larger denomination, or split one into ten inputs of the
-   next smaller denomination. These new inputs start mixing again from
+   combine ten fully mixed inputs of one denomination into one output of
+   the next larger denomination, or split one into ten outputs of the
+   next smaller denomination. These new outputs start mixing again from
    zero rounds.
 #. This process happens in the background without any intervention on
    your part. When you wish to make a transaction using your denominated

@@ -184,11 +184,11 @@ the Type column of the **Transactions** tab:
 
 After the v24 hard fork activates, a CoinJoin session can also convert
 fully mixed inputs between neighboring denominations. Your wallet may
-combine ten inputs of one denomination into one input of the next larger
-denomination (promotion), or split one input into ten inputs of the next
+combine ten inputs of one denomination into one output of the next larger
+denomination (promotion), or split one input into ten outputs of the next
 smaller denomination (demotion). This happens automatically, and these
 transactions appear as **CoinJoin Mixing** on the **Transactions** tab.
-Converted inputs start mixing again from zero rounds, so your mixing
+The new outputs start mixing again from zero rounds, so your mixing
 progress may temporarily go down.
 
 You can also use the coin control feature to view which addresses hold
@@ -210,9 +210,9 @@ used in a CoinJoin transaction is 0.00100010 DASH.
 
 After a CoinJoin session completes, the inputs your wallet contributed
 remain locked until the wallet sees the CoinJoin transaction that spends
-them, so you may briefly see them as locked in this dialog. If that
-transaction never reaches the network, the wallet unlocks any of these
-inputs that are still unspent after about an hour.
+them, so you may briefly see them as locked in this dialog. If the wallet
+hasn't seen that transaction after about an hour, it unlocks any of these
+inputs that are still unspent once Dash Core is fully synced.
 
 Paying with CoinJoin
 -----------------------

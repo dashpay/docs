@@ -267,11 +267,11 @@ This is typically used with a wallet that has been populated with
 addresses.
 
 New wallets are descriptor wallets, which do not support the
-``importaddress`` RPC. To add a watch-only address to a descriptor
-wallet, use :ref:`importdescriptors <api-rpc-wallet-importdescriptors>`
-with an ``addr(<address>)`` descriptor (including the checksum returned
-by ``getdescriptorinfo``), ideally in a wallet created with private keys
-disabled.
+``importaddress`` RPC. To add watch-only addresses to a descriptor
+wallet, create the wallet with private keys disabled and use
+:ref:`importdescriptors <api-rpc-wallet-importdescriptors>` with an
+``addr(<address>)`` descriptor (including the checksum returned by
+``getdescriptorinfo``).
 
 .. _is-broadcast:
 

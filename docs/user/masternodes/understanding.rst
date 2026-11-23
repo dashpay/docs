@@ -44,9 +44,10 @@ moves or spends those coins, the masternode stops working and payment
 ceases.
 
 The collateral of a regular masternode can also be :ref:`shared by several
-participants <shared-masternode-setup>`. No single participant can move shared
-collateral. It is released by dissolving the masternode, which returns each
-participant's contribution.
+participants <shared-masternode-setup>`. Shared collateral can only be spent
+by dissolving the masternode, which any participant can do. Dissolving returns
+each participant's contribution to their refund address, less the transaction
+fee and any early-exit penalty.
 
 Masternodes are paid by the network for the InstantSend, CoinJoin and
 governance services they provide. 20% of the block subsidy goes to the budget
@@ -156,7 +157,8 @@ Important concepts:
 - After the v24 hard fork activates, the owner reward of a regular masternode
   can be split between up to 8 payout addresses. A :ref:`shared masternode
   <shared-masternode-setup>` splits the owner reward between its participants in
-  proportion to their contributions. Evonodes cannot do either yet.
+  proportion to their contributions. Evonodes need a separate network upgrade
+  before they can do either.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
