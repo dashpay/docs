@@ -826,7 +826,8 @@ Glossary
   Masternode
     A :ref:`masternode <masternode-network>` is special type of full node
     that performs services for the network and is paid a portion of the
-    block reward. Masternodes require proof of ownership of 1000 DASH.
+    block reward. Masternodes require proof of ownership of 1000 DASH,
+    which several participants can also pool together.
 
     Masternodes serve as the second tier of the Dash network, and power
     InstantSend, CoinJoin, and the Budget System.

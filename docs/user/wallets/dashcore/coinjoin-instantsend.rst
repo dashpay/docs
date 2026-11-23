@@ -136,14 +136,14 @@ in the background.
 
    Monitoring CoinJoin progress
 
-Since CoinJoin creates a lot of new address keys to send and receive the denominations, you may
-receive a warning when the number of remaining keys runs low. This is nothing to be worried about,
-since the wallet will simply create more keys as necessary. However, for non-HD wallets these keys
-will not exist in any previous backups of your wallet. For this reason, it is important to backup
-your wallet again after the process is complete if using a non-HD wallet. When using an HD wallet,
-all keys will be derived from the wallet mnemonic so extra backups during CoinJoin are not
-necessary. You can check the status bar for the "HD" icon to determine if you are using an HD wallet
-or not.
+Since CoinJoin creates a lot of new address keys to send and receive the denominations, a legacy
+wallet may show a warning when the number of remaining keys runs low. This is nothing to be worried
+about, since the wallet will simply create more keys as necessary. However, for non-HD wallets these
+keys will not exist in any previous backups of your wallet. For this reason, it is important to
+backup your wallet again after the process is complete if using a non-HD wallet. When using an HD
+wallet, including a descriptor wallet, new keys will be derived from the wallet mnemonic so extra
+backups during CoinJoin are not necessary. You can check the status bar for the "HD" icon to
+determine if you are using an HD wallet or not.
 
 You can also monitor CoinJoin progress by viewing the transactions
 created by the process on the **Transactions** tab.
@@ -182,6 +182,15 @@ the Type column of the **Transactions** tab:
 |                                    | a CoinJoin transaction.                    |
 +------------------------------------+--------------------------------------------+
 
+After the v24 hard fork activates, a CoinJoin session can also convert
+fully mixed inputs between neighboring denominations. Your wallet may
+combine ten inputs of one denomination into one output of the next larger
+denomination (promotion), or split one input into ten outputs of the next
+smaller denomination (demotion). This happens automatically, and these
+transactions appear as **CoinJoin Mixing** on the **Transactions** tab.
+The new outputs start mixing again from zero rounds, so your mixing
+progress may temporarily go down.
+
 You can also use the coin control feature to view which addresses hold
 denominations ready to be used for CoinJoin transactions. Go to the
 **Send** tab of your wallet and click **Inputs** to view the possible
@@ -198,6 +207,12 @@ used in a CoinJoin transaction is 0.00100010 DASH.
 
    Coin Selection dialog showing addresses holding CoinJoin balances
    in different denominations
+
+After a CoinJoin session completes, the inputs your wallet contributed
+remain locked until the wallet sees the CoinJoin transaction that spends
+them, so you may briefly see them as locked in this dialog. If the wallet
+hasn't seen that transaction after about an hour, it unlocks any of these
+inputs that are still unspent once Dash Core is fully synced.
 
 Paying with CoinJoin
 -----------------------

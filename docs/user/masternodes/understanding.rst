@@ -43,6 +43,14 @@ in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
 ceases.
 
+Several participants can also :ref:`pool their funds
+<shared-masternode-setup>` to provide the collateral of a regular masternode.
+Shared collateral can only be spent by dissolving the masternode, which any
+participant can do. Dissolving returns each participant's contribution to their
+refund address. The participant who dissolves pays the transaction fee, plus an
+early-exit penalty if they dissolve alone during the early period. The other
+participants split that penalty.
+
 Masternodes are paid by the network for the InstantSend, CoinJoin and
 governance services they provide. 20% of the block subsidy goes to the budget
 with the remaining 80% split between miners and masternodes per this
@@ -148,6 +156,11 @@ Important concepts:
 - Masternode owners should specify an address different from the collateral to
   receive payments in the ProRegTx. The owner may optionally specify a non-zero
   percentage as payment to a separate masternode operator, if applicable.
+- After the v24 hard fork activates, the owner reward of a regular masternode
+  can be split between up to 8 payout addresses. A :ref:`shared masternode
+  <shared-masternode-setup>` splits the owner reward between its participants in
+  proportion to their contributions. Evonodes need a separate network upgrade
+  before they can do either.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
@@ -353,10 +366,15 @@ registered masternodes. If the score reaches the number of registered
 masternodes, a PoSe ban is enacted and the masternode must be repaired
 to ensure it provides reliable service and registered in the list again
 using a :ref:`ProUpServTx <dip3-update-service>`. The current scoring
-rules as of Dash 0.14 are:
+rules are:
 
 - Failure to participate in `DKG <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-protocol>`__\ = 66% punishment
 - Each subsequent block reduces PoSe score by 1
+
+During DKG, quorum members also vote against a masternode that runs an
+outdated protocol version, or whose connections to other masternodes don't
+relay transactions or serve compact block filters. This counts as a failure to
+participate.
 
 Quorum selection
 ================
@@ -390,8 +408,7 @@ Masternode requirements
 - A dedicated IP address: These usually come with the VPS/server.
 
 In addition to the DASH held in collateral, masternodes also have
-minimum hardware requirements. For Dash versions 20.0 and higher, these
-requirements are as follows:
+minimum hardware requirements. These requirements are as follows:
 
 .. _mn-hardware-reqs-table:
 
@@ -405,7 +422,7 @@ Regular masternodes
 +---------+------------------+------------------+
 | RAM     | 4 GB + 2 GB swap | 8 GB + 4 GB swap |
 +---------+------------------+------------------+
-| Disk    | 60 GB            | 80 GB            |
+| Disk    | 100 GB           | 120 GB           |
 +---------+------------------+------------------+
 | Network | 750 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+

@@ -9,7 +9,7 @@
 In this section, we'll use variable names that correspond to the field names in the [`filterload` message documentation](../reference/p2p-network-control-messages.md#filterload). Each code block precedes the paragraph describing it.
 
 ``` python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 BYTES_MAX = 36000
 FUNCS_MAX = 50
@@ -31,7 +31,7 @@ from math import log
 nFilterBytes = int(min((-1 / log(2)**2 * n * log(p)) / 8, BYTES_MAX))
 nHashFuncs = int(min(nFilterBytes * 8 / n * log(2), FUNCS_MAX))
 
-from bitarray import bitarray  # from pypi.python.org/pypi/bitarray
+from bitarray import bitarray  # from https://pypi.org/project/bitarray/
 vData = nFilterBytes * 8 * bitarray('0', endian="little")
 ```
 
@@ -44,12 +44,11 @@ nTweak = 0
 We also should choose a value for *nTweak*.  In this case, we'll simply use zero.
 
 ``` python
-import pyhash  # from https://github.com/flier/pyfasthash
-murmur3 = pyhash.murmur3_32()
+import mmh3  # from https://pypi.org/project/mmh3/
 
 def bloom_hash(nHashNum, data):
     seed = (nHashNum * 0xfba4c795 + nTweak) & 0xffffffff
-    return( murmur3(data, seed=seed) % (nFilterBytes * 8) )
+    return( mmh3.hash(data, seed, signed=False) % (nFilterBytes * 8) )
 ```
 
 We setup our hash function template using the formula and 0xfba4c795 constant set in [BIP37](https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki). Note that we limit the size of the seed to four bytes and that we're returning the result of the hash modulo the size of the filter in bits.
@@ -57,15 +56,15 @@ We setup our hash function template using the formula and 0xfba4c795 constant se
 ``` python
 data_to_hash = "019f5b01d4195ecbc9398fbf3c3b1fa9" \
                + "bb3183301d7a1fb3bd174fcfa40a2b65"
-data_to_hash = data_to_hash.decode("hex")
+data_to_hash = bytes.fromhex(data_to_hash)
 ```
 
 For the data to add to the filter, we're adding a [TXID](../resources/glossary.md#transaction-identifiers). Note that the TXID is in [internal byte order](../resources/glossary.md#internal-byte-order).
 
 ``` python
-print "                             Filter (As Bits)"
-print "nHashNum   nIndex   Filter   0123456789abcdef"
-print "~~~~~~~~   ~~~~~~   ~~~~~~   ~~~~~~~~~~~~~~~~"
+print("                             Filter (As Bits)")
+print("nHashNum   nIndex   Filter   0123456789abcdef")
+print("~~~~~~~~   ~~~~~~   ~~~~~~   ~~~~~~~~~~~~~~~~")
 for nHashNum in range(nHashFuncs):
     nIndex = bloom_hash(nHashNum, data_to_hash)
 
@@ -73,15 +72,15 @@ for nHashNum in range(nHashFuncs):
     vData[nIndex] = True
 
     ## Debug: print current state
-    print '      {0:2}      {1:2}     {2}   {3}'.format(
+    print('      {0:2}      {1:2}     {2}   {3}'.format(
         nHashNum,
         hex(int(nIndex)),
-        vData.tobytes().encode("hex"),
+        vData.tobytes().hex(),
         vData.to01()
-    )
+    ))
 
-print
-print "Bloom filter:", vData.tobytes().encode("hex")
+print()
+print("Bloom filter:", vData.tobytes().hex())
 ```
 
 Now we use the hash function template to run a slightly different hash function for *nHashFuncs* times. The result of each function being run on the transaction is used as an index number: the bit at that index is set to 1. We can see this in the printed debugging output:

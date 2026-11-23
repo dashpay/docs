@@ -120,21 +120,28 @@ Leave ``.conf`` files and the folders (such as ``backups``, ``blocks``,
 faster by providing a copy of the blockchain and your settings.
 
 Now open Dash Core and wait for blockchain synchronization to complete.
-Your wallet will be restored/upgraded and all balances should be
+Your wallet will be restored and all balances should be
 displayed. You should ensure you have the correct password by trying to
 unlock your wallet from **Settings > Unlock Wallet** to make sure you
 can actually create transactions using your balances. If you have any
 problems with your balance not appearing, try to force a rescan of the
-blockchain by going to **Window > Wallet Repair** and selecting **Rescan
-blockchain files**. **Rebuild index** may also help. Dash Core will
-restart and perform a full scan of the blockchain.
+blockchain by going to **Window > Repair** and clicking **Rescan Chain
+(full)**. Dash Core will perform a full scan of the blockchain without
+restarting. **Rebuild Index** may also help, but it restarts Dash Core.
 
 .. figure:: img/recovery-rescan.png
    :width: 400px
-.. figure:: img/recovery-rescanning.png
-   :width: 300px
 
    Forcing Dash Core to rescan the blockchain
+
+.. TODO: Retake img/recovery-rescan.png: it shows the old Wallet Repair tab,
+   whose buttons restarted Dash Core. The Repair tab has Rescan Chain,
+   Rescan Chain (full) and Rebuild Index.
+
+If you restored a legacy wallet, such as a wallet created by an older
+version of Dash Core, you can convert it to a descriptor wallet by
+clicking **File > Migrate Wallet**. See :ref:`dashcore-migrate-wallet`
+for details.
 
 At this stage, recovery is complete and you should make another backup
 using **File > Backup Wallet** or following the instructions :ref:`here
@@ -365,18 +372,33 @@ to read the code first.
 First, start Dash Core and unlock your wallet by selecting **Settings >
 Unlock Wallet**. Enter your password, then open the debug console by
 selecting **Window > Console**. In the console, type the following,
-replacing the example private key with your key::
+replacing the example private key with your key, to calculate the checksum
+of a descriptor containing the key::
 
-  importprivkey 7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp
+  getdescriptorinfo "pkh(7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp)"
+
+Copy the value of the ``checksum`` field from the result. Then import the
+key by typing the following, replacing the example private key with your key
+and ``ywcdk0k6`` with your checksum::
+
+  importdescriptors '[{"desc": "pkh(7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp)#ywcdk0k6", "timestamp": 0}]'
 
 .. figure:: img/recovery-dashcore-privkey.png
    :width: 400px
 
    Importing a private key using the debug console in Dash Core wallet
 
+.. TODO: Retake img/recovery-dashcore-privkey.png: it shows importprivkey,
+   which fails on descriptor wallets, and the old Wallet Repair tab label.
+   Show getdescriptorinfo and importdescriptors instead.
+
 Dash Core will rescan the blockchain for transactions involving the
 public address of this key and enter the transactions and balance in
-your wallet.
+your wallet. A ``timestamp`` of ``0`` scans the entire blockchain, so this
+may take some time. The console keeps the commands you enter, including your
+private key, in its history until you close Dash Core, so restart Dash Core
+once the import finishes. If you are using a legacy wallet, import the key with
+``importprivkey <your private key in WIF>`` instead.
 
 The private key must be in wallet import format (WIF). If your key is
 encrypted using BIP38 (key begins with 6P instead of 7), you must first

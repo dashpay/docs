@@ -65,6 +65,12 @@ doing so will cause the masternode to fall out of queue and stop earning rewards
 are also given **voting rights** on proposals. Each masternode can vote on budget proposals or
 important decisions that affect Dash.
 
+Several participants can also :ref:`pool their funds <shared-masternode-setup>` to provide the
+1000 DASH collateral of one masternode. Shared collateral can only be spent by dissolving the
+masternode, which any participant can do. Dissolving returns each participant's contribution to
+their refund address. The participant who dissolves pays the transaction fee, plus an early-exit
+penalty if they dissolve alone during the early period. The other participants split that penalty.
+
 Masternodes cost money and effort to host so they are paid a percentage
 of the block reward as an incentive. Because only one masternode is paid
 in each block, the frequency of the payment can vary, as well as the
@@ -132,6 +138,11 @@ The CoinJoin process works like this:
    <https://github.com/dashpay/dash/pull/3661>`__ which will join a
    given denomination by up to three extra rounds to further improve
    privacy.
+#. After the v24 hard fork activates, a CoinJoin session can also
+   combine ten fully mixed inputs of one denomination into one output of
+   the next larger denomination, or split one into ten outputs of the
+   next smaller denomination. These new outputs start mixing again from
+   zero rounds.
 #. This process happens in the background without any intervention on
    your part. When you wish to make a transaction using your denominated
    funds no additional waiting will be required.
@@ -140,12 +151,14 @@ Note that CoinJoin transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
 transaction fee.
 
-**IMPORTANT:** Your wallet only contains 1000 of these change addresses.
-Every time a CoinJoin transaction is created, one of your addresses is
-used up. Once enough of them are used, your wallet must create more
-addresses. It can only do this, however, if you have automatic backups
-enabled. Consequently, users who have backups disabled will also have
-CoinJoin disabled.
+**IMPORTANT:** A legacy (non-descriptor) wallet only contains 1000 of
+these change addresses. Every time a CoinJoin transaction is created,
+one of your addresses is used up. Once enough of them are used, your
+wallet must create more addresses. It can only do this, however, if you
+have automatic backups enabled. Descriptor wallets, which are the
+default for new wallets, can create more addresses without automatic
+backups. However, the Dash Core desktop wallet disables CoinJoin for
+any wallet type if automatic backups are disabled.
 
 
 .. _instantsend:
@@ -601,8 +614,9 @@ transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
 InstantSend autolocks, which caused masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removed the additional fee for
-InstantSend. 0.14.0.0 then removed the limitation on 4 inputs, so the
-network will attempt to lock all transactions. The current fee schedule
+InstantSend. 0.14.0.0 then removed the limitation on 4 inputs. The
+network now attempts to lock all transactions except masternode provider
+transactions. The current fee schedule
 for Dash is as follows:
 
 +------------------------+------------------+-------------------------------------+
@@ -617,8 +631,8 @@ As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
 US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
-1/50th of a cent. InstantSend locking will be attempted on all transactions
-without any extra charge.
+1/50th of a cent. InstantSend locking will be attempted without any extra
+charge.
 
 :ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01
 and 0.001 DASH and then creating CoinJoin transactions with other users

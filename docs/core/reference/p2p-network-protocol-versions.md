@@ -10,10 +10,12 @@
 
 The table below lists some notable versions of the P2P network protocol, with the most recent versions listed first.
 
-As of Dash Core 23.0.0, the most recent protocol version is 70238.
+As of Dash Core 24.0.0, the most recent protocol version is 70242.
 
 | Version | Initial Release                    | Major Changes
 |---------|------------------------------------|--------------
+| 70242 | [Dash Core 24.0.0](https://github.com/dashpay/dash/blob/v24.0.0/doc/release-notes.md) <br> (Nov 2026) | • [CoinJoin promotion/demotion](https://github.com/dashpay/dash/pull/7052) (protocol version 70241)<br>• [`MSG_ASSET_UNLOCK` inventory type](https://github.com/dashpay/dash/pull/7639) for version 2 asset unlock transactions<br>• [Removal of sporks 3 and 9](https://github.com/dashpay/dash/pull/7278)<br>• MIN_MASTERNODE_PROTO_VERSION set to 70242
+| 70240 | [Dash Core 23.1.0](https://github.com/dashpay/dash/blob/v23.1.0/doc/release-notes.md) <br> (Feb 2026) | • [Ban for re-propagation of stale `qfcommit` messages](https://github.com/dashpay/dash/pull/7079) (protocol version 70239)<br>• [BIP324 short ID for `platformban` message](https://github.com/dashpay/dash/pull/7082)<br>• MIN_MASTERNODE_PROTO_VERSION set to 70240
 | 70238 | [Dash Core 23.0.0](https://github.com/dashpay/dash/blob/v23.0.0/doc/release-notes.md) <br> (Nov 2025) | • [Platform Proof-of-Service ban support](https://github.com/dashpay/dash/pull/6613)<br>• [Fix isdlock cycleHash](https://github.com/dashpay/dash/pull/6608)<br>• MIN_PEER_PROTO_VERSION set to 70221
 | 70236 | [Dash Core 22.1.2](https://github.com/dashpay/dash/blob/v22.1.2/doc/release-notes.md) <br> (Apr 2025) | • [Optimized quorum diff processing](https://github.com/dashpay/dash/pull/6587)<br>• [Improved the performance of deterministic masternode list management](https://github.com/dashpay/dash/pull/6625)
 | 70235 | [Dash Core 22.0](https://github.com/dashpay/dash/blob/v22.0.0/doc/release-notes.md) <br> (Nov 2024) | • [P2P protocol encryption (BIP 324)](https://github.com/dashpay/dash-issues/issues/7)<br>• [DSQ via inventory](https://github.com/dashpay/dash/pull/6148)<br>• [Support 8000 compressed headers per request](https://github.com/dashpay/dash/pull/6239/)

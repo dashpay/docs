@@ -267,6 +267,13 @@ Register your masternode
 The keys required for the different masternode roles are described briefly under
 :ref:`mn-concepts` in this documentation.
 
+.. tip::
+
+  Starting with Dash Core v24.0.0, evonodes can also be registered from the
+  Dash Core wallet using the **Register Masternode…** wizard. Select **EvoNode**
+  on the first page of the wizard. See :ref:`Registering with the Dash Core wizard
+  <dashcore-mn-wizard>` for details.
+
 .. _register-evonode-hardware:
 
 Option 1: Registering from a hardware wallet
@@ -314,6 +321,8 @@ Confirm the following two messages:
 
   Dash Masternode Tool confirmation dialogs to register a masternode
 
+
+.. _evonode-complete-server-config:
 
 Complete server configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -469,7 +478,7 @@ corresponding public key has been created.
 If you are using a hosting service, they may provide you with their public key,
 and you can skip this step. If you are hosting your own masternode or have
 agreed to provide your host with the BLS private key, generate a BLS
-public/private keypair in Dash Core by clicking **Tools > Console** and entering
+public/private keypair in Dash Core by clicking **Window > Console** and entering
 the following command::
 
   bls generate

@@ -23,6 +23,12 @@ Dash Core's [InstantSend](../resources/glossary.md#instantsend) feature provides
 
 The introduction of the [Long-Living Masternode Quorum](../resources/glossary.md#long-living-masternode-quorum) feature in Dash Core 0.14 provided a foundation to scale InstantSend. The transaction input locking process (and resulting network traffic) now occurs only within the quorum. This minimized network congestion since only the [`isdlock` message](../reference/p2p-network-instantsend-messages.md#isdlock) produced by the locking process is relayed to the entire Dash network. The lock message contains all the information necessary to verify a successful transaction lock.
 
+## Special Transactions
+
+Since Dash Core 23.1.9, masternodes do not lock provider transactions ([ProRegTx](../reference/transactions-special-transactions.md#proregtx), [ProUpServTx](../reference/transactions-special-transactions.md#proupservtx), [ProUpRegTx](../reference/transactions-special-transactions.md#proupregtx), [ProUpRevTx](../reference/transactions-special-transactions.md#prouprevtx), and the shared masternode transactions added in Dash Core 24.0.0), either when they enter the mempool or retroactively once mined. Software should wait for a ChainLock or block confirmations before treating a provider transaction as final. A transaction that spends an output of a provider transaction can only be locked once the provider transaction is in a block that has a ChainLock or the number of confirmations shown in the table above.
+
+After the v24 hard fork activates, version 2 [asset unlock transactions](../reference/transactions-special-transactions.md#version-2-asset-unlocks) (Platform withdrawals) can be locked. Since asset unlock transactions have no inputs, the lock binds the transaction's withdrawal index to a single TXID instead of locking inputs. Masternodes only lock a version 2 asset unlock while it is in the mempool, is the only transaction there with its withdrawal index, is valid for inclusion in the next block, and does not push total pending withdrawals over the credit pool's withdrawal limit. Version 1 asset unlocks are never locked.
+
 ## Deterministic InstantSend
 
 Protocol version 70220 implemented deterministic InstantSend (see [DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md)) which added the `isdlock` message as a replacement for the `islock` message. The `islock` message was deprecated and fully removed in protocol version 70231.
@@ -37,12 +43,16 @@ Spork 2 (`SPORK_2_INSTANTSEND_ENABLED`) is used to manage InstantSend on test ne
 
 In the event of a sustained overload of InstantSend, the spork can be set to a value of `1`. This mode enables a clean transition to fully disabling InstantSend without interfering with ChainLocks. In this mode masternodes will stop creating locks for new transactions when they enter the mempool and will only lock them once mined into a block. Once all existing locked transactions are mined into blocks, InstantSend can then be disabled by setting the spork value to `0` without disrupting ChainLocks.
 
+Dash Core 24.0.0 removed Spork 3 (`SPORK_3_INSTANTSEND_BLOCK_FILTERING`), which controlled whether nodes reject blocks containing transactions that conflict with InstantSend locks. This rejection now applies on all networks whenever InstantSend is enabled. A block that has a ChainLock still takes precedence over a conflicting InstantSend lock.
+
 ## Mining Considerations
 
 Note: A transaction will **not** be included in the block template (from the [`getblocktemplate` RPC](../api/remote-procedure-calls-mining.md#getblocktemplate)) unless it:
 
  1. Has been locked, or
  2. Has been in the mempool for >=10 minutes (`WAIT_FOR_ISLOCK_TIMEOUT`)
+
+Since provider transactions are never locked (see [Special Transactions](#special-transactions)), they are only included in the block template once they have been in the mempool for 10 minutes.
 
 A [miner](../resources/glossary.md#miner) may still include any transaction, but [blocks](../resources/glossary.md#block) containing only locked transactions (or ones older than the timeout) should achieve a ChainLock faster. This is desirable to miners since it prevents any blockchain reorganizations that might orphan their block.
 

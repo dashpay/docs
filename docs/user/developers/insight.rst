@@ -73,3 +73,9 @@ will be available at::
 The Insight UI block explorer will be available at::
 
   http://<ip-address>:3001/insight/
+
+Dash Core builds the address, spent and timestamp indexes in the
+background, so they can finish after the blockchain itself has synced.
+Until they catch up, the RPCs that use them return an "index is syncing"
+error and the API endpoints that depend on them will fail. The
+``getindexinfo`` RPC shows their progress.

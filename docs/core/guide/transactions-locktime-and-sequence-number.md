@@ -16,7 +16,7 @@ Care must be taken near the expiry time of a time lock. The peer-to-peer [networ
 
 Previous versions of Dash Core provided a feature which prevented transaction signers from using the method described above to cancel a time-locked transaction, but a necessary part of this feature was disabled to prevent denial of service attacks. A legacy of this system is a four-byte [sequence number](../resources/glossary.md#sequence-number) in every input. Sequence numbers were meant to allow multiple signers to agree to update a transaction; when they finished updating the transaction, they could agree to set every input's sequence number to the four-byte unsigned maximum (0xffffffff), allowing the transaction to be added to a block even if its time lock had not expired.
 
-Even today, setting all sequence numbers to 0xffffffff (the default in Dash Core) can still disable the time lock, so if you want to use locktime, at least one input must have a sequence number below the maximum. Since sequence numbers are not used by the network for any other purpose, setting any sequence number to zero is sufficient to enable locktime.
+Even today, setting all sequence numbers to 0xffffffff (the default in Dash Core) can still disable the time lock, so if you want to use locktime, at least one input must have a sequence number below the maximum. Setting any sequence number to zero is sufficient to enable locktime. Note that sequence numbers also have another use: in transactions with version 2 or higher, they can encode a relative locktime as defined by [BIP68](https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki).
 
 ## Locktime Parsing Rules
 

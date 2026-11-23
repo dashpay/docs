@@ -52,6 +52,18 @@ In protocol versions > 70208, Dash Core can use any [input](../resources/glossar
 
 This phase involves exchanging a sequence of messages with a [masternode](../resources/glossary.md#masternode) so it can construct a denominate transaction with inputs from the clients in its pool.
 
+Once the v24 hard fork activates, a client can also use a mixing session to rebalance how many coins it holds of each denomination. In a promotion, the client combines 10 coins of the session denomination into 1 coin of the next larger denomination. In a demotion, it splits 1 coin of the next larger denomination into 10 coins of the session denomination. See the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) and [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) for details.
+
+### Promotion and Demotion
+
+A masternode only finalizes a promotion or demotion session when each side of the session denomination has either no participants or at least 2 participants. On the input side, standard and promotion participants are counted; on the output side, standard and demotion participants are counted. A lone participant on one side would hold the only coins of the session denomination on that side, making them easy to identify on-chain. A session that never attracts the missing counterparty expires in the queue stage, where no collateral is charged. A participant whose entry does not match the form it declared in its `dsa` message loses its collateral as described in the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) reference.
+
+The following rules are Dash Core wallet policy rather than protocol requirements:
+
+* The wallet only converts fully mixed coins. A promotion spends 10 fully mixed coins of the smaller denomination and a demotion spends 1 fully mixed coin of the larger denomination.
+* Coins created by a promotion or demotion restart mixing at zero rounds instead of inheriting the rounds of their inputs, because the 10:1 or 1:10 form of the conversion publicly groups the participant's coins.
+* The wallet first tries to join an existing promotion or demotion queue. It only starts a new promotion or demotion queue when there is no standard mixing session to join or start.
+
 ### Data Flow
 
 :::{attention}
@@ -106,7 +118,7 @@ Clients must respond to the Queue ready within 30 seconds or risk forfeiting the
 _**Step 6 - Inputs**_
 
 * The collateral transaction can be the same in the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) as the one in the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) (Step 1) as long as it has not been spent
-* Each client can provide up to 9 (`COINJOIN_ENTRY_MAX_SIZE`) inputs (and an equal number of outputs) to be used ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/coinjoin.h#L46))
+* Each client can provide up to 9 (`COINJOIN_ENTRY_MAX_SIZE`) inputs (and an equal number of outputs) to be used ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/coinjoin.h#L46)). After the v24 hard fork activates, promotion and demotion entries are an exception (see the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi)).
 * This is the only message in the process that contains enough information to link a wallet's CoinJoin inputs with its outputs
   * This message is sent directly between a client and the masternode processing the session (not relayed across the Dash network) so no other clients see it
 
@@ -115,6 +127,10 @@ _**Step 8 - Final Transaction (unsigned)**_
 * Once the masternode has received valid [`dsi` messages](../reference/p2p-network-privatesend-messages.md#dsi) from all clients, it creates the final transaction and sends a [`dsf` message](../reference/p2p-network-privatesend-messages.md#dsf)
   * Inputs/outputs are ordered deterministically as defined by [BIP-69](https://github.com/dashevo/bips/blob/master/bip-0069.mediawiki#Abstract) to avoid leaking any data ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/server.cpp#L301-L302))
   * Clients must sign their inputs to the Final Transaction within 15 seconds or risk forfeiting the collateral they provided in the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) (Step 4) ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/coinjoin.h#L44))
+
+_**Step 11 - Completion**_
+
+* After the session completes, the client keeps its mixed inputs locked until its wallet observes the mixing transaction spending them. If the inputs are still unspent in the chain and mempool after 1 hour, Dash Core releases them. The [`getcoinjoininfo` RPC](../api/remote-procedure-calls-dash.md#getcoinjoininfo) reports the number of these inputs as `pending_inputs`.
 
 _**Step 12 - Final Transaction broadcast**_
 
@@ -135,6 +151,6 @@ _**General**_
 
 To maintain privacy when using CoinJoin funds, transactions must fully spend all inputs to a single output (with the remainder becoming the fee - i.e. no [change output](../resources/glossary.md#change-output)). This can result in large fees depending on the value being sent.
 
-For example, an extreme case is sending the minimum non-dust value (546 duffs). This results in an extremely large transaction fee because the minimum denomination (0.00100001 DASH or 100,001 duffs) must be fully spent with no change. This results in a fee of 0.00999464 DASH and a sent value of only 0.00000546 DASH as shown by the calculation below.
+For example, an extreme case is sending the minimum non-dust value (546 duffs). This results in an extremely large transaction fee because the minimum denomination (0.00100001 DASH or 100,001 duffs) must be fully spent with no change. This results in a fee of 0.00099455 DASH and a sent value of only 0.00000546 DASH as shown by the calculation below.
 
 100001 duffs (smallest CoinJoin denomination) - 546 duffs (value to send) = 99455 duffs (fee)

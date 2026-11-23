@@ -41,7 +41,9 @@ JSON-RPC Interface
 The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. For a complete listing of RPC
 commands please refer to the :ref:`Dash Developer Guide
-<guide-index>`.
+<guide-index>`. Major Dash Core releases can change RPC arguments and
+results, so review the `release notes
+<https://github.com/dashpay/dash/releases>`__ before upgrading.
 
 Note that the following commands have been modified to support InstantSend:
 
@@ -53,6 +55,23 @@ Note that the following commands have been modified to support InstantSend:
    - :ref:`gettransaction <api-rpc-wallet-gettransaction>`
    - :ref:`listtransactions <api-rpc-wallet-listtransactions>`
    - :ref:`listsinceblock <api-rpc-wallet-listsinceblock>`
+
+Platform Addresses
+------------------
+
+`DIP18 <https://github.com/dashpay/dips/blob/master/dip-0018.md>`__ Dash
+Platform addresses start with ``dash1`` (``tdash1`` on test networks).
+Funds sent to a Platform address are converted to Dash Platform credits
+instead of being paid to a regular Dash output. ``validateaddress``
+reports a Platform address as valid and adds ``"isplatform": true`` to
+its result. Systems that check withdrawal addresses with
+``validateaddress`` should check this field and reject Platform
+addresses unless they intend to support them.
+
+Paying a Platform address requires a version 2 :ref:`asset lock
+transaction <ref-txs-assetlocktx>`. Dash Core currently treats these
+transactions as non-standard and does not relay them, so paying a Platform
+address from Dash Core fails.
 
 Special Transactions
 --------------------
@@ -85,23 +104,35 @@ which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
-+---------+------+----------------+---------------------------------------------------------------+
-| Version | Type | Payload Size   | Transaction Purpose / Example                                 |
-+=========+======+================+===============================================================+
-| 3       | 0    | n/a            | Standard Transaction                                          |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 1    | variable       | :ref:`Masternode Registration <ref-txs-proregtx>`             |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 2    | variable       | :ref:`Update Masternode Service <ref-txs-proupservtx>`        |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 3    | variable       | :ref:`Update Masternode Operator <ref-txs-proupregtx>`        |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 4    | variable       | :ref:`Masternode Revocation <ref-txs-prouprevtx>`             |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <ref-txs-cbtx>`            |
-+---------+------+----------------+---------------------------------------------------------------+
-| 3       | 6    | variable       | :ref:`Quorum Commitment <ref-txs-qctx>`                       |
-+---------+------+----------------+---------------------------------------------------------------+
++---------+------+----------------+----------------------------------------------------------------------+
+| Version | Type | Payload Size   | Transaction Purpose / Example                                        |
++=========+======+================+======================================================================+
+| 3       | 0    | n/a            | Standard Transaction                                                 |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 1    | variable       | :ref:`Masternode Registration <ref-txs-proregtx>`                    |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 2    | variable       | :ref:`Update Masternode Service <ref-txs-proupservtx>`               |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 3    | variable       | :ref:`Update Masternode Operator <ref-txs-proupregtx>`               |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 4    | variable       | :ref:`Masternode Revocation <ref-txs-prouprevtx>`                    |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <ref-txs-cbtx>`                   |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 6    | variable       | :ref:`Quorum Commitment <ref-txs-qctx>`                              |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 7    | 130 bytes      | :ref:`Masternode Hard Fork Signal <ref-txs-mnhftx>`                  |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 8    | variable       | :ref:`Asset Lock <ref-txs-assetlocktx>`                              |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 9    | variable       | :ref:`Asset Unlock <ref-txs-assetunlocktx>`                          |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 10   | variable       | :ref:`Shared Masternode Dissolution <ref-txs-prodistx>`              |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 11   | variable       | :ref:`Update Shared Masternode Share Reward <ref-txs-proupsharetx>`  |
++---------+------+----------------+----------------------------------------------------------------------+
+| 3       | 12   | variable       | :ref:`Update Shared Masternode Registrar <ref-txs-proupsharedregtx>` |
++---------+------+----------------+----------------------------------------------------------------------+
 
 Integration notes:
 
@@ -126,6 +157,10 @@ Integration notes:
    that this data is not part of the calculated hash and is provided for
    convenience.
 
+6. The txid of a version 2 :ref:`Asset Unlock <ref-txs-assetunlocktx>`
+   is calculated with its quorum signing fields set to zero, so it
+   doesn't match a hash of the raw transaction bytes.
+
 See the `transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
 
@@ -140,7 +175,8 @@ This documentation is also available as a `PDF <https://github.com/dashpay/docs/
 InstantSend is a feature provided by the Dash network that allows for
 zero-confirmation transactions to be safely accepted and re-spent. The
 network attempts to lock the inputs of every valid transaction when it
-is broadcast to the network. Every secured transaction is included in a
+is broadcast to the network, except for masternode provider
+transactions. Every secured transaction is included in a
 following block in accordance with standard blockchain principles.
 Transactions are typically locked by InstantSend within 3 seconds of
 being propagated to the network.
@@ -230,6 +266,13 @@ This is typically used with a wallet that has been populated with
 `watch-only <https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-only-address>`__ 
 addresses.
 
+New wallets are descriptor wallets, which do not support the
+``importaddress`` RPC. To add watch-only addresses to a descriptor
+wallet, create the wallet with private keys disabled and use
+:ref:`importdescriptors <api-rpc-wallet-importdescriptors>` with an
+``addr(<address>)`` descriptor (including the checksum returned by
+``getdescriptorinfo``).
+
 .. _is-broadcast:
 
 Broadcasting InstantSend Transactions
@@ -237,12 +280,14 @@ Broadcasting InstantSend Transactions
 
 .. tip::
    
-   Because all transactions on the Dash network are automatically InstantSend,
+   Because transactions on the Dash network are automatically InstantSend,
    no procedural changes are required to broadcast transactions as InstantSend.
 
-Since Dash v0.14.0 established LLMQs on the Dash network, quorums will
-now attempt to lock every valid transaction by default without any
-additional fee or action by the sending wallet or user. A transaction is
+Quorums attempt to lock every valid transaction by default without any
+additional fee or action by the sending wallet or user. Masternode
+provider transactions are the exception: they are never locked, so
+wait for a ChainLock or block confirmations before treating one as
+final (see :ref:`InstantSend <guide-features-instantsend>`). A transaction is
 eligible for InstantSend when each of its inputs is considered
 confirmed. This is the case when at least one of the following
 circumstances is true: 

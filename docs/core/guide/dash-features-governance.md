@@ -19,7 +19,7 @@ There are two distinct stages of governance sync:
 2. Follow up request(s) (vote sync) - request governance object votes for a specific object via a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) containing the hash of the object. One message is required for each object. Dash Core periodically (~ every 6 seconds) sends messages to connected nodes until all the governance objects have been synchronized.
 
 :::{note}
-Dash Core limits how frequently the first type of sync (object sync) can be requested. Frequent requests will result in the node being banned.
+Dash Core limits how frequently the first type of sync (object sync) can be requested. Frequent requests will result in the node being banned. Repeated vote sync requests for the same object from a peer are also penalized.
 :::
 
 Masternodes respond to the [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with several items:
@@ -56,6 +56,20 @@ Once the syncing [node](../resources/glossary.md#node) receives the counts and i
 | [`getdata` message](../reference/p2p-network-data-messages.md#getdata) (govobjvote) | →              |                           | (Optional) Syncing node requests govobjvote
 |                          | ←              | [`govobjvote` message](../reference/p2p-network-governance-messages.md#govobjvote)      | (If requested) Governance object vote
 
+## Superblock Triggers
+
+Dash Core manages superblock trigger creation, voting, and network propagation on masternodes.
+
+Beginning ~3 days (1662 blocks) prior to a superblock, each masternode ranks proposals. This ranking is used to determine what a candidate superblock (or "superblock trigger") should contain. If a matching trigger was not found, the masternode selected as the next block's payee creates and broadcasts a new superblock trigger.
+
+All masternodes vote for existing superblock triggers once they are fully synced. Each masternode casts only 1 superblock trigger "Yes" vote per superblock cycle, for the trigger matching its own candidate. It will vote "No" for any other triggers it receives. Masternodes only cast these "No" votes once the trigger's superblock maturity window (the 1662 blocks before the superblock on mainnet) has started. A masternode that has built a candidate also waits to vote "No" until a trigger matching its candidate exists, or until 3 blocks (`NO_VOTE_DEADLINE_BLOCKS`) before the superblock. Once the superblock height is reached, the masternode clears its "Yes" vote even if no trigger was funded, so it can vote again in the next cycle.
+
+:::{attention}
+Proposal votes submitted _after_ superblock trigger creation begins will **not** be counted by some masternodes (those that have already voted on a superblock trigger).
+:::
+
+At the superblock height, the trigger with the most "Yes" votes is paid out by that block's miner.
+
 ## Sentinel
 
 :::{attention}
@@ -77,14 +91,4 @@ Sentinel 1.1.0 introduced proposal pruning which automatically votes to delete e
 
 ### Sentinel Superblock
 
-Sentinel manages superblock creation, voting, and submission to dashd for network propagation.
-
-Beginning ~3 days (1662 blocks) prior to a superblock, Sentinel selects one masternode per block to rank proposals. This ranking is used to determine what a candidate superblock (or "superblock trigger") should contain. Based on the results, it creates and broadcasts a new superblock trigger if a matching one was not found.
-
-All masternodes vote for existing superblock triggers. Each masternode casts only 1 superblock trigger "Yes" vote per superblock cycle. It will vote "No" for any other triggers it receives.
-
-:::{attention}
-Proposal votes submitted _after_ superblock trigger creation begins will **not** be counted by some masternodes (those that have already voted on a superblock trigger).
-:::
-
-At the superblock height, the trigger with the most "Yes" votes is paid out by that block's miner.
+Sentinel managed superblock creation, voting, and submission to dashd for network propagation. Dash Core now performs these tasks itself as described in [Superblock Triggers](#superblock-triggers).
