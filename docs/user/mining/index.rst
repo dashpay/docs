@@ -66,9 +66,7 @@ masternode is “secured” by 1000 DASH. Those DASH remain under the sole
 control of their owner at all times, and can still be freely spent. The
 funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
-rewards. The exception is :ref:`shared collateral <shared-masternode-setup>`
-contributed by several participants, which can only be spent by dissolving
-the masternode.
+rewards.
 
 Mining Pools
 ============
