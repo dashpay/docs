@@ -24,7 +24,7 @@ Features:
 -  Coin control and fee control
 -  QR code generation and address book
 -  Masternode commands and voting
--  Automated backup
+-  Wallet backup and recovery phrase
 -  Debug console
 
 Available documentation:

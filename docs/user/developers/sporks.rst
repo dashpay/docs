@@ -44,19 +44,9 @@ SPORK_2_INSTANTSEND_ENABLED
   InstantSend is described in `DIP0010 LLMQ-based InstantSend
   <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__.
 
-SPORK_3_INSTANTSEND_BLOCK_FILTERING
-  If enabled, masternodes will reject blocks containing transactions in
-  conflict with locked but unconfirmed InstantSend transactions.
-
-SPORK_9_SUPERBLOCKS_ENABLED
-  If enabled, superblocks are verified and issued to pay proposal
-  winners.
-
 SPORK_17_QUORUM_DKG_ENABLED 
   Enables the `DKG process to create LLMQ quorums
-  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This
-  spork will be turned on once 80% masternodes are upgraded to v0.14,
-  which will enable DKG and DKG-based PoSe.
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`_.
 
 SPORK_19_CHAINLOCKS_ENABLED
   Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the
@@ -71,15 +61,14 @@ SPORK_23_QUORUM_POSE
   Enforces Proof of Service requirements for masternodes to support a minimum
   protocol version and maintain open ports.
 
-SPORK_24_TEST_EHF
-  Supports enhanced hard fork (EHF) testing.
-
 Viewing spork status
 --------------------
 
 The ``spork show`` and ``spork active`` commands issued in the debug
 window (or from ``dash-cli`` on a masternode) allow you to interact with
 sporks. You can open the debug window by selecting **Window > Console**.
+
+.. TODO: Retake dashcore-sporks.png: shows removed SPORK_3/SPORK_9 and the old "Wallet Repair" tab.
 
 .. figure:: img/dashcore-sporks.png
    :width: 300px

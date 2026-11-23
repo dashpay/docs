@@ -20,8 +20,9 @@ are carried out on the mainnet. There are a few other key differences:
   (instead of 76)
 - Testnet balances are denominated in tDASH (instead of DASH)
 - Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)
-- Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, 
-  testnet-seed.darkcoin.qa, testnet-seed.dashpay.io
+- Bootstrapping uses a different DNS seed: testnet-seed.dashdot.io
+- Non-standard transactions are rejected by default, as on mainnet, but
+  can be accepted by starting Dash Core with ``-acceptnonstdtxn=1``
 - Launching Dash Core in testnet mode shows an orange tray icon
 
 To start Dash Core in testnet mode, find your dash.conf file and enter

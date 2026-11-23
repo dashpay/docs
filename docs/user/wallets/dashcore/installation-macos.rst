@@ -8,8 +8,7 @@ macOS Installation Guide
 ========================
 
 This guide describes how to download, install and encrypt the Dash Core
-wallet for macOS. The guide is written for macOS Sierra, but the steps
-should be similar for other versions.
+wallet for macOS. Dash Core requires macOS 14 (Sonoma) or later.
 
 Downloading the Dash Core wallet
 --------------------------------
@@ -151,13 +150,9 @@ You can now create a wallet to send and receive funds.
 Creating your Dash Wallet
 -------------------------
 
-.. versionadded:: v20.1.0
-
-   HD wallets are now created by default.
-
 If no wallet files are loaded, you will get this prompt in the Overview tab. To
 create a wallet, click the **Create a new wallet** button or click **File** ->
-**Create Wallet**. HD wallets are created by default. See the
+**Create Wallet**. New wallets are HD descriptor wallets. See the
 :hoverxref:`advanced topics section <dashcore-hd>` for information about HD
 wallets.
 
@@ -169,8 +164,18 @@ default, your wallet will be encrypted. You may choose to uncheck the box and
 encrypt the wallet later. We have included instructions on how to encrypt your
 wallet in the following section.
 
+Click **Show Advanced Options** to see the wallet type. The **Descriptor
+Wallet** box is checked by default. Unchecking it creates a legacy wallet, which
+is only needed for commands that do not support descriptor wallets. Dash Core
+does not create automatic backups of descriptor wallets, so make your own
+:ref:`backup <dashcore-backup>` and keep your recovery phrase safe.
+
 .. figure:: img/macos/wallet-name.png
    :width: 300px
+
+.. TODO: Retake img/macos/wallet-name.png: it shows the old Create Wallet
+   dialog without the Show Advanced Options button and the Descriptor Wallet
+   (checked by default) and External signer checkboxes.
 
 Setting your password
 ^^^^^^^^^^^^^^^^^^^^^
@@ -230,8 +235,9 @@ successfully verified your mnemonic, click **Continue** to complete the wallet c
 
 .. note::
 
-   For more information about HD wallets and how to view or restore your mnemonic phrase later, see
-   the :hoverxref:`advanced topics section <dashcore-hd>`.
+   To view your mnemonic phrase later, click **Settings > Show Recovery Phrase…**. For more
+   information about HD wallets and how to restore your mnemonic phrase, see the
+   :hoverxref:`advanced topics section <dashcore-hd>`.
 
 The following section will detail the steps you need to follow if you
 choose to encrypt your Dash wallet later.
