@@ -5,6 +5,7 @@ This directory contains tools that run Dash Core examples from the docs on a rea
 * `capture-rest-examples.sh` regenerates the examples on the [HTTP REST requests](../../docs/core/api/http-rest-requests.md) page.
 * `run-transaction-tutorials.sh` runs the [transaction tutorials](../../docs/core/examples/transaction-tutorial.md) end to end (see [Transaction Tutorials](#transaction-tutorials)).
 * `capture-multisig-example.sh` regenerates the multisig example in the [Dash Core advanced topics](../../docs/user/wallets/dashcore/advanced.rst) page (see [Multisig Example](#multisig-example)).
+* `run-wallet-recovery-checks.sh` checks that the wallet backup, restore, and recovery commands in the user docs still work (see [Wallet Recovery Checks](#wallet-recovery-checks)).
 
 ## Overview
 
@@ -134,3 +135,15 @@ Running the script twice with the same Dash Core build produces identical output
 * The node starts with `-mocktime`, and each block is mined after `setmocktime` advances the clock by 150 seconds (block 1 is at `1767225600`, 2026-01-01 UTC). Before step 1 the clock jumps 9 hours ahead.
 * The wallet makes two random choices when it sends, and the buyer's `sendtoaddress` in step 3 avoids both. The buyer's only coin is 0.250005 DASH, so the payment leaves no change output to place at a random position. The tip is more than 8 hours old when the buyer sends, so the wallet sets the locktime to 0 instead of the tip height, which it sometimes lowers at random. The script fails if the funding transaction has a change output or a nonzero locktime.
 * The setup transaction that pays the buyer's coin is a raw transaction with fixed inputs and outputs, and all signatures are deterministic (RFC 6979).
+
+## Wallet Recovery Checks
+
+`run-wallet-recovery-checks.sh` runs the wallet backup, restore, and recovery commands from the user docs (the Dash Core advanced, backup, and interface pages, and the recovery and paper wallet pages) on a fresh regtest node and checks that they still work the way the pages describe. Run it for each new Dash Core release. A failed check means a documented command changed.
+
+```bash
+DASH_BIN="$HOME/code/dash/src" ./run-wallet-recovery-checks.sh
+```
+
+`DASH_BIN` must contain `dashd`, `dash-cli`, and `dash-wallet` built with Berkeley DB support, as the release binaries are. The script header describes the optional `OUT_DIR`, `DATADIR`, `P2P_PORT` (default `26701`), and `RPC_PORT` (default `26702`) variables.
+
+The script never deletes anything. Each run creates a new, private temp directory (about 30 MB), and a given `OUT_DIR` or `DATADIR` must not exist. In that directory, `checks.txt` lists each check as `PASS` or `FAIL`, the numbered files hold each command and its output, and `datadir/` keeps the wallets for inspection.
