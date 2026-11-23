@@ -132,6 +132,11 @@ The CoinJoin process works like this:
    <https://github.com/dashpay/dash/pull/3661>`__ which will join a
    given denomination by up to three extra rounds to further improve
    privacy.
+#. After the v24 hard fork activates, a CoinJoin session can also
+   combine ten fully mixed inputs of one denomination into one input of
+   the next larger denomination, or split one into ten inputs of the
+   next smaller denomination. These new inputs start mixing again from
+   zero rounds.
 #. This process happens in the background without any intervention on
    your part. When you wish to make a transaction using your denominated
    funds no additional waiting will be required.
