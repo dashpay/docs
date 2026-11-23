@@ -45,10 +45,11 @@ ceases.
 
 Several participants can also :ref:`pool their funds
 <shared-masternode-setup>` to provide the collateral of a regular masternode.
-Shared collateral can only be spent
-by dissolving the masternode, which any participant can do. Dissolving returns
-each participant's contribution to their refund address, less the transaction
-fee and any early-exit penalty.
+Shared collateral can only be spent by dissolving the masternode, which any
+participant can do. Dissolving returns each participant's contribution to their
+refund address. The participant who dissolves pays the transaction fee, plus an
+early-exit penalty if they dissolve alone during the early period. The other
+participants split that penalty.
 
 Masternodes are paid by the network for the InstantSend, CoinJoin and
 governance services they provide. 20% of the block subsidy goes to the budget
