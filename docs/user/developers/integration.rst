@@ -266,6 +266,13 @@ This is typically used with a wallet that has been populated with
 `watch-only <https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-only-address>`__ 
 addresses.
 
+New wallets are descriptor wallets, which do not support the
+``importaddress`` RPC. To add a watch-only address to a descriptor
+wallet, use :ref:`importdescriptors <api-rpc-wallet-importdescriptors>`
+with an ``addr(<address>)`` descriptor (including the checksum returned
+by ``getdescriptorinfo``), ideally in a wallet created with private keys
+disabled.
+
 .. _is-broadcast:
 
 Broadcasting InstantSend Transactions

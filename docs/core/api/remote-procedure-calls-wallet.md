@@ -1295,6 +1295,10 @@ _See also_
 * [ImportPrivKey](../api/remote-procedure-calls-wallet.md#importprivkey): adds a private key to your wallet. The key should be formatted in the wallet import format created by the [`dumpprivkey` RPC](../api/remote-procedure-calls-wallet.md#dumpprivkey).
 * [ListReceivedByAddress](../api/remote-procedure-calls-wallet.md#listreceivedbyaddress): lists the total number of dash received by each address.
 
+```{eval-rst}
+.. _api-rpc-wallet-importdescriptors:
+```
+
 ## ImportDescriptors
 
 :::{note}
