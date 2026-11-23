@@ -43,8 +43,9 @@ in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
 ceases.
 
-The collateral of a regular masternode can also be :ref:`shared by several
-participants <shared-masternode-setup>`. Shared collateral can only be spent
+Several participants can also :ref:`pool their funds
+<shared-masternode-setup>` to provide the collateral of a regular masternode.
+Shared collateral can only be spent
 by dissolving the masternode, which any participant can do. Dissolving returns
 each participant's contribution to their refund address, less the transaction
 fee and any early-exit penalty.

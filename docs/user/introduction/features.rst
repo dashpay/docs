@@ -65,8 +65,8 @@ doing so will cause the masternode to fall out of queue and stop earning rewards
 are also given **voting rights** on proposals. Each masternode can vote on budget proposals or
 important decisions that affect Dash.
 
-Several participants can also :ref:`share the 1000 DASH <shared-masternode-setup>` of one
-masternode. Shared collateral can only be spent by dissolving the masternode, which any participant
+Several participants can also :ref:`pool their funds <shared-masternode-setup>` to provide the
+1000 DASH collateral of one masternode. Shared collateral can only be spent by dissolving the masternode, which any participant
 can do. Dissolving returns each participant's contribution to their refund address, less the
 transaction fee and any early-exit penalty.
 
