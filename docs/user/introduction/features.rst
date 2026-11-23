@@ -68,9 +68,8 @@ important decisions that affect Dash.
 Several participants can also :ref:`pool their funds <shared-masternode-setup>` to provide the
 1000 DASH collateral of one masternode. Shared collateral can only be spent by dissolving the
 masternode, which any participant can do. Dissolving returns each participant's contribution to
-their refund address. The participant
-who dissolves pays the transaction fee, plus an early-exit penalty if they dissolve alone during the
-early period. The other participants split that penalty.
+their refund address. The participant who dissolves pays the transaction fee, plus an early-exit
+penalty if they dissolve alone during the early period. The other participants split that penalty.
 
 Masternodes cost money and effort to host so they are paid a percentage
 of the block reward as an incentive. Because only one masternode is paid
