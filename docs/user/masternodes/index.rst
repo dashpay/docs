@@ -25,8 +25,9 @@ masternode, using either a hosting provider or by setting up and
 maintaining your own hosting solution. The primary requirement to run a
 masternode on the Dash network is 1000 DASH. This is known as the
 collateral, and cannot be spent without interrupting operation of the
-masternode. The second requirement is the actual server running the Dash
-masternode software.
+masternode. Several people can also :ref:`share the collateral
+<shared-masternode-setup>` of one masternode. The second requirement is the
+actual server running the Dash masternode software.
 
 **Option 1: Hosted masternode**
 

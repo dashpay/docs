@@ -43,6 +43,11 @@ in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
 ceases.
 
+The collateral of a regular masternode can also be :ref:`shared by several
+participants <shared-masternode-setup>`. No single participant can move shared
+collateral. It is released by dissolving the masternode, which returns each
+participant's contribution.
+
 Masternodes are paid by the network for the InstantSend, CoinJoin and
 governance services they provide. 20% of the block subsidy goes to the budget
 with the remaining 80% split between miners and masternodes per this
@@ -148,6 +153,10 @@ Important concepts:
 - Masternode owners should specify an address different from the collateral to
   receive payments in the ProRegTx. The owner may optionally specify a non-zero
   percentage as payment to a separate masternode operator, if applicable.
+- After the v24 hard fork activates, the owner reward of a regular masternode
+  can be split between up to 8 payout addresses. A :ref:`shared masternode
+  <shared-masternode-setup>` splits the owner reward between its participants in
+  proportion to their contributions. Evonodes cannot do either yet.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
@@ -395,8 +404,7 @@ Masternode requirements
 - A dedicated IP address: These usually come with the VPS/server.
 
 In addition to the DASH held in collateral, masternodes also have
-minimum hardware requirements. For Dash versions 20.0 and higher, these
-requirements are as follows:
+minimum hardware requirements. These requirements are as follows:
 
 .. _mn-hardware-reqs-table:
 
@@ -410,7 +418,7 @@ Regular masternodes
 +---------+------------------+------------------+
 | RAM     | 4 GB + 2 GB swap | 8 GB + 4 GB swap |
 +---------+------------------+------------------+
-| Disk    | 60 GB            | 80 GB            |
+| Disk    | 100 GB           | 120 GB           |
 +---------+------------------+------------------+
 | Network | 750 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+

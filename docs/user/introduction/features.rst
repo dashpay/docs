@@ -65,6 +65,10 @@ doing so will cause the masternode to fall out of queue and stop earning rewards
 are also given **voting rights** on proposals. Each masternode can vote on budget proposals or
 important decisions that affect Dash.
 
+Several participants can also :ref:`share the 1000 DASH <shared-masternode-setup>` of one
+masternode. Shared collateral cannot be moved or spent by any one participant and is locked until
+the masternode is dissolved.
+
 Masternodes cost money and effort to host so they are paid a percentage
 of the block reward as an incentive. Because only one masternode is paid
 in each block, the frequency of the payment can vary, as well as the
