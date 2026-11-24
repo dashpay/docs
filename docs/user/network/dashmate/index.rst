@@ -51,22 +51,30 @@ Debian package
 ^^^^^^^^^^^^^^
 
 Download the newest dashmate installation package for your architecture from the `GitHub releases
-page <https://github.com/dashpay/platform/releases/latest>`__. The file name contains the version, so
-it changes with every release; this downloads the one matching the architecture you are on::
+page <https://github.com/dashpay/platform/releases/latest>`__.
+This installs stable releases only: the snippet below reads ``releases/latest``, which leaves
+prereleases out. If you run a prerelease, download the package for your architecture from that
+release's page instead.
+
+The file name contains the version, so it changes with every release; this downloads the one
+matching the architecture you are on::
 
    DASHMATE_DEB="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
      | grep -o "https://[^\"]*_$(dpkg --print-architecture)\.deb" \
      | head -n 1)"
-   if [ -z "$DASHMATE_DEB" ]; then
-     echo "Could not find a dashmate .deb for this architecture in the latest release" >&2
-   else
-     curl -fLO "$DASHMATE_DEB"
+   if [ -z "$DASHMATE_DEB" ] || ! curl -fLO "$DASHMATE_DEB"; then
+     DASHMATE_DEB=""
+     echo "Could not download the dashmate package. Try again later." >&2
    fi
 
-Install the package that was just downloaded::
+Install the package that was just downloaded. Nothing is installed if the download failed::
 
-   sudo apt update
-   sudo apt install "./$(basename "$DASHMATE_DEB")"
+   if [ -n "$DASHMATE_DEB" ] && [ -f "$(basename "$DASHMATE_DEB")" ]; then
+     sudo apt update
+     sudo apt install "./$(basename "$DASHMATE_DEB")"
+   else
+     echo "The dashmate package was not downloaded, so nothing was installed. Run the download step again." >&2
+   fi
 
 .. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message, where ``<file>`` is the name of the downloaded package:
    
@@ -359,13 +367,47 @@ status`` commands as follows::
 Node update
 -----------
 
-To update dashmate, it is necessary to download and install the new version of dashmate. First, stop
-dashmate if it is running::
+To update dashmate, it is necessary to download and install the new version of dashmate. Install it
+the same way you installed it originally (see the :ref:`dashmate install section
+<dashmate-install>`).
+
+If you installed dashmate from the Debian package, download the newest dashmate installation package
+for your architecture from the `GitHub releases page
+<https://github.com/dashpay/platform/releases/latest>`__.
+This installs stable releases only: the snippet below reads ``releases/latest``, which leaves
+prereleases out. If you run a prerelease, download the package for your architecture from that
+release's page instead.
+
+The file name contains the version, so it changes with every release; this downloads the one
+matching the architecture you are on. Download it before you stop the node, so a failed download
+never leaves the node stopped::
+
+   DASHMATE_DEB="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
+     | grep -o "https://[^\"]*_$(dpkg --print-architecture)\.deb" \
+     | head -n 1)"
+   if [ -z "$DASHMATE_DEB" ] || ! curl -fLO "$DASHMATE_DEB"; then
+     DASHMATE_DEB=""
+     echo "Could not download the dashmate package. Try again later." >&2
+   fi
+
+Next, stop dashmate if it is running::
 
   dashmate stop
 
-Next, install the new version of dashmate following the instructions in the :ref:`dashmate install
-section <dashmate-install>`.
+After stopping the node with ``dashmate stop``, install the package that was just downloaded.
+Nothing is installed if the download failed::
+
+   if [ -n "$DASHMATE_DEB" ] && [ -f "$(basename "$DASHMATE_DEB")" ]; then
+     sudo apt update
+     sudo apt install "./$(basename "$DASHMATE_DEB")"
+   else
+     echo "The dashmate package was not downloaded, so nothing was installed. Run the download step again." >&2
+   fi
+
+If you installed dashmate with npm, install the new version after stopping the node with ``dashmate
+stop``::
+
+  npm install -g dashmate
 
 Once the new version of dashmate is installed, update dash service docker images::
 
