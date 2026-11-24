@@ -240,16 +240,28 @@ dashmate dependencies::
   sudo usermod -aG docker $USER
   newgrp docker
 
-Download the dashmate installation package for your CPU architecture from the `GitHub releases page
-<https://github.com/dashpay/platform/releases/latest>`__ and install it using apt::
+Download the newest dashmate installation package for your CPU architecture from the `GitHub
+releases page <https://github.com/dashpay/platform/releases/latest>`__. The file name contains the
+version, so it changes with every release; this downloads the one matching the architecture you are
+on::
 
-   wget https://github.com/dashpay/platform/releases/download/v5.0.3/dashmate_5.0.3.5e9aff1c48-1_amd64.deb
+   DASHMATE_DEB="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
+     | grep -o "https://[^\"]*_$(dpkg --print-architecture)\.deb" \
+     | head -n 1)"
+   if [ -z "$DASHMATE_DEB" ]; then
+     echo "Could not find a dashmate .deb for this architecture in the latest release" >&2
+   else
+     curl -fLO "$DASHMATE_DEB"
+   fi
+
+Install the package that was just downloaded using apt::
+
    sudo apt update
-   sudo apt install ./dashmate_5.0.3.5e9aff1c48-1_amd64.deb
+   sudo apt install "./$(basename "$DASHMATE_DEB")"
 
-.. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message:
+.. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message, where ``<file>`` is the name of the downloaded package:
    
-   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_5.0.3.5e9aff1c48-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
+   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/<file>' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
