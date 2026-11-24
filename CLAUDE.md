@@ -86,7 +86,7 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 
 ## Contributing Conventions
 
-* Branches are named after Dash Core versions. PRs target the upstream (`dashpay/docs`) default branch, currently `23.0.0`. Older version branches (e.g., `0.17.0`) are stale; do not use them as a PR base even if a fork's `HEAD` points there.
+* Branches are named after Dash Core versions. PRs target the upstream (`dashpay/docs`) default branch, currently `24.0.0`. Older version branches (e.g., `0.17.0`) are stale; do not use them as a PR base even if a fork's `HEAD` points there.
 * Commit messages use conventional commits with scopes, e.g. `docs(rpc): ...`, `docs(governance): ...`, `chore: ...`.
 * Generate new example output for `docs/core/` on regtest so it can be reproduced later, preferably with a script under `scripts/core-regtest-examples/`. Use testnet only when regtest can't show the behavior (InstantSend/ChainLocks, quorums, live network parameters). Don't label examples as regtest output; the `*Examples from Dash Core X*` heading is enough.
 * Before finishing a change, do a clean rebuild and confirm no new Sphinx warnings. After RPC doc edits, also run `scripts/check-rpc-links.py`.
