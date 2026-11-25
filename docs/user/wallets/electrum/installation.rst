@@ -14,7 +14,7 @@ Download
 Dash Electrum is maintained by Dash Incubator member **pshenmic** and is released through his GitHub
 account. Downloads are available from the official Dash website or directly from GitHub:
 
-- https://www.dash.org/downloads/
+- https://www.dash.org/download/
 - https://github.com/pshenmic/electrum-dash/releases/latest
 
 You can optionally verify the authenticity of your download by checking its detached signature

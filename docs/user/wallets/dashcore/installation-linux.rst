@@ -14,7 +14,7 @@ but the steps should be similar for other Linux distributions.
 Downloading the Dash Core wallet
 --------------------------------
 
-Visit https://www.dash.org/downloads/ to download the latest Dash Core
+Visit https://www.dash.org/download/ to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
 you need. Click the Dash Core button to download the package
 directly.
@@ -34,7 +34,7 @@ can check in Ubuntu using the Terminal::
 If the response is ``x86_64``, download **Dash Core x64**. If the response is
 ``aarch64``, download **Dash Core ARM**. Once you know which version you need,
 download the Dash Core TGZ file to your computer from
-https://www.dash.org/downloads/ and save it to your Downloads folder.
+https://www.dash.org/download/ and save it to your Downloads folder.
 
 .. note::
    Since Dash Core 18.0, downloads are not available for 32-bit Linux installations.
