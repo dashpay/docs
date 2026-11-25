@@ -32,5 +32,3 @@ Dash, although some other enthusiast projects may also be available.
    :width: 400 px
 
    Trezor Web Wallet
-
-.. _third-party-wallets:
