@@ -71,7 +71,6 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 * `scripts/dip-format.sh` - Formats DIPs from the dashpay/dips repository for inclusion in docs
 * `scripts/core-download-link-update.sh` - Updates Dash Core download links
 * `scripts/evo-tool-download-link-update.sh` - Updates Dash Evo Tool download links
-* `scripts/dashmate-update.sh` - Updates dashmate download links content
 * `scripts/check-rpc-links.py` - Verifies that `` [`<rpc>` RPC](...#anchor) `` links point at the RPC they name. Run after editing RPC docs: `scripts/check-rpc-links.py [paths...]` (default: `docs/`)
 * `scripts/core-help-parsing.sh` - Converts `dashd`/`dash-qt`/`dash-cli --help` output into the format used by the `docs/core/dashcore/wallet-arguments-and-commands-*` pages (supports `--update <file>`)
 * `scripts/core-regtest-examples/` - Regenerates the `docs/core/api/http-rest-requests.md` examples from a deterministic Dash Core regtest run (`DASH_BIN=<dir> ./capture-rest-examples.sh`). Example output on that page comes from this script; don't hand-edit it. `capture-multisig-example.sh` there produces the Dash Core multisig example in `docs/user/wallets/dashcore/advanced.rst` the same way. See its README
@@ -81,7 +80,7 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 
 ## Automation
 
-* `core-download-update.yml`, `dashmate-update.yml`, and `evo-tool-download-update.yml` run twice daily (Core also runs on release dispatch) and open PRs that rewrite download links using the scripts above. Do not hand-edit the generated download-link content; change the scripts instead, or the next run will overwrite it.
+* `core-download-update.yml` and `evo-tool-download-update.yml` run twice daily (Core also runs on release dispatch) and open PRs that rewrite download links using the scripts above. Do not hand-edit the generated download-link content; change the scripts instead, or the next run will overwrite it.
 * `preview-url.yml` appends a Read the Docs preview build URL to new PRs (`https://dash-docs--<PR>.org.readthedocs.build/en/<PR>/`). Use it to check rendering and search, which local builds lack.
 
 ## Contributing Conventions
