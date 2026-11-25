@@ -250,14 +250,16 @@ The file name contains the version, so it changes with every release; this downl
 matching the architecture you are on into a new private directory, so no other user can replace it
 before it is installed::
 
+   DASHMATE_DEB=""
    DASHMATE_DEB_URL="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
      | grep -o "https://[^\"]*_$(dpkg --print-architecture)\.deb" \
      | head -n 1)"
-   DASHMATE_DEB="$(mktemp -d)/$(basename "$DASHMATE_DEB_URL")"
-   if [ -n "$DASHMATE_DEB_URL" ] && curl -fL -o "$DASHMATE_DEB" "$DASHMATE_DEB_URL"; then
+   DASHMATE_DEB_DIR="$(mktemp -d)"
+   if [ -n "$DASHMATE_DEB_URL" ] && [ -n "$DASHMATE_DEB_DIR" ] && [ -d "$DASHMATE_DEB_DIR" ] \
+     && curl -fL -o "$DASHMATE_DEB_DIR/$(basename "$DASHMATE_DEB_URL")" "$DASHMATE_DEB_URL"; then
+     DASHMATE_DEB="$DASHMATE_DEB_DIR/$(basename "$DASHMATE_DEB_URL")"
      echo "Downloaded $DASHMATE_DEB"
    else
-     DASHMATE_DEB=""
      echo "Could not download the dashmate package. Try again later." >&2
    fi
 
@@ -268,12 +270,14 @@ To install a prerelease, open that release's page under `GitHub releases
 architecture (``dpkg --print-architecture`` prints it). Download it with this block instead of the
 one above, replacing the example link with the one you copied::
 
+   DASHMATE_DEB=""
    DASHMATE_DEB_URL="https://github.com/dashpay/platform/releases/download/v5.1.0-dev.3/dashmate_5.1.0.dev.3-1_amd64.deb"
-   DASHMATE_DEB="$(mktemp -d)/$(basename "$DASHMATE_DEB_URL")"
-   if curl -fL -o "$DASHMATE_DEB" "$DASHMATE_DEB_URL"; then
+   DASHMATE_DEB_DIR="$(mktemp -d)"
+   if [ -n "$DASHMATE_DEB_DIR" ] && [ -d "$DASHMATE_DEB_DIR" ] \
+     && curl -fL -o "$DASHMATE_DEB_DIR/$(basename "$DASHMATE_DEB_URL")" "$DASHMATE_DEB_URL"; then
+     DASHMATE_DEB="$DASHMATE_DEB_DIR/$(basename "$DASHMATE_DEB_URL")"
      echo "Downloaded $DASHMATE_DEB"
    else
-     DASHMATE_DEB=""
      echo "Could not download the dashmate package. Check the link and try again." >&2
    fi
 
@@ -281,7 +285,6 @@ Install the package that either download block saved. It is installed by its pat
 installed if the download failed::
 
    if [ -n "$DASHMATE_DEB" ] && [ -f "$DASHMATE_DEB" ]; then
-     sudo apt update
      sudo apt install "$DASHMATE_DEB"
    else
      echo "No downloaded dashmate package found, so nothing was installed. Run the download step again in this shell." >&2
