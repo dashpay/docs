@@ -243,32 +243,53 @@ dashmate dependencies::
 Download the newest dashmate installation package for your architecture from the `GitHub releases
 page <https://github.com/dashpay/platform/releases/latest>`__.
 This installs stable releases only: the snippet below reads ``releases/latest``, which leaves
-prereleases out. If you run a prerelease, download the package for your architecture from that
-release's page instead.
+prereleases out. If you run a prerelease, use the :ref:`prerelease download
+<evonode-setup-install-dashmate-prerelease>` below instead.
 
 The file name contains the version, so it changes with every release; this downloads the one
-matching the architecture you are on::
+matching the architecture you are on into a new private directory, so no other user can replace it
+before it is installed::
 
-   DASHMATE_DEB="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
+   DASHMATE_DEB_URL="$(curl -fsSL https://api.github.com/repos/dashpay/platform/releases/latest \
      | grep -o "https://[^\"]*_$(dpkg --print-architecture)\.deb" \
      | head -n 1)"
-   if [ -z "$DASHMATE_DEB" ] || ! curl -fLO "$DASHMATE_DEB"; then
+   DASHMATE_DEB="$(mktemp -d)/$(basename "$DASHMATE_DEB_URL")"
+   if [ -n "$DASHMATE_DEB_URL" ] && curl -fL -o "$DASHMATE_DEB" "$DASHMATE_DEB_URL"; then
+     echo "Downloaded $DASHMATE_DEB"
+   else
      DASHMATE_DEB=""
      echo "Could not download the dashmate package. Try again later." >&2
    fi
 
-Install the package that was just downloaded. Nothing is installed if the download failed::
+.. _evonode-setup-install-dashmate-prerelease:
 
-   if [ -n "$DASHMATE_DEB" ] && [ -f "$(basename "$DASHMATE_DEB")" ]; then
-     sudo apt update
-     sudo apt install "./$(basename "$DASHMATE_DEB")"
+To install a prerelease, open that release's page under `GitHub releases
+<https://github.com/dashpay/platform/releases>`__ and copy the link to the ``.deb`` file for your
+architecture (``dpkg --print-architecture`` prints it). Download it with this block instead of the
+one above, replacing the example link with the one you copied::
+
+   DASHMATE_DEB_URL="https://github.com/dashpay/platform/releases/download/v5.1.0-dev.3/dashmate_5.1.0.dev.3-1_amd64.deb"
+   DASHMATE_DEB="$(mktemp -d)/$(basename "$DASHMATE_DEB_URL")"
+   if curl -fL -o "$DASHMATE_DEB" "$DASHMATE_DEB_URL"; then
+     echo "Downloaded $DASHMATE_DEB"
    else
-     echo "The dashmate package was not downloaded, so nothing was installed. Run the download step again." >&2
+     DASHMATE_DEB=""
+     echo "Could not download the dashmate package. Check the link and try again." >&2
    fi
 
-.. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message, where ``<file>`` is the name of the downloaded package:
+Install the package that either download block saved. It is installed by its path, and nothing is
+installed if the download failed::
+
+   if [ -n "$DASHMATE_DEB" ] && [ -f "$DASHMATE_DEB" ]; then
+     sudo apt update
+     sudo apt install "$DASHMATE_DEB"
+   else
+     echo "No downloaded dashmate package found, so nothing was installed. Run the download step again in this shell." >&2
+   fi
+
+.. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message, where ``<path>`` is the path of the downloaded package:
    
-   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/<file>' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
+   ``N: Download is performed unsandboxed as root as file '<path>' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
